@@ -1,33 +1,35 @@
-# 👋 Привет, я Николай (jobkubera-lab)
+# 👋 Hello, I'm Nikolay (jobkubera-lab)
 
-AI powered migration consultant & prompt engineer. Помогаю людям и компаниям легально переезжать, оформлять визы, искать работу в Европе. Создаю AI агентов для HR и compliance, обучаю работе со большими языковыми моделями.
+AI-powered migration consultant & prompt engineer. I help people and companies legally relocate, obtain visas, and find work in Europe. I build AI agents for HR and compliance, and teach how to work with large language models.
 
-![AI Consultant](https://img.shields.io/badge/-AI%20Consultant-brightgreen)
-![Migration Specialist](https://img.shields.io/badge/-Migration%20Specialist-blue)
-![Prompt Engineer](https://img.shields.io/badge/-Prompt%20Engineer-purple)
+![AI Consultant](https://img.shields.io/badge/-AI%20Consultant-brightgreen?logo=appveyor) ![Migration Specialist](https://img.shields.io/badge/-Migration%20Specialist-blue) ![Prompt Engineer](https://img.shields.io/badge/-Prompt%20Engineer-magenta)
 
-## ✨ Экспертиза
-- Организация миграции и трудоустройства: визы, ВНЖ, работа в Европе и Евросоюзе.
-- Построение и оптимизация AI агентов для HR‑процессов и проверки compliance.
-- Промт инженерия: настройка запросов для LLM, обучение сотрудников работе с ИИ.
-- Управление сервисами гостеприимства, организация мероприятий и VIP‑сопровождение.
+## ✨ Expertise
 
-## 🚀 Ключевые проекты
-- [**kuberajob**](https://github.com/jobkubera-lab/kuberajob) – сайт о трудоустройстве и миграционных услугах Kubera Job.
-- [**kubera-ai-prompts**](https://github.com/jobkubera-lab/kubera-ai-prompts) – коллекция промтов для проверки CV, сопроводительных писем, писем работодателю.
-- [**kubera-migration-templates**](https://github.com/jobkubera-lab/kubera-migration-templates) – набор шаблонов: CV, cover letters, письма работодателям, служебные записки.
-- [**kubera-visa-playbooks**](https://github.com/jobkubera-lab/kubera-visa-playbooks) – country playbooks для work visas & residence (Denmark, Czechia, Norway, Iceland).
-- [**kubera-improved-website**](https://github.com/jobkubera-lab/kubera-improved-website) – улучшенный сайт Kubera с AI интерактивом.
-- [**NikolaKubera**](https://github.com/jobkubera-lab/NikolaKubera) – информация о консультационных услугах: визы & job placement.
+- Organizing migration and employment processes: visas, residence permits, job placement in Europe and the EU.
+- Building and optimizing AI agents for HR workflows and compliance checks.
+- Prompt engineering: crafting prompts for LLMs and training employees to use AI.
+- Managing hospitality services, event organisation and VIP concierge services.
 
-## 💬 Немного о себе
-- Работаю в миграционной индустрии более 15 лет, многократно выстраивал HR‑процессы и сервисы «под ключ».
-- Проживаю в Копенгагене ( Дания ), работаю удалённо со странами ЕС, США и Азии.
-- Готов к сотрудничеству и открыт для интересных проектов и партнёрств.
+## 🚀 Key projects
 
-## 📫 Контакты
-- 🌐 Сайт: [kuberajob.com](https://kuberajob.com)
+- **[kuberajob](https://github.com/jobkubera-lab/kuberajob)** – a site for employment and migration services of Kubera Job.
+- **[kubera-ai-prompts](https://github.com/jobkubera-lab/kubera-ai-prompts)** – a collection of prompts for CV review, cover letters, employer letters.
+- **[kubera-migration-templates](https://github.com/jobkubera-lab/kubera-migration-templates)** – a set of templates: CVs, cover letters, employer letters, memos.
+- **[kubera-visa-playbooks](https://github.com/jobkubera-lab/kubera-visa-playbooks)** – country playbooks for work visas & residence (Denmark, Czechia, Norway, Iceland).
+- **[kubera-improved-website](https://github.com/jobkubera-lab/kubera-improved-website)** – an improved Kubera website with AI interaction.
+- **[NikolaKubera](https://github.com/jobkubera-lab/NikolaKubera)** – information on consulting services: visas & job placement.
+
+## 🧑‍💼 About me
+
+- I have been working in the migration industry for more than 15 years, and have repeatedly built HR processes and services “turnkey”.
+- I live in Copenhagen (Denmark) and work remotely with countries in the EU, USA and Asia.
+- I'm open to cooperation and interesting projects or partnerships.
+
+## 💌 Contacts
+
+- 🌐 Website: [kuberajob.com](https://kuberajob.com)
 - 📧 Email: [jobkubera@gmail.com](mailto:jobkubera@gmail.com)
-- 💬 Telegram: [@kuberababa](https://t.me/kuberababa)
+- 💌 Telegram: [@kuberababa](https://t.me/kuberababa)
 
-Спасибо за интерес к моим проектам!
+Thanks for your interest in my projects!
