@@ -23,7 +23,7 @@ AI-powered migration consultant & prompt engineer. I help people and companies l
 ## 🧑‍💼 About me
 
 - I have been working in the migration industry for more than 15 years, and have repeatedly built HR processes and services “turnkey”.
-- I live in Copenhagen (Denmark) and work remotely with countries in the EU, USA and Asia.
+- I live in Reykjavík and work remotely with countries in the EU, USA and Asia.
 - I'm open to cooperation and interesting projects or partnerships.
 
 ## 💌 Contacts
