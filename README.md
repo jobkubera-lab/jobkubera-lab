@@ -1,30 +1,62 @@
-# 👋 Hello, I'm Nikolay (jobkubera-lab)
+# 👋 Hello, I'm Nikolay Kubera
 
-AI-powered migration consultant & prompt engineer. I help people and companies legally relocate, obtain visas, and find work in Europe. I build AI agents for HR and compliance, and teach how to work with large language models.
+## AI Migration Consultant · Prompt Engineer · AI Solutions Builder
 
-![AI Consultant](https://img.shields.io/badge/-AI%20Consultant-brightgreen?logo=appveyor) ![Migration Specialist](https://img.shields.io/badge/-Migration%20Specialist-blue) ![Prompt Engineer](https://img.shields.io/badge/-Prompt%20Engineer-magenta)
+I create practical AI-powered solutions for migration, HR, compliance and digital services. I help people and organisations solve real-world challenges around legal relocation, visas, employment and AI adoption while building open-source tools, local AI systems and intelligent automation.
 
-## ✨ Expertise
+I also develop **AI-powered animated educational series, creative learning products and digital experiences that turn ideas and dreams into reality.**
 
-- Organizing migration and employment processes: visas, residence permits, job placement in Europe and the EU.
-- Building and optimizing AI agents for HR workflows and compliance checks.
-- Prompt engineering: crafting prompts for LLMs and training employees to use AI.
-- Managing hospitality services, event organisation and VIP concierge services.
+![AI Consultant](https://img.shields.io/badge/-AI%20Consultant-brightgreen?logo=appveyor) ![Migration Specialist](https://img.shields.io/badge/-Migration%20Specialist-blue) ![Prompt Engineer](https://img.shields.io/badge/-Prompt%20Engineer-magenta) ![AI Builder](https://img.shields.io/badge/-AI%20Solutions%20Builder-orange) ![Creative AI](https://img.shields.io/badge/-Creative%20AI-purple)
+
+## ✨ What I build
+
+- AI-assisted migration and relocation workflows.
+- AI agents for HR, research, compliance and customer support.
+- Local AI systems and private knowledge assistants.
+- Prompt systems and reusable LLM workflows.
+- Civic-tech tools and interactive community maps.
+- Educational AI products, animated series and colouring-book learning systems.
+- Digital prototypes that transform ideas into practical products.
+
+## 🧪 KUBERA LAB
+
+KUBERA LAB is my practical technology laboratory for building and testing real AI products.
+
+Current directions include:
+
+- 🌍 **Mitcham Survival Map** — community map for residents and new arrivals.
+- 🤖 **Kubera Local AI** — local and privacy-conscious AI systems.
+- 🧠 **Kubera AI Agents** — practical assistants and workflow automation.
+- 🛂 **Migration Dashboard** — tools for organising relocation and migration cases.
+- 📊 **Technology Radar** — structured evaluation of emerging technologies.
+- 🔒 **AI Privacy** — practical privacy and safer AI-use concepts.
+- ⚙️ **Automation** — workflow design using APIs, Python and no-code/low-code tools.
+- 🏛️ **Civic AI** — digital tools for communities and local services.
+- 🌌 **Cosmic English Adventures** — an AI-assisted educational universe combining cartoons, English learning, planets, colours, speaking practice and printable colouring books.
+
+Explore KUBERA LAB:  
+https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab
 
 ## 🚀 Key projects
 
-- **[kuberajob](https://github.com/jobkubera-lab/kuberajob)** – a site for employment and migration services of Kubera Job.
-- **[kubera-ai-prompts](https://github.com/jobkubera-lab/kubera-ai-prompts)** – a collection of prompts for CV review, cover letters, employer letters.
-- **[kubera-migration-templates](https://github.com/jobkubera-lab/kubera-migration-templates)** – a set of templates: CVs, cover letters, employer letters, memos.
-- **[kubera-visa-playbooks](https://github.com/jobkubera-lab/kubera-visa-playbooks)** – country playbooks for work visas & residence (Denmark, Czechia, Norway, Iceland).
-- **[kubera-improved-website](https://github.com/jobkubera-lab/kubera-improved-website)** – an improved Kubera website with AI interaction.
-- **[NikolaKubera](https://github.com/jobkubera-lab/NikolaKubera)** – information on consulting services: visas & job placement.
+- **[kuberajob](https://github.com/jobkubera-lab/kuberajob)** — employment and migration services platform.
+- **[kubera-ai-prompts](https://github.com/jobkubera-lab/kubera-ai-prompts)** — reusable prompts for CVs, cover letters, employer communication and AI workflows.
+- **[kubera-migration-templates](https://github.com/jobkubera-lab/kubera-migration-templates)** — migration and employment document templates.
+- **[kubera-visa-playbooks](https://github.com/jobkubera-lab/kubera-visa-playbooks)** — structured country playbooks for work visas and residence pathways.
+- **[kubera-local-ai](https://github.com/jobkubera-lab/kubera-local-ai)** — experiments and starter architecture for local AI.
+- **[kubera-improved-website](https://github.com/jobkubera-lab/kubera-improved-website)** — web experiments including the Mitcham Survival Map.
+- **[Cosmic English Adventures](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/cosmic-english-adventures)** — cartoons + English learning + colouring-book educational product concept.
 
 ## 🧑‍💼 About me
 
-- I have been working in the migration industry for more than 15 years, and have repeatedly built HR processes and services “turnkey”.
-- I live in Reykjavík and work remotely with countries in the EU, USA and Asia.
-- I'm open to cooperation and interesting projects or partnerships.
+- Migration consultant with long-term experience in relocation, employment and international mobility workflows.
+- AI generalist focused on practical tools rather than technology for technology's sake.
+- Building projects in London with a global perspective across Europe, the UK, the US and Asia.
+- Interested in partnerships where AI can improve real services, learning and everyday life.
+
+## 💡 Mission
+
+**Build useful technology. Teach clearly. Create boldly. Turn ideas and dreams into reality.**
 
 ## 💌 Contacts
 
@@ -32,4 +64,4 @@ AI-powered migration consultant & prompt engineer. I help people and companies l
 - 📧 Email: [jobkubera@gmail.com](mailto:jobkubera@gmail.com)
 - 💌 Telegram: [@kuberababa](https://t.me/kuberababa)
 
-Thanks for your interest in my projects!
+Thanks for visiting my work.
