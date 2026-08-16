@@ -54,7 +54,6 @@ AI generalist · Prompt engineer · Migration technology specialist
 London, United Kingdom
 
 - GitHub: https://github.com/jobkubera-lab
-- Website: https://kuberajob.com
 - Email: jobkubera@gmail.com
 
 ---
