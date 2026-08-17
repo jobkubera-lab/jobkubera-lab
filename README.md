@@ -1,4 +1,4 @@
-# 👋 Hello, I'm Nikolay Kubera
+# 👋 Hello, I'm Nikola Kubera
 
 ## AI Migration Consultant · Prompt Engineer · AI Solutions Builder
 
