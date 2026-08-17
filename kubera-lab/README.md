@@ -2,7 +2,7 @@
 
 **Technology intelligence, practical AI, local tools and digital independence.**
 
-KUBERA LAB is a portfolio project by Nikola Kubera. It presents practical experiments and working concepts across AI agents, migration technology, civic maps, local AI, privacy, automation and open-source research.
+KUBERA LAB is a portfolio project by Nikolay Kubera. It presents practical experiments and working concepts across AI agents, migration technology, civic maps, local AI, privacy, automation and open-source research.
 
 ## Why this project exists
 
@@ -49,7 +49,7 @@ A structured system for rating technologies by usefulness, privacy, cost, maturi
 
 ## Author
 
-**Nikola Kubera**  
+**Nikolay Kubera**  
 AI generalist · Prompt engineer · Migration technology specialist  
 London, United Kingdom
 
