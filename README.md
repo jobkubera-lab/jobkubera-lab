@@ -60,7 +60,6 @@ https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab
 
 ## 💌 Contacts
 
-- 🌐 Website: [kuberajob.com](https://kuberajob.com)
 - 📧 Email: [jobkubera@gmail.com](mailto:jobkubera@gmail.com)
 - 💌 Telegram: [@kuberababa](https://t.me/kuberababa)
 
