@@ -16,12 +16,11 @@ My current work is developing along three connected lines:
 
 **Kubera Guide** is my long-term mapping and field-observation project built through real travel, photography, place reviews and local discovery.
 
-Current milestones recorded for the project:
+Verified public description for now:
 
-- **Google Maps / Local Guides: Level 8**
-- **1.7M+ views**
-- **Geographic footprint across 36 countries**
-- first-hand reviews, photographs and observations rather than copied datasets
+- **hundreds of thousands of views** across Google Maps contributions;
+- international geographic footprint across multiple countries;
+- first-hand reviews, photographs and observations rather than copied datasets.
 
 The project became a real-world foundation for my later work in interactive maps, newcomer support, civic-tech and AI-assisted geographic intelligence.
 
@@ -30,7 +29,7 @@ Real-world travel → Google Maps contributions → local knowledge → interact
 
 ➡️ **[Explore the Kubera Guide project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)**
 
-> When I receive a current Google Maps profile screenshot, I will update the public project only with the numbers and milestones visible there.
+> Exact current Google Maps metrics and Local Guides level will be updated from a fresh profile screenshot so the public record stays evidence-based.
 
 ## 🧠 KUBERA AGENT OS
 
