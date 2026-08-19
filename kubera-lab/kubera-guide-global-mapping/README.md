@@ -1,103 +1,70 @@
-# 🌍 Kubera Guide — Global Mapping & Local Intelligence
+# 🌍 Kubera Guide — Global Mapping Project
 
 ![Google Maps](https://img.shields.io/badge/Google%20Maps-1.1M%20views-4285F4?logo=googlemaps&logoColor=white)
 ![Profile impressions](https://img.shields.io/badge/Profile%20impressions-1.8K-34A853)
-![Travel Footprint](https://img.shields.io/badge/Travel%20Footprint-International-FBBC05)
-![Field Research](https://img.shields.io/badge/Method-First--hand%20field%20research-EA4335)
+![Travel](https://img.shields.io/badge/Project-Travel%20%26%20Places-FBBC05)
+![Mapping](https://img.shields.io/badge/Direction-Mapping%20%26%20Civic%20Tech-EA4335)
 
-**Kubera Guide** is my long-term real-world mapping and local-intelligence project built through travel, observation, photography and original place reviews.
+**Kubera Guide** is a public travel and mapping project built around places visited in the real world and then shared through Google Maps.
 
-## Verified Google Maps snapshot — 19 August 2026
+The project combines travel, photography, place discovery and public map contributions into a growing geographic archive that other people can discover and read.
 
-A Google Maps profile screenshot confirms:
+## Project reach
 
-- 👁️ **1.1M views** on the Kubera Guide profile;
-- ✨ **1.8K impressions**;
-- 📍 identity shown as **Kubera Guide**;
-- 📷 public profile description: **Independent Google Maps contributor. Sharing places I personally visit, photograph and explore.**
+- 👁️ **1.1M Google Maps views**
+- ✨ **1.8K profile impressions**
+- 🌍 travel-based location publishing across different countries and cities
+- 📷 photos and place information published from real visits
+- 🗺️ growing public geographic footprint on Google Maps
 
-These figures are recorded from the Google Maps profile screenshot supplied on **19 August 2026**, so the project record is evidence-based rather than estimated.
-
-### Evidence
-
-![Kubera Guide Google Maps profile — 19 August 2026](evidence/google-maps-profile-2026-08-19.jpg)
-
-## What the project represents
-
-This is not a copied travel database. The core of the project is **first-hand geographic experience**:
-
-- places personally visited;
-- original photographs and visual observations;
-- reviews of local businesses, destinations and services;
-- cultural landmarks and travel locations;
-- temples, sacred places and spiritually significant locations;
-- practical location knowledge useful to visitors and newcomers.
-
-Over time, the accumulated map activity became a digital record of my movement through the world — a real-world layer of places, observations and travel experience reflected through mapping platforms.
-
-## From field travel to local intelligence
+## How the project works
 
 ```text
-Real-world travel
-      ↓
-First-hand observations
-      ↓
-Google Maps / Kubera Guide
-      ↓
-1.1M public views
-      ↓
-Location knowledge
-      ↓
-Interactive community maps
-      ↓
-Civic-tech and local-data projects
-      ↓
-AI-assisted geographic intelligence
+Travel to real places
+        ↓
+Discover locations
+        ↓
+Photograph and document them
+        ↓
+Publish on Google Maps
+        ↓
+People discover and view the contributions
+        ↓
+Build a growing geographic knowledge archive
 ```
 
-This progression now influences my work on community maps, local-service discovery, civic-tech tools and AI systems that can reason over geographic and project-specific information.
+## What Kubera Guide publishes
 
-## Current project signals
+- beaches, cities and travel destinations;
+- restaurants, pubs, shops and local businesses;
+- cultural and historical places;
+- religious and spiritual locations;
+- unusual places discovered during travel;
+- useful visual information for people exploring an area.
 
-| Signal | Verified public record |
-|---|---|
-| Google Maps identity | **Kubera Guide** |
-| Google Maps reach | **1.1M views** |
-| Profile impressions | **1.8K** |
-| Snapshot date | **19 August 2026** |
-| Geographic footprint | **International / multiple countries** |
-| Data style | **First-hand reviews, photos and observations** |
+## From Google Maps to KUBERA LAB
 
-## KUBERA LAB method
+Kubera Guide is also a source of real-world geographic experience for future KUBERA LAB projects.
 
-Kubera Guide represents the broader working method behind KUBERA LAB:
+```text
+Kubera Guide
+    ↓
+Real-world place knowledge
+    ↓
+Interactive maps
+    ↓
+Community and civic-tech tools
+    ↓
+AI-assisted local intelligence
+```
 
-**Life experience → idea → technical mechanics → working system → GitHub record.**
+This creates a bridge between real travel activity and technical mapping projects: public contributions show what people actually look at, while KUBERA LAB can turn that experience into new map-based tools and AI systems.
 
-I use AI as a translation layer between lived experience and engineering: observations become structured concepts, concepts become technical mechanisms, and those mechanisms become documented projects that can evolve over time.
+## Google Maps profile
 
-## Why this matters for KUBERA LAB
-
-Many AI projects begin with synthetic examples or downloaded datasets. Kubera Guide started the opposite way: with **direct contact with real places**.
-
-That makes it a useful foundation for experiments in:
-
-- local search and place discovery;
-- newcomer support maps;
-- travel and cultural intelligence;
-- geographic knowledge organisation;
-- community-service mapping;
-- AI agents that work with real location context.
-
-## Related direction
-
-Today this mapping experience connects naturally with the wider KUBERA LAB direction:
-
-**Maps → Local Data → Civic Tech → AI Agents → Personal Geographic Intelligence**
-
-The goal is not simply to collect locations. It is to transform real-world experience into useful digital systems that help people understand places faster and make better local decisions.
+A direct public Google Maps profile link will be placed here using the official **Share → Copy link** URL from the Kubera Guide profile.
 
 ---
 
-**Project owner:** NIKOLA KUBERA  
-**KUBERA LAB:** AI agents · local intelligence · civic tech · interactive maps
+**KUBERA GUIDE / KUBERA LAB**  
+Travel · Places · Google Maps · Local Intelligence · Interactive Maps

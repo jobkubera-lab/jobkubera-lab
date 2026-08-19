@@ -7,26 +7,24 @@ I build practical AI systems, local-intelligence tools, interactive maps and dig
 My current work is developing along three connected lines:
 
 - 🤖 **AI Agents & Local AI** — private, modular agent systems and reusable skills.
-- 🌍 **Global Mapping & Local Intelligence** — first-hand geographic knowledge built through travel and Google Maps contributions.
+- 🌍 **Global Mapping & Local Intelligence** — travel-based place publishing and geographic knowledge.
 - 🏛️ **Civic Tech & Community Tools** — maps and digital systems that help people understand places, services and local opportunities.
 
 ![AI Solutions Builder](https://img.shields.io/badge/-AI%20Solutions%20Builder-brightgreen?logo=appveyor) ![AI Agents](https://img.shields.io/badge/-AI%20Agents-blue) ![Civic Tech](https://img.shields.io/badge/-Civic%20Tech-teal) ![Interactive Maps](https://img.shields.io/badge/-Interactive%20Maps-orange) ![Local Intelligence](https://img.shields.io/badge/-Local%20Intelligence-purple)
 
-## 🌍 Kubera Guide — Global Mapping & Local Intelligence
+## 🌍 Kubera Guide — Global Mapping Project
 
-**Kubera Guide** is my long-term mapping and field-observation project built through real travel, photography, place reviews and local discovery.
+**Kubera Guide** is a travel-based Google Maps project: real places are visited, photographed, documented and published so other people can discover and read the contributions.
 
-Verified Google Maps snapshot — **19 August 2026**:
+Current public reach:
 
-- 👁️ **1.1M views** on the Kubera Guide profile;
-- ✨ **1.8K impressions**;
-- 📍 **Independent Google Maps contributor**;
-- 📷 I share places I personally visit, photograph and explore.
+- 👁️ **1.1M Google Maps views**
+- ✨ **1.8K profile impressions**
+- 🌍 international travel and location publishing
+- 📷 real-world photos and place information
 
-The project became a real-world foundation for my later work in interactive maps, newcomer support, civic-tech and AI-assisted geographic intelligence.
-
-**Project path:**  
-Real-world travel → Google Maps / Kubera Guide → 1.1M public views → location knowledge → interactive community maps → civic-tech → AI geographic assistants.
+**Project flow:**  
+Travel → discover places → photograph & document → publish on Google Maps → audience views → geographic knowledge → interactive maps and civic-tech.
 
 ➡️ **[Explore the Kubera Guide project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)**
 
@@ -62,7 +60,7 @@ I use AI to translate ideas, observations and lived experience into structured t
 
 Current directions include:
 
-- 🌍 **Kubera Guide** — global mapping and local-intelligence project.
+- 🌍 **Kubera Guide** — travel, mapping and public place discovery.
 - 🤖 **KUBERA AGENT OS** — private modular personal AI-agent architecture.
 - 🗺️ **Mitcham / Merton community mapping** — local-service and newcomer-oriented map concepts.
 - 🧠 **AI Agents** — practical assistants and workflow automation.
@@ -77,7 +75,7 @@ https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab
 
 ## 🚀 Selected public projects
 
-- **[Kubera Guide — Global Mapping & Local Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — verified 1.1M-view first-hand geographic contribution and mapping project.
+- **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — 1.1M-view travel and Google Maps publishing project.
 - **[kubera-ai-prompts](https://github.com/jobkubera-lab/kubera-ai-prompts)** — reusable prompt systems and AI workflows.
 - **[kubera-improved-website](https://github.com/jobkubera-lab/kubera-improved-website)** — web experiments and community-map work.
 - **[Cosmic English Adventures](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/cosmic-english-adventures)** — cartoons + English learning + colouring-book educational concept.
@@ -85,7 +83,7 @@ https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab
 ## 🧭 Project evolution
 
 ```text
-Travel & real-world observation
+Travel & place discovery
         ↓
 Google Maps / Kubera Guide — 1.1M views
         ↓
