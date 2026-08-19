@@ -26,7 +26,8 @@ Current public reach:
 **Project flow:**  
 Travel → discover places → photograph & document → publish on Google Maps → audience views → geographic knowledge → interactive maps and civic-tech.
 
-➡️ **[Explore the Kubera Guide project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)**
+➡️ **[Explore the Kubera Guide project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)**  
+🌍 **[View Kubera Guide on Google Maps](https://www.google.com/maps/contrib/111907570264362429428?utm_source=mstt_0&g_ep=CAESBzI2LjMzLjIYACCBvQQqqQEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc2MSwxMDA3OTY1MzUsOTQyODA1NzYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksMTAwODE1NjQwLDEwMDgyMDIzNywxMDA4MjI0ODksMTAwODI3OTcxQgJHQg%3D%3D&skid=9d39cad4-d69e-433c-81c5-5e65fff3327e&g_st=atm)**
 
 ## 🧠 KUBERA AGENT OS
 
