@@ -1,6 +1,6 @@
 # 🌍 Kubera Guide — Global Mapping & Local Intelligence
 
-![Google Maps](https://img.shields.io/badge/Google%20Maps-1.1M%2B%20views-4285F4?logo=googlemaps&logoColor=white)
+![Google Maps](https://img.shields.io/badge/Google%20Maps-1.1M%20views-4285F4?logo=googlemaps&logoColor=white)
 ![Profile impressions](https://img.shields.io/badge/Profile%20impressions-1.8K-34A853)
 ![Travel Footprint](https://img.shields.io/badge/Travel%20Footprint-International-FBBC05)
 ![Field Research](https://img.shields.io/badge/Method-First--hand%20field%20research-EA4335)
@@ -40,7 +40,7 @@ First-hand observations
       ↓
 Google Maps / Kubera Guide
       ↓
-1.1M+ public views
+1.1M public views
       ↓
 Location knowledge
       ↓
@@ -63,6 +63,14 @@ This progression now influences my work on community maps, local-service discove
 | Snapshot date | **19 August 2026** |
 | Geographic footprint | **International / multiple countries** |
 | Data style | **First-hand reviews, photos and observations** |
+
+## KUBERA LAB method
+
+Kubera Guide represents the broader working method behind KUBERA LAB:
+
+**Life experience → idea → technical mechanics → working system → GitHub record.**
+
+I use AI as a translation layer between lived experience and engineering: observations become structured concepts, concepts become technical mechanisms, and those mechanisms become documented projects that can evolve over time.
 
 ## Why this matters for KUBERA LAB
 
