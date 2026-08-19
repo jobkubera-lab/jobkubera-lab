@@ -16,20 +16,19 @@ My current work is developing along three connected lines:
 
 **Kubera Guide** is my long-term mapping and field-observation project built through real travel, photography, place reviews and local discovery.
 
-Verified public description for now:
+Verified Google Maps snapshot — **19 August 2026**:
 
-- **hundreds of thousands of views** across Google Maps contributions;
-- international geographic footprint across multiple countries;
-- first-hand reviews, photographs and observations rather than copied datasets.
+- 👁️ **1.1M views** on the Kubera Guide profile;
+- ✨ **1.8K impressions**;
+- 📍 **Independent Google Maps contributor**;
+- 📷 I share places I personally visit, photograph and explore.
 
 The project became a real-world foundation for my later work in interactive maps, newcomer support, civic-tech and AI-assisted geographic intelligence.
 
 **Project path:**  
-Real-world travel → Google Maps contributions → local knowledge → interactive community maps → civic-tech → AI geographic assistants.
+Real-world travel → Google Maps / Kubera Guide → 1.1M public views → location knowledge → interactive community maps → civic-tech → AI geographic assistants.
 
 ➡️ **[Explore the Kubera Guide project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)**
-
-> Exact current Google Maps metrics and Local Guides level will be updated from a fresh profile screenshot so the public record stays evidence-based.
 
 ## 🧠 KUBERA AGENT OS
 
@@ -39,7 +38,7 @@ The system is designed around a simple principle: **the model is replaceable; th
 
 Core architecture includes model routing, project memory, skill permissions, evidence tracking, self-checking, privacy gating, failure memory, human-control levels and an agent laboratory for testing new skills before they are trusted.
 
-🔒 **Core source code is kept private.** Public documentation and demos will expose the concept and results without publishing the protected implementation.
+🔒 **Core source code is kept private.** Public documentation and demos expose the concept and results without publishing the protected implementation.
 
 ## ✨ What I build
 
@@ -54,6 +53,12 @@ Core architecture includes model routing, project memory, skill permissions, evi
 ## 🧪 KUBERA LAB
 
 KUBERA LAB is my practical technology laboratory for building, testing and connecting real projects.
+
+My working method is simple:
+
+**Life experience → idea → technical mechanics → working system → GitHub record.**
+
+I use AI to translate ideas, observations and lived experience into structured technical systems, then preserve their development in GitHub as a long-term project archive.
 
 Current directions include:
 
@@ -72,7 +77,7 @@ https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab
 
 ## 🚀 Selected public projects
 
-- **[Kubera Guide — Global Mapping & Local Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — first-hand geographic contribution and mapping project.
+- **[Kubera Guide — Global Mapping & Local Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — verified 1.1M-view first-hand geographic contribution and mapping project.
 - **[kubera-ai-prompts](https://github.com/jobkubera-lab/kubera-ai-prompts)** — reusable prompt systems and AI workflows.
 - **[kubera-improved-website](https://github.com/jobkubera-lab/kubera-improved-website)** — web experiments and community-map work.
 - **[Cosmic English Adventures](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/cosmic-english-adventures)** — cartoons + English learning + colouring-book educational concept.
@@ -82,7 +87,7 @@ https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab
 ```text
 Travel & real-world observation
         ↓
-Google Maps / Kubera Guide
+Google Maps / Kubera Guide — 1.1M views
         ↓
 Interactive community maps
         ↓
