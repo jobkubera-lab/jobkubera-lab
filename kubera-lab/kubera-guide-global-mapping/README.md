@@ -1,6 +1,6 @@
 # 🌍 Kubera Guide — Global Mapping & Local Intelligence
 
-![Google Maps](https://img.shields.io/badge/Google%20Maps-1.1M%2B%20views-4285F4?logo=googlemaps&logoColor=white)
+![Google Maps](https://img.shields.io/badge/Google%20Maps-1.1M%20views-4285F4?logo=googlemaps&logoColor=white)
 ![Profile impressions](https://img.shields.io/badge/Profile%20impressions-1.8K-34A853)
 ![Travel Footprint](https://img.shields.io/badge/Travel%20Footprint-International-FBBC05)
 ![Field Research](https://img.shields.io/badge/Method-First--hand%20field%20research-EA4335)
@@ -9,7 +9,7 @@
 
 ## Verified Google Maps snapshot — 19 August 2026
 
-A fresh Google Maps profile screenshot confirms:
+A Google Maps profile screenshot confirms:
 
 - 👁️ **1.1M views** on the Kubera Guide profile;
 - ✨ **1.8K impressions**;
@@ -17,6 +17,10 @@ A fresh Google Maps profile screenshot confirms:
 - 📷 public profile description: **Independent Google Maps contributor. Sharing places I personally visit, photograph and explore.**
 
 These figures are recorded from the Google Maps profile screenshot supplied on **19 August 2026**, so the project record is evidence-based rather than estimated.
+
+### Evidence
+
+![Kubera Guide Google Maps profile — 19 August 2026](evidence/google-maps-profile-2026-08-19.jpg)
 
 ## What the project represents
 
@@ -40,7 +44,7 @@ First-hand observations
       ↓
 Google Maps / Kubera Guide
       ↓
-1.1M+ public views
+1.1M public views
       ↓
 Location knowledge
       ↓
@@ -63,6 +67,14 @@ This progression now influences my work on community maps, local-service discove
 | Snapshot date | **19 August 2026** |
 | Geographic footprint | **International / multiple countries** |
 | Data style | **First-hand reviews, photos and observations** |
+
+## KUBERA LAB method
+
+Kubera Guide represents the broader working method behind KUBERA LAB:
+
+**Life experience → idea → technical mechanics → working system → GitHub record.**
+
+I use AI as a translation layer between lived experience and engineering: observations become structured concepts, concepts become technical mechanisms, and those mechanisms become documented projects that can evolve over time.
 
 ## Why this matters for KUBERA LAB
 
