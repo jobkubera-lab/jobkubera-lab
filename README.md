@@ -1,58 +1,121 @@
 # 👋 Hello, I'm Nikola Kubera
 
-## AI Solutions Builder · Kubera LLC (US/WY) · Building AI agents, civic-tech tools, interactive maps and creative digital products
+## AI Solutions Builder · KUBERA LAB · AI agents, local intelligence, civic-tech and interactive maps
 
-I create practical AI-powered products, civic-tech tools, interactive maps, local AI systems and intelligent automation. I help people and organisations turn useful ideas into clear, working digital experiences.
+I build practical AI systems, local-intelligence tools, interactive maps and digital products that connect **real-world experience with useful technology**.
 
-I also develop **AI-powered animated educational series, creative learning products and digital experiences that turn ideas and dreams into reality.**
+My current work is developing along three connected lines:
 
-![AI Solutions Builder](https://img.shields.io/badge/-AI%20Solutions%20Builder-brightgreen?logo=appveyor) ![AI Agents](https://img.shields.io/badge/-AI%20Agents-blue) ![Civic Tech](https://img.shields.io/badge/-Civic%20Tech-teal) ![Interactive Maps](https://img.shields.io/badge/-Interactive%20Maps-orange) ![Creative AI](https://img.shields.io/badge/-Creative%20AI-purple)
+- 🤖 **AI Agents & Local AI** — private, modular agent systems and reusable skills.
+- 🌍 **Global Mapping & Local Intelligence** — first-hand geographic knowledge built through travel and Google Maps contributions.
+- 🏛️ **Civic Tech & Community Tools** — maps and digital systems that help people understand places, services and local opportunities.
+
+![AI Solutions Builder](https://img.shields.io/badge/-AI%20Solutions%20Builder-brightgreen?logo=appveyor) ![AI Agents](https://img.shields.io/badge/-AI%20Agents-blue) ![Civic Tech](https://img.shields.io/badge/-Civic%20Tech-teal) ![Interactive Maps](https://img.shields.io/badge/-Interactive%20Maps-orange) ![Local Intelligence](https://img.shields.io/badge/-Local%20Intelligence-purple)
+
+## 🌍 Kubera Guide — Global Mapping & Local Intelligence
+
+**Kubera Guide** is my long-term mapping and field-observation project built through real travel, photography, place reviews and local discovery.
+
+Current milestones recorded for the project:
+
+- **Google Maps / Local Guides: Level 8**
+- **1.7M+ views**
+- **Geographic footprint across 36 countries**
+- first-hand reviews, photographs and observations rather than copied datasets
+
+The project became a real-world foundation for my later work in interactive maps, newcomer support, civic-tech and AI-assisted geographic intelligence.
+
+**Project path:**  
+Real-world travel → Google Maps contributions → local knowledge → interactive community maps → civic-tech → AI geographic assistants.
+
+➡️ **[Explore the Kubera Guide project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)**
+
+> When I receive a current Google Maps profile screenshot, I will update the public project only with the numbers and milestones visible there.
+
+## 🧠 KUBERA AGENT OS
+
+I am developing **KUBERA AGENT OS** — a private, modular operating layer for a personal/local AI agent.
+
+The system is designed around a simple principle: **the model is replaceable; the user's memory, rules, skills, evidence and projects remain under the user's control.**
+
+Core architecture includes model routing, project memory, skill permissions, evidence tracking, self-checking, privacy gating, failure memory, human-control levels and an agent laboratory for testing new skills before they are trusted.
+
+🔒 **Core source code is kept private.** Public documentation and demos will expose the concept and results without publishing the protected implementation.
 
 ## ✨ What I build
 
 - AI agents and intelligent workflow tools.
-- AI assistants for research, operations and customer experiences.
-- Local AI systems and private knowledge assistants.
+- Local and privacy-conscious AI systems.
 - Prompt systems and reusable LLM workflows.
-- Civic-tech tools and interactive community maps.
-- Educational AI products, animated series and colouring-book learning systems.
-- Digital prototypes that transform ideas into practical products.
+- Interactive maps and local-service discovery tools.
+- Civic-tech prototypes for communities and newcomers.
+- Research, documentation and visual AI workflows.
+- Educational AI products and creative digital experiences.
 
 ## 🧪 KUBERA LAB
 
-KUBERA LAB is my practical technology laboratory for building and testing real AI products.
+KUBERA LAB is my practical technology laboratory for building, testing and connecting real projects.
 
 Current directions include:
 
-- 🌍 **Mitcham Survival Map** — community map for residents and new arrivals.
-- 🤖 **Kubera Local AI** — local and privacy-conscious AI systems.
-- 🧠 **Kubera AI Agents** — practical assistants and workflow automation.
+- 🌍 **Kubera Guide** — global mapping and local-intelligence project.
+- 🤖 **KUBERA AGENT OS** — private modular personal AI-agent architecture.
+- 🗺️ **Mitcham / Merton community mapping** — local-service and newcomer-oriented map concepts.
+- 🧠 **AI Agents** — practical assistants and workflow automation.
 - 📊 **Technology Radar** — structured evaluation of emerging technologies.
-- 🔒 **AI Privacy** — practical privacy and safer AI-use concepts.
-- ⚙️ **Automation** — workflow design using APIs, Python and no-code/low-code tools.
+- 🔒 **AI Privacy** — privacy-aware local AI concepts.
+- ⚙️ **Automation** — workflows using APIs, Python and no-code/low-code tools.
 - 🏛️ **Civic AI** — digital tools for communities and local services.
-- 🌌 **Cosmic English Adventures** — an AI-assisted educational universe combining cartoons, English learning, planets, colours, speaking practice and printable colouring books.
+- 🌌 **Cosmic English Adventures** — AI-assisted educational universe combining cartoons, English learning and printable activities.
 
 Explore KUBERA LAB:  
 https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab
 
-## 🚀 Key projects
+## 🚀 Selected public projects
 
+- **[Kubera Guide — Global Mapping & Local Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — first-hand geographic contribution and mapping project.
 - **[kubera-ai-prompts](https://github.com/jobkubera-lab/kubera-ai-prompts)** — reusable prompt systems and AI workflows.
-- **[kubera-local-ai](https://github.com/jobkubera-lab/kubera-local-ai)** — experiments and starter architecture for local AI.
-- **[kubera-improved-website](https://github.com/jobkubera-lab/kubera-improved-website)** — web experiments including the Mitcham Survival Map.
-- **[Cosmic English Adventures](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/cosmic-english-adventures)** — cartoons + English learning + colouring-book educational product concept.
+- **[kubera-improved-website](https://github.com/jobkubera-lab/kubera-improved-website)** — web experiments and community-map work.
+- **[Cosmic English Adventures](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/cosmic-english-adventures)** — cartoons + English learning + colouring-book educational concept.
+
+## 🧭 Project evolution
+
+```text
+Travel & real-world observation
+        ↓
+Google Maps / Kubera Guide
+        ↓
+Interactive community maps
+        ↓
+Local-data and civic-tech experiments
+        ↓
+AI agents and local intelligence
+        ↓
+KUBERA AGENT OS
+```
+
+## 🤝 Open-source participation
+
+I use GitHub not only as storage, but as a development record: branches, pull requests, reviews, issues, experiments and documented iterations.
+
+I am especially interested in contributing to open-source projects connected with:
+
+- AI agents and agent skills;
+- local / private AI;
+- maps and geospatial tools;
+- civic-tech;
+- developer productivity and automation.
 
 ## 🧑‍💼 About me
 
 - AI solutions builder creating practical products, agents, maps and digital experiences.
-- AI generalist focused on practical tools rather than technology for technology's sake.
-- Building projects in London with a global perspective across Europe, the UK, the US and Asia.
+- AI generalist focused on useful systems rather than technology for technology's sake.
+- Builder with a global perspective shaped by first-hand travel and location research.
 - Interested in partnerships where AI can improve real services, learning and everyday life.
 
 ## 💡 Mission
 
-**Build useful technology. Teach clearly. Create boldly. Turn ideas and dreams into reality.**
+**Build useful technology. Connect real-world experience with AI. Keep the core trustworthy, explainable and under human control.**
 
 ## 💌 Contacts
 
