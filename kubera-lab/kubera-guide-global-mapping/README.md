@@ -9,7 +9,7 @@
 
 ## Verified Google Maps snapshot — 19 August 2026
 
-A fresh Google Maps profile screenshot confirms:
+A Google Maps profile screenshot confirms:
 
 - 👁️ **1.1M views** on the Kubera Guide profile;
 - ✨ **1.8K impressions**;
@@ -17,6 +17,10 @@ A fresh Google Maps profile screenshot confirms:
 - 📷 public profile description: **Independent Google Maps contributor. Sharing places I personally visit, photograph and explore.**
 
 These figures are recorded from the Google Maps profile screenshot supplied on **19 August 2026**, so the project record is evidence-based rather than estimated.
+
+### Evidence
+
+![Kubera Guide Google Maps profile — 19 August 2026](evidence/google-maps-profile-2026-08-19.jpg)
 
 ## What the project represents
 
