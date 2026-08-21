@@ -1,0 +1,25 @@
+version: 1
+project: KUBERA_INNOVATION_STACK
+status_policy:
+  CONCEPT: documented architecture, no claim of working implementation
+  PROTOTYPE: executable partial implementation with limited validation
+  ACTIVE: tested implementation with reproducible demo
+modules:
+  - {id: life-system-compiler, status: CONCEPT, layer: translation}
+  - {id: reality-graph, status: CONCEPT, layer: reality}
+  - {id: geomemory-engine, status: CONCEPT, layer: reality}
+  - {id: public-private-twin, status: CONCEPT, layer: governance}
+  - {id: agent-reputation-engine, status: CONCEPT, layer: agent}
+  - {id: decision-replay, status: CONCEPT, layer: learning}
+  - {id: failure-vaccine, status: CONCEPT, layer: learning}
+  - {id: proof-of-work-portfolio, status: CONCEPT, layer: delivery}
+  - {id: geographic-intelligence-agent, status: CONCEPT, layer: application}
+  - {id: city-dna-packages, status: CONCEPT, layer: reality}
+  - {id: creative-object-dna, status: CONCEPT, layer: reality}
+  - {id: prompt-evolution-engine, status: CONCEPT, layer: translation}
+  - {id: personal-ai-constitution, status: CONCEPT, layer: governance}
+  - {id: human-authority-budget, status: CONCEPT, layer: governance}
+  - {id: github-guardian, status: CONCEPT, layer: delivery}
+  - {id: living-readme, status: CONCEPT, layer: delivery}
+  - {id: british-english-language-agent, status: CONCEPT, layer: application}
+  - {id: agent-society, status: CONCEPT, layer: agent}
