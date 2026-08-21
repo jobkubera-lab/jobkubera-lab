@@ -1,4 +1,4 @@
-version: 1
+version: 2
 project: KUBERA_INNOVATION_STACK
 status_policy:
   CONCEPT: documented architecture, no claim of working implementation
@@ -23,3 +23,12 @@ modules:
   - {id: living-readme, status: CONCEPT, layer: delivery}
   - {id: british-english-language-agent, status: CONCEPT, layer: application}
   - {id: agent-society, status: CONCEPT, layer: agent}
+external_capabilities:
+  - id: diagram-design
+    role: visual-systems-renderer
+    status: EXTERNAL_UPSTREAM
+    upstream: https://github.com/cathrynlavery/diagram-design
+    author: Cathryn Lavery
+    license: MIT
+    documented_types: 39
+    integration: visual-systems
