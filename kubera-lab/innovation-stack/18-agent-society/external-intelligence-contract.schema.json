@@ -1,91 +1,77 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://kubera-lab.local/schemas/external-intelligence-contract-v1.json",
-  "title": "KUBERA External Intelligence Contract",
+  "$id": "https://kubera-lab.local/schemas/external-intelligence-contract-v2.json",
+  "title": "KUBERA External Intelligence Contract v2",
   "type": "object",
   "$defs": {
-    "role": {
-      "type": "string",
-      "enum": [
-        "independent_auditor",
-        "red_team",
-        "architecture_critic",
-        "test_designer",
-        "specification_engineer",
-        "visual_architecture_agent",
-        "research_challenger",
-        "open_source_scout",
-        "documentation_reviewer",
-        "critic_verifier"
-      ]
-    },
-    "classification": {
-      "type": "string",
-      "enum": ["PUBLIC", "PROJECT", "PRIVATE"]
-    },
-    "severity": {
-      "type": "string",
-      "enum": ["info", "low", "medium", "high", "critical"]
-    },
+    "role": {"type":"string","enum":["independent_auditor","red_team","architecture_critic","test_designer","specification_engineer","visual_architecture_agent","research_challenger","open_source_scout","documentation_reviewer","critic_verifier"]},
+    "classification": {"type":"string","enum":["PUBLIC","PROJECT"]},
+    "severity": {"type":"string","enum":["info","low","medium","high","critical"]},
+    "execution_status": {"type":"string","enum":["completed","provider_error","schema_validation_failed","blocked","timeout"]},
     "finding": {
-      "type": "object",
-      "required": ["severity", "title"],
-      "properties": {
-        "severity": {"$ref": "#/$defs/severity"},
-        "title": {"type": "string", "minLength": 1},
-        "evidence": {"type": "string"},
-        "suggested_fix": {"type": "string"}
+      "type":"object",
+      "required":["severity","confidence","title"],
+      "properties":{
+        "severity":{"$ref":"#/$defs/severity"},
+        "confidence":{"type":"number","minimum":0,"maximum":1},
+        "title":{"type":"string","minLength":1},
+        "evidence":{"type":"string"},
+        "suggested_fix":{"type":"string"}
       },
-      "additionalProperties": false
+      "additionalProperties":false
+    },
+    "context": {
+      "type":"object",
+      "required":["classification","share_authorized","summary","context_hash","redacted_fields"],
+      "properties":{
+        "classification":{"$ref":"#/$defs/classification"},
+        "share_authorized":{"type":"boolean"},
+        "summary":{"type":"string","minLength":1},
+        "context_hash":{"type":"string","pattern":"^sha256:[0-9a-fA-F]{64}$"},
+        "redacted_fields":{"type":"array","items":{"type":"string","minLength":1},"uniqueItems":true}
+      },
+      "additionalProperties":false
     },
     "request": {
-      "type": "object",
-      "required": ["role", "target", "context"],
-      "properties": {
-        "role": {"$ref": "#/$defs/role"},
-        "target": {"type": "string", "minLength": 1},
-        "provider": {"type": "string", "default": "unspecified"},
-        "context": {
-          "type": "object",
-          "required": ["classification", "share_authorized", "summary"],
-          "properties": {
-            "classification": {"$ref": "#/$defs/classification"},
-            "share_authorized": {"type": "boolean"},
-            "summary": {"type": "string", "minLength": 1}
-          },
-          "additionalProperties": false
-        },
-        "constraints": {
-          "type": "array",
-          "items": {"type": "string", "minLength": 1},
-          "uniqueItems": true
-        }
+      "type":"object",
+      "required":["contract_version","request_id","timestamp","role","target","provider","max_role_classification","timeout_seconds","budget_tokens","context"],
+      "properties":{
+        "contract_version":{"const":"2.0"},
+        "request_id":{"type":"string","format":"uuid"},
+        "timestamp":{"type":"string","format":"date-time"},
+        "role":{"$ref":"#/$defs/role"},
+        "target":{"type":"string","minLength":1},
+        "provider":{"type":"string","minLength":1},
+        "max_role_classification":{"$ref":"#/$defs/classification"},
+        "timeout_seconds":{"type":"integer","minimum":1,"maximum":600},
+        "budget_tokens":{"type":"integer","minimum":1,"maximum":200000},
+        "context":{"$ref":"#/$defs/context"},
+        "constraints":{"type":"array","items":{"type":"string","minLength":1},"uniqueItems":true}
       },
-      "additionalProperties": false
+      "additionalProperties":false
     },
     "response": {
-      "type": "object",
-      "required": ["verdict", "summary", "findings", "unresolved_risks"],
-      "properties": {
-        "verdict": {
-          "type": "string",
-          "enum": ["pass", "needs_changes", "blocked", "inconclusive"]
-        },
-        "summary": {"type": "string"},
-        "findings": {
-          "type": "array",
-          "items": {"$ref": "#/$defs/finding"}
-        },
-        "unresolved_risks": {
-          "type": "array",
-          "items": {"type": "string"}
-        }
+      "type":"object",
+      "required":["contract_version","request_id","execution_status","summary","provider","model","model_version","latency_ms","findings","unresolved_risks","provider_error"],
+      "properties":{
+        "contract_version":{"const":"2.0"},
+        "request_id":{"type":"string","format":"uuid"},
+        "execution_status":{"$ref":"#/$defs/execution_status"},
+        "verdict":{"type":["string","null"],"enum":["pass","needs_changes","blocked","inconclusive",null]},
+        "summary":{"type":"string"},
+        "provider":{"type":"string"},
+        "model":{"type":"string"},
+        "model_version":{"type":"string"},
+        "latency_ms":{"type":"integer","minimum":0},
+        "findings":{"type":"array","items":{"$ref":"#/$defs/finding"}},
+        "unresolved_risks":{"type":"array","items":{"type":"string"}},
+        "provider_error":{"type":["string","null"]}
       },
-      "additionalProperties": false
+      "additionalProperties":false
     }
   },
-  "properties": {
-    "request": {"$ref": "#/$defs/request"},
-    "response": {"$ref": "#/$defs/response"}
+  "properties":{
+    "request":{"$ref":"#/$defs/request"},
+    "response":{"$ref":"#/$defs/response"}
   }
 }

@@ -9,7 +9,9 @@ from .proof_work import ProofOfWork, ProofStage
 from .governance import GovernanceGate, AuthorizationResult
 from .visual_systems import DiagramIntent, SUPPORTED_DIAGRAM_TYPES
 from .external_intelligence import (
+    CONTRACT_VERSION,
     ContextClassification,
+    ExecutionStatus,
     ExternalContext,
     ExternalIntelligenceRequest,
     ExternalIntelligenceResponse,
@@ -17,11 +19,13 @@ from .external_intelligence import (
     Finding,
     Severity,
     Verdict,
+    hash_context,
 )
 from .plugin_registry import (
     LicenseState,
     PermissionProfile,
     PluginCandidate,
+    PluginRegistry,
     PluginVerdict,
     ReviewState,
 )
@@ -33,7 +37,9 @@ __all__ = [
     "ReputationEngine", "ProofOfWork", "ProofStage",
     "GovernanceGate", "AuthorizationResult",
     "DiagramIntent", "SUPPORTED_DIAGRAM_TYPES",
-    "ContextClassification", "ExternalContext", "ExternalIntelligenceRequest",
-    "ExternalIntelligenceResponse", "ExternalRole", "Finding", "Severity", "Verdict",
-    "LicenseState", "PermissionProfile", "PluginCandidate", "PluginVerdict", "ReviewState",
+    "CONTRACT_VERSION", "ContextClassification", "ExecutionStatus", "ExternalContext",
+    "ExternalIntelligenceRequest", "ExternalIntelligenceResponse", "ExternalRole",
+    "Finding", "Severity", "Verdict", "hash_context",
+    "LicenseState", "PermissionProfile", "PluginCandidate", "PluginRegistry",
+    "PluginVerdict", "ReviewState",
 ]
