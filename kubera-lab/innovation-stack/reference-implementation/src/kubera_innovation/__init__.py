@@ -25,7 +25,6 @@ from .plugin_registry import (
     LicenseState,
     PermissionProfile,
     PluginCandidate,
-    PluginRegistry,
     PluginVerdict,
     ReviewState,
 )
@@ -40,6 +39,6 @@ __all__ = [
     "CONTRACT_VERSION", "ContextClassification", "ExecutionStatus", "ExternalContext",
     "ExternalIntelligenceRequest", "ExternalIntelligenceResponse", "ExternalRole",
     "Finding", "Severity", "Verdict", "hash_context",
-    "LicenseState", "PermissionProfile", "PluginCandidate", "PluginRegistry",
+    "LicenseState", "PermissionProfile", "PluginCandidate",
     "PluginVerdict", "ReviewState",
 ]
