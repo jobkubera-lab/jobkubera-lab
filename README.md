@@ -27,30 +27,6 @@ My current work is developing along three connected lines:
 
 ![AI Solutions Builder](https://img.shields.io/badge/-AI%20Solutions%20Builder-brightgreen?logo=appveyor) ![AI Agents](https://img.shields.io/badge/-AI%20Agents-blue) ![Civic Tech](https://img.shields.io/badge/-Civic%20Tech-teal) ![Interactive Maps](https://img.shields.io/badge/-Interactive%20Maps-orange) ![Local Intelligence](https://img.shields.io/badge/-Local%20Intelligence-purple)
 
-## 📊 GitHub dashboard
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=jobkubera-lab&show_icons=true&theme=default&count_private=true&include_all_commits=true&hide_border=true" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jobkubera-lab&layout=compact&count_private=true&hide_border=true" alt="Top languages" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=jobkubera-lab&theme=default&hide_border=true" alt="GitHub streak" />
-</p>
-
-### 🏆 GitHub trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=jobkubera-lab&theme=flat&column=4&margin-w=10&margin-h=10" alt="GitHub trophies" />
-</p>
-
-### ⏱️ Activity summary
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jobkubera-lab&theme=default&utcOffset=1" alt="Productive time" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=jobkubera-lab&theme=default" alt="GitHub summary stats" />
-</p>
-
 ## 🌍 Kubera Guide — Global Mapping Project
 
 **Kubera Guide** is a travel-based Google Maps project: real places are visited, photographed, documented and published so other people can discover and read the contributions.
