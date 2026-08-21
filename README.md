@@ -1,5 +1,13 @@
 # 👋 Hello, I'm Nikola Kubera
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=760&lines=AI+Solutions+Builder;Building+KUBERA+AGENT+OS;AI+Agents+%7C+Local+Intelligence+%7C+Civic+Tech;Kubera+Guide+%E2%80%94+1.1M+Google+Maps+views" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=jobkubera-lab&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+</p>
+
 ## AI Solutions Builder · KUBERA LAB · AI agents, local intelligence, civic-tech and interactive maps
 
 I build practical AI systems, local-intelligence tools, interactive maps and digital products that connect **real-world experience with useful technology**.
@@ -10,7 +18,38 @@ My current work is developing along three connected lines:
 - 🌍 **Global Mapping & Local Intelligence** — travel-based place publishing and geographic knowledge.
 - 🏛️ **Civic Tech & Community Tools** — maps and digital systems that help people understand places, services and local opportunities.
 
+## 🧰 Technology stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![AI Agents](https://img.shields.io/badge/AI%20Agents-000000?style=for-the-badge&logo=openai&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
 ![AI Solutions Builder](https://img.shields.io/badge/-AI%20Solutions%20Builder-brightgreen?logo=appveyor) ![AI Agents](https://img.shields.io/badge/-AI%20Agents-blue) ![Civic Tech](https://img.shields.io/badge/-Civic%20Tech-teal) ![Interactive Maps](https://img.shields.io/badge/-Interactive%20Maps-orange) ![Local Intelligence](https://img.shields.io/badge/-Local%20Intelligence-purple)
+
+## 📊 GitHub dashboard
+
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=jobkubera-lab&show_icons=true&theme=default&count_private=true&include_all_commits=true&hide_border=true" alt="GitHub stats" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jobkubera-lab&layout=compact&count_private=true&hide_border=true" alt="Top languages" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=jobkubera-lab&theme=default&hide_border=true" alt="GitHub streak" />
+</p>
+
+### 🏆 GitHub trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=jobkubera-lab&theme=flat&column=4&margin-w=10&margin-h=10" alt="GitHub trophies" />
+</p>
+
+### ⏱️ Activity summary
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jobkubera-lab&theme=default&utcOffset=1" alt="Productive time" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=jobkubera-lab&theme=default" alt="GitHub summary stats" />
+</p>
 
 ## 🌍 Kubera Guide — Global Mapping Project
 
@@ -97,6 +136,14 @@ AI agents and local intelligence
 KUBERA AGENT OS
 ```
 
+## 🐍 Contribution trail
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jobkubera-lab/jobkubera-lab/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jobkubera-lab/jobkubera-lab/output/github-contribution-grid-snake.svg" />
+  <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/jobkubera-lab/jobkubera-lab/output/github-contribution-grid-snake.svg" />
+</picture>
+
 ## 🤝 Open-source participation
 
 I use GitHub not only as storage, but as a development record: branches, pull requests, reviews, issues, experiments and documented iterations.
@@ -120,9 +167,12 @@ I am especially interested in contributing to open-source projects connected wit
 
 **Build useful technology. Connect real-world experience with AI. Keep the core trustworthy, explainable and under human control.**
 
-## 💌 Contacts
+## 🔗 Connect
 
-- 📧 Email: [jobkubera@gmail.com](mailto:jobkubera@gmail.com)
-- 💌 Telegram: [@kuberababa](https://t.me/kuberababa)
+<p>
+  <a href="mailto:jobkubera@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://t.me/kuberababa"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
+  <a href="https://github.com/jobkubera-lab"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+</p>
 
 Thanks for visiting my work.
