@@ -28,6 +28,8 @@ from .plugin_registry import (
     PluginVerdict,
     ReviewState,
 )
+from .evidence_ledger import EvidenceEntry, EvidenceLedger
+from .agent_pipeline import DeterministicAgentPipeline, PipelineResult, PipelineVerdict, StageResult
 
 __all__ = [
     "Constitution", "Decision", "PolicyRule",
@@ -41,4 +43,6 @@ __all__ = [
     "Finding", "Severity", "Verdict", "hash_context",
     "LicenseState", "PermissionProfile", "PluginCandidate",
     "PluginVerdict", "ReviewState",
+    "EvidenceEntry", "EvidenceLedger",
+    "DeterministicAgentPipeline", "PipelineResult", "PipelineVerdict", "StageResult",
 ]
