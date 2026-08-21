@@ -1,11 +1,19 @@
 {
+  "contract_version": "2.0",
+  "request_id": "bb29bd8f-78a9-45a2-9dfa-8d3eec292b84",
+  "timestamp": "2026-08-21T15:40:00Z",
   "role": "independent_auditor",
   "target": "KUBERA foundation runtime",
   "provider": "claude",
+  "max_role_classification": "PROJECT",
+  "timeout_seconds": 90,
+  "budget_tokens": 8000,
   "context": {
     "classification": "PROJECT",
     "share_authorized": true,
-    "summary": "Review only the supplied source files and specifications. The private repository remains private; do not assume access to files that were not provided."
+    "summary": "Sanitized, task-scoped review packet only. No PRIVATE context is permitted to leave KUBERA.",
+    "context_hash": "sha256:5f70bf18a086007016e948b04aed3b82103a36be01a2e6acbf3d6c6f0cae9f8c",
+    "redacted_fields": ["credentials", "personal_identifiers"]
   },
   "constraints": [
     "do_not_modify_code",

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kubera-innovation-reference"
-version = "0.4.0"
-description = "Public reference implementation for KUBERA Innovation Stack contracts, governance and capability intake"
+version = "0.5.0"
+description = "Public reference implementation for KUBERA Innovation Stack contracts, hardened external intelligence and safe capability intake"
 requires-python = ">=3.11"
 
 [project.scripts]
