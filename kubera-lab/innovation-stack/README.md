@@ -1,10 +1,23 @@
 # KUBERA INNOVATION STACK
 
-**18 modular technology concepts for turning real-world experience into trustworthy AI systems.**
+**18 modular technologies for turning real-world experience into trustworthy AI systems.**
 
-> Status: architecture / concept portfolio. Modules are documented as specifications unless a repository or implementation is explicitly marked as working code.
+> Current state: **6 executable foundation prototypes + 12 documented concepts.** A module is only upgraded from `CONCEPT` when executable code and validation exist.
 
 KUBERA INNOVATION STACK is the public architecture layer around KUBERA LAB. It connects real-world observations, structured memory, AI agents, human control, GitHub evidence and public project presentation.
+
+## Executable foundation v0.1
+
+The public [Reference Implementation](reference-implementation/) currently implements:
+
+- ✅ Personal AI Constitution — deterministic policy gate;
+- ✅ Human Authority Budget — expiring, consumable permissions;
+- ✅ Reality Graph — SQLite graph with visibility-safe public export;
+- ✅ Failure Vaccine — explicit preventive rules and regression-test templates;
+- ✅ Agent Reputation Engine — verified-only weighted reputation;
+- ✅ Proof-of-Work Portfolio — ordered engineering evidence chain.
+
+The package currently has **39 unit tests** and a safe in-memory demo. GitHub CI validates it across Python 3.11, 3.12 and 3.13.
 
 ## Core idea
 
@@ -30,33 +43,33 @@ Living GitHub portfolio
 
 ## The 18 modules
 
-1. [Life → System Compiler](01-life-system-compiler/) — converts a real-life problem into a technical project plan.
-2. [KUBERA Reality Graph](02-reality-graph/) — connects places, projects, ideas, files, decisions and events.
-3. [GeoMemory Engine](03-geomemory-engine/) — structured geographic memory from real travel and place knowledge.
-4. [Public / Private Twin](04-public-private-twin/) — protected private core plus safe public project twin.
-5. [Agent Reputation Engine](05-agent-reputation-engine/) — measurable trust scores for agents, skills and models.
-6. [Decision Replay](06-decision-replay/) — reconstructs why a technical decision was made.
-7. [Failure Vaccine](07-failure-vaccine/) — converts known failures into preventive checks and tests.
-8. [Proof-of-Work Portfolio](08-proof-of-work-portfolio/) — links ideas to issues, commits, tests, PRs and releases.
-9. [Geographic Intelligence Agent](09-geographic-intelligence-agent/) — AI layer over local maps and place knowledge.
-10. [City DNA Packages](10-city-dna-packages/) — portable structured knowledge packs for cities.
-11. [Creative Object DNA](11-creative-object-dna/) — digital identity and lifecycle for physical/creative objects.
-12. [Prompt Evolution Engine](12-prompt-evolution-engine/) — versioned prompt experiments with measurable outcomes.
-13. [Personal AI Constitution](13-personal-ai-constitution/) — owner-controlled rules above any replaceable model.
-14. [Human Authority Budget](14-human-authority-budget/) — time- and action-limited permissions for agents.
-15. [KUBERA GitHub Guardian](15-github-guardian/) — repository health, secrets, links, CI and documentation checks.
-16. [Living README](16-living-readme/) — automatically refreshed project status and evidence.
-17. [British English Personal Language Agent](17-british-english-language-agent/) — adaptive learning from real communication patterns.
-18. [KUBERA Agent Society](18-agent-society/) — multiple specialist agents that challenge and verify each other.
+1. [Life → System Compiler](01-life-system-compiler/) — `CONCEPT`
+2. [KUBERA Reality Graph](02-reality-graph/) — `PROTOTYPE`
+3. [GeoMemory Engine](03-geomemory-engine/) — `CONCEPT`
+4. [Public / Private Twin](04-public-private-twin/) — `CONCEPT`
+5. [Agent Reputation Engine](05-agent-reputation-engine/) — `PROTOTYPE`
+6. [Decision Replay](06-decision-replay/) — `CONCEPT`
+7. [Failure Vaccine](07-failure-vaccine/) — `PROTOTYPE`
+8. [Proof-of-Work Portfolio](08-proof-of-work-portfolio/) — `PROTOTYPE`
+9. [Geographic Intelligence Agent](09-geographic-intelligence-agent/) — `CONCEPT`
+10. [City DNA Packages](10-city-dna-packages/) — `CONCEPT`
+11. [Creative Object DNA](11-creative-object-dna/) — `CONCEPT`
+12. [Prompt Evolution Engine](12-prompt-evolution-engine/) — `CONCEPT`
+13. [Personal AI Constitution](13-personal-ai-constitution/) — `PROTOTYPE`
+14. [Human Authority Budget](14-human-authority-budget/) — `PROTOTYPE`
+15. [KUBERA GitHub Guardian](15-github-guardian/) — `CONCEPT`
+16. [Living README](16-living-readme/) — `CONCEPT`
+17. [British English Personal Language Agent](17-british-english-language-agent/) — `CONCEPT`
+18. [KUBERA Agent Society](18-agent-society/) — `CONCEPT`
 
 ## Design principles
 
-- **Model-agnostic:** Llama, Qwen or future models can be replaced without losing system memory and rules.
-- **Evidence-first:** claims should link to sources, commits, tests or recorded decisions.
-- **Human authority:** agents receive explicit, limited permissions.
-- **Private by default:** secrets and personal data stay out of public artifacts.
-- **Failure becomes knowledge:** important errors should create reusable prevention rules.
-- **Real-world origin:** projects may start from lived situations, not only synthetic AI demos.
+- **Model-agnostic:** replace models without losing memory and rules.
+- **Evidence-first:** important claims should link to sources, tests or commits.
+- **Human authority:** agents receive explicit limited permissions.
+- **Private by default:** secrets and private data stay out of public artifacts.
+- **Failure becomes knowledge:** validated errors can become prevention rules.
+- **Real-world origin:** systems may begin from real human situations.
 - **GitHub as engineering record:** history should show how an idea became a system.
 
 ## Supporting documents
@@ -64,10 +77,11 @@ Living GitHub portfolio
 - [Architecture](ARCHITECTURE.md)
 - [Module registry](modules.yaml)
 - [Roadmap](ROADMAP.md)
+- [Executable reference implementation](reference-implementation/)
 
 ## Relationship to KUBERA AGENT OS
 
-The Innovation Stack is the **public specification layer**. KUBERA AGENT OS is the agent-runtime direction that can implement selected modules. Private implementation details do not need to be published for the architecture to remain understandable.
+The Innovation Stack is the **public architecture/reference layer**. KUBERA AGENT OS remains the private runtime direction. Public reference modules expose interfaces and testable mechanics without publishing the protected private core.
 
 ---
 
