@@ -1,8 +1,8 @@
 # KUBERA Innovation Stack — Public Reference Implementation
 
-This directory contains executable **public reference code** for six foundation modules from the KUBERA Innovation Stack.
+This directory contains executable **public reference code** for selected KUBERA Innovation Stack foundation modules plus a model-agnostic visual-system contract.
 
-Implemented in v0.1:
+Implemented foundation prototypes:
 
 - Personal AI Constitution
 - Human Authority Budget
@@ -11,7 +11,11 @@ Implemented in v0.1:
 - Agent Reputation Engine
 - Proof-of-Work Portfolio
 
-The implementation intentionally uses the Python standard library for runtime logic. It is designed to demonstrate clear interfaces and safety properties without exposing any private KUBERA AGENT OS implementation.
+Cross-cutting prototype contract:
+
+- **Visual Systems / DiagramIntent** — validates one of 39 diagram categories, HTML/SVG/PNG output, detail, theme, optional brand source, Mermaid/draw.io source format and static/motion preference. It does not vendor or execute a third-party renderer.
+
+The implementation intentionally uses the Python standard library for runtime logic. It demonstrates clear interfaces and safety properties without exposing any private KUBERA AGENT OS implementation.
 
 ## Run
 
@@ -23,10 +27,10 @@ python -m kubera_innovation demo --json
 
 ## Validation
 
-The v0.1 reference implementation includes **39 unit tests** covering governance decisions, consumable authority, visibility-safe graph export, explicit failure rules, verified-only reputation scoring, proof-of-work ordering and combined governance gates.
+The v0.2 reference implementation includes **47 unit tests**: the original 39 foundation tests plus 8 Visual Systems contract tests. GitHub CI validates the package across Python 3.11, 3.12 and 3.13.
 
 ## Security boundary
 
-This is a reference implementation, not a production security boundary. It does not execute shell commands, access accounts, store credentials, or perform autonomous external actions.
+This is a reference implementation, not a production security boundary. It does not execute shell commands, access accounts, store credentials, perform autonomous external actions, or silently publish private diagrams.
 
 See [Security Boundary](docs/SECURITY_BOUNDARY.md) and [Integration Contract](docs/INTEGRATION.md).

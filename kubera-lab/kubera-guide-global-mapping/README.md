@@ -39,26 +39,43 @@ Build a growing geographic knowledge archive
 - restaurants, pubs, shops and local businesses;
 - cultural and historical places;
 - religious and spiritual locations;
-- unusual places discovered during travel;
+- technology / creative spaces and unusual places discovered during travel;
 - useful visual information for people exploring an area.
 
-## From Google Maps to KUBERA LAB
+## Technical bridge: Kubera Guide → GeoMemory
 
-Kubera Guide is also a source of real-world geographic experience for future KUBERA LAB projects.
+The public mapping activity can later be normalized into a machine-readable geographic record without changing the nature of the original project.
+
+```yaml
+source_platform: google_maps
+provenance: first_hand
+place_name: <public place name>
+category: <place category>
+city: <city when known>
+country: <country when known>
+capture_type: photo
+public_source_url: <public Google Maps contribution/profile URL>
+```
+
+This structure is intentionally different from scraped/current web facts. First-hand location observations, externally sourced operational facts and AI inference remain separate data classes.
+
+The bridge is defined in the [GeoMemory Engine](../innovation-stack/03-geomemory-engine/) and can later feed City DNA packages, interactive community maps and a Geographic Intelligence Agent.
+
+## From Google Maps to KUBERA LAB
 
 ```text
 Kubera Guide
     ↓
-Real-world place knowledge
+First-hand place knowledge
     ↓
-Interactive maps
+GeoMemory
+    ↓
+Interactive maps / City DNA
     ↓
 Community and civic-tech tools
     ↓
 AI-assisted local intelligence
 ```
-
-This creates a bridge between real travel activity and technical mapping projects: public contributions show what people actually look at, while KUBERA LAB can turn that experience into new map-based tools and AI systems.
 
 ## Google Maps profile
 
@@ -67,4 +84,4 @@ This creates a bridge between real travel activity and technical mapping project
 ---
 
 **KUBERA GUIDE / KUBERA LAB**  
-Travel · Places · Google Maps · Local Intelligence · Interactive Maps
+Travel · Places · Google Maps · GeoMemory · Local Intelligence · Interactive Maps

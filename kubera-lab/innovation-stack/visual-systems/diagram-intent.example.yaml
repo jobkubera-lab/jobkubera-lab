@@ -1,0 +1,15 @@
+contract_version: "1.0"
+diagram_type: architecture
+title: KUBERA Innovation Stack
+purpose: Explain how the core modules connect without exposing private implementation details.
+audience: technical partners
+detail: medium
+output_format: html
+theme: light
+brand_source: null
+source_format: null
+motion: false
+accessibility:
+  static_default: true
+  motion_optional: true
+  contrast_check_required: true

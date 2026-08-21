@@ -1,12 +1,12 @@
 # KUBERA INNOVATION STACK
 
-**18 modular technologies for turning real-world experience into trustworthy AI systems.**
+**18 modular technologies plus cross-cutting capabilities for turning real-world experience into trustworthy AI systems.**
 
-> Current state: **6 executable foundation prototypes + 12 documented concepts.** A module is only upgraded from `CONCEPT` when executable code and validation exist.
+> Current state: **6 executable foundation prototypes + 12 documented concepts + Visual Systems prototype contract.** A module is only upgraded from `CONCEPT` when executable code and validation exist.
 
-KUBERA INNOVATION STACK is the public architecture layer around KUBERA LAB. It connects real-world observations, structured memory, AI agents, human control, GitHub evidence and public project presentation.
+KUBERA INNOVATION STACK is the public architecture layer around KUBERA LAB. It connects real-world observations, structured memory, AI agents, human control, GitHub evidence, geographic intelligence, visual explanation and public project presentation.
 
-## Executable foundation v0.1
+## Executable foundation v0.2
 
 The public [Reference Implementation](reference-implementation/) currently implements:
 
@@ -15,9 +15,10 @@ The public [Reference Implementation](reference-implementation/) currently imple
 - ✅ Reality Graph — SQLite graph with visibility-safe public export;
 - ✅ Failure Vaccine — explicit preventive rules and regression-test templates;
 - ✅ Agent Reputation Engine — verified-only weighted reputation;
-- ✅ Proof-of-Work Portfolio — ordered engineering evidence chain.
+- ✅ Proof-of-Work Portfolio — ordered engineering evidence chain;
+- ✅ Visual Systems `DiagramIntent` — validated contract for routing technical content to a compatible visual renderer.
 
-The package currently has **39 unit tests** and a safe in-memory demo. GitHub CI validates it across Python 3.11, 3.12 and 3.13.
+The package now contains **47 unit tests**. GitHub CI validates it across Python 3.11, 3.12 and 3.13.
 
 ## Core idea
 
@@ -27,6 +28,8 @@ Real-world experience
 Reality Graph + GeoMemory
         ↓
 Life → System Compiler
+        ↓
+Diagram Intent / Visual Systems
         ↓
 KUBERA AGENT OS
         ↓
@@ -62,15 +65,24 @@ Living GitHub portfolio
 17. [British English Personal Language Agent](17-british-english-language-agent/) — `CONCEPT`
 18. [KUBERA Agent Society](18-agent-society/) — `CONCEPT`
 
+## Cross-cutting capabilities
+
+### 🎨 [Visual Systems Layer](visual-systems/)
+A KUBERA-owned model-agnostic `DiagramIntent` contract plus integration architecture for external visual renderers. The first documented upstream capability is **Diagram Design** by Cathryn Lavery (MIT), whose live repository currently documents 39 editorial diagram types and standalone HTML/SVG/PNG output.
+
+### 🌍 Kubera Guide → GeoMemory bridge
+The Google Maps project provides a real-world source model for `first_hand` geographic observations: place, category, visit context, media, public source link and platform-level reach. The screenshots supplied for the project confirm **1.1M Google Maps views** and **1.8K profile impressions**.
+
 ## Design principles
 
-- **Model-agnostic:** replace models without losing memory and rules.
+- **Model-agnostic:** replace models without losing memory, rules or visual contracts.
 - **Evidence-first:** important claims should link to sources, tests or commits.
 - **Human authority:** agents receive explicit limited permissions.
-- **Private by default:** secrets and private data stay out of public artifacts.
+- **Private by default:** secrets and private data stay out of public artifacts and diagrams.
 - **Failure becomes knowledge:** validated errors can become prevention rules.
 - **Real-world origin:** systems may begin from real human situations.
 - **GitHub as engineering record:** history should show how an idea became a system.
+- **Respect upstream ownership:** external open-source capabilities retain original authorship and licenses.
 
 ## Supporting documents
 
@@ -78,6 +90,8 @@ Living GitHub portfolio
 - [Module registry](modules.yaml)
 - [Roadmap](ROADMAP.md)
 - [Executable reference implementation](reference-implementation/)
+- [Visual Systems Layer](visual-systems/)
+- [Third-party references](THIRD_PARTY.md)
 
 ## Relationship to KUBERA AGENT OS
 
@@ -85,4 +99,4 @@ The Innovation Stack is the **public architecture/reference layer**. KUBERA AGEN
 
 ---
 
-**KUBERA LAB** · AI Agents · Local Intelligence · Civic Tech · Maps · Human-controlled automation
+**KUBERA LAB** · AI Agents · Local Intelligence · Civic Tech · Maps · Visual Systems · Human-controlled automation
