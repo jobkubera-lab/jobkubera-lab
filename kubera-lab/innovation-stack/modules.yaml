@@ -1,4 +1,4 @@
-version: 3
+version: 4
 project: KUBERA_INNOVATION_STACK
 status_policy:
   CONCEPT: documented architecture, no claim of working implementation
@@ -26,6 +26,7 @@ modules:
 cross_cutting_capabilities:
   - {id: visual-systems, status: PROTOTYPE, implementation: reference-implementation}
   - {id: external-intelligence-node, status: PROTOTYPE, implementation: reference-implementation, contract_version: "1.0"}
+  - {id: plugin-intelligence-registry, status: PROTOTYPE, implementation: reference-implementation, contract_version: "1.0"}
 external_capabilities:
   - id: diagram-design
     role: visual-systems-renderer
@@ -35,3 +36,10 @@ external_capabilities:
     license: MIT
     documented_types: 39
     integration: visual-systems
+  - id: awesome-dsh-plugin
+    role: capability-discovery-catalog
+    status: EXTERNAL_CATALOG
+    upstream: https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+    license: CC0-1.0
+    integration: plugin-intelligence-registry
+    trust: DISCOVERY_ONLY
