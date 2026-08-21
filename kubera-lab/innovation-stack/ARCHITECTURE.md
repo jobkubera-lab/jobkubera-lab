@@ -15,17 +15,17 @@ Turns human intent and observations into technical specifications, experiments a
 ### 3. Visual Systems layer — cross-cutting
 `DiagramIntent` · external renderer adapters · brand tokens · accessibility checks
 
-Turns architecture, data, workflows and timelines into explicit visual artifacts. Visual output remains subject to privacy/publication policy and does not depend on one LLM vendor.
+Turns architecture, data, workflows and timelines into explicit visual artifacts.
 
 ### 4. Agent layer
-`KUBERA AGENT OS` · `Agent Reputation Engine` · `Agent Society`
+`KUBERA AGENT OS` · `Agent Reputation Engine` · `Agent Society` · `External Intelligence Node`
 
-Routes work between models, skills and tools while measuring reliability.
+Routes work between models, skills and tools while measuring reliability. External models are specialist workers behind a common contract, not owners of project memory.
 
 ### 5. Governance layer
-`Personal AI Constitution` · `Human Authority Budget` · `Public / Private Twin`
+`Personal AI Constitution` · `Human Authority Budget` · `Public / Private Twin` · `Context / Privacy Gate`
 
-Defines what agents may do, for how long, with which data, and what may become public.
+Defines what agents may do, for how long, with which data, and what may leave the private boundary.
 
 ### 6. Learning layer
 `Evidence Ledger` · `Decision Replay` · `Failure Vaccine`
@@ -42,44 +42,34 @@ Makes engineering progress visible, verifiable and maintainable.
 
 Demonstrates how the architecture can produce domain-specific agents.
 
-## Reference flow
+## Reference multi-model flow
 
 ```text
 Human goal
   ↓
 Personal AI Constitution
   ↓
-Life → System Compiler
+KUBERA Orchestrator
   ↓
-Reality Graph / Project Memory
+Context / Privacy Gate
   ↓
-DiagramIntent (when visual explanation is useful)
-  ↓
-Orchestrator → Model Router → Skill / Tool
-  ↓
-Human Authority Budget
-  ↓
-Execution
-  ↓
-Self Check
-  ↓
+┌──────────────────┬───────────────────────┬──────────────────┐
+│ Builder model    │ External Intelligence │ Local/private AI │
+│ create           │ critique / audit      │ private work     │
+└──────────────────┴───────────────────────┴──────────────────┘
+  ↓ structured handoffs
 Evidence Ledger
   ↓
-Reputation update + Failure Vaccine
+Self-Check
   ↓
-Private/Public Gate
-  ↓
-Proof of Work / Living README / Visual artifact
+Human decision
 ```
 
+## External intelligence rule
+Project memory belongs to KUBERA. External providers receive only task-scoped context. `PROJECT` and `PRIVATE` context requires explicit sharing authorization in the public reference contract. A production gateway must additionally redact secrets, enforce provider policies and record disclosure metadata.
+
 ## Visual contract rule
-
-The Visual Systems Layer defines intent and validation separately from the renderer. This allows a future local renderer, Diagram Design, or another compatible capability to be swapped without changing the upstream project logic.
-
-## Geographic provenance rule
-
-GeoMemory records must distinguish `first_hand`, `external_source` and `model_inference`. Kubera Guide is treated as a source of first-hand public place observations, not as a substitute for current external facts such as opening hours or transport status.
+The Visual Systems Layer defines intent and validation separately from the renderer, allowing visual capabilities to be replaced without changing upstream project logic.
 
 ## Interoperability rule
-
 Every module should expose simple, replaceable interfaces: JSON/YAML records, SQLite tables, Markdown specifications or tool APIs. No module should require one specific LLM vendor to remain useful.

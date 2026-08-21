@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kubera-lab.local/schemas/external-intelligence-contract-v1.json",
+  "title": "KUBERA External Intelligence Contract",
+  "type": "object",
+  "$defs": {
+    "role": {
+      "type": "string",
+      "enum": [
+        "independent_auditor",
+        "red_team",
+        "architecture_critic",
+        "test_designer",
+        "specification_engineer",
+        "visual_architecture_agent",
+        "research_challenger",
+        "open_source_scout",
+        "documentation_reviewer",
+        "critic_verifier"
+      ]
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["PUBLIC", "PROJECT", "PRIVATE"]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["info", "low", "medium", "high", "critical"]
+    },
+    "finding": {
+      "type": "object",
+      "required": ["severity", "title"],
+      "properties": {
+        "severity": {"$ref": "#/$defs/severity"},
+        "title": {"type": "string", "minLength": 1},
+        "evidence": {"type": "string"},
+        "suggested_fix": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "request": {
+      "type": "object",
+      "required": ["role", "target", "context"],
+      "properties": {
+        "role": {"$ref": "#/$defs/role"},
+        "target": {"type": "string", "minLength": 1},
+        "provider": {"type": "string", "default": "unspecified"},
+        "context": {
+          "type": "object",
+          "required": ["classification", "share_authorized", "summary"],
+          "properties": {
+            "classification": {"$ref": "#/$defs/classification"},
+            "share_authorized": {"type": "boolean"},
+            "summary": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
+        },
+        "constraints": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "response": {
+      "type": "object",
+      "required": ["verdict", "summary", "findings", "unresolved_risks"],
+      "properties": {
+        "verdict": {
+          "type": "string",
+          "enum": ["pass", "needs_changes", "blocked", "inconclusive"]
+        },
+        "summary": {"type": "string"},
+        "findings": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/finding"}
+        },
+        "unresolved_risks": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "request": {"$ref": "#/$defs/request"},
+    "response": {"$ref": "#/$defs/response"}
+  }
+}
