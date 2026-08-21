@@ -18,6 +18,13 @@ from .external_intelligence import (
     Severity,
     Verdict,
 )
+from .plugin_registry import (
+    LicenseState,
+    PermissionProfile,
+    PluginCandidate,
+    PluginVerdict,
+    ReviewState,
+)
 
 __all__ = [
     "Constitution", "Decision", "PolicyRule",
@@ -28,4 +35,5 @@ __all__ = [
     "DiagramIntent", "SUPPORTED_DIAGRAM_TYPES",
     "ContextClassification", "ExternalContext", "ExternalIntelligenceRequest",
     "ExternalIntelligenceResponse", "ExternalRole", "Finding", "Severity", "Verdict",
+    "LicenseState", "PermissionProfile", "PluginCandidate", "PluginVerdict", "ReviewState",
 ]

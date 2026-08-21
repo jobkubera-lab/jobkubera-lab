@@ -1,0 +1,49 @@
+version: 1
+source_catalogs:
+  - id: awesome-dsh-plugin
+    url: https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+    catalog_license: CC0-1.0
+    trust: DISCOVERY_ONLY
+    note: individual plugin licenses and code must be reviewed separately
+pipeline:
+  - DISCOVER
+  - SOURCE_VERIFY
+  - LICENSE_CHECK
+  - SECURITY_REVIEW
+  - COMPATIBILITY_REVIEW
+  - HUMAN_APPROVAL
+  - SANDBOX_TEST
+  - ADOPT_OR_REJECT
+candidates:
+  - id: dsh-project-memory
+    upstream: https://github.com/00080000/dsh-project-memory
+    source_category: memory
+    kubera_targets: [project-memory, reality-graph, life-system-compiler]
+    license_status: UNKNOWN_REVIEW_REQUIRED
+    security_status: NOT_REVIEWED
+    risk: MEDIUM
+    verdict: CANDIDATE
+  - id: dsh-telemetry-redactor
+    upstream: https://github.com/030611/dsh-telemetry-redactor
+    source_category: security
+    kubera_targets: [context-privacy-gate, external-intelligence-node]
+    license_status: UNKNOWN_REVIEW_REQUIRED
+    security_status: NOT_REVIEWED
+    risk: HIGH
+    verdict: CANDIDATE
+  - id: dsh-verification-receipt
+    upstream: https://github.com/030611/dsh-verification-receipt
+    source_category: security
+    kubera_targets: [evidence-ledger, proof-of-work-portfolio]
+    license_status: UNKNOWN_REVIEW_REQUIRED
+    security_status: NOT_REVIEWED
+    risk: MEDIUM
+    verdict: CANDIDATE
+  - id: qiushi-dsh-evidence-audit
+    upstream: https://github.com/030611/qiushi-dsh-evidence-audit
+    source_category: security
+    kubera_targets: [evidence-ledger, decision-replay]
+    license_status: UNKNOWN_REVIEW_REQUIRED
+    security_status: NOT_REVIEWED
+    risk: MEDIUM
+    verdict: CANDIDATE
