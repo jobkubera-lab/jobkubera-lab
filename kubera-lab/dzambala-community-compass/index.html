@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DZAMBALA Community Compass</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    :root{font-family:Inter,system-ui,Arial,sans-serif;background:#f5f5f2;color:#111}
+    body{margin:0}.wrap{max-width:1180px;margin:auto;padding:24px}.hero{padding:34px 0 18px}.hero h1{font-size:clamp(2rem,5vw,4rem);margin:0 0 8px}.hero p{max-width:780px;font-size:1.05rem;line-height:1.5;color:#444}
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.controls button,.controls select{border:1px solid #bbb;background:white;padding:10px 14px;border-radius:999px;font:inherit;cursor:pointer}.controls button.active{background:#111;color:white;border-color:#111}
+    .status{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 22px;color:#555}.pill{background:white;border:1px solid #ddd;border-radius:999px;padding:7px 10px}
+    .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.panel{background:white;border:1px solid #ddd;border-radius:18px;overflow:hidden}.panel h2{padding:18px 18px 0;margin:0}.list{padding:12px 18px 18px;display:grid;gap:12px}.card{border:1px solid #e0e0e0;border-radius:14px;padding:15px}.card h3{margin:0 0 7px}.meta{font-size:.9rem;color:#666}.trust{font-weight:700}.card p{line-height:1.45;color:#333}.card a{color:#111;font-weight:700}#map{height:620px}.empty{padding:20px;color:#666}
+    @media(max-width:850px){.grid{grid-template-columns:1fr}#map{height:420px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="pill" style="display:inline-block">MVP v0.1 · London + Merton</div>
+    <h1>DZAMBALA Community Compass</h1>
+    <p>A verified-source navigator for community, culture, wellbeing, learning and volunteering. It does not rank beliefs or people — it ranks how well each listing can be verified.</p>
+  </section>
+
+  <div class="controls">
+    <button id="allBtn" class="active">All London</button>
+    <button id="mertonBtn">Merton only</button>
+    <select id="category">
+      <option value="all">All categories</option>
+      <option value="community">Community</option>
+      <option value="culture">Culture</option>
+      <option value="volunteering">Volunteering</option>
+    </select>
+  </div>
+
+  <div class="status">
+    <span class="pill" id="count">0 sources</span>
+    <span class="pill">Trust Score = source verification confidence</span>
+    <span class="pill">Last seed check: 21 Aug 2026</span>
+  </div>
+
+  <div class="grid">
+    <section class="panel"><h2>Verified sources</h2><div id="list" class="list"></div></section>
+    <section class="panel"><div id="map"></div></section>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const list = document.getElementById('list');
+const count = document.getElementById('count');
+const category = document.getElementById('category');
+const allBtn = document.getElementById('allBtn');
+const mertonBtn = document.getElementById('mertonBtn');
+let area = 'all'; let data = []; let markers = [];
+const map = L.map('map').setView([51.48,-0.16],10);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(map);
+function score(item){const t=item.trust;return t.authority+t.freshness+t.direct_link+t.local_relevance}
+function render(){
+  markers.forEach(m=>map.removeLayer(m)); markers=[];
+  const filtered=data.filter(x=>(area==='all'||x.area==='Merton')&&(category.value==='all'||x.category===category.value));
+  count.textContent=`${filtered.length} verified source${filtered.length===1?'':'s'}`;
+  list.innerHTML='';
+  if(!filtered.length){list.innerHTML='<div class="empty">No sources match this filter yet.</div>';return}
+  filtered.sort((a,b)=>score(b)-score(a)).forEach(item=>{
+    const card=document.createElement('article'); card.className='card';
+    card.innerHTML=`<h3>${item.name}</h3><div class="meta">${item.area} · ${item.category} · <span class="trust">Trust ${score(item)}/100</span></div><p>${item.description}</p><div class="meta">Checked ${item.last_checked} · ${item.source_type}</div><p><a href="${item.source_url}" target="_blank" rel="noopener">Open original source ↗</a></p>`;
+    list.appendChild(card);
+    if(Number.isFinite(item.lat)&&Number.isFinite(item.lon)){
+      const marker=L.marker([item.lat,item.lon]).addTo(map).bindPopup(`<strong>${item.name}</strong><br>Trust ${score(item)}/100`); markers.push(marker);
+    }
+  });
+  if(markers.length){const group=L.featureGroup(markers);map.fitBounds(group.getBounds().pad(0.22));}
+}
+allBtn.onclick=()=>{area='all';allBtn.classList.add('active');mertonBtn.classList.remove('active');render()};
+mertonBtn.onclick=()=>{area='Merton';mertonBtn.classList.add('active');allBtn.classList.remove('active');render()};
+category.onchange=render;
+fetch('./data.json').then(r=>{if(!r.ok)throw new Error('data.json failed');return r.json()}).then(json=>{data=json;render()}).catch(err=>{list.innerHTML=`<div class="empty">Could not load data: ${err.message}</div>`});
+</script>
+</body>
+</html>
