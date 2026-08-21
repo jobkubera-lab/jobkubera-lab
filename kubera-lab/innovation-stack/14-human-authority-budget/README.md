@@ -1,10 +1,17 @@
 # Human Authority Budget
 
-**Status:** `CONCEPT`  
+**Status:** `PROTOTYPE`  
 **Layer:** Governance / Permissions
 
 ## Purpose
 Extend `READ / CREATE / ACT / ADMIN` with explicit temporary limits so an agent cannot keep acting indefinitely after one approval.
+
+## Prototype implementation
+The v0.1 runtime implements control levels, capability allowlists, consumable counts and timezone-aware expiry. Missing capabilities, exhausted limits, expired grants and insufficient levels fail closed.
+
+A `GovernanceGate` combines this budget with Personal AI Constitution rules so a constitutional denial cannot consume or bypass authority.
+
+➡️ [Open the reference implementation](../reference-implementation/)
 
 ## Example grant
 ```yaml
@@ -17,14 +24,8 @@ limits:
   purchases: 0
 ```
 
-## Enforcement
-Every side-effecting tool call spends from the relevant budget. Expiry or exhaustion returns control to the human.
-
 ## Safety
-ADMIN should still not mean unlimited authority. High-risk classes can remain permanently approval-gated.
+`ADMIN` is not interpreted as unlimited authority. A capability still needs to be explicitly granted and high-risk classes can remain approval-gated.
 
-## Integrations
-Human Control Levels, Personal AI Constitution, Tool Executor, Evidence Ledger, Failure Vaccine.
-
-## MVP
-A local permission object checked before every mutating tool call, with immutable audit entries for grants and consumption.
+## Next prototype step
+Add tamper-evident audit entries for grant creation and every budget consumption event.
