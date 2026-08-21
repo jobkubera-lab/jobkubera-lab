@@ -8,6 +8,16 @@ from .reputation import ReputationEngine
 from .proof_work import ProofOfWork, ProofStage
 from .governance import GovernanceGate, AuthorizationResult
 from .visual_systems import DiagramIntent, SUPPORTED_DIAGRAM_TYPES
+from .external_intelligence import (
+    ContextClassification,
+    ExternalContext,
+    ExternalIntelligenceRequest,
+    ExternalIntelligenceResponse,
+    ExternalRole,
+    Finding,
+    Severity,
+    Verdict,
+)
 
 __all__ = [
     "Constitution", "Decision", "PolicyRule",
@@ -16,4 +26,6 @@ __all__ = [
     "ReputationEngine", "ProofOfWork", "ProofStage",
     "GovernanceGate", "AuthorizationResult",
     "DiagramIntent", "SUPPORTED_DIAGRAM_TYPES",
+    "ContextClassification", "ExternalContext", "ExternalIntelligenceRequest",
+    "ExternalIntelligenceResponse", "ExternalRole", "Finding", "Severity", "Verdict",
 ]

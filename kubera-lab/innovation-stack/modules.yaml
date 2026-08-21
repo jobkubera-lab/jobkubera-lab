@@ -1,4 +1,4 @@
-version: 2
+version: 3
 project: KUBERA_INNOVATION_STACK
 status_policy:
   CONCEPT: documented architecture, no claim of working implementation
@@ -23,6 +23,9 @@ modules:
   - {id: living-readme, status: CONCEPT, layer: delivery}
   - {id: british-english-language-agent, status: CONCEPT, layer: application}
   - {id: agent-society, status: CONCEPT, layer: agent}
+cross_cutting_capabilities:
+  - {id: visual-systems, status: PROTOTYPE, implementation: reference-implementation}
+  - {id: external-intelligence-node, status: PROTOTYPE, implementation: reference-implementation, contract_version: "1.0"}
 external_capabilities:
   - id: diagram-design
     role: visual-systems-renderer

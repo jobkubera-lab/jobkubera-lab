@@ -1,0 +1,16 @@
+{
+  "role": "independent_auditor",
+  "target": "KUBERA foundation runtime",
+  "provider": "claude",
+  "context": {
+    "classification": "PROJECT",
+    "share_authorized": true,
+    "summary": "Review only the supplied source files and specifications. The private repository remains private; do not assume access to files that were not provided."
+  },
+  "constraints": [
+    "do_not_modify_code",
+    "separate_verified_findings_from_assumptions",
+    "prioritize_security_privacy_correctness_and_missing_tests",
+    "return_structured_findings"
+  ]
+}
