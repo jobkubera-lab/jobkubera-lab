@@ -1,0 +1,26 @@
+Target: https://github.com/nhsuk/nhsuk-service-manual/issues/2497
+
+--- a/app/views/design-system/components/file-upload/index.njk
++++ b/app/views/design-system/components/file-upload/index.njk
+@@
+   <h2 id="how-to-use-file-upload">How to use file upload</h2>
+   <p>To upload a file, the user can either:</p>
+   <ul>
+     <li>use the "Choose file" button</li>
+     <li>drag and drop a file into the file upload input area</li>
+   </ul>
++
++  <p>If your service only accepts certain file types, tell users before they choose a file. Use hint text to list the accepted formats, for example: "Upload a JPG, PNG or PDF". Avoid restricting file types unless your service genuinely needs to, as unnecessary restrictions can make the service harder to use.</p>
+@@
+   <h4 id="if-the-file-is-empty">If the file is empty</h4>
+-  <p>Say "The selected file is empty".</h4>
++  <p>Say "The selected file is empty".</p>
+@@
+   <h4 id="if-there-was-a-problem-and-the-file-was-not-uploaded">If there was a problem and the file was not uploaded</h4>
+-  <p>Say "The selected file could not be uploaded – try again".
++  <p>Say "The selected file could not be uploaded – try again".</p>
+
+WHY THIS IS A GOOD CONTRIBUTION
+- Implements the exact direction in issue #2497: tell teams to give users file-type guidance before upload.
+- Fixes two malformed HTML paragraphs found in the same page.
+- Small, reviewable documentation change with accessibility value.
