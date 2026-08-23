@@ -10,8 +10,13 @@ from fastapi.responses import HTMLResponse
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = BASE_DIR / "data" / "services.json"
+STOPWORDS = {
+    "i", "me", "my", "we", "our", "the", "a", "an", "to", "for", "at", "in",
+    "on", "with", "and", "or", "is", "are", "was", "were", "want", "need",
+    "please", "help", "can", "could", "would"
+}
 
-app = FastAPI(title="KUBERA Council AI Service Finder", version="0.1.0")
+app = FastAPI(title="KUBERA Council AI Service Finder", version="0.1.1")
 
 
 def load_services() -> list[dict[str, Any]]:
@@ -25,6 +30,10 @@ def normalise(text: str) -> str:
     return re.sub(r"\s+", " ", text)
 
 
+def meaningful_tokens(text: str) -> set[str]:
+    return {token for token in normalise(text).split() if token not in STOPWORDS and len(token) > 1}
+
+
 def score_query(query: str, service: dict[str, Any]) -> tuple[int, list[str]]:
     q = normalise(query)
     candidates: list[str] = []
@@ -34,23 +43,26 @@ def score_query(query: str, service: dict[str, Any]) -> tuple[int, list[str]]:
 
     matched: list[str] = []
     score = 0
-    q_tokens = set(q.split())
+    q_tokens = meaningful_tokens(q)
 
     for phrase in candidates:
         p = normalise(phrase)
         if not p:
             continue
+
         if p in q:
             matched.append(phrase)
-            score += 4 + len(p.split())
+            score += 4 + len(meaningful_tokens(p))
             continue
 
-        p_tokens = set(p.split())
+        p_tokens = meaningful_tokens(p)
+        if not p_tokens:
+            continue
+
         overlap = len(q_tokens & p_tokens)
-        if overlap:
+        if overlap >= 2 or (len(p_tokens) == 1 and overlap == 1):
             score += overlap
-            if overlap >= max(1, len(p_tokens) // 2):
-                matched.append(phrase)
+            matched.append(phrase)
 
     return score, matched[:5]
 
