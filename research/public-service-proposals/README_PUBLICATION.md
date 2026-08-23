@@ -1,1 +1,0 @@
-These proposals are intended for publication in external GitHub issue trackers. External publication requires the connected GitHub integration to have permission to create issues in those repositories.
