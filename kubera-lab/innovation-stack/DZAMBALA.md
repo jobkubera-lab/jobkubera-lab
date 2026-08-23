@@ -72,6 +72,8 @@ Human decision and control
 
 ## 2040 research hypotheses
 
+Learning and reference material selected for the architecture is maintained in [`LEARNING_RESOURCES.md`](./LEARNING_RESOURCES.md).
+
 ### Sovereign Agent Kernel
 A portable governance/memory/evidence kernel capable of running above several agent runtimes and model providers.
 
