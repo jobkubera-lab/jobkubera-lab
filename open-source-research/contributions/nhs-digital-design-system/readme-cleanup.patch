@@ -1,0 +1,27 @@
+Target: https://github.com/NHS-digital-website/design-system
+
+--- a/README.md
++++ b/README.md
+@@
+-We will then investigate the issue and work on a fix if required. Alternatively, you are welcome to raise a pull request with your proposed fix and a link to the issue. We will then review your changes and merge or decline with an explaination.
++We will then investigate the issue and work on a fix if required. Alternatively, you are welcome to raise a pull request with your proposed fix and a link to the issue. We will then review your changes and merge or decline with an explanation.
+@@
+-You should include an explaination of the feature / component, along with the reasoning for the proposal.
++You should include an explanation of the feature / component, along with the reasoning for the proposal.
+@@
+-Once pushed, the distribtion workflow will deploy a version of storybook and CDN matching the tagged version name.
++Once pushed, the distribution workflow will deploy a version of Storybook and the CDN matching the tagged version name.
+@@
+-Release versions should always be created from the master branch. Note: this will require elevated repo permissions.
++Release versions should always be created from the main branch. Note: this will require elevated repo permissions.
+@@
+-Next, enter a release title (typically the version number) and a description of the changes - this should include any breaking changes and mirgration information.
++Next, enter a release title (typically the version number) and a description of the changes - this should include any breaking changes and migration information.
+
+WHY THIS IS A GOOD CONTRIBUTION
+- The repository's actual default branch is `main`, while its deployment documentation still says `master`.
+- Fixes four visible documentation typos: `explaination` (twice), `distribtion`, and `mirgration`.
+- Zero runtime risk and easy for maintainers to review.
+
+PR TITLE
+`Fix README typos and update release branch name`
