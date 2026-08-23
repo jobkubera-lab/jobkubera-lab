@@ -1,0 +1,31 @@
+Target: https://github.com/nhsengland/leaflet-geomaps-NHS
+
+--- /dev/null
++++ b/.gitignore
+@@
++.Rhistory
++.RData
++.Ruserdata
++.Rproj.user/
++
+--- a/.Rhistory
++++ /dev/null
+@@
+-(remove tracked local R history file)
+
+--- a/.Rproj.user
++++ /dev/null
+@@
+-(remove tracked RStudio user-state directory)
+
+WHY THIS SHOULD BE FIXED
+- `.Rhistory` contains developer-local command history and should not be versioned.
+- `.Rproj.user/` is RStudio per-user IDE state and should not be versioned.
+- Both add noise, can create accidental personal-data leakage, and make diffs less reproducible.
+- Adding a standard R `.gitignore` prevents the files returning.
+
+PR TITLE
+`Remove local R/RStudio state from the repository`
+
+PR BODY
+`This removes tracked developer-local R/RStudio state and adds a small .gitignore so it is not recommitted. The change does not alter the mapping examples or data.`
