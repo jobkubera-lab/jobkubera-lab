@@ -4,7 +4,7 @@ build-backend="setuptools.build_meta"
 
 [project]
 name="kubera-innovation-reference"
-version="0.7.0"
+version="0.8.0"
 description="KUBERA Innovation Stack reference runtime — sovereign governance, evidence and provider-neutral contracts"
 requires-python=">=3.11"
 
