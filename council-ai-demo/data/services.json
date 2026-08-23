@@ -1,0 +1,57 @@
+[
+  {
+    "id": "homelessness-prevention",
+    "title": "Homelessness prevention and housing advice",
+    "description": "Help if you are at risk of losing your home, have been asked to leave, or need urgent housing advice.",
+    "source_url": "https://www.gov.uk/if-youre-homeless-at-risk-of-homelessness",
+    "keywords": ["homeless", "eviction", "landlord", "asked to leave", "housing advice", "lose my home", "nowhere to live", "rent problem"],
+    "aliases": {
+      "uk": ["виселення", "орендодавець", "житло", "втрачаю житло", "нема де жити", "допомога з житлом"],
+      "pl": ["eksmisja", "właściciel chce mnie wyrzucić", "pomoc mieszkaniowa", "bezdomność", "nie mam gdzie mieszkać"]
+    }
+  },
+  {
+    "id": "council-tax-support",
+    "title": "Council Tax support",
+    "description": "Information about Council Tax support, reductions and help when you are struggling to pay.",
+    "source_url": "https://www.gov.uk/apply-council-tax-reduction",
+    "keywords": ["council tax", "cannot pay council tax", "council tax reduction", "council tax support", "tax bill"],
+    "aliases": {
+      "uk": ["муніципальний податок", "не можу платити council tax", "знижка council tax"],
+      "pl": ["council tax", "nie mogę zapłacić council tax", "zniżka council tax", "pomoc z podatkiem"]
+    }
+  },
+  {
+    "id": "adult-social-care",
+    "title": "Adult social care and support",
+    "description": "Support for adults who need help with daily living, care needs or support for carers.",
+    "source_url": "https://www.nhs.uk/conditions/social-care-and-support-guide/",
+    "keywords": ["care for my mother", "care for my father", "adult social care", "carer support", "help at home", "daily living support"],
+    "aliases": {
+      "uk": ["догляд за мамою", "догляд за батьком", "соціальна допомога дорослим", "допомога вдома"],
+      "pl": ["opieka nad mamą", "opieka nad ojcem", "opieka społeczna", "pomoc w domu"]
+    }
+  },
+  {
+    "id": "waste-recycling",
+    "title": "Waste and recycling",
+    "description": "Bin collections, missed collections, recycling and household waste information.",
+    "source_url": "https://www.gov.uk/rubbish-collection-day",
+    "keywords": ["bin", "rubbish", "recycling", "missed collection", "waste", "garbage"],
+    "aliases": {
+      "uk": ["сміття", "переробка", "не забрали сміття", "контейнер"],
+      "pl": ["śmieci", "recykling", "nie odebrali śmieci", "pojemnik"]
+    }
+  },
+  {
+    "id": "benefits-support",
+    "title": "Benefits and financial support",
+    "description": "Find information about benefits and financial help you may be entitled to.",
+    "source_url": "https://www.gov.uk/browse/benefits",
+    "keywords": ["benefits", "money help", "financial support", "low income", "universal credit", "need money"],
+    "aliases": {
+      "uk": ["допомога грошима", "соціальні виплати", "пільги", "низький дохід"],
+      "pl": ["zasiłki", "pomoc finansowa", "niski dochód", "świadczenia"]
+    }
+  }
+]
