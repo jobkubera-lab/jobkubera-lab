@@ -7,7 +7,7 @@
     "keywords": ["homeless", "eviction", "landlord", "asked to leave", "housing advice", "lose my home", "nowhere to live", "rent problem"],
     "aliases": {
       "uk": ["виселення", "орендодавець", "житло", "втрачаю житло", "нема де жити", "допомога з житлом"],
-      "pl": ["eksmisja", "właściciel chce mnie wyrzucić", "pomoc mieszkaniowa", "bezdomność", "nie mam gdzie mieszkać"]
+      "pl": ["eksmisja", "właściciel chce mnie wyrzucić", "pomoc mieszkaniowa", "pomocy mieszkaniowej", "bezdomność", "nie mam gdzie mieszkać"]
     }
   },
   {
@@ -18,7 +18,7 @@
     "keywords": ["council tax", "cannot pay council tax", "council tax reduction", "council tax support", "tax bill"],
     "aliases": {
       "uk": ["муніципальний податок", "не можу платити council tax", "знижка council tax"],
-      "pl": ["council tax", "nie mogę zapłacić council tax", "zniżka council tax", "pomoc z podatkiem"]
+      "pl": ["council tax", "nie mogę zapłacić council tax", "zniżka council tax", "pomoc z podatkiem", "pomocy z podatkiem"]
     }
   },
   {
@@ -51,7 +51,7 @@
     "keywords": ["benefits", "money help", "financial support", "low income", "universal credit", "need money"],
     "aliases": {
       "uk": ["допомога грошима", "соціальні виплати", "пільги", "низький дохід"],
-      "pl": ["zasiłki", "pomoc finansowa", "niski dochód", "świadczenia"]
+      "pl": ["zasiłki", "pomoc finansowa", "pomocy finansowej", "niski dochód", "świadczenia"]
     }
   }
 ]
