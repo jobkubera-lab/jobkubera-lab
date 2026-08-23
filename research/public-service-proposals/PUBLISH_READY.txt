@@ -1,5 +1,0 @@
-NHS.UK Frontend: READY
-GOV.UK Frontend: READY
-LocalGov Drupal natural-language service finder: READY
-
-Existing LocalGov issue: https://github.com/localgovdrupal/localgov/issues/927
