@@ -30,6 +30,7 @@ from .plugin_registry import (
 )
 from .evidence_ledger import EvidenceEntry, EvidenceLedger
 from .agent_pipeline import DeterministicAgentPipeline, PipelineResult, PipelineVerdict, StageResult
+from .tool_safety import PrivacyGate, SecretScanResult, ToolLoopGuard, ToolValidator, ValidationResult
 
 __all__ = [
     "Constitution", "Decision", "PolicyRule",
@@ -45,4 +46,5 @@ __all__ = [
     "PluginVerdict", "ReviewState",
     "EvidenceEntry", "EvidenceLedger",
     "DeterministicAgentPipeline", "PipelineResult", "PipelineVerdict", "StageResult",
+    "PrivacyGate", "SecretScanResult", "ToolLoopGuard", "ToolValidator", "ValidationResult",
 ]
