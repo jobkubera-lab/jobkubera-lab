@@ -29,11 +29,36 @@ class BaselineEvaluatorTests(unittest.TestCase):
         self.assertGreater(score, 0)
 
     def test_predict_falls_back_for_unrelated_query(self):
-        predicted, _, score = baseline.predict(
+        predicted, top3, score = baseline.predict(
             "renew my passport", self.catalogue
         )
         self.assertIsNone(predicted)
+        self.assertEqual(top3, [])
         self.assertLess(score, baseline.FALLBACK_THRESHOLD)
+
+    def test_zero_overlap_does_not_create_alphabetical_top3(self):
+        predicted, top3, score = baseline.predict(
+            "weather tomorrow", self.catalogue
+        )
+        self.assertIsNone(predicted)
+        self.assertEqual(top3, [])
+        self.assertEqual(score, 0.0)
+
+    def test_filler_word_about_does_not_create_match(self):
+        catalogue = [
+            {
+                "id": "business-rates",
+                "name": "Business rates",
+                "description": "Information about non-domestic rates for businesses",
+                "aliases": ["shop rates"],
+            }
+        ]
+        predicted, top3, score = baseline.predict(
+            "Write me a poem about London", catalogue
+        )
+        self.assertIsNone(predicted)
+        self.assertEqual(top3, [])
+        self.assertEqual(score, 0.0)
 
     def test_evaluate_reports_top1_top3_and_fallback_metrics(self):
         queries = [
