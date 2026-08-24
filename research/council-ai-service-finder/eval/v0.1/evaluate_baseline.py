@@ -16,6 +16,7 @@ STOPWORDS = {
     "a", "an", "and", "are", "can", "do", "for", "how", "i", "is", "it",
     "me", "my", "of", "on", "the", "to", "want", "where", "with",
 }
+FALLBACK_THRESHOLD = 0.20
 
 
 def tokenize(text: str) -> set[str]:
@@ -49,6 +50,15 @@ def rank(query: str, catalogue: Iterable[dict]) -> list[tuple[str, float]]:
     return sorted(ranked, key=lambda item: (-item[1], item[0]))
 
 
+def predict(query: str, catalogue: Iterable[dict], threshold: float = FALLBACK_THRESHOLD):
+    ranked = rank(query, catalogue)
+    if not ranked:
+        return None, [], 0.0
+    top_id, top_score = ranked[0]
+    predicted = top_id if top_score >= threshold else None
+    return predicted, ranked[:3], top_score
+
+
 def load_queries() -> list[dict]:
     return [
         json.loads(line)
@@ -57,45 +67,60 @@ def load_queries() -> list[dict]:
     ]
 
 
-def main() -> int:
-    catalogue = json.loads(CATALOGUE_PATH.read_text(encoding="utf-8"))
-    queries = load_queries()
-
-    correct = 0
-    fallbacks_correct = 0
+def evaluate(catalogue: list[dict], queries: list[dict]) -> dict:
+    top1_correct = 0
+    top3_correct = 0
+    positive_cases = 0
     fallback_cases = 0
-    evaluated = 0
+    fallback_correct = 0
+    false_positive_fallbacks = 0
 
     for case in queries:
-        ranked = rank(case["query"], catalogue)
-        top_id, top_score = ranked[0]
+        predicted, top3, top_score = predict(case["query"], catalogue)
         expected = case.get("expected_service_id")
-
-        # A deliberately conservative baseline fallback threshold.
-        predicted = top_id if top_score >= 0.20 else None
-        evaluated += 1
+        top3_ids = [service_id for service_id, _ in top3]
 
         if expected is None:
             fallback_cases += 1
             if predicted is None:
-                fallbacks_correct += 1
-                correct += 1
-        elif predicted == expected:
-            correct += 1
+                fallback_correct += 1
+            else:
+                false_positive_fallbacks += 1
+        else:
+            positive_cases += 1
+            if predicted == expected:
+                top1_correct += 1
+            if expected in top3_ids:
+                top3_correct += 1
 
         print(
             f"{case['id']}: expected={expected!r} predicted={predicted!r} "
-            f"score={top_score:.3f}"
+            f"top3={top3_ids!r} score={top_score:.3f}"
         )
 
-    accuracy = correct / evaluated if evaluated else 0.0
-    fallback_accuracy = (
-        fallbacks_correct / fallback_cases if fallback_cases else 0.0
-    )
-    print(f"\naccuracy={accuracy:.3f} ({correct}/{evaluated})")
+    return {
+        "positive_cases": positive_cases,
+        "fallback_cases": fallback_cases,
+        "precision_at_1": top1_correct / positive_cases if positive_cases else 0.0,
+        "top3_recall": top3_correct / positive_cases if positive_cases else 0.0,
+        "fallback_accuracy": fallback_correct / fallback_cases if fallback_cases else 0.0,
+        "false_positive_fallbacks": false_positive_fallbacks,
+    }
+
+
+def main() -> int:
+    catalogue = json.loads(CATALOGUE_PATH.read_text(encoding="utf-8"))
+    queries = load_queries()
+    metrics = evaluate(catalogue, queries)
+
+    print("\nMetrics")
+    print(f"precision_at_1={metrics['precision_at_1']:.3f}")
+    print(f"top3_recall={metrics['top3_recall']:.3f}")
+    print(f"fallback_accuracy={metrics['fallback_accuracy']:.3f}")
+    print(f"false_positive_fallbacks={metrics['false_positive_fallbacks']}")
     print(
-        f"fallback_accuracy={fallback_accuracy:.3f} "
-        f"({fallbacks_correct}/{fallback_cases})"
+        f"cases: positive={metrics['positive_cases']} "
+        f"fallback={metrics['fallback_cases']}"
     )
     return 0
 
