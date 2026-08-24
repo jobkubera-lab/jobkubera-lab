@@ -13,8 +13,11 @@ CATALOGUE_PATH = HERE / "service_catalogue.json"
 QUERIES_PATH = HERE / "queries.jsonl"
 TOKEN_RE = re.compile(r"[\w']+", re.UNICODE)
 STOPWORDS = {
-    "a", "an", "and", "are", "can", "do", "for", "how", "i", "is", "it",
-    "me", "my", "of", "on", "the", "to", "want", "where", "with",
+    "a", "about", "an", "and", "are", "can", "did", "do", "for", "how",
+    "i", "is", "it", "me", "my", "of", "on", "please", "should", "tell",
+    "that", "the", "these", "this", "those", "to", "want", "was", "what",
+    "when", "where", "whether", "who", "why", "will", "with", "would",
+    "write",
 }
 FALLBACK_THRESHOLD = 0.20
 
@@ -54,9 +57,15 @@ def predict(query: str, catalogue: Iterable[dict], threshold: float = FALLBACK_T
     ranked = rank(query, catalogue)
     if not ranked:
         return None, [], 0.0
+
     top_id, top_score = ranked[0]
     predicted = top_id if top_score >= threshold else None
-    return predicted, ranked[:3], top_score
+
+    # Do not present zero-overlap entries as meaningful Top-3 candidates.
+    # Without this filter, all-zero ties are ordered alphabetically by ID,
+    # which can create fake recall hits with no lexical evidence.
+    evidenced_top3 = [item for item in ranked if item[1] > 0.0][:3]
+    return predicted, evidenced_top3, top_score
 
 
 def load_queries() -> list[dict]:
