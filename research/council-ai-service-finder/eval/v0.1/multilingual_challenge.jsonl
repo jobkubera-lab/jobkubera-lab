@@ -1,0 +1,12 @@
+{"id":"m001","query":"У моєму орендованому житлі сиро і власник нічого не ремонтує","language":"uk","expected_service_id":"housing-repairs-private-rented"}
+{"id":"m002","query":"Потрібна пільга на муніципальний податок через низький дохід","language":"uk","expected_service_id":"council-tax-support"}
+{"id":"m003","query":"У мене залишилися старі меблі, як замовити їх вивезення?","language":"uk","expected_service_id":"bulky-waste-collection"}
+{"id":"m004","query":"Сміття сьогодні не вивезли, куди повідомити?","language":"uk","expected_service_id":"missed-bin"}
+{"id":"m005","query":"W wynajmowanym mieszkaniu jest pleśń i właściciel nic nie robi","language":"pl","expected_service_id":"housing-repairs-private-rented"}
+{"id":"m006","query":"Potrzebuję ulgi na podatek lokalny z powodu niskiego dochodu","language":"pl","expected_service_id":"council-tax-support"}
+{"id":"m007","query":"Mam starą lodówkę i duże meble do odbioru","language":"pl","expected_service_id":"bulky-waste-collection"}
+{"id":"m008","query":"Nie zabrano mojego kosza z odpadami","language":"pl","expected_service_id":"missed-bin"}
+{"id":"m009","query":"Яка завтра погода в Лондоні?","language":"uk","expected_service_id":null,"expected_action":"fallback"}
+{"id":"m010","query":"Напиши мені вірш українською","language":"uk","expected_service_id":null,"expected_action":"fallback"}
+{"id":"m011","query":"Jaka będzie jutro pogoda?","language":"pl","expected_service_id":null,"expected_action":"fallback"}
+{"id":"m012","query":"Napisz dla mnie wiersz o Londynie","language":"pl","expected_service_id":null,"expected_action":"fallback"}
