@@ -14,7 +14,7 @@ CATALOGUE_PATH = HERE / "service_catalogue.json"
 QUERIES_PATH = HERE / "queries.jsonl"
 TOKEN_RE = re.compile(r"[\w']+", re.UNICODE)
 STOPWORDS = {
-    "a", "about", "an", "and", "are", "can", "did", "do", "for", "how",
+    "a", "about", "an", "and", "are", "can", "council", "did", "do", "for", "how",
     "i", "is", "it", "me", "my", "of", "on", "please", "should", "tell",
     "that", "the", "these", "this", "those", "to", "want", "was", "what",
     "when", "where", "whether", "who", "why", "will", "with", "would",
@@ -27,6 +27,10 @@ AMBIGUITY_MARGIN = 0.15
 LEGAL_CONCLUSION_PATTERNS = (
     re.compile(r"\b(legally|legal)\b.*\b(guilty|liable|illegal|lawful|unlawful)\b", re.I),
     re.compile(r"\b(is|was|are|were)\b.*\b(guilty|liable|illegal|lawful|unlawful)\b", re.I),
+)
+PROMPT_INJECTION_PATTERNS = (
+    re.compile(r"\bignore\b.*\b(catalogue|instructions?|rules?)\b", re.I),
+    re.compile(r"\binvent\b.*\b(service|answer|result)\b", re.I),
 )
 
 
@@ -45,7 +49,10 @@ def service_text(service: dict) -> str:
 
 
 def is_guarded(query: str) -> bool:
-    return any(pattern.search(query) for pattern in LEGAL_CONCLUSION_PATTERNS)
+    return any(
+        pattern.search(query)
+        for pattern in (*LEGAL_CONCLUSION_PATTERNS, *PROMPT_INJECTION_PATTERNS)
+    )
 
 
 def build_index(catalogue: list[dict]) -> tuple[list[Counter], dict[str, int], float]:
