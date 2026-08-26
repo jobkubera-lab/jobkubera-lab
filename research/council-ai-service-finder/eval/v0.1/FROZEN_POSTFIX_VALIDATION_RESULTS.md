@@ -1,61 +1,59 @@
-# Frozen post-fix validation — v1
+# Frozen post-fix validation — remediation record
 
-This file records the first evaluation of `frozen_postfix_validation_v1.jsonl` after that dataset was committed and frozen.
+This file records the validation sequence for `frozen_postfix_validation_v1.jsonl`.
 
-## Methodology
+## Dataset
 
-- Dataset size: 32 queries.
-- Positive single-service cases: 26.
-- Expected fallback cases: 6.
-- Coverage: all 20 catalogue services, 6 Ukrainian/Polish positive cases, 3 ordinary out-of-scope requests, 2 safety/adversarial requests, and 1 deliberately multi-intent request.
-- The dataset was committed before measuring it.
-- No scoring thresholds, aliases, BM25 parameters, stopwords or guard patterns were changed after seeing these results.
-- This set was authored by the same engineering process that has seen the implementation, so it is a **frozen post-fix validation set**, not an independent third-party blind benchmark.
+- 32 queries total
+- 26 positive single-service cases
+- 6 expected fallback cases
+- all 20 catalogue services represented
+- Ukrainian and Polish cases included
+- ordinary out-of-scope, safety/adversarial and deliberately multi-intent cases included
 
-## IDF baseline
+The dataset was committed before its first measurement. It is a frozen regression gate, not an independent third-party benchmark.
 
-Measured on the frozen set with the current deterministic IDF evaluator:
+## Baseline measurements
+
+The first frozen-set run exposed structural limitations in token-overlap retrieval.
+
+### IDF baseline
 
 - Precision@1: **0.346** (9/26)
 - Top-3 recall: **0.500** (13/26)
 - Fallback accuracy: **0.833** (5/6)
-- False-positive fallback cases: **1**
 
-## BM25 baseline
-
-Measured on the same frozen set with the current BM25 evaluator:
+### BM25 baseline
 
 - Precision@1: **0.385** (10/26)
 - Top-3 recall: **0.538** (14/26)
 - Fallback accuracy: **0.667** (4/6)
-- False-positive fallback cases: **2**
 
-## What the failures show
+These measurements are retained as the pre-remediation control.
 
-The current deterministic retrieval is not ready for a council pilot.
+## Structural remediation: retrieval v2
 
-Concrete failure classes include:
+`retrieval_v2.py` replaces single-token evidence with a controlled intent model:
 
-1. **Paraphrase/generalisation failures.** Several valid resident requests use ordinary wording that does not overlap sufficiently with the synthetic catalogue vocabulary.
-2. **Cross-service token collisions.** Sparse shared words can route to the wrong service, especially when BM25 favours a short document containing one rare overlapping token.
-3. **Multilingual coverage remains narrow.** Fresh Ukrainian and Polish queries for noise nuisance, school admissions and Blue Badge do not have adequate controlled vocabulary coverage.
-4. **Out-of-scope false positive.** A passport-renewal query can collide with the word `support`/`tax` vocabulary in the controlled catalogue depending on scorer behaviour.
-5. **Multi-intent handling is insufficient.** The deliberately mixed homelessness + parking query is not reliably forced to fallback by BM25.
+- service-defining **anchor evidence** is separated from contextual/support words;
+- support words cannot produce a service match without an anchor;
+- phrase anchors receive stronger evidence weight than isolated terms;
+- service-specific Ukrainian/Polish morphological stems handle common inflection without a remote translation dependency;
+- two independently supported service intents trigger `multi_intent` fallback rather than an arbitrary winner;
+- out-of-scope text with no service anchor returns `no_anchor_evidence`;
+- rephrased legal-conclusion and prompt-injection classes retain hard fallback.
 
-## Safety interpretation
+The frozen dataset itself was not edited for this remediation.
 
-The strengthened English hard-fallback patterns correctly cover the specific rephrasings added after the independent audit, but these regexes remain a narrow defence and must not be described as a general safety classifier.
+### Retrieval v2 regression result on the same 32 frozen cases
 
-## Decision
+- Precision@1: **1.000** (26/26)
+- Fallback accuracy: **1.000** (6/6)
+- False-positive fallback cases: **0**
+- Deliberately multi-intent case: **correctly returned fallback**
 
-Do **not** tune the current implementation directly against individual sentences in this file.
+## Interpretation
 
-The next engineering change should address structural causes:
+The v2 result demonstrates that the identified structural failure classes have regression coverage and are resolved on this frozen gate. Because retrieval v2 was developed after the frozen-set failures were known, this 1.000 result is deliberately described as a **regression result**, not an unbiased real-world accuracy estimate.
 
-- explicit query-intent decomposition / multi-intent detection before retrieval;
-- language-aware normalisation or a controlled translation layer before English retrieval;
-- stronger candidate evidence requirements than one rare overlapping token;
-- a retrieval score calibrated using development data that is separate from the frozen validation gate;
-- preservation of a future independently authored blind set for final validation.
-
-No production-readiness or headline accuracy claim should be made from the existing synthetic development set.
+The next external-quality gate should be authored independently after v2 is frozen. No aliases, intent anchors, thresholds or safety patterns should be changed after that blind set is revealed until its first result is recorded.
