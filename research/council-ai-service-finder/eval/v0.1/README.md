@@ -1,66 +1,71 @@
-# Council AI Service Finder — Evaluation Dataset v0.1
+# Council AI Service Finder — Evaluation Harness
 
-This directory is a **pre-production evaluation harness**, not a claim of live council integration.
+A deterministic research harness for mapping ordinary resident language to a controlled catalogue of council services without inventing unsupported services or advice.
 
-## Purpose
+## Current architecture
 
-Measure whether a service-finder can map ordinary resident language to a controlled catalogue of council services without inventing services or advice.
+The project now contains three transparent retrieval controls:
+
+- `evaluate_baseline.py` — IDF-weighted lexical baseline;
+- `evaluate_bm25.py` — dependency-free BM25 comparison;
+- `retrieval_v2.py` — structured intent retrieval with anchor evidence, multilingual morphology, multi-intent fallback and hard safety fallbacks.
+
+## Retrieval v2
+
+The v2 matcher addresses the failure modes found during baseline validation without introducing an LLM dependency.
+
+### Anchor evidence
+
+Each service has service-defining anchors in `intent_lexicon_v2.json`. Context words can improve an already-supported match but cannot create a service match on their own.
+
+Example: `low income` is context, not proof of Council Tax Support. A tax anchor such as `council tax`, `local tax` or `tax bill` is required.
+
+### Multilingual morphology
+
+Service-specific Ukrainian and Polish stems support common inflection patterns for the multilingual services currently covered by the evaluation set. This keeps the behaviour deterministic and locally testable.
+
+### Multi-intent handling
+
+If two distinct services both have strong anchor evidence, v2 returns a conservative `multi_intent` fallback rather than arbitrarily selecting one service.
+
+### Safety fallback
+
+Known classes of authoritative legal-conclusion requests and prompt-injection instructions are hard-fallback cases before service selection.
+
+## Frozen regression gate
+
+`frozen_postfix_validation_v1.jsonl` contains 32 resident-style cases covering all 20 catalogue services plus multilingual, out-of-scope, adversarial and multi-intent requests.
+
+After the structural v2 remediation, the unchanged frozen set records:
+
+- Precision@1: **1.000 (26/26)**
+- Fallback accuracy: **1.000 (6/6)**
+- False-positive fallback cases: **0**
+- Multi-intent case: **correct fallback**
+
+See `FROZEN_POSTFIX_VALIDATION_RESULTS.md` for the full remediation record and the earlier IDF/BM25 controls.
+
+These are regression results. A future external-quality benchmark should be authored independently after v2 is frozen and measured before any further tuning.
 
 ## Files
 
-- `service_catalogue.json` — small canonical test catalogue used only for evaluation.
-- `queries.jsonl` — primary synthetic evaluation set.
-- `multilingual_challenge.jsonl` — secondary Ukrainian/Polish challenge set written after the first alias pass. It is useful for regression testing but is **not an independently authored held-out set**.
-- `evaluate_baseline.py` — deterministic IDF-weighted evaluator with explicit fallback rules.
-- `test_evaluate_baseline.py` — unit/regression tests.
+- `service_catalogue.json` — controlled 20-service evaluation catalogue
+- `intent_lexicon_v2.json` — service anchors, support evidence and multilingual stems
+- `queries.jsonl` — original synthetic evaluation set
+- `multilingual_challenge.jsonl` — multilingual regression challenge
+- `frozen_postfix_validation_v1.jsonl` — frozen post-fix regression gate
+- `evaluate_baseline.py` — IDF baseline
+- `evaluate_bm25.py` — BM25 baseline
+- `retrieval_v2.py` — structured retrieval v2
+- `test_evaluate_baseline.py` — baseline tests
+- `test_evaluate_bm25.py` — BM25 tests
+- `test_retrieval_v2.py` — v2 architecture and safety regression tests
 
-## Rules
+## Core invariants
 
-1. The system may return only service IDs present in `service_catalogue.json`.
-2. A query marked `expected_service_id: null` must trigger a fallback rather than a guessed service.
-3. Evaluation reports Precision@1, Top-3 recall, fallback accuracy, false-positive fallbacks, and decision reasons.
-4. Raw resident queries must not be logged in a production system by default.
-5. The datasets are synthetic and must be replaced or supplemented with a real council-approved catalogue and an independently authored validation set before any production-readiness claim.
-
-## Deterministic v0.3 baseline
-
-The baseline remains model-free:
-
-1. tokenize the resident query and controlled service catalogue;
-2. derive smoothed IDF weights from the catalogue so common words carry less weight than distinctive terms;
-3. rank only official catalogue entries;
-4. discard zero-evidence candidates;
-5. fall back when the best score is below the engineering threshold;
-6. fall back when the top candidates are too close to distinguish safely;
-7. apply a narrow safety guard for requests asking the finder to make authoritative legal conclusions.
-
-This is intentionally conservative. A fallback is preferable to confidently routing a resident to the wrong service.
-
-## Measured engineering diagnostics
-
-With `FALLBACK_THRESHOLD = 0.10` and `AMBIGUITY_MARGIN = 0.02`, the current primary synthetic set measures approximately:
-
-- Precision@1: **0.895** (34/38)
-- Top-3 recall: **0.974** (37/38)
-- fallback accuracy: **1.000** (4/4)
-
-The secondary multilingual challenge set measures:
-
-- Precision@1: **0.875** (7/8)
-- Top-3 recall: **0.875** (7/8)
-- fallback accuracy: **1.000** (4/4)
-
-These figures are regression diagnostics only. The multilingual challenge set was authored after the first multilingual alias pass, so it cannot demonstrate independent generalisation.
-
-## Known limitations
-
-- The service catalogue is synthetic rather than council-approved production data.
-- Multilingual coverage is shallow and limited to a subset of services.
-- Tokenisation has no language-specific stemming or lemmatisation.
-- The safety guard intentionally covers only narrow legal-conclusion patterns; it is not a general safety classifier.
-- Threshold and ambiguity settings are engineering defaults, not an SLA.
-- A genuinely held-out evaluation set must be written independently of the catalogue/alias authors.
-
-## Next experiment
-
-Do **not** add an LLM merely to improve headline metrics. First expand independently validated multilingual coverage and compare this deterministic IDF baseline with BM25 or another transparent retrieval baseline. Add embeddings or an LLM reranker only if those simpler systems fail on representative held-out data.
+1. Return only controlled service IDs.
+2. No service match without service-defining evidence.
+3. Ambiguous/multi-intent input falls back rather than choosing arbitrarily.
+4. Anonymous/offline deterministic operation remains possible.
+5. Retrieval decisions remain explainable through matched anchors/support terms.
+6. No production claim is inferred from a synthetic catalogue; council deployment requires council-approved service data and an external validation gate.
