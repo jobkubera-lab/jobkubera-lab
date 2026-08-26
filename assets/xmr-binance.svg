@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="170" viewBox="0 0 760 170" role="img" aria-label="Monero XMR Binance reference price">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#05070b"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="170" rx="22" fill="url(#bg)"/>
+  <rect x="1" y="1" width="758" height="168" rx="21" fill="none" stroke="#2b313b"/>
+  <circle cx="73" cy="85" r="43" fill="#ff6600"/>
+  <text x="73" y="77" text-anchor="middle" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">XMR</text>
+  <text x="73" y="101" text-anchor="middle" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="12">MONERO</text>
+  <text x="140" y="48" fill="#9ca3af" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" letter-spacing="1.4">MONERO MARKET WATCH</text>
+  <text x="140" y="94" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="700">Updating…</text>
+  <text x="140" y="124" fill="#f3ba2f" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700">BINANCE REFERENCE PRICE</text>
+  <text x="140" y="148" fill="#6b7280" font-family="Arial,Helvetica,sans-serif" font-size="12">XMR is not a Binance spot trading pair • card refreshes automatically</text>
+</svg>
