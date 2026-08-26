@@ -1,0 +1,22 @@
+{
+  "housing-repairs-private-rented": {"anchors": ["landlord", "rented", "leak", "mould", "damp", "disrepair", "hazard", "black patch"], "supports": ["repair", "wall"]},
+  "council-tax-support": {"anchors": ["council tax", "local tax", "tax bill", "council tax reduction"], "supports": ["low income", "wages", "support", "reduction"]},
+  "bulky-waste-collection": {"anchors": ["wardrobe", "washing machine", "fridge", "sofa", "furniture", "appliance", "bulky", "large item", "too big"], "supports": ["collect", "collection", "dispose"]},
+  "missed-bin": {"anchors": ["bin", "rubbish", "recycling", "left behind", "not collected", "missed collection"], "supports": ["collection", "street"]},
+  "homelessness-help": {"anchors": ["tenancy", "no place to sleep", "lose my home", "losing my home", "homeless", "eviction", "nowhere to stay"], "supports": ["ending", "sleep", "home"]},
+  "housing-benefit": {"anchors": ["rent", "housing benefit", "housing payment"], "supports": ["low income", "support", "help", "payment"]},
+  "blue-badge": {"anchors": ["mobility", "disabled parking", "parking permit", "disability"], "supports": ["limited", "disabled"], "stems": ["інвалід", "паркуван", "ходи", "niepełnospraw", "parkow", "chodz"]},
+  "adult-social-care": {"anchors": ["elderly", "dress", "meals", "help at home", "care assessment", "adult care", "carer"], "supports": ["father", "mother", "home"]},
+  "childrens-social-care": {"anchors": ["young person", "child", "at risk", "safeguarding", "child safety"], "supports": ["unsafe", "home"]},
+  "school-admissions": {"anchors": ["school place", "state school", "school"], "supports": ["daughter", "son", "moving", "borough"], "stems": ["школ", "дитин", "szkol", "córk"]},
+  "planning-permission": {"anchors": ["adding another room", "extension", "planning", "development"], "supports": ["property", "build", "room"]},
+  "noise-nuisance": {"anchors": ["loud", "noise", "music", "parties", "thumping"], "supports": ["night", "neighbour", "flat"], "stems": ["гучн", "музик", "сусід", "głośn", "imprez", "sąsiedz"]},
+  "food-safety": {"anchors": ["takeaway", "unsafe food", "became ill", "food", "restaurant", "hygiene", "chicken"], "supports": ["ill", "unsafe"]},
+  "parking-penalty": {"anchors": ["penalty notice", "parking penalty", "parking ticket", "pcn", "fine"], "supports": ["car", "mistake", "issued"]},
+  "register-birth": {"anchors": ["baby", "birth", "newborn"], "supports": ["registration", "register", "official"]},
+  "register-death": {"anchors": ["passed away", "death", "died"], "supports": ["registration", "register", "official", "relative"]},
+  "street-lighting": {"anchors": ["lamp post", "street lamp", "street light", "lighting"], "supports": ["dark", "corner"]},
+  "pothole": {"anchors": ["crater", "pothole", "carriageway", "road defect", "hole in road"], "supports": ["road", "cars", "swerving"]},
+  "fly-tipping": {"anchors": ["abandoned", "mattress", "dumped", "fly tipping", "illegal waste"], "supports": ["bags", "furniture", "alley"]},
+  "business-rates": {"anchors": ["business rates", "shop", "businesses", "property tax", "non domestic"], "supports": ["charged", "property", "small"]}
+}
