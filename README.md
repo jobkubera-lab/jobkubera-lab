@@ -8,6 +8,16 @@
   <img src="https://komarev.com/ghpvc/?username=jobkubera-lab&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
 </p>
 
+## 🟠 Monero (XMR) — Market Watch
+
+<p align="center">
+  <a href="https://www.binance.com/en/price/monero/USD">
+    <img src="assets/xmr-binance.svg" width="760" alt="Monero XMR — Binance reference price" />
+  </a>
+</p>
+
+<p align="center"><sub>Reference market price displayed by Binance · informational only · XMR is not a Binance spot trading pair.</sub></p>
+
 ## AI Solutions Builder · KUBERA LAB · AI agents, local intelligence, civic-tech and interactive maps
 
 I build practical AI systems, local-intelligence tools, interactive maps and digital products that connect **real-world experience with useful technology**.
