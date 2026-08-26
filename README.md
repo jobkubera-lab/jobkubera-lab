@@ -12,11 +12,17 @@
 
 <p align="center">
   <a href="https://www.binance.com/en/price/monero/USD">
-    <img src="assets/xmr-binance.svg" width="760" alt="Monero XMR — Binance reference price" />
+    <img src="assets/xmr-binance.svg" width="760" alt="Monero XMR market watch" />
   </a>
 </p>
 
-<p align="center"><sub>Reference market price displayed by Binance · informational only · XMR is not a Binance spot trading pair.</sub></p>
+<p align="center">
+  <a href="https://www.binance.com/en/price/monero/USD">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.coingecko.com%2Fapi%2Fv3%2Fsimple%2Fprice%3Fids%3Dmonero%26vs_currencies%3Dusd&query=%24.monero.usd&suffix=%20USD&label=XMR%20LIVE&logo=monero&logoColor=white&color=ff6600&style=for-the-badge" alt="Live XMR/USD market price" />
+  </a>
+</p>
+
+<p align="center"><sub>Live XMR/USD market value: CoinGecko market data · card links to Binance's Monero reference-price page · XMR is not a Binance spot trading pair.</sub></p>
 
 ## AI Solutions Builder · KUBERA LAB · AI agents, local intelligence, civic-tech and interactive maps
 
