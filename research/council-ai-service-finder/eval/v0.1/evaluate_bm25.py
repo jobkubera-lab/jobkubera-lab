@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import math
 import re
@@ -174,9 +175,21 @@ def evaluate(catalogue: list[dict], queries: list[dict]) -> dict:
     }
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--queries",
+        type=Path,
+        default=QUERIES_PATH,
+        help="JSONL evaluation file (default: queries.jsonl)",
+    )
+    return parser.parse_args()
+
+
 def main() -> int:
+    args = parse_args()
     catalogue = json.loads(CATALOGUE_PATH.read_text(encoding="utf-8"))
-    metrics = evaluate(catalogue, load_queries())
+    metrics = evaluate(catalogue, load_queries(args.queries))
     print("\nBM25 Metrics")
     for key, value in metrics.items():
         print(f"{key}={value:.3f}" if isinstance(value, float) else f"{key}={value}")
