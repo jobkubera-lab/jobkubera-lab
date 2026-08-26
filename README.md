@@ -1,5 +1,14 @@
 # 👋 Hello, I'm Nikola Kubera
 
+<p align="right">
+  <a href="https://www.coingecko.com/en/coins/monero" title="Monero (XMR)">
+    <img src="https://cdn.simpleicons.org/monero/FF6600" width="18" height="18" alt="XMR" />
+  </a>
+  <a href="https://www.coingecko.com/en/coins/monero" title="Live XMR/USD price">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.coingecko.com%2Fapi%2Fv3%2Fsimple%2Fprice%3Fids%3Dmonero%26vs_currencies%3Dusd&query=%24.monero.usd&prefix=%24&label=&color=2f3337&style=flat" height="18" alt="Live XMR/USD price" />
+  </a>
+</p>
+
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=760&lines=AI+Solutions+Builder;Building+KUBERA+AGENT+OS;AI+Agents+%7C+Local+Intelligence+%7C+Civic+Tech;Kubera+Guide+%E2%80%94+1.1M+Google+Maps+views" alt="Typing SVG" />
 </p>
@@ -7,22 +16,6 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=jobkubera-lab&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
 </p>
-
-## 🟠 Monero (XMR) — Market Watch
-
-<p align="center">
-  <a href="https://www.coingecko.com/en/coins/monero">
-    <img src="assets/xmr-market.svg" width="760" alt="Monero XMR live market watch" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://www.coingecko.com/en/coins/monero">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.coingecko.com%2Fapi%2Fv3%2Fsimple%2Fprice%3Fids%3Dmonero%26vs_currencies%3Dusd&query=%24.monero.usd&suffix=%20USD&label=XMR%20LIVE&logo=monero&logoColor=white&color=ff6600&style=for-the-badge" alt="Live XMR/USD market price" />
-  </a>
-</p>
-
-<p align="center"><sub>Live XMR/USD market price · source: CoinGecko.</sub></p>
 
 ## AI Solutions Builder · KUBERA LAB · AI agents, local intelligence, civic-tech and interactive maps
 
