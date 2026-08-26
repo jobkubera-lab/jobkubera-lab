@@ -5,7 +5,7 @@
     <img src="https://cdn.simpleicons.org/monero/FF6600" width="18" height="18" alt="XMR" />
   </a>
   <a href="https://www.coingecko.com/en/coins/monero" title="Live XMR/USD price">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.coingecko.com%2Fapi%2Fv3%2Fsimple%2Fprice%3Fids%3Dmonero%26vs_currencies%3Dusd&query=%24.monero.usd&prefix=%24&label=&color=2f3337&style=flat" height="18" alt="Live XMR/USD price" />
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.coingecko.com%2Fapi%2Fv3%2Fsimple%2Fprice%3Fids%3Dmonero%26vs_currencies%3Dusd&query=%24.monero.usd&prefix=%24&label=&color=2f3337&style=flat&cacheSeconds=300" height="18" alt="Live XMR/USD price" />
   </a>
 </p>
 
