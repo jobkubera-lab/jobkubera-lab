@@ -24,12 +24,19 @@ K1 = 1.2
 B = 0.75
 MIN_SCORE = 0.8
 AMBIGUITY_MARGIN = 0.15
+
+# Deliberately narrow hard-fallback patterns. These do not constitute a general
+# legal- or prompt-injection classifier; they only protect known classes that
+# should never be answered by lexical service retrieval.
 LEGAL_CONCLUSION_PATTERNS = (
     re.compile(r"\b(legally|legal)\b.*\b(guilty|liable|illegal|lawful|unlawful)\b", re.I),
     re.compile(r"\b(is|was|are|were)\b.*\b(guilty|liable|illegal|lawful|unlawful)\b", re.I),
+    re.compile(r"\b(breaking|breaks?|broke|violating|violates?|breaching|breaches?)\b.{0,40}\b(the\s+)?law\b", re.I),
+    re.compile(r"\b(in\s+breach\s+of|against)\b.{0,20}\b(the\s+)?law\b", re.I),
 )
 PROMPT_INJECTION_PATTERNS = (
-    re.compile(r"\bignore\b.*\b(catalogue|instructions?|rules?)\b", re.I),
+    re.compile(r"\b(ignore|override|bypass|disregard)\b.*\b(catalogue|instructions?|rules?|safety|system)\b", re.I),
+    re.compile(r"\b(catalogue|instructions?|rules?|safety|system)\b.*\b(ignore|override|bypass|disregard)\b", re.I),
     re.compile(r"\binvent\b.*\b(service|answer|result)\b", re.I),
 )
 
