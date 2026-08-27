@@ -186,7 +186,3 @@ I am especially interested in contributing to open-source projects connected wit
 </p>
 
 <p align="center"><sub>Thanks for visiting my work.</sub></p>
-
-<p align="center">
-  <img src="assets/saturn-ancient-symbol.svg" width="118" alt="Ancient Saturn symbol" />
-</p>
