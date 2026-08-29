@@ -26,8 +26,9 @@ Privacy-conscious evidence record
 
 The system is designed for residents, newcomers and staff-assisted service lookup. It does not impersonate a council, determine legal eligibility or invent official actions.
 
-- **[Open the working prototype PR](https://github.com/jobkubera-lab/kubera-improved-website/pull/3)**
-- **[Council AI Service Finder v3](https://github.com/jobkubera-lab/jobkubera-lab/pull/25)**
+- **[Open the working Civic Evidence OS prototype](https://github.com/jobkubera-lab/kubera-improved-website/tree/main/civic-evidence-os)**
+- **[Council AI Service Finder v3](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder)**
+- **[KUBERA Agent Fabric](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/kubera-agent-fabric)**
 - **[Mitcham Survival Map project](https://github.com/jobkubera-lab/kubera-improved-website/tree/main/mitcham-survival-map)**
 
 ## Selected projects
@@ -36,8 +37,10 @@ The system is designed for residents, newcomers and staff-assisted service looku
 |---|---|---|
 | **KUBERA Civic Evidence OS** | Explainable local-service navigation with official evidence | Active prototype |
 | **KUBERA AGENT OS** | Private modular agent runtime with memory, permissions and self-checking | Private development |
-| **Council AI Service Finder** | Controlled multilingual retrieval for council services | Independent evaluation required |
+| **[KUBERA Agent Fabric](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/kubera-agent-fabric)** | Provider-neutral orchestration with verification and approval gates | Tested reference prototype |
+| **Council AI Service Finder** | Controlled service retrieval with explicit safety fallbacks | Independent evaluation required |
 | **Mitcham Survival Map** | Practical local map for residents and newcomers | Public working project |
+| **[KUBERA AI Engineer Roadmap](https://github.com/jobkubera-lab/kubera-learning./blob/main/docs/AI_ENGINEER_ROADMAP.md)** | Build-first AI engineering curriculum and intelligence library | Published |
 | **Kubera Guide** | First-hand geographic knowledge and place documentation | 1.1M+ Google Maps views |
 | **KUBERA Prompt Library** | Versioned task prompts and quality-control rules | Active |
 
