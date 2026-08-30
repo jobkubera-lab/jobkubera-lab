@@ -1,16 +1,60 @@
 # NIKOLA KUBERA
 
-## AI Solutions Builder · Civic Technology · Local Intelligence
+## AI Agent Systems · Sovereign LLM Architecture · Civic AI
 
-I build practical AI systems that connect verified information, local services and human-controlled automation.
+I build practical AI systems that combine **agent orchestration, human-controlled permissions, privacy boundaries, verified evidence and public-service intelligence**.
 
-My work has one central direction:
+My engineering direction is simple:
 
-> **Turn real-world knowledge into trustworthy, explainable and useful digital tools.**
+> **Replaceable AI models. Human-controlled memory, permissions and evidence.**
 
-## Flagship system: KUBERA Civic Evidence OS
+## Flagship engineering stack: KUBERA / DZAMBALA
 
-KUBERA Civic Evidence OS connects three capabilities:
+KUBERA / DZAMBALA is a provider-neutral architecture for controlled AI-agent systems.
+
+```text
+Human Owner
+    ↓
+Policy + Permission Grant
+    ↓
+Context / Privacy Gate
+    ↓
+Builder → Critic → Verifier
+    ↓
+Tool Safety + Runtime Controls
+    ↓
+Evidence Ledger
+    ↓
+Verified Result
+```
+
+Public reference components include deterministic multi-agent pipelines, signed authorization concepts, privacy classification, tool-schema validation, loop protection, provider budgets, evidence logging, failure prevention and runtime abstraction.
+
+- **[KUBERA / DZAMBALA Innovation Stack](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack)**
+- **[Technical learning and reference stack](https://github.com/jobkubera-lab/jobkubera-lab/blob/main/kubera-lab/innovation-stack/LEARNING_RESOURCES.md)**
+
+## Working civic-AI prototypes
+
+### DZAMBALA Community Compass — London + Merton v0.2
+
+A verified event and community-discovery prototype with official-source provenance.
+
+Current implementation includes:
+
+- London + Merton and Merton-only views;
+- 8 source-backed upcoming event records in the current seed layer;
+- Today / Tomorrow / Weekend / Free / category filters;
+- official-source links and verification dates;
+- freshness warnings;
+- deterministic duplicate detection;
+- event/source validation;
+- GitHub Actions CI.
+
+**[Open Community Compass](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/dzambala-community-compass)**
+
+### KUBERA Civic Evidence OS
+
+A civic-service navigation concept based on controlled retrieval, official evidence and human-readable presentation.
 
 ```text
 Resident question
@@ -24,24 +68,34 @@ Map or assisted-lookup presentation
 Privacy-conscious evidence record
 ```
 
-The system is designed for residents, newcomers and staff-assisted service lookup. It does not impersonate a council, determine legal eligibility or invent official actions.
-
-- **[Open the working Civic Evidence OS prototype](https://github.com/jobkubera-lab/kubera-improved-website/tree/main/civic-evidence-os)**
+- **[Working Civic Evidence OS prototype](https://github.com/jobkubera-lab/kubera-improved-website/tree/main/civic-evidence-os)**
 - **[Council AI Service Finder v3](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder)**
 - **[KUBERA Agent Fabric](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/kubera-agent-fabric)**
-- **[Mitcham Survival Map project](https://github.com/jobkubera-lab/kubera-improved-website/tree/main/mitcham-survival-map)**
+- **[Mitcham Survival Map](https://github.com/jobkubera-lab/kubera-improved-website/tree/main/mitcham-survival-map)**
+
+## Open-source / public-service work
+
+I use open-source contribution as engineering evidence, not as a marketing claim.
+
+- **LocalGov Drupal issue #927 — Language switcher for resident-facing service pages**  
+  https://github.com/localgovdrupal/localgov/issues/927
+- Public-service proposal pack for NHS.UK Frontend, GOV.UK Frontend and LocalGov Drupal:  
+  **[UK Public-Service Proposals](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/public-service-proposals)**
+
+The rule is consistent: unsupported impact numbers are not presented as fact, experimental software is not called production-ready, and public-service recommendations should remain traceable to authoritative sources.
 
 ## Selected projects
 
 | Project | Purpose | Status |
 |---|---|---|
+| **KUBERA / DZAMBALA** | Sovereign, provider-neutral AI-agent architecture | Active reference implementation |
+| **DZAMBALA Community Compass** | Verified London + Merton event/community discovery | v0.2 · tested |
 | **KUBERA Civic Evidence OS** | Explainable local-service navigation with official evidence | Active prototype |
 | **KUBERA AGENT OS** | Private modular agent runtime with memory, permissions and self-checking | Private development |
 | **[KUBERA Agent Fabric](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/kubera-agent-fabric)** | Provider-neutral orchestration with verification and approval gates | Tested reference prototype |
 | **Council AI Service Finder** | Controlled service retrieval with explicit safety fallbacks | Independent evaluation required |
 | **Mitcham Survival Map** | Practical local map for residents and newcomers | Public working project |
-| **[KUBERA AI Engineer Roadmap](https://github.com/jobkubera-lab/kubera-learning./blob/main/docs/AI_ENGINEER_ROADMAP.md)** | Build-first AI engineering curriculum and intelligence library | Published |
-| **Kubera Guide** | First-hand geographic knowledge and place documentation | 1.1M+ Google Maps views |
+| **[KUBERA AI Engineer Roadmap](https://github.com/jobkubera-lab/kubera-learning./blob/main/docs/AI_ENGINEER_ROADMAP.md)** | Build-first AI engineering curriculum | Published |
 | **KUBERA Prompt Library** | Versioned task prompts and quality-control rules | Active |
 
 ## KUBERA AGENT OS
@@ -60,7 +114,7 @@ Its design includes:
 - READ / CREATE / ACT / ADMIN permission levels;
 - evidence and failure memory;
 - privacy gates;
-- mandatory human confirmation before external actions.
+- mandatory human confirmation before consequential external actions.
 
 The protected implementation remains private. Public repositories show controlled demonstrations, documentation and verified outputs.
 
@@ -75,15 +129,19 @@ Kubera Guide is a first-hand travel and mapping project built from visited, phot
 
 [View Kubera Guide on Google Maps](https://www.google.com/maps/contrib/111907570264362429428)
 
-## Open-source work
+## Engineering areas
 
-Current public-service and civic-tech work includes contributions or proposals connected with LocalGov Drupal, GOV.UK, NHS England, Ministry of Justice and Open Referral.
+**AI / LLM:** agent systems, structured prompts, multi-agent verification, provider abstraction, human-in-the-loop controls, MCP concepts  
+**Backend:** Python, SQLite, JSON / JSON Schema, deterministic validation, SHA-256 / HMAC concepts  
+**Safety:** privacy classification, signed authorization concepts, tool validation, loop protection, evidence logging, fail-closed rules  
+**Workflow:** Git, GitHub, Pull Requests, GitHub Actions, unit tests, architecture documentation
 
-The working rule is simple: claims must be traceable, evaluation data must stay independent, and experimental software must not be presented as production-ready.
+## Technical career profile
 
-## Technology
+**SHCHEGLOV NIKOLA — AI Engineering Profile**  
+https://github.com/jobkubera-lab/jobkubera-lab/blob/main/career/SHCHEGLOV_NIKOLA_AI_ENGINEERING_PROFILE.md
 
-Python · SQLite · GitHub Actions · deterministic retrieval · AI agents · local AI · evidence ledgers · interactive maps · privacy-conscious automation
+Target areas: AI Agent Engineering, LLM Applications, AI Automation, Prompt Systems, AI Prototyping and technical AI product work.
 
 ## Contact
 
@@ -93,4 +151,4 @@ Python · SQLite · GitHub Actions · deterministic retrieval · AI agents · lo
 
 ---
 
-**KUBERA LAB — useful technology, verified evidence, human control.**
+**KUBERA LAB — AI systems with verified evidence and human control.**
