@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -17,6 +18,10 @@ def validate_item(item: dict) -> None:
     parsed = urlparse(item["source_url"])
     if parsed.scheme != "https" or not parsed.netloc:
         raise ValueError(f"{item['id']}: source_url must be HTTPS")
+    try:
+        datetime.strptime(item["last_checked"], "%Y-%m-%d")
+    except ValueError as exc:
+        raise ValueError(f"{item['id']}: last_checked must be YYYY-MM-DD") from exc
     if set(item["trust"]) != TRUST_KEYS:
         raise ValueError(f"{item['id']}: trust fields must be exactly {sorted(TRUST_KEYS)}")
     values = item["trust"].values()

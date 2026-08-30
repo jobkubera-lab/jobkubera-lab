@@ -8,7 +8,7 @@
     "description": "Official borough events calendar covering community, heritage, wellbeing, family and cultural activities across Merton.",
     "source_url": "https://www.merton.gov.uk/communities-and-neighbourhoods/events/events-calendar",
     "source_type": "local_government",
-    "last_checked": "2026-08-21",
+    "last_checked": "2026-08-30",
     "trust": {"authority": 40, "freshness": 30, "direct_link": 20, "local_relevance": 10},
     "lat": 51.4098,
     "lon": -0.2108
@@ -22,7 +22,7 @@
     "description": "Borough-wide hub for community activity, social prescribing, volunteering and local organisations.",
     "source_url": "https://www.mertonconnected.co.uk/community",
     "source_type": "local_vcse_infrastructure",
-    "last_checked": "2026-08-21",
+    "last_checked": "2026-08-30",
     "trust": {"authority": 36, "freshness": 30, "direct_link": 20, "local_relevance": 10},
     "lat": 51.4038,
     "lon": -0.1685
@@ -36,7 +36,7 @@
     "description": "Entry point for voluntary, community and faith organisations in Merton, including support for new and existing groups.",
     "source_url": "https://www.mertonconnected.co.uk/organisations",
     "source_type": "local_vcse_infrastructure",
-    "last_checked": "2026-08-21",
+    "last_checked": "2026-08-30",
     "trust": {"authority": 36, "freshness": 30, "direct_link": 20, "local_relevance": 10},
     "lat": 51.4038,
     "lon": -0.1685
@@ -50,7 +50,7 @@
     "description": "Cultural wing of the High Commission of India in the UK, with Indian music, dance, theatre, exhibitions, lectures, yoga, Ayurveda and cultural exchange programmes.",
     "source_url": "https://www.hcilondon.gov.in/page/cultural-engagement/",
     "source_type": "foreign_government_cultural_body",
-    "last_checked": "2026-08-21",
+    "last_checked": "2026-08-30",
     "trust": {"authority": 40, "freshness": 30, "direct_link": 20, "local_relevance": 8},
     "lat": 51.5096,
     "lon": -0.1516
@@ -64,8 +64,8 @@
     "description": "Long-established London centre for Indian arts, culture and education. Charity status and London contact details are independently listed by the Charity Commission.",
     "source_url": "https://www.bhavan.net/",
     "source_type": "registered_charity",
-    "last_checked": "2026-08-21",
-    "trust": {"authority": 36, "freshness": 28, "direct_link": 20, "local_relevance": 8},
+    "last_checked": "2026-08-30",
+    "trust": {"authority": 36, "freshness": 30, "direct_link": 20, "local_relevance": 8},
     "lat": 51.4899,
     "lon": -0.2097
   }
