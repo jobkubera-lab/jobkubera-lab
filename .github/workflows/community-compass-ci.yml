@@ -1,0 +1,29 @@
+name: Test Community Compass
+
+on:
+  push:
+    paths:
+      - 'kubera-lab/dzambala-community-compass/**'
+      - '.github/workflows/community-compass-ci.yml'
+  pull_request:
+    paths:
+      - 'kubera-lab/dzambala-community-compass/**'
+      - '.github/workflows/community-compass-ci.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: kubera-lab/dzambala-community-compass
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate sources
+        run: python validate_data.py
+      - name: Validate events
+        run: python validate_events.py
+      - name: Run event tests
+        run: python -m unittest -v test_events.py
