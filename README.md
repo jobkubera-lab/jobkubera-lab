@@ -251,5 +251,3 @@ Every KUBERA project should:
   <a href="https://t.me/kuberababa"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
   <a href="https://github.com/jobkubera-lab"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 </p>
-
-Thanks for visiting my work.
