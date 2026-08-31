@@ -72,6 +72,8 @@ Core architecture includes model routing, project memory, skill permissions, evi
 - Civic-tech prototypes for communities and newcomers.
 - Research, documentation and visual AI workflows.
 - Educational AI products and creative digital experiences.
+- Structured Jyotish and Vedic astrology research tools.
+- Digital guidance tools for international employment, relocation and residence planning.
 
 ## 🧪 KUBERA LAB
 
@@ -141,12 +143,41 @@ I am especially interested in contributing to open-source projects connected wit
 - civic-tech;
 - developer productivity and automation.
 
-## 🧑‍💼 About me
+## 🕉️ Vedic Astrology & Jyotish
 
-- AI solutions builder creating practical products, agents, maps and digital experiences.
-- AI generalist focused on useful systems rather than technology for technology's sake.
-- Builder with a global perspective shaped by first-hand travel and location research.
-- Interested in partnerships where AI can improve real services, learning and everyday life.
+I study traditional Vedic astrology and turn its structured methods into clear digital tools and practical personal guidance.
+
+- Jyotish birth-chart research and structured interpretation;
+- planetary periods, transits and life-cycle analysis;
+- career, relocation and place-compatibility perspectives;
+- concepts for transparent Jyotish calculators, knowledge bases and AI-assisted research;
+- respect for classical principles without presenting uncertain predictions as guaranteed facts.
+
+> **Traditional knowledge, modern tools, transparent reasoning.**
+
+## 🌐 International Work & Relocation Guidance
+
+I provide practical, research-based consultations for people exploring employment and legal residence abroad.
+
+| Direction | Practical support |
+| --- | --- |
+| 💼 **Employment abroad** | Job-search strategy, CV and application positioning, employer communication and realistic preparation |
+| 🧭 **Relocation planning** | Comparison of routes, personal action plans, document checklists and timelines |
+| 📄 **Residence and legalisation** | Research through current official sources, requirements and step-by-step preparation |
+| 🌍 **Countries covered** | 🇷🇸 Serbia · 🇲🇪 Montenegro · 🇮🇸 Iceland · 🇬🇪 Georgia · 🇦🇲 Armenia |
+
+Every case is checked against current official information. Where regulated legal advice is required, I clearly separate practical guidance from legal representation.
+
+## 🧑‍💼 About NIKOLA KUBERA
+
+**NIKOLA KUBERA** is an independent AI solutions builder, international relocation researcher and creator of practical digital tools.
+
+- I combine AI systems, local intelligence, interactive maps, employment research, migration guidance, cultural projects and Jyotish knowledge.
+- My perspective is shaped by first-hand international relocation, travel and detailed research into how people actually live, work and adapt in different countries.
+- I turn complex information into clear choices, realistic next steps and tools that people can genuinely use.
+- I value accuracy, human control, privacy, trustworthy sources and traditional knowledge tested through practical experience.
+- Through **KUBERA LAB**, I develop original ideas at the intersection of technology, geography, education, culture and personal guidance.
+- I am open to partnerships with individuals, local businesses and organisations that need useful AI, research or structured international guidance.
 
 ## 💡 Mission
 
