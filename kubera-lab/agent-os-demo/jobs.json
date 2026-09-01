@@ -1,32 +1,49 @@
-[
-  {
-    "id": "official-service-lookup",
-    "title": "Official service lookup",
-    "task": "Find the official Merton service page for a housing repair issue.",
-    "brief": "Use a verified official service source, explain why it matches, and do not submit any form.",
-    "sources": ["Official Merton service catalogue"],
-    "score": 3,
-    "action_draft": "Open the official service page and review the next steps.",
-    "approved": false
-  },
-  {
-    "id": "employer-reply-draft",
-    "title": "Employer reply draft",
-    "task": "Prepare a short professional reply to an employer asking for availability.",
-    "brief": "Draft a clear reply for human review. Do not send it.",
-    "sources": ["Job and migration templates"],
-    "score": 2,
-    "action_draft": "Thank you for your message. I am available to discuss the role and can confirm my schedule once we agree a suitable time.",
-    "approved": false
-  },
-  {
-    "id": "weekend-events",
-    "title": "Weekend events",
-    "task": "Show manually verified weekend events for London/Merton.",
-    "brief": "Use the Community Compass verified event layer and keep original source links visible.",
-    "sources": ["Community Compass v0.2"],
-    "score": 2,
-    "action_draft": "Review the listed event source before deciding to attend.",
-    "approved": false
-  }
-]
+{
+  "product": "KUBERA Agent OS",
+  "rule": "prepare then wait",
+  "jobs": [
+    {
+      "id": "lookup-housing",
+      "tab": "lookup",
+      "title": "Official service lookup",
+      "task": "My council home toilet is leaking and needs repair",
+      "source_repo": "kubera-improved-website/civic-evidence-os",
+      "brief": "Matched controlled catalogue: Housing repairs.",
+      "official_url": "https://www.merton.gov.uk/council-tax-benefits-and-housing/housing/housing-repairs",
+      "score": 3,
+      "action_draft": "Open the official housing repairs page. Do not submit the form from this demo.",
+      "approved": false
+    },
+    {
+      "id": "events-weekend",
+      "tab": "place",
+      "title": "Weekend events",
+      "task": "What is on this weekend near Merton?",
+      "source_repo": "jobkubera-lab/kubera-lab/dzambala-community-compass",
+      "brief": "Manual Compass seeds only. Not a live scraper.",
+      "items": ["Check events.json in Community Compass v0.2", "Mitcham Survival Map for place context", "Kubera Guide field notes"],
+      "action_draft": "Publish the weekend list only after you confirm each event date.",
+      "approved": false
+    },
+    {
+      "id": "work-reply",
+      "tab": "work",
+      "title": "Employer reply draft",
+      "task": "Prepare a short reply to an employer about documents",
+      "source_repo": "kubera-ai-prompts + kubera-migration-templates",
+      "brief": "Draft only. Uses your existing prompt/template libraries.",
+      "action_draft": "Thank you for your message. I can provide the requested documents this week. Please confirm the exact list and deadline.",
+      "approved": false
+    },
+    {
+      "id": "approve-gate",
+      "tab": "control",
+      "title": "Human approval gate",
+      "task": "Send the prepared action",
+      "source_repo": "innovation-stack/reference-implementation",
+      "brief": "Agent Fabric pattern: no external write without approval.",
+      "action_draft": "READY TO SEND — blocked until Approve.",
+      "approved": false
+    }
+  ]
+}
