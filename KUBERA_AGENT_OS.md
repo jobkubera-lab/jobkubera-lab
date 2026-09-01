@@ -6,71 +6,81 @@ What we show a customer. What we build next. What already exists in this GitHub.
 
 KUBERA takes a real work task, checks sources, prepares the result, and waits for the human before any external action.
 
-## Core
+## Why a customer pays
 
-One core:
+Teams already have ChatGPT, search and ten tabs. They still lose time on:
 
-```text
-Task
+- unchecked answers
+- agents that post or send too early
+- no trace of why a result appeared
+
+KUBERA sells the missing layer: **verified groundwork + human authority**.
+
+## What the demo must show in 5 minutes
+
+1. Customer types a task in plain language.
+2. System splits work (research / match / draft).
+3. It returns: result, sources, confidence as an engineering score not a promise.
+4. It prepares an action (email, reply, listing, form link).
+5. Nothing is sent until the customer approves.
+6. A log stores the decision hash, not raw private text.
+
+If a slide cannot point to a running step, cut the slide.
+
+## Borrowed from the market — used as rules, not copies
+
+| Others ship | We take as a rule | Already in this GitHub |
+|---|---|---|
+| Parallel workers + one report (Grok Workflows) | Split task, merge one brief | Agent Fabric workers + Civic/Compass outputs |
+| Chat surface + server agent (Vercel + Claude Managed Agents) | One session per job, many channels later | CLI + website as first surfaces |
+| Independent check / skeptics | Second pass before the brief is trusted | verifier / safety fallbacks |
+| Privacy aliases + no raw logs (Brave / Anthropic Insights style) | Hash the query, allow-list profile tags | evidence.jsonl, ResidentProfile rules |
+| Explicit human sign-off before any send | External write needs approval | Trust Mesh ActionIntent idea |
+| Voice as an output only (ElevenLabs) | Voice later, not the brain | not built — do not demo |
+
+Do not paste their code. Do not use their names in the customer pitch except “the market already works this way”.
+
+## Product shape
+
+```
+Task in
+  → plan
+  → workers (bounded)
   → check
-  → draft
+  → brief + draft action
   → human approve / reject
   → receipt in ledger
 ```
 
-The core stays the same. The customer can use several existing KUBERA attachments around it.
+Noses (pluggable, one at a time):
 
-## Existing attachments
+- work & documents (visa, CV, employer letter) — templates already exist
+- local verified lookup (council / events) — code already exists
+- research brief for a business question — docs exist, runtime thin
+- later: voice out, chat adapters
 
-1. **Work / visa** — existing job, visa, CV, letter and prompt libraries; `kuberajob` is the public work site.
-2. **Place / events** — Mitcham mapping and Community Compass with manually verified event data.
-3. **Official lookup** — Civic Evidence OS for controlled Merton service lookup with tests and conservative fallback behaviour.
-4. **Agent control** — Agent Fabric / Trust Mesh for bounded workers, approval gates and hash-ledger mechanics.
-5. **Client research** — existing product/research briefs plus worker/checking patterns.
-6. **Later attachments** — voice output, chat channels and wallet/sign-off ideas only when the existing core needs them; they are not a new core.
+## What is already built (say this to a funder)
 
-## What the demo should show
+- Civic Evidence OS: tested lookup, fallbacks, no form submit
+- Assisted plain-text channel
+- Optional profile with consent and erasure
+- Community Compass: manual event seeds + validation
+- Agent Fabric reference: worker budget, approval gate, hash ledger
+- Public site + migration/job libraries
 
-A single customer-facing OS with several directions, not one Merton widget:
+Status line to say out loud: **tested prototypes, not a live council system, not a bank, not auto-publish.**
 
-- Work / visa draft
-- Place / events
-- Official lookup
-- Approve / ledger
+## What to build before the first paid pilot (only this)
 
-The demo may use prepared examples, but it must keep the same operating rule: checked groundwork first, external action only after the human.
+1. One demo page: task box → brief → approve button that does not send.
+2. One YAML/JSON job record: task, sources, score, action draft, approved true/false.
+3. Three canned demos: “find official service”, “draft a reply to an employer”, “weekend events list”.
+4. One-page pitch PDF from this file. No extra architecture novels.
 
-## Borrowed from the market — used as rules, not copies
+## Do not build for the pitch
 
-- parallel workers can produce one merged brief;
-- one session should represent one job;
-- a second checker should challenge important output;
-- logs should store hashes/controlled metadata rather than raw private task text;
-- external writes require explicit human approval.
+New repos, modules 19–30, live posting, payments, scraping Compass, “Merton official partner”, eligibility engine.
 
-Do not paste third-party code. These are operating rules, not cloned products.
+## Ask to the customer
 
-## Repository map inside the OS
-
-- `kubera-lab/dzambala-community-compass/` — Place / events attachment.
-- `kubera-lab/innovation-stack/reference-implementation/` — Agent Fabric / control reference.
-- `KUBERA_LOCAL_DESK.md` — local civic product canon.
-- `REPO_MAP.md` — workspace map.
-- `KUBERA_PRODUCT.md` — product brief / customer language.
-- `kubera-lab/agent-os-demo/` — customer-facing multi-direction demo.
-- `kubera-improved-website/civic-evidence-os/` — Official lookup attachment in the existing public-site repository.
-- `kubera-ai-prompts`, `kubera-visa-playbooks`, `kubera-migration-templates`, `kuberajob` — Work / visa content and public surface.
-
-## Backlog, not separate products
-
-Innovation-stack modules 01–18 are idea/backlog material. Do not expand them into new customer-facing products or more module families. Reuse a detail only when an existing attachment needs it.
-
-## Status
-
-**Prototype.** Existing components are tested prototypes, reference implementations, content libraries or public-site work. KUBERA is not a live council service, does not make official eligibility decisions, and does not auto-publish or auto-submit forms.
-
-## Customer pitch
-
-Show the OS plus several attachments already connected to the same rule:
-
-**Here is the task. Here are the checked sources. Here is the prepared action. Without the approval button, the system stays silent.**
+Pilot 4–6 weeks. One workflow they already do by hand. Fixed fee. We plug their sources into this OS. They keep the approve button.
