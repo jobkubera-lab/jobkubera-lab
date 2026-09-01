@@ -21,7 +21,11 @@
       "task": "What is on this weekend near Merton?",
       "source_repo": "jobkubera-lab/kubera-lab/dzambala-community-compass",
       "brief": "Manual Compass seeds only. Not a live scraper.",
-      "items": ["Check events.json in Community Compass v0.2", "Mitcham Survival Map for place context", "Kubera Guide field notes"],
+      "items": [
+        "Check events.json in Community Compass v0.2",
+        "Mitcham Survival Map for place context",
+        "Kubera Guide field notes"
+      ],
       "action_draft": "Publish the weekend list only after you confirm each event date.",
       "approved": false
     },
