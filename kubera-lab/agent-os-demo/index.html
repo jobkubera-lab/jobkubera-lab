@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KUBERA Agent OS Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 860px; margin: 40px auto; padding: 0 20px; line-height: 1.5; }
+    textarea, select, button { width: 100%; box-sizing: border-box; margin-top: 10px; padding: 12px; font-size: 16px; }
+    .card { border: 1px solid #ccc; border-radius: 12px; padding: 18px; margin-top: 20px; }
+    .muted { color: #666; }
+    .status { font-weight: 700; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>KUBERA Agent OS</h1>
+  <p class="muted">Task → checked brief → human approve. Prototype only. Nothing is sent to any external service.</p>
+
+  <label for="preset">Demo job</label>
+  <select id="preset">
+    <option value="official">Official service lookup</option>
+    <option value="employer">Employer reply draft</option>
+    <option value="events">Weekend events</option>
+  </select>
+
+  <label for="task">Task</label>
+  <textarea id="task" rows="4">Find the official Merton service page for a housing repair issue.</textarea>
+  <button id="prepare">Prepare checked brief</button>
+
+  <div class="card" id="briefCard" hidden>
+    <h2>Checked brief</h2>
+    <p id="brief"></p>
+    <p><strong>Sources:</strong> <span id="sources"></span></p>
+    <p><strong>Engineering score:</strong> <span id="score"></span> — not a certainty claim.</p>
+    <p><strong>Draft action:</strong> <span id="draft"></span></p>
+    <button id="approve">Approve</button>
+    <p class="status" id="approved">approved: no</p>
+  </div>
+
+  <script>
+    const jobs = {
+      official: {
+        task: 'Find the official Merton service page for a housing repair issue.',
+        brief: 'Use a verified official service source, explain why it matches, and do not submit any form.',
+        sources: 'Official Merton service catalogue',
+        score: 3,
+        draft: 'Open the official service page and review the next steps.'
+      },
+      employer: {
+        task: 'Prepare a short professional reply to an employer asking for availability.',
+        brief: 'Draft a clear reply for human review. Do not send it.',
+        sources: 'Job and migration templates',
+        score: 2,
+        draft: 'Thank you for your message. I am available to discuss the role and can confirm my schedule once we agree a suitable time.'
+      },
+      events: {
+        task: 'Show manually verified weekend events for London/Merton.',
+        brief: 'Use the Community Compass verified event layer and keep original source links visible.',
+        sources: 'Community Compass v0.2',
+        score: 2,
+        draft: 'Review the listed event source before deciding to attend.'
+      }
+    };
+
+    const preset = document.getElementById('preset');
+    const task = document.getElementById('task');
+    const briefCard = document.getElementById('briefCard');
+    const brief = document.getElementById('brief');
+    const sources = document.getElementById('sources');
+    const score = document.getElementById('score');
+    const draft = document.getElementById('draft');
+    const approved = document.getElementById('approved');
+
+    preset.addEventListener('change', () => {
+      task.value = jobs[preset.value].task;
+      briefCard.hidden = true;
+      approved.textContent = 'approved: no';
+    });
+
+    document.getElementById('prepare').addEventListener('click', () => {
+      const job = jobs[preset.value];
+      brief.textContent = job.brief;
+      sources.textContent = job.sources;
+      score.textContent = job.score;
+      draft.textContent = job.draft;
+      approved.textContent = 'approved: no';
+      briefCard.hidden = false;
+    });
+
+    document.getElementById('approve').addEventListener('click', () => {
+      approved.textContent = 'approved: yes';
+    });
+  </script>
+</body>
+</html>
