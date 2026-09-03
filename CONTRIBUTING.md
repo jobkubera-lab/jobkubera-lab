@@ -82,7 +82,7 @@ The same unit-test and safe-demo path is exercised by GitHub Actions across Pyth
 
 ## Coverage
 
-CI measures **source-only branch coverage** for `kubera_innovation`. The first source-only baseline measured **86%**. The workflow therefore enforces a conservative **85% fail-under floor** and also includes the safe CLI demo in the coverage run.
+CI measures **source-only branch coverage** for `kubera_innovation`. The current unit-tests + safe-demo coverage run reports **89%**. The workflow enforces a conservative **85% fail-under floor** to prevent silent regression while leaving room for legitimate refactoring.
 
 Do not claim a higher percentage unless a current CI report supports it.
 
