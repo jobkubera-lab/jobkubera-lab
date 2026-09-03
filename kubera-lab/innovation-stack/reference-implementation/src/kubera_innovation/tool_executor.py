@@ -21,6 +21,7 @@ from .execution_controls import (
     ActionStatus,
     GateOutcome,
     IdempotencyOutcome,
+    IdempotencyState,
     IdempotencyStore,
     Reversibility,
     SourceEvidenceActionGate,
@@ -79,8 +80,6 @@ class ToolRequest:
             raise ValueError(f"tool request fields must not be empty: {', '.join(empty)}")
         if not isinstance(arguments, Mapping):
             raise TypeError("tool arguments must be a mapping")
-        # Canonical JSON both validates JSON-serializability and prevents later
-        # caller mutation from changing the approved request identity.
         arguments_json = _canonical_json(dict(arguments))
         return cls(
             action_id=str(action_id).strip(),
@@ -96,11 +95,13 @@ class ToolRequest:
 
     @property
     def arguments(self) -> dict[str, Any]:
-        # Return a fresh object so adapters cannot mutate the canonical request.
+        # Always return a fresh object: caller/adapter mutation cannot change the
+        # canonical request object that was originally constructed.
         return json.loads(self.arguments_json)
 
     @property
     def request_hash(self) -> str:
+        """Hash of the original canonical request before privacy redaction."""
         return hash_request(
             {
                 "tool_name": self.tool_name,
@@ -118,17 +119,39 @@ class ToolRequest:
             return Reversibility.IRREVERSIBLE
         return Reversibility.REVERSIBLE
 
-    def to_intent(self) -> ActionIntent:
+    def intent_for_hash(self, request_hash: str) -> ActionIntent:
         return ActionIntent(
             action_id=self.action_id,
             run_id=self.run_id,
             actor=self.actor,
             operation=self.operation,
             target=self.target,
-            request_hash=self.request_hash,
+            request_hash=request_hash,
             reversibility=self.effective_reversibility,
             idempotency_key=self.idempotency_key,
         )
+
+    def to_intent(self) -> ActionIntent:
+        """Compatibility helper using the original request hash.
+
+        SovereignToolExecutor itself uses the finalized sanitized request hash.
+        """
+        return self.intent_for_hash(self.request_hash)
+
+
+@dataclass(frozen=True)
+class PreparedToolCall:
+    """Final immutable payload that approval, idempotency and execution share."""
+
+    request: ToolRequest
+    arguments_json: str
+    request_hash: str
+    intent: ActionIntent
+    redacted_paths: tuple[str, ...]
+
+    @property
+    def arguments(self) -> dict[str, Any]:
+        return json.loads(self.arguments_json)
 
 
 class ToolAdapter(Protocol):
@@ -150,6 +173,7 @@ class ToolExecutionStatus(str, Enum):
     APPROVAL_REQUIRED = "APPROVAL_REQUIRED"
     REPLAYED = "REPLAYED"
     CONFLICT = "CONFLICT"
+    UNKNOWN_EXTERNAL_STATE = "UNKNOWN_EXTERNAL_STATE"
     PENDING_RECONCILIATION = "PENDING_RECONCILIATION"
 
 
@@ -167,7 +191,13 @@ class ToolExecutionResult:
 
 
 class SovereignToolExecutor:
-    """Compose all mandatory gates before an injected tool adapter is callable."""
+    """Compose mandatory gates before an injected tool adapter is callable.
+
+    The reference guarantee applies to callers that only receive this executor as
+    their execution capability. Real deployments must also keep tool credentials
+    and raw provider clients outside agent/plugin reach; Python alone cannot stop
+    arbitrary code that already owns those credentials from calling a provider.
+    """
 
     def __init__(
         self,
@@ -202,6 +232,35 @@ class SovereignToolExecutor:
             approval_grant_id=grant.grant_id if grant else None,
         )
 
+    def prepare(self, request: ToolRequest, *, schema: Mapping[str, Any]) -> PreparedToolCall:
+        """Sanitize, validate and freeze the exact payload that may be executed."""
+        scan = PrivacyGate.sanitize(request.arguments)
+        sanitized = scan.value
+        validation = ToolValidator.validate(sanitized, schema)
+        if not validation.valid:
+            raise ValueError(validation.error or "tool validation failed")
+        finalized_json = _canonical_json(sanitized)
+        finalized_arguments = json.loads(finalized_json)
+        finalized_hash = hash_request(
+            {
+                "tool_name": request.tool_name,
+                "operation": request.operation,
+                "target": request.target,
+                "arguments": finalized_arguments,
+            }
+        )
+        return PreparedToolCall(
+            request=request,
+            arguments_json=finalized_json,
+            request_hash=finalized_hash,
+            intent=request.intent_for_hash(finalized_hash),
+            redacted_paths=scan.redacted_paths,
+        )
+
+    def approval_subject(self, request: ToolRequest, *, schema: Mapping[str, Any]) -> str:
+        """Return the exact subject a signed approval must authorize."""
+        return self.prepare(request, schema=schema).intent.fingerprint
+
     def execute(
         self,
         request: ToolRequest,
@@ -213,13 +272,12 @@ class SovereignToolExecutor:
         policy_decision: Decision,
         grant: AuthorizationGrant | None = None,
     ) -> ToolExecutionResult:
-        intent = request.to_intent()
+        fallback_intent = request.to_intent()
 
         if not isinstance(handoff, HandoffArtifact) or handoff.status is not HandoffStatus.READY:
-            # A non-ready/missing handoff must never reach the adapter.
             if isinstance(handoff, HandoffArtifact):
                 entry = self._log(
-                    intent,
+                    fallback_intent,
                     status=ActionStatus.BLOCKED,
                     result={"reason": "ready handoff required"},
                     handoff=handoff,
@@ -232,23 +290,23 @@ class SovereignToolExecutor:
                 )
             return ToolExecutionResult(ToolExecutionStatus.BLOCKED, reason="handoff required")
 
-        # Privacy is enforced before exact adapter arguments are validated or exposed.
-        scan = PrivacyGate.sanitize(request.arguments)
-        sanitized = scan.value
-        validation = ToolValidator.validate(sanitized, schema)
-        if not validation.valid:
+        try:
+            prepared = self.prepare(request, schema=schema)
+        except (TypeError, ValueError) as exc:
             entry = self._log(
-                intent,
+                fallback_intent,
                 status=ActionStatus.BLOCKED,
-                result={"reason": validation.error, "redacted_paths": list(scan.redacted_paths)},
+                result={"reason": str(exc)},
                 handoff=handoff,
                 grant=grant,
             )
             return ToolExecutionResult(
                 ToolExecutionStatus.BLOCKED,
                 evidence_entry_id=entry.entry_id,
-                reason=validation.error or "tool validation failed",
+                reason=str(exc),
             )
+
+        intent = prepared.intent
 
         # Verified booleans alone are insufficient: the handoff must carry refs.
         source_ok = bool(source_verified and handoff.source_refs)
@@ -288,7 +346,7 @@ class SovereignToolExecutor:
                 reason=decision.reason,
             )
 
-        reservation = self._idempotency.reserve(request.idempotency_key, request.request_hash)
+        reservation = self._idempotency.reserve(request.idempotency_key, prepared.request_hash)
         if reservation.outcome is IdempotencyOutcome.CONFLICT:
             entry = self._log(
                 intent,
@@ -303,15 +361,22 @@ class SovereignToolExecutor:
                 reason="idempotency conflict",
             )
         if reservation.outcome is IdempotencyOutcome.REPLAY:
-            status = (
-                ToolExecutionStatus.REPLAYED
-                if reservation.result_ref
-                else ToolExecutionStatus.PENDING_RECONCILIATION
-            )
+            if reservation.state is IdempotencyState.COMPLETE and reservation.result_ref:
+                status = ToolExecutionStatus.REPLAYED
+                action_status = ActionStatus.REPLAYED
+                reason = "existing completed action replayed without side effect"
+            else:
+                status = ToolExecutionStatus.UNKNOWN_EXTERNAL_STATE
+                action_status = ActionStatus.UNKNOWN_EXTERNAL_STATE
+                reason = "existing reservation is not confirmed complete; reconcile before retry"
             entry = self._log(
                 intent,
-                status=ActionStatus.REPLAYED,
-                result={"result_ref": reservation.result_ref, "replayed": True},
+                status=action_status,
+                result={
+                    "result_ref": reservation.result_ref,
+                    "replayed": True,
+                    "idempotency_state": reservation.state.value if reservation.state else None,
+                },
                 handoff=handoff,
                 grant=grant,
             )
@@ -319,44 +384,53 @@ class SovereignToolExecutor:
                 status,
                 evidence_entry_id=entry.entry_id,
                 result_ref=reservation.result_ref,
-                reason=(
-                    "existing completed action replayed without side effect"
-                    if reservation.result_ref
-                    else "existing reservation has no confirmed result; reconcile before retry"
-                ),
+                reason=reason,
             )
 
         try:
-            # Adapter receives only finalized sanitized arguments, never signer/grant objects.
+            # The adapter sees only the finalized sanitized payload. It never gets
+            # signer/grant/governance objects or the authorization secret.
             result = self._adapter.execute(
                 tool_name=request.tool_name,
                 operation=request.operation,
                 target=request.target,
-                arguments=json.loads(_canonical_json(sanitized)),
+                arguments=prepared.arguments,
             )
-        except Exception as exc:  # fail closed: reservation remains PENDING
+        except Exception as exc:
+            # Once adapter execution has started, an exception cannot prove that
+            # the remote side effect did not happen. Keep the reservation PENDING.
             entry = self._log(
                 intent,
-                status=ActionStatus.FAILED,
+                status=ActionStatus.UNKNOWN_EXTERNAL_STATE,
                 result={"error_type": type(exc).__name__, "error": str(exc)},
                 handoff=handoff,
                 grant=grant,
             )
             return ToolExecutionResult(
-                ToolExecutionStatus.PENDING_RECONCILIATION,
+                ToolExecutionStatus.UNKNOWN_EXTERNAL_STATE,
                 evidence_entry_id=entry.entry_id,
-                reason="adapter outcome not safely repeatable; reconcile before retry",
+                reason="adapter outcome is unknown; reconcile before any retry",
             )
 
-        entry = self._log(
-            intent,
-            status=ActionStatus.EXECUTED,
-            result=result,
-            handoff=handoff,
-            grant=grant,
-        )
-        result_ref = f"evidence:{entry.entry_id}"
-        self._idempotency.complete(request.idempotency_key, result_ref=result_ref)
+        try:
+            entry = self._log(
+                intent,
+                status=ActionStatus.EXECUTED,
+                result=result,
+                handoff=handoff,
+                grant=grant,
+            )
+            result_ref = f"evidence:{entry.entry_id}"
+            self._idempotency.complete(request.idempotency_key, result_ref=result_ref)
+        except Exception:
+            # External execution already returned successfully, but local evidence
+            # or completion persistence failed. Do not retry the side effect.
+            return ToolExecutionResult(
+                ToolExecutionStatus.UNKNOWN_EXTERNAL_STATE,
+                result=result,
+                reason="external action returned but local confirmation failed; reconcile before retry",
+            )
+
         return ToolExecutionResult(
             ToolExecutionStatus.EXECUTED,
             result=result,
