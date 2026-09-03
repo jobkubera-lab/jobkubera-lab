@@ -31,6 +31,20 @@ from .plugin_registry import (
 from .evidence_ledger import EvidenceEntry, EvidenceLedger
 from .agent_pipeline import DeterministicAgentPipeline, PipelineResult, PipelineVerdict, StageResult
 from .tool_safety import PrivacyGate, SecretScanResult, ToolLoopGuard, ToolValidator, ValidationResult
+from .handoff import HandoffArtifact, HandoffStatus
+from .execution_controls import (
+    ActionIntent,
+    ActionLogger,
+    ActionStatus,
+    GateDecision,
+    GateOutcome,
+    IdempotencyDecision,
+    IdempotencyOutcome,
+    IdempotencyStore,
+    Reversibility,
+    SourceEvidenceActionGate,
+    hash_request,
+)
 
 __all__ = [
     "Constitution", "Decision", "PolicyRule",
@@ -47,4 +61,8 @@ __all__ = [
     "EvidenceEntry", "EvidenceLedger",
     "DeterministicAgentPipeline", "PipelineResult", "PipelineVerdict", "StageResult",
     "PrivacyGate", "SecretScanResult", "ToolLoopGuard", "ToolValidator", "ValidationResult",
+    "HandoffArtifact", "HandoffStatus",
+    "ActionIntent", "ActionLogger", "ActionStatus", "GateDecision", "GateOutcome",
+    "IdempotencyDecision", "IdempotencyOutcome", "IdempotencyStore", "Reversibility",
+    "SourceEvidenceActionGate", "hash_request",
 ]
