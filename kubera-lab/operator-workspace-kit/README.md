@@ -12,8 +12,8 @@
 workspace/
 ├── tasks/       # входящие задачи, найденные указатели и рабочий scope
 ├── handoffs/    # черновики и письменные передачи результата
-├── evidence/    # проверенные факты и ссылки на источники
-├── reviews/     # то, что ждёт проверки
+├── evidence/    # проверенные факты и correction-сигналы
+├── reviews/     # то, что ждёт проверки, включая improvement proposals
 ├── approved/    # результат, одобренный человеком
 └── archive/     # устаревшее и завершённое
 ```
@@ -28,7 +28,9 @@ workspace/
 - `ACTION_LOG.md` — человекочитаемый журнал/экспорт действий; **не заменяет Evidence Ledger**;
 - `skills/verify-before-claim.md` — сначала проверить факт, потом утверждать;
 - `skills/recheck-before-write.md` — перечитать текущее состояние перед сохранением/commit;
-- `examples/merton-civic-evidence-work-contract.md` — реальный пример контракта для Civic Evidence OS.
+- `examples/merton-civic-evidence-work-contract.md` — реальный пример контракта для Civic Evidence OS;
+- `improvement-loop/README.md` — правила превращения повторяющихся corrections в проверяемые улучшения;
+- `control-desk/` — статический интерактивный demo интерфейса Agents / Setup / Improve.
 
 ## Рабочий цикл
 
@@ -39,6 +41,47 @@ workspace/
 5. Всё, что требует человека, переносить в `workspace/reviews/`.
 6. После явного approval сохранить итог в `workspace/approved/`.
 7. Неактуальные версии переносить в `workspace/archive/`, а не выдавать за текущее состояние.
+
+## Improvement loop
+
+Повторяющаяся ошибка агента не должна каждый раз исправляться только в чате.
+
+Reference runtime теперь содержит `ImprovementRegistry`:
+
+```text
+compact CorrectionSignal
+→ deterministic cluster
+→ promotion threshold
+→ exact rule / skill / gate / doc proposal
+→ evidence + exact diff
+→ human approve / dismiss
+→ approved payload
+→ normal Git / PR workflow
+```
+
+По умолчанию хранятся **минимальные сигналы**, а не полный текст разговора: fingerprint, короткое summary, conversation id и pain score. Это уменьшает privacy-риск и не превращает историю чатов во вторую базу знаний.
+
+Default promotion threshold: минимум **3 сигнала**, минимум **2 разных разговора**, суммарный pain минимум **3**. Порог детерминированный и может быть изменён явно через `PromotionThreshold`.
+
+Proposal сам **не пишет файлы**. Даже после достижения порога он только готовит предложение и diff. `approved_change()` остаётся заблокированным до явного человеческого review конкретного proposal.
+
+## Agent overview
+
+`ImprovementRegistry` также содержит минимальный локальный реестр agent sessions со статусами:
+
+`running · waiting_approval · finished · failed · idle · unknown`
+
+Он не заявляет live-интеграцию с Codex/Claude/Cursor. Это provider-neutral data model, к которому реальные adapters могут быть подключены позже через отдельный проверяемый scope.
+
+## Control Desk demo
+
+`control-desk/index.html` показывает нашу собственную UX-модель:
+
+- **Agents** — текущие состояния исполнителей;
+- **Setup** — какие правила, skills и security boundaries ими управляют;
+- **Improve** — повторяющиеся correction-сигналы, evidence, diff и human decision.
+
+Демо работает только на фиктивных данных и не выполняет внешних действий.
 
 ## Правило истины
 

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KUBERA Control Desk — Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">KUBERA LAB · OPERATOR WORKSPACE</p>
+        <h1>KUBERA Control Desk</h1>
+        <p class="subtitle">Evidence-led agent oversight. Human authority stays final.</p>
+      </div>
+      <div class="demo-badge">DEMO DATA · NO LIVE PROVIDERS</div>
+    </header>
+
+    <nav class="tabs" aria-label="Control Desk sections">
+      <button class="tab active" data-view="agents">Agents</button>
+      <button class="tab" data-view="setup">Setup</button>
+      <button class="tab" data-view="improve">Improve <span class="count">2</span></button>
+    </nav>
+
+    <section id="agents" class="view active" aria-labelledby="agents-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">OPERATIONS</p>
+          <h2 id="agents-title">Agent overview</h2>
+        </div>
+        <p class="muted">Approval and failures surface before routine progress.</p>
+      </div>
+      <div id="agent-grid" class="grid cards"></div>
+    </section>
+
+    <section id="setup" class="view" aria-labelledby="setup-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CONTEXT CONTROL</p>
+          <h2 id="setup-title">Rules, skills and gates</h2>
+        </div>
+        <p class="muted">One visible inventory of the files shaping agent behaviour.</p>
+      </div>
+      <div id="setup-list" class="stack"></div>
+    </section>
+
+    <section id="improve" class="view" aria-labelledby="improve-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">EVIDENCE → CHANGE</p>
+          <h2 id="improve-title">Improvement proposals</h2>
+        </div>
+        <p class="muted">Repeated corrections can draft a change. They cannot apply it.</p>
+      </div>
+      <div id="proposal-list" class="stack"></div>
+    </section>
+
+    <footer>
+      <strong>KUBERA prepares. The human remains the authority.</strong>
+      <span>Static demonstration only — no send, publish, payment or provider access.</span>
+    </footer>
+  </main>
+
+  <dialog id="diff-dialog">
+    <div class="dialog-head">
+      <div>
+        <p class="eyebrow">EXACT CHANGE</p>
+        <h2 id="diff-title">Proposal diff</h2>
+      </div>
+      <button id="close-dialog" class="ghost">Close</button>
+    </div>
+    <pre id="diff-content"></pre>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

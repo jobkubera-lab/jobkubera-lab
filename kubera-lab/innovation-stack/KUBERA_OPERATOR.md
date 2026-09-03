@@ -82,6 +82,39 @@ HandoffArtifact
 - same key + different request → CONFLICT;
 - если adapter мог выполнить действие, но локальная система не доказала результат, требуется reconciliation.
 
+## Correction → durable improvement
+
+Повторяющаяся correction считается **сигналом**, а не разрешением автоматически переписать правила.
+
+Reference `ImprovementRegistry` использует такой цикл:
+
+```text
+minimal CorrectionSignal
+→ repeated-evidence cluster
+→ PromotionThreshold
+→ exact rule / skill / gate / doc proposal
+→ exact diff
+→ human APPROVE / DISMISS
+→ approved payload
+→ normal PR / CI path
+```
+
+По умолчанию полный transcript не требуется: registry хранит fingerprint, короткое summary, conversation id, intended artifact и pain score. Это уменьшает privacy-риск и не создаёт вторую память из всех разговоров.
+
+Default threshold: 3 сигнала, 2 разных разговора, aggregate pain 3. До достижения порога permanent improvement не предлагается.
+
+`maybe_propose()` не пишет файлы. `approved_change()` заблокирован до явного review конкретного proposal. Даже approved payload затем должен пройти обычный Git/PR/CI процесс.
+
+Когда повторяющееся правило можно безопасно выразить детерминированно, gate/test/CI предпочтительнее вечного повторения инструкции в prose.
+
+## Agent status overview
+
+Provider-neutral session state допускает только явные состояния:
+
+`running · waiting_approval · finished · failed · idle · unknown`
+
+Это модель состояния, не заявление о live-интеграции с конкретными провайдерами. Реальные adapters добавляются отдельно и не получают обход существующих execution controls.
+
 ## Notify by exception
 
 Обычный успешный подготовительный поток не должен перегружать человека уведомлениями. Эскалация нужна при approval, failure, unknown external state, значимом изменении состояния или превышении порога.
