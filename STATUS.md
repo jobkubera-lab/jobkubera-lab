@@ -10,13 +10,15 @@ Updated 2026-09-03.
 
 PR #38 merged: `HandoffArtifact`, Source/Evidence/Action gates, `IdempotencyStore`, and `ActionLogger` into the existing Evidence Ledger; focused tests 12/12; GitHub Actions green.
 
+PR #39 merged: `SovereignToolExecutor` now composes Handoff → Privacy/Validation → Source/Evidence/Action gates → signed approval → idempotency → injected tool adapter → ActionLogger/Evidence Ledger. The full Innovation Stack suite is green: 120 tests on Python 3.11, 3.12 and 3.13.
+
 ## Frozen
 
 Innovation-stack modules 01–18 are not separate products and should not be expanded as parallel product lines. The active Control layer is `DZAMBALA.md` plus `reference-implementation/`.
 
 ## Next step
 
-Wrap one Tool Executor so no external tool path can bypass gates + approval + idempotency.
+Red-team the `SovereignToolExecutor` and only then connect one narrowly scoped real adapter through this boundary.
 
 ## Rule
 
