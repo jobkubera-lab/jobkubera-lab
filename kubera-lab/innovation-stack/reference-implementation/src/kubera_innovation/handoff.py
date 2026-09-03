@@ -115,3 +115,7 @@ class HandoffArtifact:
             f"## Evidence\n\n{evidence}\n\n"
             f"## Next action\n\n{self.next_action}\n"
         )
+
+    def to_handoff_md(self) -> str:
+        """Render the existing HandoffArtifact as HANDOFF.md without a second format."""
+        return self.to_markdown()
