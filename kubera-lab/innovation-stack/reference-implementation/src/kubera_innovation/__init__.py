@@ -45,6 +45,14 @@ from .execution_controls import (
     SourceEvidenceActionGate,
     hash_request,
 )
+from .tool_executor import (
+    IRREVERSIBLE_OPERATIONS,
+    SovereignToolExecutor,
+    ToolAdapter,
+    ToolExecutionResult,
+    ToolExecutionStatus,
+    ToolRequest,
+)
 
 __all__ = [
     "Constitution", "Decision", "PolicyRule",
@@ -65,4 +73,6 @@ __all__ = [
     "ActionIntent", "ActionLogger", "ActionStatus", "GateDecision", "GateOutcome",
     "IdempotencyDecision", "IdempotencyOutcome", "IdempotencyStore", "Reversibility",
     "SourceEvidenceActionGate", "hash_request",
+    "IRREVERSIBLE_OPERATIONS", "SovereignToolExecutor", "ToolAdapter",
+    "ToolExecutionResult", "ToolExecutionStatus", "ToolRequest",
 ]
