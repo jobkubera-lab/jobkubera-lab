@@ -26,13 +26,21 @@
    Стратегия: `kubera-lab/innovation-stack/DZAMBALA.md`  
    Роль: handoff, source/evidence/action gates, approval, idempotency, Evidence Ledger и контролируемое выполнение.
 
+## Craft — отдельно от runtime
+
+**KUBERA STONES**  
+Папка: `kubera-lab/kubera-stones/`  
+Роль: one-of-a-kind handmade stones, персональные символы и custom-order craft. Это отдельное творческое направление и не часть AI runtime.
+
 ## Витрина
 
-Профильный `README.md`, `STATUS.md`, `KUBERA_LOCAL_DESK.md` и эта карта объясняют одну систему: **KUBERA Local Desk + DZAMBALA Control layer**.
+Корневой профильный `README.md` — отдельная лицевая презентационная страница. Операционные статусы, runtime-изменения и служебные записи размещаются в `STATUS.md`, `REPO_MAP.md` и внутренних README проектов, а не добавляются автоматически на лицевую страницу.
 
 ## Склад / библиотека
 
 Остальные репозитории и материалы не считаются отдельными флагманскими продуктами. Это библиотеки, заметки, старые эксперименты или черновики, пока они не нужны одному из трёх флагманских кусков: Lookup / Place / Control.
+
+Шаблоны виз и миграционные материалы остаются библиотекой, а не главным нарративом аккаунта.
 
 ## Заморожено
 

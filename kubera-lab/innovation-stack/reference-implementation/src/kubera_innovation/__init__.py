@@ -40,6 +40,7 @@ from .execution_controls import (
     GateOutcome,
     IdempotencyDecision,
     IdempotencyOutcome,
+    IdempotencyState,
     IdempotencyStore,
     Reversibility,
     SourceEvidenceActionGate,
@@ -47,6 +48,7 @@ from .execution_controls import (
 )
 from .tool_executor import (
     IRREVERSIBLE_OPERATIONS,
+    PreparedToolCall,
     SovereignToolExecutor,
     ToolAdapter,
     ToolExecutionResult,
@@ -71,8 +73,8 @@ __all__ = [
     "PrivacyGate", "SecretScanResult", "ToolLoopGuard", "ToolValidator", "ValidationResult",
     "HandoffArtifact", "HandoffStatus",
     "ActionIntent", "ActionLogger", "ActionStatus", "GateDecision", "GateOutcome",
-    "IdempotencyDecision", "IdempotencyOutcome", "IdempotencyStore", "Reversibility",
-    "SourceEvidenceActionGate", "hash_request",
-    "IRREVERSIBLE_OPERATIONS", "SovereignToolExecutor", "ToolAdapter",
+    "IdempotencyDecision", "IdempotencyOutcome", "IdempotencyState", "IdempotencyStore",
+    "Reversibility", "SourceEvidenceActionGate", "hash_request",
+    "IRREVERSIBLE_OPERATIONS", "PreparedToolCall", "SovereignToolExecutor", "ToolAdapter",
     "ToolExecutionResult", "ToolExecutionStatus", "ToolRequest",
 ]
