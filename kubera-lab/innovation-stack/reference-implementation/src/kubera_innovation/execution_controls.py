@@ -52,9 +52,6 @@ class ActionIntent:
 
     @property
     def fingerprint(self) -> str:
-        # Approval is tied not only to operation/target/request content, but also
-        # to the actor and idempotency domain. This prevents a valid grant from
-        # being replayed by another actor or with a fresh key to repeat a side effect.
         packet = {
             "actor": self.actor,
             "operation": self.operation,
@@ -84,11 +81,7 @@ class GateDecision:
 
 
 class SourceEvidenceActionGate:
-    """Fail-closed source -> evidence -> action gate for consequential work.
-
-    Irreversible work requires a signed grant even if policy would otherwise
-    allow it. The grant is checked against the exact action fingerprint.
-    """
+    """Fail-closed source -> evidence -> action gate for consequential work."""
 
     def evaluate(
         self,
@@ -130,6 +123,7 @@ class SourceEvidenceActionGate:
 class IdempotencyOutcome(str, Enum):
     NEW = "NEW"
     REPLAY = "REPLAY"
+    IN_FLIGHT = "IN_FLIGHT"
     CONFLICT = "CONFLICT"
 
 
@@ -148,8 +142,8 @@ class IdempotencyDecision:
 class IdempotencyStore:
     """SQLite reservation store preventing duplicate side effects on retries.
 
-    A reservation stays PENDING until a confirmed result reference is persisted.
-    A replay of a PENDING reservation must be reconciled rather than executed again.
+    COMPLETE + same hash is a replay. PENDING + same hash is IN_FLIGHT and must
+    never be executed again until an operator reconciles the external state.
     """
 
     def __init__(self, path: str = ":memory:") -> None:
@@ -188,6 +182,8 @@ class IdempotencyStore:
                 state = IdempotencyState(state_text)
                 if existing_hash != request_hash:
                     return IdempotencyDecision(IdempotencyOutcome.CONFLICT, state, result_ref)
+                if state is IdempotencyState.PENDING:
+                    return IdempotencyDecision(IdempotencyOutcome.IN_FLIGHT, state, result_ref)
                 return IdempotencyDecision(IdempotencyOutcome.REPLAY, state, result_ref)
 
     def complete(self, key: str, *, result_ref: str) -> None:
@@ -221,6 +217,7 @@ class ActionStatus(str, Enum):
     QUEUED = "QUEUED"
     APPROVAL_REQUIRED = "APPROVAL_REQUIRED"
     EXECUTED = "EXECUTED"
+    CONFIRMED_SUCCEEDED = "CONFIRMED_SUCCEEDED"
     BLOCKED = "BLOCKED"
     FAILED = "FAILED"
     REPLAYED = "REPLAYED"
