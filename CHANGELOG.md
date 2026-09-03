@@ -1,132 +1,106 @@
 # CHANGELOG
 
-All notable changes to KUBERA LAB are documented in this file.
+This file records **verified changes** to the active KUBERA / DZAMBALA public workspace. It is not a roadmap and does not reconstruct older history from memory.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+Current priorities and future work belong in [`STATUS.md`](./STATUS.md).
 
----
+## 2026-09-03 — reference runtime v0.9.1 and operator boundary
 
-## [0.9.1] — 2026-09-03
+### PR #38 — DZAMBALA operational trust layer
 
-### Added
+Merged: [`#38`](https://github.com/jobkubera-lab/jobkubera-lab/pull/38)
 
-- **SovereignToolExecutor** — single choke point for all external side effects
-- **IdempotencyStore** — prevents duplicate actions on retries (PENDING/COMPLETE states)
-- **SignedApproval** — exact-action fingerprinting for consequential decisions
-- **ActionLogger** — writes to Evidence Ledger instead of separate audit database
-- **WorkContract** — five-field specialist work boundaries (Job, Sources, Judgment, Output, Forbidden)
-- **LocalDraftAdapter** — reversible tool path: task → brief → approval → local draft
+Added the reference operational controls that are now used by the active runtime:
 
-### Changed
+- `HandoffArtifact`;
+- Source / Evidence / Action gates;
+- signed approval bound to exact action fingerprints;
+- `IdempotencyStore`;
+- `ActionLogger` writing into the existing Evidence Ledger;
+- focused operational-control tests.
 
-- Tool Executor hardened: approval now bound to finalized sanitized payload + actor + idempotency key
-- UNKNOWN_EXTERNAL_STATE handling improved for uncertain adapter responses
-- Evidence gates require actual ledger resolution (no boolean substitutes)
-- DZAMBALA operational trust layer now reference-implemented
+### PR #39 — SovereignToolExecutor
 
-### Fixed
+Merged: [`#39`](https://github.com/jobkubera-lab/jobkubera-lab/pull/39)
 
-- Reversibility boundary now enforced: preparation vs. irreversible side effects
-- Source Gate → Evidence Gate → Action Gate chain now strict
-- Privacy validation prevents PRIVATE context leakage to external providers
+Added `SovereignToolExecutor` as the reference execution boundary over:
 
-### Documentation
+`Handoff → Privacy/Validation → Source/Evidence/Action gates → approval → idempotency → injected adapter → ActionLogger/Evidence Ledger`.
 
-- [KUBERA_OPERATOR.md](./kubera-lab/innovation-stack/KUBERA_OPERATOR.md) — operational rules
-- [DZAMBALA.md](./kubera-lab/innovation-stack/DZAMBALA.md) — control-layer architecture
-- [STATUS.md](./STATUS.md) — current work and next steps
+No live Slack, email, payment, browser-posting, or Kickstarter adapter was connected.
 
----
+### PR #40 — runtime hardening to v0.9.1
 
-## [0.2] — 2026-08-29
+Merged: [`#40`](https://github.com/jobkubera-lab/jobkubera-lab/pull/40)
 
-### Added
+Hardened the existing executor and control state:
 
-- **Community Compass v0.2** — verified geographic discovery for London + Merton
-- **Kubera Guide** — 1.1M+ Google Maps views, structured place documentation
-- **KUBERA Visual Systems** — DiagramIntent contract for renderer-independent visual requests
-- **Agent Fabric** — trust mesh and approval gates for agent-to-agent work
+- approval binding includes the finalized sanitized payload, actor, and idempotency domain;
+- idempotency distinguishes `PENDING` from `COMPLETE`;
+- uncertain adapter state returns an unknown/reconciliation state instead of blindly retrying;
+- Evidence Ledger writes are serialized;
+- malformed authorization grants fail closed;
+- adversarial hardening tests were added;
+- reference package version set to `0.9.1`.
 
-### Changed
+### PR #41 — operator pack
 
-- DZAMBALA reframed as sovereign layer above replaceable runtimes
-- Innovation Stack reduced to 18 core modules (no expansion)
-- Migration/visa templates moved to library/archive status
-- Profile narrowed to three active flagships
+Merged: [`#41`](https://github.com/jobkubera-lab/jobkubera-lab/pull/41)
 
-### Deprecated
+Added and integrated:
 
-- Innovation-stack modules 19+ (rejected)
-- Separate product lines from Innovation Stack modules
+- `KUBERA_OPERATOR.md`;
+- five-field `WorkContract` (`Job / Sources / Judgment / Output / Forbidden`);
+- ledger-backed Source/Evidence resolution;
+- explicit in-flight/unknown handling for pending idempotency reservations;
+- `SovereignToolExecutor` documented as the single reference tool choke point.
 
----
+At merge, the reference CI reported **143/143 tests green** on Python 3.11, 3.12, and 3.13.
 
-## [0.1] — 2026-08-15
+### PR #42 — first narrow real adapter and demo
 
-### Added
+Merged: [`#42`](https://github.com/jobkubera-lab/jobkubera-lab/pull/42)
 
-- **Civic Evidence OS** — source-backed local-service lookup
-  - Privacy-conscious ResidentProfile
-  - Evidence ledger (SHA-256 hashed queries)
-  - Source/Evidence/Action gates
-  - Fallback on ambiguity
-  
-- **Mitcham Survival Map** — 19 verified park records
-  - Official coordinates and source links
-  - Mobile-first responsive design
-  - PWA shell
-  
-- **Morden Hall Park Digital Trail** — National Trust prototype proposal
-  - Independent interactive experience
-  - Requires National Trust approval for production
+Added one reversible real adapter behind the executor:
 
-### Initial releases
+- `LocalDraftAdapter` writes a local UTF-8 draft only;
+- example path: `task → brief → approval → SovereignToolExecutor → local draft`;
+- replay does not write the completed draft twice;
+- no send/publish/payment/network action was added.
 
-- KUBERA LAB public project structure
-- Kubera Guide project page (1.1M+ views)
-- KUBERA Innovation Stack definition (18 modules)
-- Foundation modules with executable reference implementation
+After this merge, the reference CI reported **145/145 tests green** on Python 3.11, 3.12, and 3.13.
 
----
+### PR #43 — restore and lock profile README
 
-## Unreleased
+Merged: [`#43`](https://github.com/jobkubera-lab/jobkubera-lab/pull/43)
 
-### Planned (Next iteration)
+Restored the owner-approved root profile `README.md` and added repository guard ownership/CI controls so ordinary PR work must not silently rewrite the profile page.
 
-- **GeoMemory prototype** — from already-public map records
-- **Shared schemas** for remaining Innovation Stack modules
-- **Public reference contracts** connected to private KUBERA AGENT OS
-- **Reproducible demos** and proof-of-work dashboards
-- **Failure Vaccine** — regression tests from verified failures
+### PR #44 — self-healing profile guard
 
-### In research (2040 horizon)
+Merged: [`#44`](https://github.com/jobkubera-lab/jobkubera-lab/pull/44)
 
-- Sovereign Agent Kernel — portable governance above several runtimes
-- Verifiable Agent History — cryptographically linked evidence records
-- Context Firewall — minimum-purpose review packets
-- Capability Market with Trust — permission profiles and provenance
-- Model Competition — multiple providers reviewed independently
-- Permission Economics — authority as consumable resource
+Strengthened the root profile README protection. Pull requests are checked against the approved canonical README hash, and direct changes to `main` are subject to the self-healing workflow.
 
----
+## 2026-08-30 — Community Compass v0.2
 
-## Frozen / Not expanding
+### PR #36 — verified London + Merton event layer
 
-Per [STATUS.md](./STATUS.md):
+Merged: [`#36`](https://github.com/jobkubera-lab/jobkubera-lab/pull/36)
 
-- **Innovation Stack modules** — 18 total, no modules 19+
-- **Control layer** — DZAMBALA.md + reference-implementation/ are active; rest frozen
-- **Migration/visa templates** — library material, not primary product line
+Added the manually verified Community Compass v0.2 event layer with provenance/freshness handling and dedicated validation/CI. Automatic scraping, autonomous re-verification, and AI ranking were explicitly not claimed.
 
----
+## Scope and frozen work
 
-## See also
+Per [`STATUS.md`](./STATUS.md):
 
-- [STATUS.md](./STATUS.md) — current workspace status and next steps
-- [KUBERA_OPERATOR.md](./kubera-lab/innovation-stack/KUBERA_OPERATOR.md) — execution flow
-- [DZAMBALA.md](./kubera-lab/innovation-stack/DZAMBALA.md) — architecture and principles
-- [CONTRIBUTING.md](./CONTRIBUTING.md) — how to contribute
+- `DZAMBALA.md` + `reference-implementation/` are the active Control layer;
+- Innovation Stack modules 01–18 are not separate product lines;
+- do not create modules 19+;
+- migration/visa material remains supporting library content rather than the primary account runtime.
 
----
+## Historical accuracy rule
+
+Older releases and dates are intentionally omitted here unless they are verified from repository history. Do not add invented release dates, reconstructed milestones, or speculative future features to this changelog.
 
 **KUBERA prepares. The human remains the authority.**
