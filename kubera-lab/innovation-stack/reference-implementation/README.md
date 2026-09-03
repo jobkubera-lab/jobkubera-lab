@@ -19,31 +19,43 @@ Executable public reference code for selected KUBERA / DZAMBALA foundation modul
 
 ## v0.9 operational trust layer
 
-The reference runtime now adds four mechanics for persistent multi-agent work:
+### Handoff artifacts
+`HandoffArtifact` transfers a task between specialist agents without relying on chat history. It records previous owner, next owner, objective, status, output summary, sources, evidence references and exact next action.
 
-### 1. Handoff artifacts
-`HandoffArtifact` transfers a task between specialist agents without relying on chat history. It records the previous owner, next owner, task objective, status, output summary, sources, evidence references and exact next action. Every artifact has a deterministic SHA-256 identity and can be rendered as `HANDOFF.md`.
+### Source → Evidence → Action gates
+`SourceEvidenceActionGate` fails closed before consequential work. Missing source or evidence blocks execution. Irreversible operations require signed approval even when a broad policy says `ALLOW`. Approval is bound to the exact action fingerprint.
 
-### 2. Source → Evidence → Action gates
-`SourceEvidenceActionGate` fails closed before consequential work:
+### Idempotent execution
+`IdempotencyStore` reserves side-effecting work before execution. Same key + same request becomes a replay; same key + different request becomes a conflict.
 
-1. the source must be verified;
-2. the evidence must be verified;
-3. policy and reversibility determine whether execution is allowed.
+### Action log
+`ActionLogger` writes operational status and references into the existing hash-chained Evidence Ledger rather than creating a competing audit store.
 
-An irreversible action requires signed human approval even when a general policy would otherwise allow the operation. The signed grant is bound to the action fingerprint (`operation + target + request hash`).
+### Sovereign Tool Executor
+`SovereignToolExecutor` is the single reference boundary for injected external tool adapters:
 
-### 3. Idempotent execution reservations
-`IdempotencyStore` prevents a retry from silently repeating an external side effect. The same idempotency key with the same request is treated as a replay; reuse with a different request is a conflict.
+```text
+HandoffArtifact
+  → PrivacyGate
+  → ToolValidator
+  → Source Gate
+  → Evidence Gate
+  → Action Gate / signed approval
+  → IdempotencyStore reserve
+  → injected ToolAdapter
+  → ActionLogger
+  → Evidence Ledger
+```
 
-### 4. Structured action log
-`ActionLogger` does not create a second competing audit database. It records action status, actor, target, reversibility, source/evidence references, idempotency key and approval grant ID into the existing hash-chained Evidence Ledger.
+The adapter receives only finalized sanitized arguments. It does not receive the authorization signer or signing secret. A completed request is replayed without a second side effect; a pending reservation without a confirmed result requires reconciliation instead of blind retry.
+
+No real Slack, email, payment, Kickstarter or browser-posting adapter is connected in this reference implementation.
 
 ## Operational rule
 
-Reversible work can be automated more freely. Irreversible work — publish, send, buy, delete, sign, accept terms, or equivalent external side effects — must cross the action gate and carry exact approval when required.
+**KUBERA prepares. The human remains the authority.**
 
-The implementation deliberately keeps **approval stricter than convenience**: a broad allow rule does not cancel an irreversible-action approval requirement.
+Reversible preparation can be automated more freely. Irreversible operations such as `send`, `publish`, `pay`, `delete` and `sign` require explicit signed approval in the reference executor.
 
 ## Run
 
@@ -55,9 +67,9 @@ python -m kubera_innovation demo --json
 
 ## Security boundary
 
-This remains a reference runtime, not a production security product. The Evidence Ledger is tamper-evident hash-chain logic, not immutable external storage or a digital signature service. The signed-grant reference uses a local HMAC signer; production deployments should use protected key material and stronger identity/attestation where required.
+This remains a reference runtime, not a production security product. The Evidence Ledger is tamper-evident hash-chain logic, not immutable external storage or a digital-signature service. The signed-grant reference uses a local HMAC signer; production deployments should protect key material and use stronger identity/attestation where required.
 
-The runtime does not claim automatic provider execution, automatic source re-verification, durable distributed workflow recovery, or a complete browser/action sandbox.
+The runtime does not claim a live council service, banking service, autonomous posting, automatic provider execution, automatic source re-verification, durable distributed workflow recovery or a complete browser/action sandbox.
 
 ## Architecture direction
 
