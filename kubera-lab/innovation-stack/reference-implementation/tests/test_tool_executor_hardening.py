@@ -1,32 +1,20 @@
 from __future__ import annotations
 
-from dataclasses import replace
 import threading
 import unittest
 
 from kubera_innovation.authorization_grant import AuthorizationGrant, AuthorizationSigner
 from kubera_innovation.constitution import Decision
 from kubera_innovation.evidence_ledger import EvidenceLedger
-from kubera_innovation.execution_controls import (
-    ActionLogger,
-    IdempotencyOutcome,
-    IdempotencyState,
-    IdempotencyStore,
-)
+from kubera_innovation.execution_controls import ActionLogger, IdempotencyOutcome, IdempotencyState, IdempotencyStore
 from kubera_innovation.handoff import HandoffArtifact, HandoffStatus
-from kubera_innovation.tool_executor import (
-    SovereignToolExecutor,
-    ToolExecutionStatus,
-    ToolRequest,
-)
+from kubera_innovation.tool_executor import SovereignToolExecutor, ToolExecutionStatus, ToolRequest
+from kubera_innovation.work_contract import WorkContract
 
 
 SCHEMA = {
     "type": "object",
-    "properties": {
-        "body": {"type": "string"},
-        "token": {"type": "string"},
-    },
+    "properties": {"body": {"type": "string"}, "token": {"type": "string"}},
     "required": ["body"],
     "additionalProperties": False,
 }
@@ -38,14 +26,7 @@ class RecordingAdapter:
         self.fail = fail
 
     def execute(self, *, tool_name, operation, target, arguments):
-        self.calls.append(
-            {
-                "tool_name": tool_name,
-                "operation": operation,
-                "target": target,
-                "arguments": dict(arguments),
-            }
-        )
+        self.calls.append({"tool_name": tool_name, "operation": operation, "target": target, "arguments": dict(arguments)})
         if self.fail:
             raise RuntimeError("provider outcome unavailable")
         return {"ok": True, "call": len(self.calls)}
@@ -58,14 +39,7 @@ class BlockingAdapter(RecordingAdapter):
         self.release = threading.Event()
 
     def execute(self, *, tool_name, operation, target, arguments):
-        self.calls.append(
-            {
-                "tool_name": tool_name,
-                "operation": operation,
-                "target": target,
-                "arguments": dict(arguments),
-            }
-        )
+        self.calls.append({"tool_name": tool_name, "operation": operation, "target": target, "arguments": dict(arguments)})
         self.started.set()
         self.release.wait(timeout=2)
         return {"ok": True, "call": len(self.calls)}
@@ -74,6 +48,29 @@ class BlockingAdapter(RecordingAdapter):
 class ToolExecutorHardeningTests(unittest.TestCase):
     def setUp(self) -> None:
         self.ledger = EvidenceLedger()
+        source = self.ledger.append(
+            run_id="refs-hardening",
+            stage="source_verification",
+            input_value={"source": "official"},
+            output_value={"verified": True},
+            metadata={"reference_kind": "source", "verified": True},
+        )
+        evidence = self.ledger.append(
+            run_id="refs-hardening",
+            stage="evidence_verification",
+            input_value={"evidence": "reviewed"},
+            output_value={"verified": True},
+            metadata={"reference_kind": "evidence", "verified": True},
+        )
+        self.source_ref = f"evidence:{source.entry_id}"
+        self.evidence_ref = f"evidence:{evidence.entry_id}"
+        self.contract = WorkContract(
+            job="execute reviewed request",
+            sources=("ledger refs",),
+            judgment="use exact reviewed payload",
+            output="tool result",
+            forbidden=("delete", "pay"),
+        )
         self.store = IdempotencyStore()
         self.adapter = RecordingAdapter()
         self.signer = AuthorizationSigner(b"h" * 32)
@@ -96,21 +93,12 @@ class ToolExecutorHardeningTests(unittest.TestCase):
             objective="execute a reviewed tool action",
             status=HandoffStatus.READY,
             output_summary="source and evidence prepared",
-            source_refs=("source:official",),
-            evidence_refs=("evidence:verified",),
+            source_refs=(self.source_ref,),
+            evidence_refs=(self.evidence_ref,),
             next_action="execute only through SovereignToolExecutor",
         )
 
-    def request(
-        self,
-        *,
-        actor="operator",
-        operation="publish",
-        target="example",
-        body="hello",
-        token=None,
-        key="hardening-key",
-    ):
+    def request(self, *, actor="operator", operation="publish", target="example", body="hello", token=None, key="hardening-key"):
         arguments = {"body": body}
         if token is not None:
             arguments["token"] = token
@@ -129,9 +117,8 @@ class ToolExecutorHardeningTests(unittest.TestCase):
         return (executor or self.executor).execute(
             request,
             handoff=self.handoff(),
+            work_contract=self.contract,
             schema=SCHEMA,
-            source_verified=True,
-            evidence_verified=True,
             policy_decision=Decision.ALLOW,
             grant=grant,
         )
@@ -142,15 +129,18 @@ class ToolExecutorHardeningTests(unittest.TestCase):
 
     def test_approval_is_bound_to_final_sanitized_payload(self):
         request = self.request(token="sk-1234567890abcdef", key="sanitized")
-        grant = self.grant_for(request)
-        result = self.execute(request, grant=grant)
-        self.assertEqual(result.status, ToolExecutionStatus.EXECUTED)
+        result = self.execute(request, grant=self.grant_for(request))
+        self.assertEqual(result.status, ToolExecutionStatus.SUCCEEDED)
         self.assertEqual(self.adapter.calls[0]["arguments"]["token"], "***REDACTED***")
 
     def test_grant_for_raw_secret_payload_does_not_authorize_sanitized_execution(self):
         request = self.request(token="sk-1234567890abcdef", key="raw-grant")
-        raw_intent = request.to_intent()
-        grant = self.signer.issue(scope=raw_intent.approval_scope, subject=raw_intent.fingerprint)
+        raw_hash = request.intent_for_hash(
+            __import__("kubera_innovation.execution_controls", fromlist=["hash_request"]).hash_request(
+                {"tool_name": request.tool_name, "operation": request.operation, "target": request.target, "arguments": request.arguments}
+            )
+        )
+        grant = self.signer.issue(scope=raw_hash.approval_scope, subject=raw_hash.fingerprint)
         result = self.execute(request, grant=grant)
         self.assertEqual(result.status, ToolExecutionStatus.BLOCKED)
         self.assertEqual(len(self.adapter.calls), 0)
@@ -159,32 +149,28 @@ class ToolExecutorHardeningTests(unittest.TestCase):
         original = self.request(actor="operator-a", key="actor-key")
         grant = self.grant_for(original)
         changed = self.request(actor="operator-b", key="actor-key")
-        result = self.execute(changed, grant=grant)
-        self.assertEqual(result.status, ToolExecutionStatus.BLOCKED)
+        self.assertEqual(self.execute(changed, grant=grant).status, ToolExecutionStatus.BLOCKED)
         self.assertEqual(len(self.adapter.calls), 0)
 
     def test_grant_cannot_move_to_new_idempotency_key(self):
         original = self.request(key="approved-key")
         grant = self.grant_for(original)
         changed = self.request(key="fresh-key")
-        result = self.execute(changed, grant=grant)
-        self.assertEqual(result.status, ToolExecutionStatus.BLOCKED)
+        self.assertEqual(self.execute(changed, grant=grant).status, ToolExecutionStatus.BLOCKED)
         self.assertEqual(len(self.adapter.calls), 0)
 
     def test_grant_cannot_move_to_different_target(self):
         original = self.request(target="target-a", key="target-key")
         grant = self.grant_for(original)
         changed = self.request(target="target-b", key="target-key")
-        result = self.execute(changed, grant=grant)
-        self.assertEqual(result.status, ToolExecutionStatus.BLOCKED)
+        self.assertEqual(self.execute(changed, grant=grant).status, ToolExecutionStatus.BLOCKED)
         self.assertEqual(len(self.adapter.calls), 0)
 
     def test_grant_cannot_authorize_modified_arguments(self):
         original = self.request(body="approved", key="payload-key")
         grant = self.grant_for(original)
         changed = self.request(body="changed", key="payload-key")
-        result = self.execute(changed, grant=grant)
-        self.assertEqual(result.status, ToolExecutionStatus.BLOCKED)
+        self.assertEqual(self.execute(changed, grant=grant).status, ToolExecutionStatus.BLOCKED)
         self.assertEqual(len(self.adapter.calls), 0)
 
     def test_pending_reservation_never_reexecutes_tool(self):
@@ -199,12 +185,7 @@ class ToolExecutorHardeningTests(unittest.TestCase):
 
     def test_adapter_exception_enters_unknown_state_and_retry_does_not_repeat(self):
         failing = RecordingAdapter(fail=True)
-        executor = SovereignToolExecutor(
-            adapter=failing,
-            idempotency_store=self.store,
-            action_logger=ActionLogger(self.ledger),
-            signer=self.signer,
-        )
+        executor = SovereignToolExecutor(adapter=failing, idempotency_store=self.store, action_logger=ActionLogger(self.ledger), signer=self.signer)
         request = self.request(operation="draft", key="exception")
         first = self.execute(request, executor=executor)
         second = self.execute(request, executor=executor)
@@ -214,12 +195,7 @@ class ToolExecutorHardeningTests(unittest.TestCase):
 
     def test_two_concurrent_same_key_requests_make_one_external_call(self):
         blocking = BlockingAdapter()
-        executor = SovereignToolExecutor(
-            adapter=blocking,
-            idempotency_store=self.store,
-            action_logger=ActionLogger(self.ledger),
-            signer=self.signer,
-        )
+        executor = SovereignToolExecutor(adapter=blocking, idempotency_store=self.store, action_logger=ActionLogger(self.ledger), signer=self.signer)
         request = self.request(operation="draft", key="concurrent")
         results: list = []
 
@@ -232,11 +208,9 @@ class ToolExecutorHardeningTests(unittest.TestCase):
         second = self.execute(request, executor=executor)
         blocking.release.set()
         thread.join(timeout=2)
-
         self.assertEqual(len(blocking.calls), 1)
         self.assertEqual(second.status, ToolExecutionStatus.UNKNOWN_EXTERNAL_STATE)
-        self.assertEqual(len(results), 1)
-        self.assertEqual(results[0].status, ToolExecutionStatus.EXECUTED)
+        self.assertEqual(results[0].status, ToolExecutionStatus.SUCCEEDED)
 
     def test_mutating_original_arguments_after_creation_does_not_change_execution(self):
         original = {"body": "approved"}
@@ -252,7 +226,7 @@ class ToolExecutorHardeningTests(unittest.TestCase):
         )
         original["body"] = "mutated"
         result = self.execute(request)
-        self.assertEqual(result.status, ToolExecutionStatus.EXECUTED)
+        self.assertEqual(result.status, ToolExecutionStatus.SUCCEEDED)
         self.assertEqual(self.adapter.calls[0]["arguments"]["body"], "approved")
 
     def test_completed_reservation_replays_with_complete_state(self):
@@ -260,7 +234,7 @@ class ToolExecutorHardeningTests(unittest.TestCase):
         first = self.execute(request)
         prepared = self.executor.prepare(request, schema=SCHEMA)
         replay = self.store.reserve(request.idempotency_key, prepared.request_hash)
-        self.assertEqual(first.status, ToolExecutionStatus.EXECUTED)
+        self.assertEqual(first.status, ToolExecutionStatus.SUCCEEDED)
         self.assertEqual(replay.outcome, IdempotencyOutcome.REPLAY)
         self.assertEqual(replay.state, IdempotencyState.COMPLETE)
         self.assertIsNotNone(replay.result_ref)
@@ -270,13 +244,8 @@ class ToolExecutorHardeningTests(unittest.TestCase):
 
         def append(index: int):
             try:
-                self.ledger.append(
-                    run_id="run-ledger",
-                    stage="concurrent",
-                    input_value={"index": index},
-                    output_value={"ok": True},
-                )
-            except Exception as exc:  # pragma: no cover - assertion captures it
+                self.ledger.append(run_id="run-ledger", stage="concurrent", input_value={"index": index}, output_value={"ok": True})
+            except Exception as exc:
                 errors.append(exc)
 
         threads = [threading.Thread(target=append, args=(index,)) for index in range(12)]
@@ -284,32 +253,21 @@ class ToolExecutorHardeningTests(unittest.TestCase):
             thread.start()
         for thread in threads:
             thread.join(timeout=2)
-
         self.assertEqual(errors, [])
         self.assertEqual(len(self.ledger.entries("run-ledger")), 12)
         self.assertTrue(self.ledger.verify_chain())
 
     def test_malformed_authorization_grant_fails_closed(self):
         malformed = AuthorizationGrant(
-            grant_id="bad",
-            scope="execute:publish",
-            subject="subject",
-            issued_at="not-a-date",
-            expires_at="also-not-a-date",
-            signature="bad-signature",
+            grant_id="bad", scope="execute:publish", subject="subject",
+            issued_at="not-a-date", expires_at="also-not-a-date", signature="bad-signature",
         )
-        self.assertFalse(
-            self.signer.verify(
-                malformed,
-                required_scope="execute:publish",
-                subject="subject",
-            )
-        )
+        self.assertFalse(self.signer.verify(malformed, required_scope="execute:publish", subject="subject"))
 
     def test_adapter_receives_only_tool_fields_and_final_arguments(self):
         request = self.request(operation="draft", token="Bearer abcdefghijklmnop", key="adapter-shape")
         result = self.execute(request)
-        self.assertEqual(result.status, ToolExecutionStatus.EXECUTED)
+        self.assertEqual(result.status, ToolExecutionStatus.SUCCEEDED)
         call = self.adapter.calls[0]
         self.assertEqual(set(call), {"tool_name", "operation", "target", "arguments"})
         self.assertNotIn("grant", call)
