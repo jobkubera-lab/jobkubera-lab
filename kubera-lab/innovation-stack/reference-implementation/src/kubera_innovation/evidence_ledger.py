@@ -72,6 +72,10 @@ class EvidenceLedger:
         ).fetchone()
         return row[0] if row else self.GENESIS_HASH
 
+    @staticmethod
+    def _entry_from_row(row: tuple[Any, ...]) -> EvidenceEntry:
+        return EvidenceEntry(*row[:-1], json.loads(row[-1]))
+
     def append(
         self,
         *,
@@ -142,10 +146,31 @@ class EvidenceLedger:
                 params = (run_id,)
             query += " ORDER BY sequence ASC"
             rows = self._conn.execute(query, params).fetchall()
-            return [
-                EvidenceEntry(*row[:-1], json.loads(row[-1]))
-                for row in rows
-            ]
+            return [self._entry_from_row(row) for row in rows]
+
+    def resolve_reference(self, reference: str) -> EvidenceEntry | None:
+        """Resolve a canonical ledger reference such as ``evidence:<entry_id>``.
+
+        Tool execution uses this instead of caller-supplied verification booleans.
+        Unknown or malformed references return ``None`` and therefore fail closed.
+        """
+        if not isinstance(reference, str) or not reference.strip():
+            return None
+        value = reference.strip()
+        if value.startswith("evidence:"):
+            entry_id = value.split(":", 1)[1].strip()
+        elif value.startswith("ledger:"):
+            entry_id = value.split(":", 1)[1].strip()
+        else:
+            entry_id = value
+        if not entry_id:
+            return None
+        with self._lock:
+            row = self._conn.execute(
+                "SELECT entry_id, run_id, stage, timestamp, input_hash, output_hash, previous_hash, entry_hash, metadata_json FROM evidence WHERE entry_id = ?",
+                (entry_id,),
+            ).fetchone()
+            return self._entry_from_row(row) if row else None
 
     def verify_chain(self) -> bool:
         with self._lock:
