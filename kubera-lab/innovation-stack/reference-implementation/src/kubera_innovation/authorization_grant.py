@@ -63,12 +63,17 @@ class AuthorizationSigner:
         return AuthorizationGrant(**payload, signature=self._sign_payload(payload))
 
     def verify(self, grant: AuthorizationGrant, *, required_scope: str, subject: str, now: datetime | None = None) -> bool:
-        expected = self._sign_payload(grant.unsigned_payload())
-        if not hmac.compare_digest(expected, grant.signature):
+        try:
+            expected = self._sign_payload(grant.unsigned_payload())
+            if not hmac.compare_digest(expected, grant.signature):
+                return False
+            if grant.scope != required_scope or grant.subject != subject:
+                return False
+            now = now or datetime.now(timezone.utc)
+            expiry = datetime.fromisoformat(grant.expires_at.replace("Z", "+00:00"))
+            issued = datetime.fromisoformat(grant.issued_at.replace("Z", "+00:00"))
+            if issued.tzinfo is None or expiry.tzinfo is None or now.tzinfo is None:
+                return False
+            return issued <= now < expiry
+        except (AttributeError, TypeError, ValueError, json.JSONDecodeError):
             return False
-        if grant.scope != required_scope or grant.subject != subject:
-            return False
-        now = now or datetime.now(timezone.utc)
-        expiry = datetime.fromisoformat(grant.expires_at.replace("Z", "+00:00"))
-        issued = datetime.fromisoformat(grant.issued_at.replace("Z", "+00:00"))
-        return issued <= now < expiry
