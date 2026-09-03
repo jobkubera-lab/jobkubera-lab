@@ -1,42 +1,52 @@
 # KUBERA Innovation Stack — Public Reference Implementation
 
-Executable public reference code for selected KUBERA Innovation Stack foundation modules and cross-cutting contracts.
+Executable public reference code for selected KUBERA / DZAMBALA foundation modules and cross-cutting control contracts.
 
-## Implemented foundation prototypes
+## Implemented reference components
+
 - Personal AI Constitution
 - Human Authority Budget
-- KUBERA Reality Graph
+- Reality Graph
 - Failure Vaccine
 - Agent Reputation Engine
 - Proof-of-Work Portfolio
 - Evidence Ledger — SQLite append-only hash-chained records
 - Deterministic Agent Pipeline — Builder → Critic → Verifier → Evidence Ledger
+- Privacy Gate, strict tool validation and loop protection
+- External Intelligence contracts and provider budgets
+- Runtime adapter contracts
+- Plugin Intelligence Registry
 
-## Cross-cutting prototype contracts
-- Visual Systems / DiagramIntent
-- External Intelligence Node — hardened provider-independent audit/critic handoff
-- Plugin Intelligence Registry — safe external capability intake
+## v0.9 operational trust layer
 
-## External Intelligence v0.5 hardening
-The External Intelligence contract enforces:
-- `PRIVATE` context never leaves KUBERA;
-- role-specific context ceilings;
-- explicit authorization for `PROJECT` packets;
-- request UUID and UTC timestamp;
-- contract versioning;
-- SHA-256 context identity;
-- redaction metadata;
-- timeout/token budgets;
-- provider/model/version/latency metadata;
-- finding confidence;
-- separate provider/transport execution status from review verdict.
+The reference runtime now adds four mechanics for persistent multi-agent work:
 
-## v0.6 deterministic pipeline
-The first executable Agent Society control loop now runs without any external model dependency. Builder, Critic and Verifier are injected Python callables. Each stage is written into an SQLite Evidence Ledger with input/output hashes and a hash link to the previous record.
+### 1. Handoff artifacts
+`HandoffArtifact` transfers a task between specialist agents without relying on chat history. It records the previous owner, next owner, task objective, status, output summary, sources, evidence references and exact next action. Every artifact has a deterministic SHA-256 identity and can be rendered as `HANDOFF.md`.
 
-This proves orchestration mechanics and evidence recording before adding provider adapters.
+### 2. Source → Evidence → Action gates
+`SourceEvidenceActionGate` fails closed before consequential work:
+
+1. the source must be verified;
+2. the evidence must be verified;
+3. policy and reversibility determine whether execution is allowed.
+
+An irreversible action requires signed human approval even when a general policy would otherwise allow the operation. The signed grant is bound to the action fingerprint (`operation + target + request hash`).
+
+### 3. Idempotent execution reservations
+`IdempotencyStore` prevents a retry from silently repeating an external side effect. The same idempotency key with the same request is treated as a replay; reuse with a different request is a conflict.
+
+### 4. Structured action log
+`ActionLogger` does not create a second competing audit database. It records action status, actor, target, reversibility, source/evidence references, idempotency key and approval grant ID into the existing hash-chained Evidence Ledger.
+
+## Operational rule
+
+Reversible work can be automated more freely. Irreversible work — publish, send, buy, delete, sign, accept terms, or equivalent external side effects — must cross the action gate and carry exact approval when required.
+
+The implementation deliberately keeps **approval stricter than convenience**: a broad allow rule does not cancel an irreversible-action approval requirement.
 
 ## Run
+
 ```bash
 python -m pip install -e .
 python -m unittest discover -s tests -v
@@ -44,9 +54,11 @@ python -m kubera_innovation demo --json
 ```
 
 ## Security boundary
-The public code still does not call Claude or another provider and is not production DLP. A future provider adapter must implement secret scanning, minimum-purpose packet construction, structured provider output, authentication, retries and provider-policy enforcement.
 
-The Evidence Ledger hash chain is tamper-evident reference logic, not a digital signature or immutable external audit service.
+This remains a reference runtime, not a production security product. The Evidence Ledger is tamper-evident hash-chain logic, not immutable external storage or a digital signature service. The signed-grant reference uses a local HMAC signer; production deployments should use protected key material and stronger identity/attestation where required.
 
-## Research direction
-See [`../HORIZON-2040.md`](../HORIZON-2040.md) for a clearly labelled comparison between current agent frameworks and long-horizon KUBERA research hypotheses.
+The runtime does not claim automatic provider execution, automatic source re-verification, durable distributed workflow recovery, or a complete browser/action sandbox.
+
+## Architecture direction
+
+See [`../DZAMBALA.md`](../DZAMBALA.md) for the sovereign architecture and the distinction between implemented mechanics and future research.
