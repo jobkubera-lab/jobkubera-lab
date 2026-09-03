@@ -52,7 +52,7 @@ jobs:
         run: |
           python -m pip install -e .
           python -m pip install coverage
-      - name: Measure branch coverage
+      - name: Measure source branch coverage
         run: |
-          coverage run --branch -m unittest discover -s tests -q
+          coverage run --branch --source=kubera_innovation -m unittest discover -s tests -q
           coverage report --show-missing
