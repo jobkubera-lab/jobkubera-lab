@@ -39,7 +39,9 @@ Verified Result
 
 The public reference runtime is currently **v0.9**. PR #38 added the operational trust layer: `HandoffArtifact`, Source/Evidence/Action gates, exact-action approval binding, `IdempotencyStore`, and `ActionLogger` using the existing hash-chained Evidence Ledger.
 
-The next runtime step is to put one controlled Tool Executor in front of external tool calls so the gates, approval and idempotency cannot be skipped inside the reference execution path.
+PR #39 adds `SovereignToolExecutor`, which composes Handoff → Privacy/Validation → Source/Evidence/Action gates → signed approval → idempotency → injected tool adapter → ActionLogger/Evidence Ledger. The full reference suite is green with **120 tests on Python 3.11, 3.12 and 3.13**.
+
+The next runtime step is red-team review of the executor before connecting one narrowly scoped real adapter through this boundary.
 
 ## Engineering principles
 
@@ -76,6 +78,7 @@ Provider-neutral Python reference components for controlled agent execution, inc
 - source/evidence/action gates;
 - signed approval concepts;
 - idempotency controls;
+- sovereign tool execution boundary;
 - action logging and Evidence Ledger;
 - failure-prevention and reputation foundations.
 
