@@ -16,7 +16,11 @@ PR #40 merged: Tool Executor hardened to v0.9.1 — approval bound to finalized 
 
 PR #41 merged: KUBERA operator pack landed — `KUBERA_OPERATOR.md`, five-field `WorkContract`, ledger-backed Source/Evidence resolution, explicit PENDING/IN_FLIGHT idempotency handling, and `SovereignToolExecutor` as the single reference tool choke point. CI: **143/143 tests green on Python 3.11, 3.12 and 3.13**.
 
-PR #42 merged: profile narrowed to the three active flagships; `LocalDraftAdapter` adds one reversible real tool path behind `SovereignToolExecutor`: `task → brief → approval → local draft`. Replay does not write the draft twice. Full Innovation Stack CI: **145/145 tests green on Python 3.11, 3.12 and 3.13**.
+PR #42 merged: `LocalDraftAdapter` adds one reversible real tool path behind `SovereignToolExecutor`: `task → brief → approval → local draft`. Replay does not write the draft twice. Full Innovation Stack CI: **145/145 tests green on Python 3.11, 3.12 and 3.13**.
+
+PR #43 and #44 merged: the owner-approved root profile `README.md` was restored and protected by a hash-check/self-healing workflow. The profile README is owner-controlled and must not be changed by routine project work.
+
+Current reference CI also measures source-only branch coverage. Unit tests + safe demo report **89%**, with an enforced **85% fail-under floor**.
 
 ## Frozen
 

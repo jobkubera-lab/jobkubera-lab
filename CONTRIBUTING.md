@@ -1,203 +1,155 @@
 # CONTRIBUTING
 
-Thank you for your interest in contributing to KUBERA LAB!
+KUBERA LAB is a public engineering workspace for the active KUBERA / DZAMBALA reference runtime, Civic Evidence work, Community Compass, and supporting research artifacts.
 
-This is a **professional engineering project** building practical AI systems. We welcome contributions that:
-- Improve code quality and testing
-- Clarify documentation
-- Add new capabilities
-- Report issues
-- Suggest architectural improvements
+The product rule is fixed:
 
----
+> **KUBERA prepares. The human remains the authority.**
 
-## How to contribute
+## Scope
 
-### 1. Report issues
+Contributions are welcome when they improve an existing active project, fix a verified defect, strengthen tests, or make documentation more accurate.
 
-Found a bug or architectural concern?
+Do not:
 
-**Open an issue with:**
-- Clear description of the problem
-- Steps to reproduce
-- Expected vs. actual behavior
-- Any relevant logs or traces
-- Environment (Python version, OS, etc.)
+- create Innovation Stack modules 19+;
+- turn modules 01–18 into new parallel products;
+- claim the reference runtime is a live council, bank, autonomous publisher, or production deployment;
+- add send/publish/pay/delete/sign integrations without a separate explicit review;
+- change the root profile `README.md` unless the repository owner explicitly asks for that exact change.
 
-### 2. Discuss major changes
+The current active direction is recorded in [`STATUS.md`](./STATUS.md).
 
-For significant changes:
-- Open an issue first
-- Describe the change and why
-- Wait for discussion
-- Then submit a PR
+## Development workflow
 
-This helps us align on architecture and prevents wasted effort.
+1. Start from an up-to-date `main` branch.
+2. Create one focused feature/fix branch.
+3. Keep one logical change per PR.
+4. Add or update tests for behavior changes.
+5. Run the relevant test suite before opening the PR.
+6. Document limitations and failure modes; do not replace them with production claims.
 
-### 3. Submit pull requests
+For architectural changes, read first:
 
-**Before submitting:**
-- Fork the repository
-- Create a feature branch: `git checkout -b feature/your-feature`
-- Make your changes
-- Write or update tests
-- Update documentation
-- Run the full test suite
+- [`kubera-lab/innovation-stack/DZAMBALA.md`](./kubera-lab/innovation-stack/DZAMBALA.md)
+- [`kubera-lab/innovation-stack/KUBERA_OPERATOR.md`](./kubera-lab/innovation-stack/KUBERA_OPERATOR.md)
+- [`STATUS.md`](./STATUS.md)
 
-**In your PR description:**
-- What does this change do?
-- Why is it needed?
-- How does it relate to existing code?
-- Any breaking changes?
-- Links to related issues
+## Python compatibility
 
-### 4. Code standards
+The public reference runtime requires **Python 3.11+** and CI currently tests **Python 3.11, 3.12, and 3.13**.
 
-**Python:**
-- Python 3.9+ compatible
-- Follow PEP 8
-- Use type hints
-- Write docstrings
-- No external dependencies without review
+Use:
 
-**Testing:**
-- Write tests for new functionality
-- Run `python -m unittest discover -s tests -v`
-- Aim for >80% coverage
-- Test failure cases
+- type hints for public APIs;
+- deterministic behavior in control-path code;
+- standard-library solutions where practical;
+- no new runtime dependency without review;
+- fail-closed behavior for authorization, evidence, privacy, and tool-safety checks.
 
-**Documentation:**
-- Update README.md if needed
-- Add docstrings to functions
-- Explain architectural decisions
-- Link to related files
+## Reference runtime layout
 
-### 5. Key principles
-
-When contributing, keep these principles in mind:
-
-1. **Evidence before claims** — all changes should be testable and verifiable
-2. **Privacy by default** — never expose internal state unnecessarily
-3. **Human authority** — no automatic actions on consequential decisions
-4. **Deterministic** — avoid non-determinism in core logic
-5. **Reversibility** — prefer preparation over irreversible side effects
-
----
-
-## Architecture guidelines
-
-### Before you code
-
-- Read [DZAMBALA.md](./kubera-lab/innovation-stack/DZAMBALA.md) for control-layer philosophy
-- Review [KUBERA_OPERATOR.md](./kubera-lab/innovation-stack/KUBERA_OPERATOR.md) for execution rules
-- Check STATUS.md for current direction
-
-### When adding features
-
-1. **Keep it reversible** — new code should support preparation (reversible) better than side effects
-2. **Use the gates** — source → evidence → action gates for any external integration
-3. **Add to evidence ledger** — log consequential decisions with sources and reasoning
-4. **Require approval for irreversible actions** — no automatic sends, publishes, or deletions
-5. **Support idempotency** — retries should be safe
-
-### Code organization
-
-```
-kubera-lab/
-├── innovation-stack/
-│   ├── reference-implementation/    # Executable reference runtime
-│   │   ├── handoff.py             # HandoffArtifact
-│   │   ├── work_contract.py       # WorkContract
-│   │   ├── gates.py               # Source/Evidence/Action gates
-│   │   ├── executor.py            # SovereignToolExecutor
-│   │   └── evidence_ledger.py     # Evidence log
-│   ├── DZAMBALA.md                # Architecture
-│   └── KUBERA_OPERATOR.md         # Operational rules
-├── kubera-guide-global-mapping/   # Public mapping project
-├── dzambala-community-compass/    # Geographic discovery
-└── kubera-stones/                 # Craft work
+```text
+kubera-lab/innovation-stack/reference-implementation/
+├── pyproject.toml
+├── examples/
+├── src/
+│   └── kubera_innovation/
+│       ├── handoff.py
+│       ├── work_contract.py
+│       ├── execution_controls.py
+│       ├── authorization_grant.py
+│       ├── evidence_ledger.py
+│       ├── tool_executor.py
+│       └── local_draft_adapter.py
+└── tests/
 ```
 
----
+`SovereignToolExecutor` is the reference choke point for tool execution. Application/example code must not bypass it to call a side-effecting adapter directly.
 
-## Testing strategy
+## Run the reference tests
 
-### Unit tests
+From the repository root:
 
 ```bash
-cd civic-evidence-os
-PYTHONPATH=. python -m unittest discover -s tests -v
+cd kubera-lab/innovation-stack/reference-implementation
+python -m pip install -e .
+python -m unittest discover -s tests -v
+python -m kubera_innovation demo --json
 ```
 
-### Validation tests
+The same unit-test and safe-demo path is exercised by GitHub Actions across Python 3.11–3.13.
 
-- Test evidence gates (source, evidence, action)
-- Test idempotency (same request, same result)
-- Test fallback behavior (missing data)
-- Test privacy (no query leakage)
+## Coverage
 
-### Integration tests
+CI measures **source-only branch coverage** for `kubera_innovation`. The current unit-tests + safe-demo coverage run reports **89%**. The workflow enforces a conservative **85% fail-under floor** to prevent silent regression while leaving room for legitimate refactoring.
 
-- End-to-end handoff flow
-- Evidence ledger consistency
-- Multi-agent coordination
+Do not claim a higher percentage unless a current CI report supports it.
 
----
+## Control-path requirements
 
-## Documentation standards
+For consequential tool work, preserve the enforced sequence:
 
-- Use clear, technical language
-- Explain the "why" not just the "what"
-- Link to related files and concepts
-- Include examples where helpful
-- Mark sections [DRAFT], [STABLE], [DEPRECATED]
-
----
-
-## Commit messages
-
-Use clear, descriptive commit messages:
-
-```
-fix: Correct idempotency key conflict handling
-
-- Check for same key + different request
-- Return CONFLICT state instead of executing
-- Add test for conflict detection
-- Fixes #42
+```text
+Handoff
+→ WorkContract
+→ Privacy / validation
+→ ledger-backed Source Gate
+→ Evidence Gate
+→ Action Gate / signed approval when required
+→ Idempotency reserve
+→ ToolAdapter
+→ completion state
+→ ActionLogger
+→ Evidence Ledger
 ```
 
-Good prefixes:
-- `fix:` — bug fix
-- `feat:` — new feature
-- `docs:` — documentation
-- `refactor:` — code cleanup
-- `test:` — adding/improving tests
-- `chore:` — maintenance
+Required behavior includes:
 
----
+- missing source/evidence fails closed;
+- irreversible operations require exact signed approval;
+- same idempotency key + same completed request does not repeat the side effect;
+- pending/unknown external state is reconciled before retry;
+- same key + different request conflicts;
+- secrets/private context are not intentionally exported through tool payloads.
+
+## Documentation rules
+
+- Describe what exists, not what is merely planned.
+- Put roadmap items in `STATUS.md`, not in historical release notes.
+- Link claims to code, tests, PRs, or verified sources when appropriate.
+- Keep the root profile `README.md` owner-controlled and unchanged unless explicitly authorized.
+- Do not add vendor branding or copy third-party guides into KUBERA documentation.
+
+## Security reports
+
+For suspected vulnerabilities, follow [`SECURITY.md`](./SECURITY.md). Do not publish credentials, private data, exploitable secrets, or sensitive reproduction material in a public issue.
 
 ## Licensing
 
-By contributing, you agree your work is licensed under the MIT License.
+This repository currently does **not** contain a root `LICENSE` file. Do not assume that contributions or repository content are licensed under MIT or another open-source license unless the repository owner explicitly adds one.
 
----
+A repository-wide license choice is an owner decision and is not implied by this contribution guide.
 
-## Code of conduct
+## Commit and PR quality
 
-We expect all contributors to:
-- Be respectful and inclusive
-- Focus on the work, not the person
-- Value clear communication
-- Welcome diverse perspectives
-- Acknowledge mistakes and learn from them
+Prefer clear messages such as:
 
----
+```text
+fix: block pending idempotency replay
+feat: add read-only lookup adapter behind executor
+test: cover exact approval fingerprint conflict
+docs: correct runtime testing instructions
+```
 
-## Questions?
+A PR should state:
 
-- Open a GitHub issue
-- Email: jobkubera@gmail.com
-- Telegram: [@kuberababa](https://t.me/kuberababa)
+- what changed;
+- why it is needed;
+- files/behavior affected;
+- tests run;
+- any remaining limitation or manual step.
 
-Thank you for building trustworthy AI systems! 🚀
+## Conduct
+
+Keep review technical, specific, respectful, and evidence-based.
