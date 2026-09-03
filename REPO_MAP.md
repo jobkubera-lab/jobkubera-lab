@@ -1,41 +1,46 @@
 # KUBERA repository map
 
-Обновлено: 2026-09-01.
+Обновлено: 2026-09-03.
 
 ## Продукт
 
-**KUBERA Local Desk** — человек описывает задачу, система даёт официальный источник, человек действует.
+**KUBERA Local Desk** — человек описывает задачу, система находит и проверяет официальный источник, готовит понятный результат и сохраняет доказательства; человек остаётся authority.
 
-Это не council service, не eligibility decision и не автопостинг.
+Это не live council service, не eligibility decision, не банк и не автопостинг.
 
 ## Флагманы
 
 1. **Lookup — Civic Evidence OS**  
    Репозиторий: `jobkubera-lab/kubera-improved-website`  
    Папка: `civic-evidence-os/`  
-   Роль: детерминированный поиск Merton по проверенному каталогу, официальный URL, fallback и safety.
+   Роль: детерминированный поиск по проверенному каталогу, официальный URL, fallback и safety.
 
-2. **Place — Community Compass / Mitcham map**  
+2. **Place — Community Compass v0.2**  
    Репозиторий: `jobkubera-lab/jobkubera-lab`  
    Папка: `kubera-lab/dzambala-community-compass/`  
-   Роль: карта и вручную проверенные события/места.
+   Роль: карта, вручную проверенные события и provenance для London + Merton.
 
-3. **Control — Agent Fabric / Trust Mesh**  
+3. **Control — Agent Fabric / Trust Mesh + DZAMBALA**  
    Репозиторий: `jobkubera-lab/jobkubera-lab`  
    Папка: `kubera-lab/innovation-stack/reference-implementation/`  
-   Роль: approval + ledger; агент готовит действие, человек остаётся authority.
+   Стратегия: `kubera-lab/innovation-stack/DZAMBALA.md`  
+   Роль: handoff, source/evidence/action gates, approval, idempotency, Evidence Ledger и контролируемое выполнение.
 
 ## Витрина
 
-Профильный `README.md`, `STATUS.md`, `KUBERA_LOCAL_DESK.md` и эта карта репо объясняют один продукт: **KUBERA Local Desk**.
+Профильный `README.md`, `STATUS.md`, `KUBERA_LOCAL_DESK.md` и эта карта объясняют одну систему: **KUBERA Local Desk + DZAMBALA Control layer**.
 
 ## Склад / библиотека
 
-Остальные репозитории и материалы не считаются отдельными продуктами. Это библиотеки, заметки, старые эксперименты или черновики, пока они не нужны одному из трёх флагманских кусков: Lookup / Place / Control.
+Остальные репозитории и материалы не считаются отдельными флагманскими продуктами. Это библиотеки, заметки, старые эксперименты или черновики, пока они не нужны одному из трёх флагманских кусков: Lookup / Place / Control.
 
 ## Заморожено
 
-Innovation-stack модули 01–18 не развивать и не расширять новыми модулями. Не создавать из них отдельные продукты.
+Innovation-stack модули 01–18 как отдельные продукты **не развивать и не расширять новыми модулями 19+**.
+
+`reference-implementation/` и `DZAMBALA.md` — действующий Control-слой и продолжают развиваться через небольшие проверяемые компоненты и тесты.
+
+Остальной innovation-stack считается замороженным архитектурным материалом, если он не нужен действующему reference runtime.
 
 Также не развивать как витринные направления: `ssh-check`, `kubera-local-ai2`, голос, крипто-оплату, автокомменты и другие черновые эксперименты.
 
