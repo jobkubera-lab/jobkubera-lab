@@ -32,6 +32,7 @@ from .evidence_ledger import EvidenceEntry, EvidenceLedger
 from .agent_pipeline import DeterministicAgentPipeline, PipelineResult, PipelineVerdict, StageResult
 from .tool_safety import PrivacyGate, SecretScanResult, ToolLoopGuard, ToolValidator, ValidationResult
 from .handoff import HandoffArtifact, HandoffStatus
+from .work_contract import WorkContract
 from .execution_controls import (
     ActionIntent,
     ActionLogger,
@@ -71,7 +72,7 @@ __all__ = [
     "EvidenceEntry", "EvidenceLedger",
     "DeterministicAgentPipeline", "PipelineResult", "PipelineVerdict", "StageResult",
     "PrivacyGate", "SecretScanResult", "ToolLoopGuard", "ToolValidator", "ValidationResult",
-    "HandoffArtifact", "HandoffStatus",
+    "HandoffArtifact", "HandoffStatus", "WorkContract",
     "ActionIntent", "ActionLogger", "ActionStatus", "GateDecision", "GateOutcome",
     "IdempotencyDecision", "IdempotencyOutcome", "IdempotencyState", "IdempotencyStore",
     "Reversibility", "SourceEvidenceActionGate", "hash_request",

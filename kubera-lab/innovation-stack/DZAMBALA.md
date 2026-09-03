@@ -59,9 +59,9 @@ Outcome Reputation + Failure Vaccine
 Human decision and control
 ```
 
-## Operational trust layer — implemented in reference v0.9
+## Operational trust layer — implemented in reference v0.9+
 
-The following mechanics are now executable reference components rather than architecture-only notes.
+The following mechanics are executable reference components rather than architecture-only notes.
 
 ### Persistent handoff contract
 Agent-to-agent work must not depend on remembered chat context. `HandoffArtifact` carries the task ID, previous owner, next owner, objective, status, output summary, source references, evidence references and exact next action. It can be rendered as a `HANDOFF.md` artifact and has a SHA-256 identity.
@@ -77,7 +77,7 @@ Recommended workspace convention for future durable runtimes:
 /workspace/archive/
 ```
 
-This directory layout is an architectural convention; the public runtime does not yet claim a distributed persistent workspace manager.
+This directory layout is an architectural convention; the public runtime does not claim a distributed persistent workspace manager.
 
 ### Three gates before consequential actions
 
@@ -85,11 +85,15 @@ This directory layout is an architectural convention; the public runtime does no
 SOURCE GATE → EVIDENCE GATE → ACTION GATE
 ```
 
-- **Source Gate:** a consequential action must be based on a currently verified authoritative source.
+- **Source Gate:** a consequential action must be based on a verified authoritative source reference.
 - **Evidence Gate:** the evidence required for the decision must be present and verified.
 - **Action Gate:** owner policy, reversibility and signed authorization determine whether execution is allowed.
 
-Any failed source/evidence gate stops the action. Unknown or missing proof fails closed.
+Source and evidence references are resolved against the canonical Evidence Ledger by the tool executor. A naked caller boolean is not evidence. Unknown or missing proof fails closed.
+
+### Work contract
+
+`WorkContract` records five fields for specialist work: Job, Sources, Judgment, Output and Forbidden. For irreversible execution, an empty Forbidden boundary is insufficient authority and fails closed.
 
 ### Reversibility boundary
 
@@ -97,23 +101,22 @@ DZAMBALA distinguishes preparation from external side effects.
 
 **Reversible:** research, analyse, draft, summarize, compare, prepare, verify, queue.
 
-**Irreversible / consequential:** publish, send, buy, delete, sign, accept terms, change an external account or execute an equivalent real-world side effect.
+**Irreversible / consequential:** publish, send, pay, buy, delete, sign, accept terms, Launch, change an external account or execute an equivalent real-world side effect.
 
 An irreversible action requires signed approval even when a broad policy says `ALLOW`. In other words, **approval wins over convenience**.
 
 ### Exact-action approval
 
-The action gate binds approval to the action fingerprint:
+Approval is bound to the finalized sanitized action fingerprint, including actor, operation, target, exact request hash and idempotency domain. A grant for one payload cannot authorize a modified payload.
 
-`operation + target + exact request hash`
-
-A grant for one payload cannot authorize a modified payload. The existing signed-grant mechanism remains a reference HMAC design; production identity and key protection require stronger deployment controls.
+The signed-grant mechanism remains a reference HMAC design; production identity and key protection require stronger deployment controls.
 
 ### Idempotent retries
 
-Every side-effecting action should carry an idempotency key. `IdempotencyStore` reserves that key before execution:
+Every side-effecting action carries an idempotency key. `IdempotencyStore` reserves that key before execution:
 
-- same key + same request → replay, do not repeat the side effect;
+- COMPLETE + same request → replay, do not repeat the side effect;
+- PENDING + same request → unknown/in-flight, reconcile before retry;
 - same key + different request → conflict, stop;
 - new key → eligible for first execution after all other gates pass.
 
@@ -121,7 +124,7 @@ This protects retries after partial failures from double-sending, double-publish
 
 ### Action log uses the Evidence Ledger
 
-DZAMBALA does not create a competing audit database for operations. `ActionLogger` records action ID, actor, operation, target, reversibility, status, source/evidence references, idempotency key and approval-grant reference into the existing hash-chained Evidence Ledger.
+DZAMBALA does not create a competing audit database. `ActionLogger` writes operational states into the existing hash-chained Evidence Ledger. `CONFIRMED_SUCCEEDED` is recorded by the executor only after the adapter returned and the idempotency reservation was completed.
 
 ## Engineering principles adopted now
 
@@ -170,11 +173,13 @@ Authority becomes a consumable resource across time, actions, token/cost budgets
 
 ## Near-term target
 
-DZAMBALA is successful only if the public reference runtime can prove these mechanics in small tests:
+`SovereignToolExecutor` is the reference **choke point** for external side effects. Application/runtime code must not call `ToolAdapter.execute()` outside this boundary.
 
-`Handoff → Source Gate → Evidence Gate → Signed Action Grant → Idempotency Reserve → Execution → Action Log → Evidence Ledger → Verified Result`
+The enforced path is:
 
-The next production slice should connect these controls to one fake/injected tool executor first, then to a real provider/tool adapter only after tests prove that no external side effect can bypass source, evidence, authority and idempotency checks.
+`Handoff → WorkContract → Privacy/Validation → ledger-backed Source/Evidence Gates → Signed Action Grant when required → Idempotency Reserve → ToolAdapter → Completion → Action Log → Evidence Ledger`
+
+`DeterministicAgentPipeline` prepares work; it does not own or call raw adapters. The next production slice is not another framework: it is one narrowly scoped real adapter placed behind this choke point, with credentials kept outside agent/plugin reach and reconciliation required for `UNKNOWN_EXTERNAL_STATE`.
 
 ## Current references
 
@@ -185,5 +190,3 @@ The next production slice should connect these controls to one fake/injected too
 - Temporal durable execution concepts: https://docs.temporal.io/
 
 These projects remain independent upstream systems; DZAMBALA is KUBERA's integration/governance direction, not a fork or ownership claim.
-
-The operational principles added in v0.9 were also informed by user-supplied field notes about multi-agent operations. Their external attribution was not required for implementation and is not presented here as a verified upstream specification.
