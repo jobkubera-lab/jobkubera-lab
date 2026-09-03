@@ -16,7 +16,7 @@ PR #40 merged: Tool Executor hardened to v0.9.1 — approval bound to finalized 
 
 PR #41 merged: KUBERA operator pack landed — `KUBERA_OPERATOR.md`, five-field `WorkContract`, ledger-backed Source/Evidence resolution, explicit PENDING/IN_FLIGHT idempotency handling, and `SovereignToolExecutor` as the single reference tool choke point. CI: **143/143 tests green on Python 3.11, 3.12 and 3.13**.
 
-A narrow demo adapter is being added separately: local draft-file output only, with the path `task → brief → approval → SovereignToolExecutor → local draft`; no send, publish, payment, browser or network adapter.
+PR #42 merged: profile narrowed to the three active flagships; `LocalDraftAdapter` adds one reversible real tool path behind `SovereignToolExecutor`: `task → brief → approval → local draft`. Replay does not write the draft twice. Full Innovation Stack CI: **145/145 tests green on Python 3.11, 3.12 and 3.13**.
 
 ## Frozen
 
@@ -28,7 +28,7 @@ Migration/visa templates remain library material rather than the primary account
 
 ## Next step
 
-Prove the local approved-draft demo end to end, then consider at most one narrowly scoped external read/lookup adapter behind `SovereignToolExecutor`; raw provider credentials remain outside agent/plugin reach.
+If a real external integration is added, add at most one narrowly scoped read/lookup adapter behind `SovereignToolExecutor`; raw provider credentials remain outside agent/plugin reach and no send/publish/payment action is added without a separate review.
 
 ## Rule
 
