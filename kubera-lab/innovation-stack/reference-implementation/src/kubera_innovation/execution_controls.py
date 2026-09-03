@@ -5,6 +5,7 @@ from enum import Enum
 from hashlib import sha256
 import json
 import sqlite3
+from threading import RLock
 from typing import Any
 
 from .authorization_grant import AuthorizationGrant, AuthorizationSigner
@@ -51,10 +52,15 @@ class ActionIntent:
 
     @property
     def fingerprint(self) -> str:
+        # Approval is tied not only to operation/target/request content, but also
+        # to the actor and idempotency domain. This prevents a valid grant from
+        # being replayed by another actor or with a fresh key to repeat a side effect.
         packet = {
+            "actor": self.actor,
             "operation": self.operation,
             "target": self.target,
             "request_hash": self.request_hash,
+            "idempotency_key": self.idempotency_key,
         }
         return hash_request(packet)
 
@@ -127,17 +133,28 @@ class IdempotencyOutcome(str, Enum):
     CONFLICT = "CONFLICT"
 
 
+class IdempotencyState(str, Enum):
+    PENDING = "PENDING"
+    COMPLETE = "COMPLETE"
+
+
 @dataclass(frozen=True)
 class IdempotencyDecision:
     outcome: IdempotencyOutcome
+    state: IdempotencyState | None = None
     result_ref: str | None = None
 
 
 class IdempotencyStore:
-    """SQLite reservation store preventing duplicate side effects on retries."""
+    """SQLite reservation store preventing duplicate side effects on retries.
+
+    A reservation stays PENDING until a confirmed result reference is persisted.
+    A replay of a PENDING reservation must be reconciled rather than executed again.
+    """
 
     def __init__(self, path: str = ":memory:") -> None:
-        self._conn = sqlite3.connect(path)
+        self._lock = RLock()
+        self._conn = sqlite3.connect(path, check_same_thread=False)
         self._conn.execute(
             """
             CREATE TABLE IF NOT EXISTS idempotency (
@@ -153,37 +170,51 @@ class IdempotencyStore:
     def reserve(self, key: str, request_hash: str) -> IdempotencyDecision:
         if not key.strip() or not request_hash.strip():
             raise ValueError("idempotency key and request_hash must not be empty")
-        try:
-            self._conn.execute(
-                "INSERT INTO idempotency (key, request_hash, state, result_ref) VALUES (?, ?, 'PENDING', NULL)",
-                (key, request_hash),
-            )
-            self._conn.commit()
-            return IdempotencyDecision(IdempotencyOutcome.NEW)
-        except sqlite3.IntegrityError:
-            row = self._conn.execute(
-                "SELECT request_hash, state, result_ref FROM idempotency WHERE key = ?",
-                (key,),
-            ).fetchone()
-            assert row is not None
-            existing_hash, _state, result_ref = row
-            if existing_hash != request_hash:
-                return IdempotencyDecision(IdempotencyOutcome.CONFLICT)
-            return IdempotencyDecision(IdempotencyOutcome.REPLAY, result_ref)
+        with self._lock:
+            try:
+                self._conn.execute(
+                    "INSERT INTO idempotency (key, request_hash, state, result_ref) VALUES (?, ?, 'PENDING', NULL)",
+                    (key, request_hash),
+                )
+                self._conn.commit()
+                return IdempotencyDecision(IdempotencyOutcome.NEW, IdempotencyState.PENDING)
+            except sqlite3.IntegrityError:
+                row = self._conn.execute(
+                    "SELECT request_hash, state, result_ref FROM idempotency WHERE key = ?",
+                    (key,),
+                ).fetchone()
+                assert row is not None
+                existing_hash, state_text, result_ref = row
+                state = IdempotencyState(state_text)
+                if existing_hash != request_hash:
+                    return IdempotencyDecision(IdempotencyOutcome.CONFLICT, state, result_ref)
+                return IdempotencyDecision(IdempotencyOutcome.REPLAY, state, result_ref)
 
     def complete(self, key: str, *, result_ref: str) -> None:
         if not result_ref.strip():
             raise ValueError("result_ref must not be empty")
-        cur = self._conn.execute(
-            "UPDATE idempotency SET state = 'COMPLETE', result_ref = ? WHERE key = ?",
-            (result_ref, key),
-        )
-        if cur.rowcount != 1:
-            raise KeyError(f"unknown idempotency key: {key}")
-        self._conn.commit()
+        with self._lock:
+            cur = self._conn.execute(
+                "UPDATE idempotency SET state = 'COMPLETE', result_ref = ? WHERE key = ? AND state = 'PENDING'",
+                (result_ref, key),
+            )
+            if cur.rowcount == 1:
+                self._conn.commit()
+                return
+            row = self._conn.execute(
+                "SELECT state, result_ref FROM idempotency WHERE key = ?",
+                (key,),
+            ).fetchone()
+            if row is None:
+                raise KeyError(f"unknown idempotency key: {key}")
+            state_text, existing_ref = row
+            if state_text == IdempotencyState.COMPLETE.value and existing_ref == result_ref:
+                return
+            raise RuntimeError(f"idempotency key cannot be completed from state {state_text}")
 
     def close(self) -> None:
-        self._conn.close()
+        with self._lock:
+            self._conn.close()
 
 
 class ActionStatus(str, Enum):
@@ -193,6 +224,7 @@ class ActionStatus(str, Enum):
     BLOCKED = "BLOCKED"
     FAILED = "FAILED"
     REPLAYED = "REPLAYED"
+    UNKNOWN_EXTERNAL_STATE = "UNKNOWN_EXTERNAL_STATE"
 
 
 class ActionLogger:
