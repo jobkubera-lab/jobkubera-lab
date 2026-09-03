@@ -82,7 +82,9 @@ The same unit-test and safe-demo path is exercised by GitHub Actions across Pyth
 
 ## Coverage
 
-Coverage is measured in CI as an engineering metric. Do not state a target percentage as achieved unless a current CI report supports it. A future fail-under threshold should be based on an observed baseline, not an invented number.
+CI measures **source-only branch coverage** for `kubera_innovation`. The first source-only baseline measured **86%**. The workflow therefore enforces a conservative **85% fail-under floor** and also includes the safe CLI demo in the coverage run.
+
+Do not claim a higher percentage unless a current CI report supports it.
 
 ## Control-path requirements
 
