@@ -38,7 +38,7 @@ jobs:
         run: python -m kubera_innovation demo --json
 
   coverage:
-    name: coverage-baseline
+    name: coverage-source
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -55,4 +55,5 @@ jobs:
       - name: Measure source branch coverage
         run: |
           coverage run --branch --source=kubera_innovation -m unittest discover -s tests -q
-          coverage report --show-missing
+          coverage run --append --branch --source=kubera_innovation -m kubera_innovation demo --json
+          coverage report --show-missing --fail-under=85
