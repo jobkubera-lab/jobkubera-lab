@@ -1,0 +1,28 @@
+name: Profile README Lock
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify-profile-readme:
+    name: verify-profile-readme
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Verify locked profile README
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="1e23d60ca20b461dad51d7ca05ec5dfb4bdbd26e"
+          actual="$(git hash-object README.md)"
+          echo "expected=$expected"
+          echo "actual=$actual"
+          if [ "$actual" != "$expected" ]; then
+            echo "::error file=README.md::Profile README is locked. Restore the canonical version before merging."
+            exit 1
+          fi
