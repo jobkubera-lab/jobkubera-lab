@@ -1,128 +1,253 @@
-# NIKOLA KUBERA
+# 👋 Hello, I'm Nikola Kubera
 
-## KUBERA Local Desk · DZAMBALA Agent Layer · Civic Evidence
+<p align="right">
+  <a href="https://www.coingecko.com/en/coins/monero" title="Monero (XMR)">
+    <img src="https://cdn.simpleicons.org/monero/FF6600" width="18" height="18" alt="XMR" />
+  </a>
+  <a href="https://www.coingecko.com/en/coins/monero" title="Live XMR/USD price">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.coingecko.com%2Fapi%2Fv3%2Fsimple%2Fprice%3Fids%3Dmonero%26vs_currencies%3Dusd&query=%24.monero.usd&prefix=%24&label=&color=2f3337&style=flat" height="18" alt="Live XMR/USD price" />
+  </a>
+</p>
 
-I build practical AI systems that prepare evidence-backed work while keeping consequential authority with the human owner.
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=760&lines=AI+Solutions+Builder;Building+KUBERA+AGENT+OS;AI+Agents+%7C+Local+Intelligence+%7C+Civic+Tech;Kubera+Guide+%E2%80%94+1.1M+Google+Maps+views" alt="Typing SVG" />
+</p>
 
-> **KUBERA prepares. The human remains the authority.**
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=jobkubera-lab&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+</p>
 
-Working from **London — Mitcham pilot**.
+## AI Solutions Builder · KUBERA LAB · AI agents, local intelligence, civic-tech and interactive maps
 
-## Flagship system
+I build practical AI systems, research tools, interactive maps and digital products that turn complex real-world information into clear, usable results.
 
-| Layer | Project | Role |
-| --- | --- | --- |
-| **Lookup** | [Civic Evidence OS](https://github.com/jobkubera-lab/kubera-improved-website/tree/main/civic-evidence-os) | Controlled service lookup with official-source evidence and safety fallbacks |
-| **Place** | [Community Compass v0.2](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/dzambala-community-compass) | Verified London + Merton community/event discovery with provenance |
-| **Control** | [DZAMBALA reference runtime](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack/reference-implementation) | Handoffs, gates, approval, idempotency, tool safety and Evidence Ledger |
-| **Craft** | [KUBERA STONES](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-stones) | One-of-a-kind handmade decorative stones; separate from the AI runtime |
+### ⚡ Five connected directions
 
-## KUBERA / DZAMBALA control model
+- 🤖 **AI Agent Systems & Automation** — modular agents, reusable skills, model routing and controlled workflows.
+- 🗺️ **Mapping & Local Intelligence** — field data, place discovery, geographic knowledge and interactive maps.
+- 🏛️ **Civic Tech & Public-Service Tools** — explainable systems for residents, newcomers and local communities.
+- 🌐 **International Work & Relocation Intelligence** — structured employment research, route comparison and document planning.
+- 🕉️ **Vedic Astrology & Jyotish Technology** — traditional knowledge translated into transparent digital tools and research workflows.
+
+## 🧰 Technology stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![AI Agents](https://img.shields.io/badge/AI%20Agents-000000?style=for-the-badge&logo=openai&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+![AI Solutions Builder](https://img.shields.io/badge/-AI%20Solutions%20Builder-brightgreen?logo=appveyor) ![AI Agents](https://img.shields.io/badge/-AI%20Agents-blue) ![Civic Tech](https://img.shields.io/badge/-Civic%20Tech-teal) ![Interactive Maps](https://img.shields.io/badge/-Interactive%20Maps-orange) ![Local Intelligence](https://img.shields.io/badge/-Local%20Intelligence-purple)
+
+## 🌍 Kubera Guide — Global Mapping Project
+
+**Kubera Guide** is a field-built Google Maps project based on real locations, original photographs and structured place documentation.
+
+### 📊 Current public reach
+
+- 👁️ **1.1M+ Google Maps views**
+- ✨ **1.8K profile impressions**
+- 🌍 international place research and publishing
+- 📷 original visual evidence and location information
+
+### 🔄 From field discovery to useful intelligence
+
+**🧭 Field observation → 📷 evidence capture → 🗂️ structured place record → 🌍 public mapping → 📊 audience signals → 🧠 local intelligence → 🗺️ interactive services**
+
+Each contribution begins with a real place and becomes part of a reusable geographic knowledge layer.
+
+➡️ **[Explore the Kubera Guide project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)**  
+🌍 **[View Kubera Guide on Google Maps](https://www.google.com/maps/contrib/111907570264362429428?utm_source=mstt_0&g_ep=CAESBzI2LjMzLjIYACCBvQQqqQEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc2MSwxMDA3OTY1MzUsOTQyODA1NzYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksMTAwODE1NjQwLDEwMDgyMDIzNywxMDA4MjI0ODksMTAwODI3OTcxQgJHQg%3D%3D&skid=9d39cad4-d69e-433c-81c5-5e65fff3327e&g_st=atm)**
+
+## 🧠 KUBERA AGENT OS
+
+**KUBERA AGENT OS** is a provider-neutral orchestration layer for personal, local and hybrid AI systems.
+
+> **Models can change. Ownership of memory, policies, skills, evidence and projects does not.**
+
+### 🧩 Technical architecture
+
+| Layer | Responsibility |
+| --- | --- |
+| 🔀 **Model Router** | Selects a local or remote model by task complexity, privacy, cost and reliability |
+| 🧠 **Project Memory** | Keeps context, decisions, preferences and lessons isolated by project |
+| 🧬 **Skill DNA** | Defines versioned capabilities, tools, contracts, permissions and trust levels |
+| 🛡️ **Policy & Permissions** | Enforces READ / CREATE / ACT / ADMIN levels and human approval gates |
+| 🔐 **Privacy Gate** | Classifies, limits and redacts sensitive context before model or tool access |
+| 🧪 **Builder · Critic · Verifier** | Produces, challenges and independently checks each important result |
+| 🧾 **Evidence Ledger** | Records sources, claims, checks, outputs and traceable decision history |
+| 🔁 **Failure Memory** | Captures recurring errors, recovery strategies and prevention rules |
+| ⏱️ **Runtime Controls** | Applies budgets, timeouts, retry limits, loop protection and audit logging |
+| 🧫 **Agent Laboratory** | Tests and evaluates new skills before they receive operational trust |
+
+### ⚙️ Controlled execution cycle
 
 ```text
-Human Owner
-    ↓
-Project / Handoff Artifact
-    ↓
-Privacy + Tool Validation
-    ↓
-Source Gate → Evidence Gate → Action Gate
-    ↓
-Signed Approval when required
-    ↓
-Idempotent Tool Execution
-    ↓
-Action Log → Evidence Ledger
-    ↓
-Verified Result
+Request
+  → Project Context
+  → Policy & Privacy Gate
+  → Model Router
+  → Skill Selection
+  → Tool Execution
+  → Self-Check
+  → Evidence Ledger
+  → Human Approval
+  → Verified Result
 ```
 
-The public reference runtime is currently **v0.9**. PR #38 added the operational trust layer: `HandoffArtifact`, Source/Evidence/Action gates, exact-action approval binding, `IdempotencyStore`, and `ActionLogger` using the existing hash-chained Evidence Ledger.
+The design keeps models interchangeable while preserving continuity, accountability and human authority across every project.
 
-PR #39 adds `SovereignToolExecutor`, which composes Handoff → Privacy/Validation → Source/Evidence/Action gates → signed approval → idempotency → injected tool adapter → ActionLogger/Evidence Ledger. The full reference suite is green with **120 tests on Python 3.11, 3.12 and 3.13**.
+## ✨ What I build
 
-The next runtime step is red-team review of the executor before connecting one narrowly scoped real adapter through this boundary.
+- 🤖 AI agents and intelligent workflow tools.
+- 🧠 Local, hybrid and privacy-conscious AI systems.
+- 🧬 Prompt systems, Skill DNA modules and reusable LLM workflows.
+- 🗺️ Interactive maps and local-service discovery tools.
+- 🏛️ Civic-tech prototypes for communities and newcomers.
+- 🔎 Research, evidence tracking and structured knowledge systems.
+- 🎓 Educational AI products and creative digital experiences.
+- 🕉️ Jyotish and Vedic astrology research tools.
+- 🌐 International employment, relocation and residence-planning tools.
 
-## Engineering principles
+## 🧪 KUBERA LAB
 
-- **Human authority:** irreversible external actions require stricter authorization than reversible preparation.
-- **Evidence before claims:** official/source evidence is separated from assumptions.
-- **Fail closed:** missing source, evidence, authorization or valid tool input blocks execution.
-- **Idempotent side effects:** retries must not blindly repeat a completed external action.
-- **Provider-neutral architecture:** models and runtimes are replaceable; policy, memory and evidence remain owner-controlled.
-- **Privacy by default:** external models and tools receive only the context required for the task.
-- **No false production claims:** reference prototypes are not described as live council, banking or autonomous posting services.
+**KUBERA LAB** is my applied research-and-development environment for turning real needs, verified information and original ideas into working digital systems.
 
-## Selected engineering work
+### ⚙️ My method
 
-### Civic Evidence OS
+**🔍 Observe → ✅ verify → 🧭 define the problem → 🧩 design the architecture → 🛠️ build → 🧪 test → 🧾 record evidence → 🔁 improve**
 
-A working prototype for controlled local-service retrieval. It is designed to return source-backed information and explicit fallbacks rather than inventing official decisions.
+I use AI as an engineering partner to convert real-world needs, research, field observations and cultural knowledge into specifications, data structures, decision rules, agent workflows, interfaces and testable software.
 
-[Open Civic Evidence OS](https://github.com/jobkubera-lab/kubera-improved-website/tree/main/civic-evidence-os)
+Ideas are decomposed into components, checked against reliable sources, modelled as repeatable processes, tested for failure modes and refined through documented iterations. The goal is not an impressive description — it is a system that can be inspected, used and improved.
 
-### DZAMBALA Community Compass — London + Merton v0.2
+### 🚀 Active directions
 
-A verified community and event layer with source provenance, freshness checks, filters and validation tests.
+- 🌍 **Kubera Guide** — field mapping, visual evidence and public place discovery.
+- 🤖 **KUBERA AGENT OS** — modular orchestration, memory, permissions and verification.
+- 🗺️ **Mitcham / Merton community mapping** — local services and newcomer-oriented tools.
+- 🧠 **AI Agents** — task-specific assistants, skills and controlled automation.
+- 📊 **Technology Radar** — structured evaluation of emerging technologies.
+- 🔐 **AI Privacy** — privacy gates, local models and human-controlled data.
+- ⚙️ **Automation** — workflows using APIs, Python and no-code / low-code tools.
+- 🏛️ **Civic AI** — evidence-led digital tools for communities and public services.
+- 🌌 **Cosmic English Adventures** — AI-assisted education combining stories, animation, English learning and printable activities.
+- 🕉️ **Jyotish Technology** — structured Vedic astrology research and transparent digital tools.
+- 🌐 **Relocation Intelligence** — official-source research for international work, documents and residence planning.
 
-[Open Community Compass](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/dzambala-community-compass)
+➡️ **[Explore KUBERA LAB](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab)**
 
-### KUBERA / DZAMBALA reference runtime
+## 🚀 Selected public projects
 
-Provider-neutral Python reference components for controlled agent execution, including:
+- **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — 1.1M-view travel and Google Maps publishing project.
+- **[kubera-ai-prompts](https://github.com/jobkubera-lab/kubera-ai-prompts)** — reusable prompt systems and AI workflows.
+- **[kubera-improved-website](https://github.com/jobkubera-lab/kubera-improved-website)** — web experiments and community-map work.
+- **[Cosmic English Adventures](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/cosmic-english-adventures)** — cartoons + English learning + colouring-book educational concept.
 
-- Builder → Critic → Verifier orchestration;
-- privacy and secret redaction;
-- strict tool-schema validation;
-- handoff artifacts;
-- source/evidence/action gates;
-- signed approval concepts;
-- idempotency controls;
-- sovereign tool execution boundary;
-- action logging and Evidence Ledger;
-- failure-prevention and reputation foundations.
+## 🧭 Project evolution
 
-[Open Innovation Stack / DZAMBALA](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack)
+```text
+🧭 Real-world observation
+          ↓
+📷 Verified field evidence
+          ↓
+🗂️ Structured knowledge
+          ↓
+🗺️ Maps, guidance and service tools
+          ↓
+🤖 Agent workflows and automation
+          ↓
+🧾 Evidence, testing and human control
+          ↓
+🧠 KUBERA AGENT OS
+```
 
-## Open-source participation
+## 🐍 Contribution trail
 
-Public civic-tech work includes LocalGov Drupal contribution/proposal activity and technical proposals for public-service interfaces. Experimental work is kept separate from claims of official service ownership or production deployment.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jobkubera-lab/jobkubera-lab/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jobkubera-lab/jobkubera-lab/output/github-contribution-grid-snake.svg" />
+  <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/jobkubera-lab/jobkubera-lab/output/github-contribution-grid-snake.svg" />
+</picture>
 
-- [LocalGov Drupal issue #927](https://github.com/localgovdrupal/localgov/issues/927)
-- [Public-service proposals](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/public-service-proposals)
+## 🤝 Open-source participation
 
-## Libraries and supporting work
+I use GitHub as an engineering workspace and public development record: branches, pull requests, reviews, issues, tests, experiments, decisions and reproducible iterations.
 
-Migration/visa templates and older experiments remain libraries or historical material; they are **not** the primary account narrative. The active product direction is Local Desk / agents / evidence / human-controlled execution.
+### 🔭 Areas of contribution
 
-Learning material remains in [kubera-learning.](https://github.com/jobkubera-lab/kubera-learning.) while the canonical repository name is being cleaned up to `kubera-learning`.
+- 🤖 **Agent orchestration** — multi-agent workflows, skill registries and tool contracts.
+- 🧠 **Local & hybrid AI** — replaceable models, lightweight runtimes and controlled context.
+- 🛡️ **AI safety & permissions** — approval gates, privacy boundaries and action controls.
+- 🧾 **Evidence & evaluation** — source tracking, self-checking, benchmarks and failure analysis.
+- 🗺️ **Maps & geospatial systems** — place data, local discovery and community intelligence.
+- 🏛️ **Civic and public-service technology** — explainable tools built around verified official information.
+- 🌍 **Multilingual accessibility** — clearer resident-facing services across languages and communities.
+- 🔎 **Retrieval & data quality** — validation, provenance, freshness and duplicate detection.
+- ⚙️ **Developer productivity** — Python automation, APIs, GitHub Actions and repeatable workflows.
+- 🎓 **Educational and creative AI** — learning systems, interactive content and visual workflows.
+- 🌐 **Relocation information tools** — structured employment, document and residence research.
 
-## Field evidence
+## 🕉️ Vedic Astrology & Jyotish
 
-Kubera Guide remains a separate field-mapping and place-documentation project. Its project files are not part of the DZAMBALA runtime.
+I study traditional Vedic astrology and turn its structured methods into clear digital tools and practical personal guidance.
 
-[View Kubera Guide project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)
+- Jyotish birth-chart research and structured interpretation;
+- planetary periods, transits and life-cycle analysis;
+- career, relocation and place-compatibility perspectives;
+- concepts for transparent Jyotish calculators, knowledge bases and AI-assisted research;
+- respect for classical principles without presenting uncertain predictions as guaranteed facts.
 
-## Technical profile
+> **Traditional knowledge, modern tools, transparent reasoning.**
 
-**Python · SQLite · Git · GitHub Actions · AI agents · deterministic validation · JSON / JSON Schema · evidence ledgers · privacy gates · human-in-the-loop controls · interactive maps**
+## 🌐 International Work & Relocation Guidance
 
-Technical CV: [SHCHEGLOV NIKOLA — AI Engineering Profile](https://github.com/jobkubera-lab/jobkubera-lab/blob/main/career/SHCHEGLOV_NIKOLA_AI_ENGINEERING_PROFILE.md)
+Practical, source-checked guidance for international employment and lawful residence planning.
 
-## Repository navigation
+| Focus | Support |
+| :--- | :--- |
+| 💼 **Work** | Search strategy · CV · applications |
+| 🧭 **Move** | Route comparison · action plan · timeline |
+| 📄 **Status** | Requirements · documents · official sources |
+| 🌍 **Countries** | 🇷🇸 Serbia · 🇲🇪 Montenegro · 🇮🇸 Iceland · 🇬🇪 Georgia · 🇦🇲 Armenia |
 
-- [STATUS.md](./STATUS.md) — current work and next step
-- [REPO_MAP.md](./REPO_MAP.md) — canonical project map
-- [DZAMBALA.md](./kubera-lab/innovation-stack/DZAMBALA.md) — control-layer architecture
-- [Reference implementation](./kubera-lab/innovation-stack/reference-implementation/) — executable public runtime
-- [KUBERA STONES](./kubera-lab/kubera-stones/) — separate Craft project
+📌 **Clear options, verified requirements and realistic next steps — never invented guarantees.**
 
-## Contact
+## 🧑‍💼 About NIKOLA KUBERA
 
-- GitHub: [jobkubera-lab](https://github.com/jobkubera-lab)
-- Email: jobkubera@gmail.com
-- Telegram: [@kuberababa](https://t.me/kuberababa)
+**NIKOLA KUBERA** is a multidisciplinary systems builder working at the intersection of AI engineering, local intelligence, civic technology, international employment research, Jyotish and digital education.
 
----
+- 🧠 I design modular AI architectures with memory, skills, permissions, verification and evidence trails.
+- 🛠️ I turn real problems into specifications, prototypes, workflows, maps and usable digital products.
+- 🗺️ I connect field data and geographic research with interactive local-intelligence systems.
+- 🔎 I analyse official sources and convert complex employment, document and residence requirements into structured action plans.
+- 🕉️ I explore how classical Jyotish methods can be represented through transparent calculations, knowledge systems and responsible AI assistance.
+- 🎓 I create educational and cultural concepts that combine technology, visual storytelling and practical learning.
+- 🧪 I develop **KUBERA LAB** as one connected ecosystem where ideas are researched, built, tested, documented and improved.
+- 🤝 I am open to collaboration with individuals, businesses, researchers and organisations that need practical AI, structured research or original digital solutions.
 
-**KUBERA LAB — evidence before claims, privacy by default, human authority.**
+## 💡 Mission
+
+> **Build practical intelligence: systems that turn verified knowledge into action while keeping people — not models — in control.**
+
+My mission is to connect AI engineering, field data, geographic knowledge, public-service research, international employment and relocation guidance, Jyotish and education into one coherent technology ecosystem.
+
+Every KUBERA project should:
+
+- 🎯 solve a concrete real-world problem;
+- 🧾 separate verified evidence from assumptions;
+- 🧭 explain how a result was reached;
+- 🔐 protect personal data and user ownership;
+- 🔄 remain usable when models or providers change;
+- 🧪 expose failure modes through testing and self-checking;
+- 👤 preserve human approval for consequential actions;
+- 📈 improve through measurable, documented iterations.
+
+**⚙️ Useful by design · 🧾 Evidence before claims · 🔐 Privacy by default · 🧭 Clear next steps · 👤 Human authority**
+
+## 🔗 Connect
+
+<p>
+  <a href="mailto:jobkubera@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://t.me/kuberababa"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
+  <a href="https://github.com/jobkubera-lab"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+</p>
