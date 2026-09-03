@@ -32,6 +32,10 @@ class HandoffTests(unittest.TestCase):
         self.assertIn("ledger:1", text)
         self.assertIn("Open both sources", text)
 
+    def test_handoff_md_is_same_existing_format(self) -> None:
+        artifact = self.make()
+        self.assertEqual(artifact.to_handoff_md(), artifact.to_markdown())
+
     def test_empty_next_action_is_rejected(self) -> None:
         with self.assertRaises(ValueError):
             HandoffArtifact.create(
