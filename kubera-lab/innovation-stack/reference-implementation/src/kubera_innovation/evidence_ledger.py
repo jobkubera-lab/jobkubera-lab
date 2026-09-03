@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from hashlib import sha256
 import json
 import sqlite3
+from threading import RLock
 from typing import Any, Optional
 from uuid import uuid4
 
@@ -41,7 +42,8 @@ class EvidenceLedger:
     GENESIS_HASH = "GENESIS"
 
     def __init__(self, path: str = ":memory:") -> None:
-        self._conn = sqlite3.connect(path)
+        self._lock = RLock()
+        self._conn = sqlite3.connect(path, check_same_thread=False)
         self._conn.execute(
             """
             CREATE TABLE IF NOT EXISTS evidence (
@@ -82,76 +84,13 @@ class EvidenceLedger:
     ) -> EvidenceEntry:
         if not run_id.strip() or not stage.strip():
             raise ValueError("run_id and stage must not be empty")
-        metadata = dict(metadata or {})
-        ts = timestamp or _utc_now()
-        input_hash = self.hash_value(input_value)
-        output_hash = self.hash_value(output_value)
-        previous_hash = self._last_hash()
-        entry_id = str(uuid4())
-        envelope = {
-            "entry_id": entry_id,
-            "run_id": run_id,
-            "stage": stage,
-            "timestamp": ts,
-            "input_hash": input_hash,
-            "output_hash": output_hash,
-            "previous_hash": previous_hash,
-            "metadata": metadata,
-        }
-        entry_hash = "sha256:" + sha256(_canonical_json(envelope).encode("utf-8")).hexdigest()
-        self._conn.execute(
-            """
-            INSERT INTO evidence
-            (entry_id, run_id, stage, timestamp, input_hash, output_hash, previous_hash, entry_hash, metadata_json)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """,
-            (
-                entry_id,
-                run_id,
-                stage,
-                ts,
-                input_hash,
-                output_hash,
-                previous_hash,
-                entry_hash,
-                _canonical_json(metadata),
-            ),
-        )
-        self._conn.commit()
-        return EvidenceEntry(
-            entry_id,
-            run_id,
-            stage,
-            ts,
-            input_hash,
-            output_hash,
-            previous_hash,
-            entry_hash,
-            metadata,
-        )
-
-    def entries(self, run_id: Optional[str] = None) -> list[EvidenceEntry]:
-        query = "SELECT entry_id, run_id, stage, timestamp, input_hash, output_hash, previous_hash, entry_hash, metadata_json FROM evidence"
-        params: tuple[Any, ...] = ()
-        if run_id is not None:
-            query += " WHERE run_id = ?"
-            params = (run_id,)
-        query += " ORDER BY sequence ASC"
-        rows = self._conn.execute(query, params).fetchall()
-        return [
-            EvidenceEntry(*row[:-1], json.loads(row[-1]))
-            for row in rows
-        ]
-
-    def verify_chain(self) -> bool:
-        rows = self._conn.execute(
-            "SELECT entry_id, run_id, stage, timestamp, input_hash, output_hash, previous_hash, entry_hash, metadata_json FROM evidence ORDER BY sequence ASC"
-        ).fetchall()
-        expected_previous = self.GENESIS_HASH
-        for row in rows:
-            entry_id, run_id, stage, ts, input_hash, output_hash, previous_hash, entry_hash, metadata_json = row
-            if previous_hash != expected_previous:
-                return False
+        with self._lock:
+            metadata = dict(metadata or {})
+            ts = timestamp or _utc_now()
+            input_hash = self.hash_value(input_value)
+            output_hash = self.hash_value(output_value)
+            previous_hash = self._last_hash()
+            entry_id = str(uuid4())
             envelope = {
                 "entry_id": entry_id,
                 "run_id": run_id,
@@ -160,13 +99,80 @@ class EvidenceLedger:
                 "input_hash": input_hash,
                 "output_hash": output_hash,
                 "previous_hash": previous_hash,
-                "metadata": json.loads(metadata_json),
+                "metadata": metadata,
             }
-            recomputed = "sha256:" + sha256(_canonical_json(envelope).encode("utf-8")).hexdigest()
-            if recomputed != entry_hash:
-                return False
-            expected_previous = entry_hash
-        return True
+            entry_hash = "sha256:" + sha256(_canonical_json(envelope).encode("utf-8")).hexdigest()
+            self._conn.execute(
+                """
+                INSERT INTO evidence
+                (entry_id, run_id, stage, timestamp, input_hash, output_hash, previous_hash, entry_hash, metadata_json)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    entry_id,
+                    run_id,
+                    stage,
+                    ts,
+                    input_hash,
+                    output_hash,
+                    previous_hash,
+                    entry_hash,
+                    _canonical_json(metadata),
+                ),
+            )
+            self._conn.commit()
+            return EvidenceEntry(
+                entry_id,
+                run_id,
+                stage,
+                ts,
+                input_hash,
+                output_hash,
+                previous_hash,
+                entry_hash,
+                metadata,
+            )
+
+    def entries(self, run_id: Optional[str] = None) -> list[EvidenceEntry]:
+        with self._lock:
+            query = "SELECT entry_id, run_id, stage, timestamp, input_hash, output_hash, previous_hash, entry_hash, metadata_json FROM evidence"
+            params: tuple[Any, ...] = ()
+            if run_id is not None:
+                query += " WHERE run_id = ?"
+                params = (run_id,)
+            query += " ORDER BY sequence ASC"
+            rows = self._conn.execute(query, params).fetchall()
+            return [
+                EvidenceEntry(*row[:-1], json.loads(row[-1]))
+                for row in rows
+            ]
+
+    def verify_chain(self) -> bool:
+        with self._lock:
+            rows = self._conn.execute(
+                "SELECT entry_id, run_id, stage, timestamp, input_hash, output_hash, previous_hash, entry_hash, metadata_json FROM evidence ORDER BY sequence ASC"
+            ).fetchall()
+            expected_previous = self.GENESIS_HASH
+            for row in rows:
+                entry_id, run_id, stage, ts, input_hash, output_hash, previous_hash, entry_hash, metadata_json = row
+                if previous_hash != expected_previous:
+                    return False
+                envelope = {
+                    "entry_id": entry_id,
+                    "run_id": run_id,
+                    "stage": stage,
+                    "timestamp": ts,
+                    "input_hash": input_hash,
+                    "output_hash": output_hash,
+                    "previous_hash": previous_hash,
+                    "metadata": json.loads(metadata_json),
+                }
+                recomputed = "sha256:" + sha256(_canonical_json(envelope).encode("utf-8")).hexdigest()
+                if recomputed != entry_hash:
+                    return False
+                expected_previous = entry_hash
+            return True
 
     def close(self) -> None:
-        self._conn.close()
+        with self._lock:
+            self._conn.close()
