@@ -1,7 +1,27 @@
 import unittest
 from unittest.mock import patch
 
-from kubera_innovation.tool_safety import PrivacyGate, ToolLoopGuard, ToolValidator
+from kubera_innovation.tool_safety import (
+    PrivacyGate,
+    PrivacyRedactionError,
+    ToolLoopGuard,
+    ToolValidator,
+)
+
+
+class _EmailRedactor:
+    def redact(self, text: str) -> str:
+        return text.replace("person@example.com", "<EMAIL>")
+
+
+class _BrokenRedactor:
+    def redact(self, text: str) -> str:
+        raise RuntimeError("boom")
+
+
+class _InvalidRedactor:
+    def redact(self, text: str):
+        return None
 
 
 class PrivacyGateTests(unittest.TestCase):
@@ -21,6 +41,30 @@ class PrivacyGateTests(unittest.TestCase):
         result = PrivacyGate.sanitize({"message": "normal project text"})
         self.assertTrue(result.clean)
         self.assertEqual(result.value["message"], "normal project text")
+
+    def test_optional_text_redactor_masks_pii_and_records_path(self):
+        result = PrivacyGate.sanitize(
+            {"message": "Email person@example.com for help"},
+            text_redactor=_EmailRedactor(),
+        )
+        self.assertEqual(result.value["message"], "Email <EMAIL> for help")
+        self.assertEqual(result.redacted_paths, ("message",))
+
+    def test_builtin_secret_redaction_still_wins_with_external_redactor(self):
+        result = PrivacyGate.sanitize(
+            {"api_key": "person@example.com"},
+            text_redactor=_EmailRedactor(),
+        )
+        self.assertEqual(result.value["api_key"], "***REDACTED***")
+        self.assertEqual(result.redacted_paths, ("api_key",))
+
+    def test_external_redactor_failure_fails_closed(self):
+        with self.assertRaises(PrivacyRedactionError):
+            PrivacyGate.sanitize({"message": "sensitive"}, text_redactor=_BrokenRedactor())
+
+    def test_external_redactor_must_return_string(self):
+        with self.assertRaises(PrivacyRedactionError):
+            PrivacyGate.sanitize({"message": "sensitive"}, text_redactor=_InvalidRedactor())
 
 
 class ToolValidatorTests(unittest.TestCase):

@@ -28,9 +28,18 @@ from .plugin_registry import (
     PluginVerdict,
     ReviewState,
 )
-from .evidence_ledger import EvidenceEntry, EvidenceLedger
+from .evidence_ledger import EvidenceEntry, EvidenceLedger, EvidencePackage
 from .agent_pipeline import DeterministicAgentPipeline, PipelineResult, PipelineVerdict, StageResult
-from .tool_safety import PrivacyGate, SecretScanResult, ToolLoopGuard, ToolValidator, ValidationResult
+from .tool_safety import (
+    PrivacyGate,
+    PrivacyRedactionError,
+    SecretScanResult,
+    TextRedactor,
+    ToolLoopGuard,
+    ToolValidator,
+    ValidationResult,
+)
+from .presidio_adapter import PresidioTextRedactor, PresidioUnavailableError
 from .handoff import HandoffArtifact, HandoffStatus
 from .work_contract import WorkContract
 from .local_draft_adapter import LocalDraftAdapter
@@ -81,9 +90,11 @@ __all__ = [
     "Finding", "Severity", "Verdict", "hash_context",
     "LicenseState", "PermissionProfile", "PluginCandidate",
     "PluginVerdict", "ReviewState",
-    "EvidenceEntry", "EvidenceLedger",
+    "EvidenceEntry", "EvidenceLedger", "EvidencePackage",
     "DeterministicAgentPipeline", "PipelineResult", "PipelineVerdict", "StageResult",
-    "PrivacyGate", "SecretScanResult", "ToolLoopGuard", "ToolValidator", "ValidationResult",
+    "PrivacyGate", "PrivacyRedactionError", "SecretScanResult", "TextRedactor",
+    "ToolLoopGuard", "ToolValidator", "ValidationResult",
+    "PresidioTextRedactor", "PresidioUnavailableError",
     "HandoffArtifact", "HandoffStatus", "WorkContract", "LocalDraftAdapter",
     "AgentSession", "AgentState", "ClusterStats", "CorrectionSignal", "ImprovementArtifact",
     "ImprovementProposal", "ImprovementRegistry", "PromotionThreshold", "ProposalStatus",

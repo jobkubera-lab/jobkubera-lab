@@ -32,6 +32,29 @@ class EvidenceEntry:
     metadata: dict[str, Any]
 
 
+@dataclass(frozen=True)
+class EvidencePackage:
+    """Portable manifest for one run without raw prompt or output payloads.
+
+    The package proves the integrity of the included evidence envelopes and the
+    package manifest itself. It does not replace full-ledger ``verify_chain()``;
+    entries from other runs may sit between two entries in the same run.
+    """
+
+    schema: str
+    run_id: str
+    entries: tuple[EvidenceEntry, ...]
+    package_hash: str
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "schema": self.schema,
+            "run_id": self.run_id,
+            "entries": [EvidenceLedger.entry_payload(entry) for entry in self.entries],
+            "package_hash": self.package_hash,
+        }
+
+
 class EvidenceLedger:
     """SQLite-backed append-only ledger for deterministic workflow evidence.
 
@@ -40,6 +63,7 @@ class EvidenceLedger:
     """
 
     GENESIS_HASH = "GENESIS"
+    EVIDENCE_PACKAGE_SCHEMA = "kubera.evidence-package.v1"
 
     def __init__(self, path: str = ":memory:") -> None:
         self._lock = RLock()
@@ -65,6 +89,33 @@ class EvidenceLedger:
     @staticmethod
     def hash_value(value: Any) -> str:
         return "sha256:" + sha256(_canonical_json(value).encode("utf-8")).hexdigest()
+
+    @staticmethod
+    def entry_payload(entry: EvidenceEntry) -> dict[str, Any]:
+        return {
+            "entry_id": entry.entry_id,
+            "run_id": entry.run_id,
+            "stage": entry.stage,
+            "timestamp": entry.timestamp,
+            "input_hash": entry.input_hash,
+            "output_hash": entry.output_hash,
+            "previous_hash": entry.previous_hash,
+            "entry_hash": entry.entry_hash,
+            "metadata": entry.metadata,
+        }
+
+    @staticmethod
+    def _entry_envelope(entry: EvidenceEntry) -> dict[str, Any]:
+        return {
+            "entry_id": entry.entry_id,
+            "run_id": entry.run_id,
+            "stage": entry.stage,
+            "timestamp": entry.timestamp,
+            "input_hash": entry.input_hash,
+            "output_hash": entry.output_hash,
+            "previous_hash": entry.previous_hash,
+            "metadata": entry.metadata,
+        }
 
     def _last_hash(self) -> str:
         row = self._conn.execute(
@@ -171,6 +222,54 @@ class EvidenceLedger:
                 (entry_id,),
             ).fetchone()
             return self._entry_from_row(row) if row else None
+
+    def export_package(self, run_id: str) -> EvidencePackage:
+        """Export a hash-verifiable manifest for one run.
+
+        Raw ``input_value`` and ``output_value`` are intentionally absent; only
+        hashes and metadata already stored in the ledger are exported.
+        """
+        if not isinstance(run_id, str) or not run_id.strip():
+            raise ValueError("run_id must not be empty")
+        selected = tuple(self.entries(run_id.strip()))
+        if not selected:
+            raise KeyError(run_id)
+        envelope = {
+            "schema": self.EVIDENCE_PACKAGE_SCHEMA,
+            "run_id": run_id.strip(),
+            "entries": [self.entry_payload(entry) for entry in selected],
+        }
+        return EvidencePackage(
+            schema=self.EVIDENCE_PACKAGE_SCHEMA,
+            run_id=run_id.strip(),
+            entries=selected,
+            package_hash=self.hash_value(envelope),
+        )
+
+    @classmethod
+    def verify_package(cls, package: EvidencePackage) -> bool:
+        if not isinstance(package, EvidencePackage):
+            return False
+        if package.schema != cls.EVIDENCE_PACKAGE_SCHEMA or not package.run_id.strip():
+            return False
+        if not package.entries:
+            return False
+
+        for entry in package.entries:
+            if entry.run_id != package.run_id:
+                return False
+            recomputed_entry_hash = "sha256:" + sha256(
+                _canonical_json(cls._entry_envelope(entry)).encode("utf-8")
+            ).hexdigest()
+            if recomputed_entry_hash != entry.entry_hash:
+                return False
+
+        envelope = {
+            "schema": package.schema,
+            "run_id": package.run_id,
+            "entries": [cls.entry_payload(entry) for entry in package.entries],
+        }
+        return cls.hash_value(envelope) == package.package_hash
 
     def verify_chain(self) -> bool:
         with self._lock:
