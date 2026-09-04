@@ -9,9 +9,24 @@ from __future__ import annotations
 from dataclasses import dataclass
 import re
 import time
-from typing import Any, Mapping
+from typing import Any, Mapping, Protocol
 
 _REDACTED = "***REDACTED***"
+
+
+class PrivacyRedactionError(RuntimeError):
+    """Fail-closed error raised when an external privacy redactor cannot be trusted."""
+
+
+class TextRedactor(Protocol):
+    """Minimal provider-neutral interface for optional PII redaction engines.
+
+    A Presidio-backed adapter can implement this protocol without making Presidio
+    a hard dependency of the KUBERA reference runtime.
+    """
+
+    def redact(self, text: str) -> str:
+        ...
 
 
 @dataclass(frozen=True)
@@ -25,7 +40,13 @@ class SecretScanResult:
 
 
 class PrivacyGate:
-    """Redact likely credentials from nested tool parameters before outbound use."""
+    """Redact likely credentials and optionally PII before outbound use.
+
+    Built-in scanning remains dependency-free and handles credential-shaped data.
+    A caller may supply a ``TextRedactor`` for deeper PII handling. External
+    redactors fail closed: an exception or non-string result blocks the operation
+    instead of silently sending unsanitized data onward.
+    """
 
     _KEY_PATTERN = re.compile(
         r"(?:api[_-]?key|password|passwd|secret|token|authorization|credential)",
@@ -51,12 +72,27 @@ class PrivacyGate:
         return redacted, changed
 
     @classmethod
-    def sanitize(cls, value: Any) -> SecretScanResult:
+    def sanitize(
+        cls,
+        value: Any,
+        *,
+        text_redactor: TextRedactor | None = None,
+    ) -> SecretScanResult:
         paths: list[str] = []
 
         def walk(item: Any, path: str, key: str | None = None) -> Any:
             if isinstance(item, str):
                 redacted, changed = cls._redact_string(key, item)
+                if text_redactor is not None and redacted != _REDACTED:
+                    try:
+                        external_value = text_redactor.redact(redacted)
+                    except Exception as exc:  # fail closed at the privacy boundary
+                        raise PrivacyRedactionError("external text redactor failed") from exc
+                    if not isinstance(external_value, str):
+                        raise PrivacyRedactionError("external text redactor must return a string")
+                    if external_value != redacted:
+                        changed = True
+                        redacted = external_value
                 if changed:
                     paths.append(path or "$value")
                 return redacted
