@@ -136,12 +136,6 @@ Ideas are decomposed into components, checked against reliable sources, modelled
 
 ➡️ **[Explore KUBERA LAB](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab)**
 
-## 🪨 KUBERA STONES — Kickstarter
-
-Support my one-of-a-kind handcrafted stone art project on Kickstarter.
-
-➡️ **[View and support KUBERA STONES on Kickstarter](https://www.kickstarter.com/projects/804620399/kubera-stones-one-of-a-kind-handcrafted-stone-art?ref=1ui91a&utm_source=github&utm_medium=profile&utm_campaign=kubera_stones)**
-
 ## 🚀 Selected public projects
 
 - **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — 1.1M-view travel and Google Maps publishing project.
