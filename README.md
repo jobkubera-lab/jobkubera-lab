@@ -29,12 +29,6 @@ I build practical AI systems, research tools, interactive maps and digital produ
 - 🌐 **International Work & Relocation Intelligence** — structured employment research, route comparison and document planning.
 - 🕉️ **Vedic Astrology & Jyotish Technology** — traditional knowledge translated into transparent digital tools and research workflows.
 
-## 🪨 KUBERA Stones — live Kickstarter campaign
-
-One-of-a-kind handcrafted stone art, created individually from natural stone.
-
-➡️ **[View and support KUBERA Stones on Kickstarter](https://www.kickstarter.com/projects/804620399/kubera-stones-one-of-a-kind-handcrafted-stone-art?ref=user_menu&utm_source=github&utm_medium=profile&utm_campaign=kubera_stones)**
-
 ## 🧰 Technology stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
