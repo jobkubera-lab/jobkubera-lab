@@ -1,4 +1,4 @@
-# 👋 CIAO, I'm Kubera
+# 👋 Hello, I'm Nikola Kubera
 
 <p align="right">
   <a href="https://www.coingecko.com/en/coins/monero" title="Monero (XMR)">
