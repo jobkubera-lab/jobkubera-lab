@@ -1,12 +1,12 @@
 # KUBERA repository map
 
-Обновлено: 2026-09-03.
+Обновлено: 2026-09-09.
 
 ## Продукт
 
-**KUBERA Local Desk** — человек описывает задачу, система находит и проверяет официальный источник, готовит понятный результат и сохраняет доказательства; человек остаётся authority.
+**KUBERA Local Desk / Agent OS** — человек описывает задачу, система находит и проверяет источник, готовит понятный результат, сохраняет доказательства и предлагает следующее действие; человек остаётся authority.
 
-Это не live council service, не eligibility decision, не банк и не автопостинг.
+Это не live council service, не eligibility decision, не procurement authority, не банк и не автопостинг.
 
 ## Флагманы
 
@@ -25,6 +25,30 @@
    Папка: `kubera-lab/innovation-stack/reference-implementation/`  
    Стратегия: `kubera-lab/innovation-stack/DZAMBALA.md`  
    Роль: handoff, source/evidence/action gates, approval, idempotency, Evidence Ledger и контролируемое выполнение.
+
+## Операционные noses Agent OS
+
+### KUBERA Tender Intelligence
+
+Папка: `kubera-lab/tender-intelligence/`
+
+Роль: превращает нормализованную государственную закупку в объяснимое решение:
+
+```text
+source -> evidence -> capability match -> blockers -> score -> BID / REVIEW / NO-BID -> human decision
+```
+
+Первый профиль ориентирован на UK public-sector digital opportunities: AI, automation, data, civic tech, websites, accessibility, document workflows, AI assurance, user research и technical support.
+
+Это **не отдельный флагманский продукт и не новый Agent OS**. Это прикладной workflow поверх существующего Control/Evidence слоя.
+
+Ограничения:
+
+- нет автономной подачи тендеров;
+- нет подписания деклараций;
+- нет принятия legal terms;
+- нет заявлений о partnership с UK government;
+- live source adapters должны использовать официальные API / feeds / разрешённые способы доступа.
 
 ## Craft — отдельно от runtime
 
