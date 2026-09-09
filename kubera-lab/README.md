@@ -1,6 +1,6 @@
 # KUBERA LAB
 
-**AI agents · local intelligence · civic tech · interactive maps · visual systems · human-controlled automation.**
+**AI agents · local intelligence · civic tech · procurement intelligence · interactive maps · visual systems · human-controlled automation.**
 
 KUBERA LAB is a practical technology laboratory for turning real-world observations and ideas into structured technical systems, prototypes and documented engineering projects.
 
@@ -16,6 +16,7 @@ The goal is not to publish artificial activity. Projects should show what is a c
 
 - **KUBERA AGENT OS** — modular, model-agnostic architecture for personal/local AI agents.
 - **KUBERA Innovation Stack** — 18 connected technologies for memory, governance, agent reliability, proof-of-work and real-world applications.
+- **Tender Intelligence** — evidence-first UK procurement opportunity matching and BID / REVIEW / NO-BID support for a human operator.
 - **Kubera Guide** — travel and Google Maps publishing connected to GeoMemory and future map tools.
 - **Visual Systems** — structured diagram intent, architecture/process/data visualization and external renderer adapters.
 - **Civic Technology** — interactive community maps and local-service discovery.
@@ -25,6 +26,11 @@ The goal is not to publish artificial activity. Projects should show what is a c
 - **AI Privacy & Governance** — explicit permissions, public/private boundaries and evidence trails.
 
 ## Featured projects
+
+### 🧾 KUBERA Tender Intelligence
+A public reference prototype for turning a normalized public procurement notice into an explainable opportunity decision. It checks provenance, matches KUBERA capabilities, applies delivery-risk and hard-blocker rules, and returns **BID / REVIEW / NO-BID** while leaving submission and legal acceptance to the human operator.
+
+[Open Tender Intelligence](tender-intelligence/)
 
 ### 🌍 Kubera Guide — Global Mapping Project
 Public travel/mapping project with **1.1M Google Maps views** and **1.8K profile impressions**, now used as the real-world design source for the GeoMemory data model.
@@ -42,7 +48,7 @@ A tested `DiagramIntent` contract for turning architecture, workflows, data mode
 [Open Visual Systems](innovation-stack/visual-systems/)
 
 ### 🤖 KUBERA AGENT OS
-Private-core direction for a modular personal/local AI system. Public documentation describes the architecture without exposing protected implementation.
+Private-core direction for a modular personal/local AI system. Public documentation describes the architecture without exposing protected implementation. Tender Intelligence is treated as an operational nose of this OS rather than a second agent platform.
 
 ### 🗺️ Community Mapping
 Local-service and newcomer-oriented map concepts, including Mitcham/Merton work and reusable geographic-intelligence ideas.
@@ -56,11 +62,12 @@ Local-service and newcomer-oriented map concepts, including Mitcham/Merton work 
 - separate facts, estimates and inference;
 - record failures so they can become future prevention;
 - keep the human in control of consequential actions;
+- require provenance for procurement decisions;
 - separate visual intent from any single renderer or AI vendor.
 
 ## Portfolio capabilities
 
-`AI product architecture` · `AI agents` · `Prompt engineering` · `Research` · `Python` · `GitHub` · `GitHub Actions` · `Diagram systems` · `HTML/SVG` · `Interactive maps` · `GeoMemory` · `Local AI` · `Automation` · `Technical documentation`
+`AI product architecture` · `AI agents` · `Procurement intelligence` · `Prompt engineering` · `Research` · `Python` · `GitHub` · `GitHub Actions` · `Diagram systems` · `HTML/SVG` · `Interactive maps` · `GeoMemory` · `Local AI` · `Automation` · `Technical documentation`
 
 ## Roadmap
 
@@ -69,7 +76,9 @@ Local-service and newcomer-oriented map concepts, including Mitcham/Merton work 
 - [x] Define KUBERA Innovation Stack with 18 modules
 - [x] Build first executable Innovation Stack foundation modules
 - [x] Add a tested Visual Systems contract and third-party attribution layer
-- [ ] Implement shared schemas for remaining Innovation Stack modules
+- [x] Add first Tender Intelligence scoring prototype with capability profile and blockers
+- [ ] Add read-only official procurement source adapters
+- [ ] Connect tender decisions to the shared Evidence Ledger / Agent OS job record
 - [ ] Build GeoMemory prototype from already-public map records
 - [ ] Connect selected public reference contracts to private KUBERA AGENT OS
 - [ ] Publish reproducible demos and proof-of-work dashboards

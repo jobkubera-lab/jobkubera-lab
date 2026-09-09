@@ -1,0 +1,44 @@
+{
+  "profile_name": "KUBERA public-sector digital capability profile",
+  "capabilities": {
+    "ai": ["artificial intelligence", "ai assistant", "ai agent", "machine learning", "conversational ai", "chatbot"],
+    "automation": ["automation", "workflow", "rpa", "process improvement", "intelligent automation"],
+    "data": ["data", "analytics", "dashboard", "reporting", "data processing", "open data"],
+    "civic_tech": ["local authority", "council", "public realm", "resident", "citizen", "public service", "civic"],
+    "web": ["website", "web development", "wordpress", "portal", "online form", "digital service"],
+    "accessibility": ["accessibility", "wcag", "inclusive design"],
+    "documents": ["document automation", "document processing", "document management", "classification", "extraction"],
+    "ai_assurance": ["ai assurance", "evaluation", "model evaluation", "testing", "audit", "evidence", "provenance"],
+    "research": ["user research", "service discovery", "research", "requirements gathering"],
+    "support": ["it support", "technical support", "digital support"]
+  },
+  "positive_signals": {
+    "sme": 10,
+    "small supplier": 10,
+    "local authority": 6,
+    "council": 6,
+    "prototype": 4,
+    "discovery": 4,
+    "proof of concept": 4,
+    "pilot": 5
+  },
+  "risk_signals": {
+    "iso 27001 required": 20,
+    "cyber essentials plus required": 15,
+    "24/7 support": 12,
+    "minimum turnover": 15,
+    "national rollout": 12,
+    "large multidisciplinary team": 15,
+    "security cleared": 20,
+    "soc 2 required": 20
+  },
+  "hard_blockers": [
+    "must hold iso 27001 at submission",
+    "minimum annual turnover £1,000,000",
+    "security clearance required before bid"
+  ],
+  "commercial": {
+    "preferred_min_value_gbp": 5000,
+    "preferred_max_value_gbp": 250000
+  }
+}
