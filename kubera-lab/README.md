@@ -1,6 +1,6 @@
 # KUBERA LAB
 
-**AI agents · local intelligence · civic tech · procurement intelligence · interactive maps · visual systems · human-controlled automation.**
+**AI agents · MCP capability servers · local intelligence · civic tech · procurement intelligence · interactive maps · visual systems · human-controlled automation.**
 
 KUBERA LAB is a practical technology laboratory for turning real-world observations and ideas into structured technical systems, prototypes and documented engineering projects.
 
@@ -10,78 +10,102 @@ KUBERA LAB is a practical technology laboratory for turning real-world observati
 Life experience → idea → technical mechanics → working system → GitHub record
 ```
 
-The goal is not to publish artificial activity. Projects should show what is a concept, what is a prototype and what is actually tested.
+The goal is not artificial activity. Projects should show what is a concept, what is a prototype, what is tested and what is not yet production-ready.
 
 ## Core directions
 
 - **KUBERA AGENT OS** — modular, model-agnostic architecture for personal/local AI agents.
-- **KUBERA Innovation Stack** — 18 connected technologies for memory, governance, agent reliability, proof-of-work and real-world applications.
-- **Tender Intelligence** — evidence-first UK procurement opportunity matching and BID / REVIEW / NO-BID support for a human operator.
-- **Kubera Guide** — travel and Google Maps publishing connected to GeoMemory and future map tools.
-- **Visual Systems** — structured diagram intent, architecture/process/data visualization and external renderer adapters.
-- **Civic Technology** — interactive community maps and local-service discovery.
+- **KUBERA MCP LAB** — reusable bounded capability servers, gateway policy and project-based MCP learning.
+- **Tender Intelligence** — evidence-first UK procurement opportunity qualification and bid-preparation support.
+- **Civic Technology / Local Desk** — official-source local-service discovery and resident workflows.
+- **KUBERA Innovation Stack** — governance, agent reliability, evidence and human-control reference architecture.
+- **Kubera Guide / GeoMemory** — real-world mapping and local intelligence.
+- **Visual Systems** — renderer-independent architecture/process/data visualization contracts.
 - **Local AI** — private/self-hosted models, skills and knowledge tools.
-- **Prompt Engineering** — versioned prompts, evaluation and reusable workflows.
-- **Automation** — controlled workflows using Python, APIs, GitHub Actions and agent tools.
-- **AI Privacy & Governance** — explicit permissions, public/private boundaries and evidence trails.
+- **Automation** — controlled workflows using Python, TypeScript, APIs, GitHub Actions and agent tools.
+- **AI Privacy & Governance** — explicit permissions, public/private boundaries, evidence trails and approval gates.
 
 ## Featured projects
 
+### 🔌 KUBERA MCP LAB
+MCP 2026-07-28 / SDK v2 engineering track for turning KUBERA capabilities into reusable, narrowly scoped servers.
+
+Current foundation:
+
+- Hello MCP;
+- Evidence MCP;
+- ONS MCP;
+- Tender MCP;
+- deny-by-default TypeScript gateway reference;
+- security baseline;
+- staged learning track;
+- Python and TypeScript CI.
+
+The lab uses `READ_ONLY` / `PREPARE_ONLY` by default and reserves consequential writes for a future approval-receipt architecture.
+
+[Open MCP LAB](mcp-lab/)
+
 ### 🧾 KUBERA Tender Intelligence
-A public reference prototype for turning a normalized public procurement notice into an explainable opportunity decision. It checks provenance, matches KUBERA capabilities, applies delivery-risk and hard-blocker rules, and returns **BID / REVIEW / NO-BID** while leaving submission and legal acceptance to the human operator.
+Official read-only UK procurement intake plus deterministic opportunity qualification. v1.1 adds checkpoint/pagination, deadline intelligence, CPV matching, requirement verification, buyer-history enrichment, win-gap analysis and DRAFT_ONLY bid packs.
 
 [Open Tender Intelligence](tender-intelligence/)
 
 ### 🌍 Kubera Guide — Global Mapping Project
-Public travel/mapping project with **1.1M Google Maps views** and **1.8K profile impressions**, now used as the real-world design source for the GeoMemory data model.
+Public travel/mapping project based on real-world contribution history and used as a design source for geographic-intelligence ideas.
 
 [Open project](kubera-guide-global-mapping/)
 
 ### 🧠 KUBERA Innovation Stack
-A public architecture of **18 modular technologies** plus cross-cutting capabilities connecting real-world memory, AI agents, human control, visual explanation, reliability and GitHub proof-of-work.
+Public architecture connecting real-world memory, AI agents, human control, visual explanation, reliability and GitHub proof-of-work. The reference implementation remains the active Control layer; avoid expanding frozen modules for appearance.
 
 [Open Innovation Stack](innovation-stack/)
 
 ### 🎨 KUBERA Visual Systems Layer
-A tested `DiagramIntent` contract for turning architecture, workflows, data models and project strategy into renderer-independent visual requests. The first documented external capability is the MIT-licensed Diagram Design upstream.
+A tested `DiagramIntent` contract for turning architecture, workflows, data models and project strategy into renderer-independent visual requests.
 
 [Open Visual Systems](innovation-stack/visual-systems/)
 
 ### 🤖 KUBERA AGENT OS
-Private-core direction for a modular personal/local AI system. Public documentation describes the architecture without exposing protected implementation. Tender Intelligence is treated as an operational nose of this OS rather than a second agent platform.
+The orchestration layer. Agent OS chooses when to use a capability; MCP defines what bounded capability is available; Control/Evidence rules determine whether an action/result is trusted.
 
-### 🗺️ Community Mapping
-Local-service and newcomer-oriented map concepts, including Mitcham/Merton work and reusable geographic-intelligence ideas.
+### 🗺️ Community Mapping / Local Desk
+Local-service and community intelligence concepts, including Mitcham/Merton work and reusable official-source discovery patterns.
 
 ## Engineering principles
 
 - keep private cores private;
 - verify external actions before claiming success;
-- use branches, PRs and tests for meaningful changes;
+- branches, PRs, CI and tests for meaningful changes;
 - preserve third-party licenses and attribution;
 - separate facts, estimates and inference;
-- record failures so they can become future prevention;
-- keep the human in control of consequential actions;
-- require provenance for procurement decisions;
-- separate visual intent from any single renderer or AI vendor.
+- record failures so they become future prevention;
+- keep humans in control of consequential actions;
+- require provenance for procurement and official-data decisions;
+- deny unknown MCP servers/tools by default;
+- do not pass secrets through model tool arguments;
+- separate product channels from reusable capability servers.
 
 ## Portfolio capabilities
 
-`AI product architecture` · `AI agents` · `Procurement intelligence` · `Prompt engineering` · `Research` · `Python` · `GitHub` · `GitHub Actions` · `Diagram systems` · `HTML/SVG` · `Interactive maps` · `GeoMemory` · `Local AI` · `Automation` · `Technical documentation`
+`AI product architecture` · `AI agents` · `MCP servers` · `MCP gateway policy` · `Procurement intelligence` · `Civic tech` · `Evidence/provenance` · `Python` · `TypeScript` · `GitHub Actions` · `Interactive maps` · `Local AI` · `Automation` · `Technical documentation`
 
 ## Roadmap
 
 - [x] Create KUBERA LAB public project structure
-- [x] Build Kubera Guide project page
-- [x] Define KUBERA Innovation Stack with 18 modules
-- [x] Build first executable Innovation Stack foundation modules
-- [x] Add a tested Visual Systems contract and third-party attribution layer
-- [x] Add first Tender Intelligence scoring prototype with capability profile and blockers
-- [ ] Add read-only official procurement source adapters
-- [ ] Connect tender decisions to the shared Evidence Ledger / Agent OS job record
-- [ ] Build GeoMemory prototype from already-public map records
-- [ ] Connect selected public reference contracts to private KUBERA AGENT OS
-- [ ] Publish reproducible demos and proof-of-work dashboards
+- [x] Define Control/Evidence reference architecture
+- [x] Build Civic Evidence / Community Compass prototypes
+- [x] Add Tender Intelligence v1.1 with official read-only UK procurement intake
+- [x] Create MCP LAB architecture/security/learning foundation
+- [x] Add Hello, Evidence, ONS and Tender MCP starter servers
+- [x] Add deny-by-default TypeScript MCP gateway reference
+- [x] Add MCP Lab CI
+- [ ] connect Evidence MCP to shared durable Evidence Ledger runtime
+- [ ] connect ONS MCP to the verified ONS adapter/test fixtures
+- [ ] add Local MCP backed by official council-source allow-lists
+- [ ] add scoped Document MCP
+- [ ] harden one read-only MCP server for authenticated remote Streamable HTTP deployment
+- [ ] build first MCP App operator card (Tender decision + evidence)
+- [ ] connect official WhatsApp Business channel only after remote auth/tenant/rate-limit gates
 
 ---
 
