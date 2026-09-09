@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kubera-mcp-lab"
+version = "0.1.0"
+description = "KUBERA MCP learning and capability server lab"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp>=2,<3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[tool.setuptools]
+packages = ["shared"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

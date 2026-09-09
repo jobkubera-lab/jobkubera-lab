@@ -4,7 +4,7 @@
 
 ## Продукт
 
-**KUBERA Local Desk / Agent OS** — человек описывает задачу, система находит и проверяет источник, готовит понятный результат, сохраняет доказательства и предлагает следующее действие; человек остаётся authority.
+**KUBERA Local Desk / Agent OS** — человек описывает задачу, система выбирает ограниченную capability, находит и проверяет источник, готовит понятный результат, сохраняет доказательства и предлагает следующее действие; человек остаётся authority.
 
 Это не live council service, не eligibility decision, не procurement authority, не банк и не автопостинг.
 
@@ -26,29 +26,59 @@
    Стратегия: `kubera-lab/innovation-stack/DZAMBALA.md`  
    Роль: handoff, source/evidence/action gates, approval, idempotency, Evidence Ledger и контролируемое выполнение.
 
+## Capability layer — KUBERA MCP LAB
+
+Папка: `kubera-lab/mcp-lab/`
+
+Роль: набор небольших MCP-серверов, которые делают существующие KUBERA-capabilities переиспользуемыми для разных каналов и AI-hosts.
+
+```text
+surface -> Agent OS -> MCP Gateway -> bounded MCP server -> official/data source
+                                      -> evidence/result -> human-controlled action
+```
+
+Текущая foundation-версия включает:
+
+- Hello MCP — учебный/smoke-test сервер;
+- Evidence MCP — SHA-256 provenance envelopes;
+- ONS MCP — read-only official statistics interface;
+- Tender MCP — interface к существующему Tender Intelligence;
+- TypeScript gateway reference с deny-by-default server/tool registry;
+- security baseline;
+- project-based learning track;
+- Python/TypeScript CI.
+
+MCP LAB **не является новым Agent OS**. Agent OS решает, когда использовать capability; MCP определяет ограниченный tool/resource contract; Control/Evidence слой обеспечивает границы и human authority.
+
 ## Операционные noses Agent OS
 
 ### KUBERA Tender Intelligence
 
 Папка: `kubera-lab/tender-intelligence/`
 
-Роль: превращает нормализованную государственную закупку в объяснимое решение:
+Роль:
 
 ```text
-source -> evidence -> capability match -> blockers -> score -> BID / REVIEW / NO-BID -> human decision
+official source -> normalize/provenance -> checkpoint -> deadline/CPV/requirements/buyer -> gaps -> BID/REVIEW/NO-BID -> DRAFT bid pack -> human
 ```
 
-Первый профиль ориентирован на UK public-sector digital opportunities: AI, automation, data, civic tech, websites, accessibility, document workflows, AI assurance, user research и technical support.
-
-Это **не отдельный флагманский продукт и не новый Agent OS**. Это прикладной workflow поверх существующего Control/Evidence слоя.
+Включает read-only Find a Tender / Contracts Finder intake и v1.1 intelligence.
 
 Ограничения:
 
 - нет автономной подачи тендеров;
 - нет подписания деклараций;
 - нет принятия legal terms;
-- нет заявлений о partnership с UK government;
-- live source adapters должны использовать официальные API / feeds / разрешённые способы доступа.
+- нет заявлений о partnership с UK government.
+
+### Future MCP-backed noses
+
+Следующие направления развиваются как конфигурации общей системы, а не новые платформы:
+
+- Local MCP / KUBERA Local Desk;
+- Collector MCP / KUBERA Collector Intelligence;
+- Document MCP / KUBERA Document Desk;
+- Business/booking MCP для AI Receptionist — только после approval/idempotency/auth gates.
 
 ## Craft — отдельно от runtime
 
@@ -62,7 +92,7 @@ source -> evidence -> capability match -> blockers -> score -> BID / REVIEW / NO
 
 ## Склад / библиотека
 
-Остальные репозитории и материалы не считаются отдельными флагманскими продуктами. Это библиотеки, заметки, старые эксперименты или черновики, пока они не нужны одному из трёх флагманских кусков: Lookup / Place / Control.
+Остальные репозитории и материалы не считаются отдельными флагманскими продуктами. Это библиотеки, заметки, старые эксперименты или черновики, пока они не нужны Lookup / Place / Control / Capability слоям.
 
 Шаблоны виз и миграционные материалы остаются библиотекой, а не главным нарративом аккаунта.
 
@@ -72,10 +102,8 @@ Innovation-stack модули 01–18 как отдельные продукты
 
 `reference-implementation/` и `DZAMBALA.md` — действующий Control-слой и продолжают развиваться через небольшие проверяемые компоненты и тесты.
 
-Остальной innovation-stack считается замороженным архитектурным материалом, если он не нужен действующему reference runtime.
-
-Также не развивать как витринные направления: `ssh-check`, `kubera-local-ai2`, голос, крипто-оплату, автокомменты и другие черновые эксперименты.
+Также не развивать как витринные направления: `ssh-check`, `kubera-local-ai2`, крипто-оплату, автокомменты и другие черновые эксперименты.
 
 ## Правило
 
-**KUBERA prepares. The human remains the authority.**
+**KUBERA prepares. MCP exposes bounded capabilities. The human remains the authority.**

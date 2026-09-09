@@ -4,7 +4,7 @@ What we show a customer. What we build next. What already exists in this GitHub.
 
 ## One sentence
 
-KUBERA takes a real work task, checks sources, prepares the result, and waits for the human before any external action.
+KUBERA takes a real work task, checks sources, prepares the result, and waits for the human before any consequential external action.
 
 ## Why a customer pays
 
@@ -13,60 +13,74 @@ Teams already have ChatGPT, search and ten tabs. They still lose time on:
 - unchecked answers
 - agents that post or send too early
 - no trace of why a result appeared
+- disconnected tools that cannot be safely reused
 - opportunities discovered too late or pursued without checking delivery fit
 
-KUBERA sells the missing layer: **verified groundwork + human authority**.
-
-## What the demo must show in 5 minutes
-
-1. Customer types a task in plain language.
-2. System splits work (research / match / draft).
-3. It returns: result, sources, confidence as an engineering score not a promise.
-4. It prepares an action (email, reply, listing, form link, bid brief).
-5. Nothing is sent or submitted until the customer approves.
-6. A log stores the decision hash, not raw private text.
-
-If a slide cannot point to a running step, cut the slide.
-
-## Borrowed from the market — used as rules, not copies
-
-| Others ship | We take as a rule | Already in this GitHub |
-|---|---|---|
-| Parallel workers + one report (Grok Workflows) | Split task, merge one brief | Agent Fabric workers + Civic/Compass outputs |
-| Chat surface + server agent (Vercel + Claude Managed Agents) | One session per job, many channels later | CLI + website as first surfaces |
-| Independent check / skeptics | Second pass before the brief is trusted | verifier / safety fallbacks |
-| Privacy aliases + no raw logs (Brave / Anthropic Insights style) | Hash the query, allow-list profile tags | evidence.jsonl, ResidentProfile rules |
-| Explicit human sign-off before any send | External write needs approval | Trust Mesh ActionIntent idea |
-| Procurement intelligence systems | Filter, evidence-check and score before bid drafting | Tender Intelligence reference prototype |
-| Voice as an output only (ElevenLabs) | Voice later, not the brain | not built — do not demo |
-
-Do not paste their code. Do not use their names in the customer pitch except “the market already works this way”.
+KUBERA sells the missing layer: **verified groundwork + reusable capabilities + human authority**.
 
 ## Product shape
 
 ```text
-Task in
-  → plan
-  → workers (bounded)
-  → check
-  → brief + draft action
-  → human approve / reject
-  → receipt in ledger
+User / business channel
+  -> Agent OS plans
+  -> MCP capability selected
+  -> bounded tool executes
+  -> evidence / result returned
+  -> verifier / policy check
+  -> draft action
+  -> human approve / reject
+  -> receipt in ledger
 ```
 
-Noses (pluggable, one at a time):
+## Operational noses / capabilities
 
-- work & documents (CV, employer letter, structured applications) — templates already exist
-- local verified lookup (council / events) — code already exists
-- research brief for a business question — docs exist, runtime thin
-- **UK Tender Intelligence** — normalize opportunity → evidence → capability match → BID / REVIEW / NO-BID → draft bid brief
-- later: voice out, chat adapters
+- work & documents (CV, employer letter, structured applications)
+- local verified lookup (council / events)
+- research brief for a business question
+- UK Tender Intelligence
+- ONS / official-statistics retrieval
+- Evidence Ledger/provenance operations
+- later: controlled business/booking tools and channel adapters
+
+## KUBERA MCP LAB integration
+
+`kubera-lab/mcp-lab/` is the reusable capability-server layer for Agent OS. It targets MCP 2026-07-28 and stable SDK v2 lines.
+
+The first public servers are:
+
+- `kubera-hello-mcp` — smoke test / learning;
+- `kubera-evidence-mcp` — evidence hashes and provenance envelopes;
+- `kubera-ons-mcp` — allow-listed read-only ONS API retrieval;
+- `kubera-tender-mcp` — deterministic procurement scoring and DRAFT_ONLY bid packs.
+
+The TypeScript gateway reference implements a deny-by-default route/tool registry. It is deliberately not an arbitrary proxy.
+
+MCP does not replace KUBERA Agent OS. Agent OS decides **when** a capability should be used; the MCP server defines **what bounded capability exists**; Control/Evidence layers decide **whether the result/action is trusted**.
+
+## MCP security model
+
+New tools start `READ_ONLY` or `PREPARE_ONLY`.
+
+Consequential write tools require, before implementation:
+
+- explicit tool scope;
+- authenticated subject/workspace;
+- allow-listed destination;
+- rate limit and input/result budgets;
+- machine-verifiable human approval receipt;
+- idempotency/replay protection;
+- audit receipt;
+- rollback/compensation strategy where possible.
+
+Free-form model text is never sufficient approval for an external write.
 
 ## Tender Intelligence integration
 
-`kubera-lab/tender-intelligence/` is a reference implementation of a procurement opportunity nose for Agent OS.
+`kubera-lab/tender-intelligence/` is a procurement opportunity nose for Agent OS. It now includes official read-only UK procurement intake plus v1.1 intelligence: checkpoint/pagination, deadline, CPV, requirement verification, buyer-history enrichment, win-gap analysis and draft bid packs.
 
-It reuses the same core rules:
+Tender MCP exposes this existing engine rather than copying its business logic.
+
+Core rules:
 
 - provenance is required;
 - scoring is explainable and bounded;
@@ -74,31 +88,48 @@ It reuses the same core rules:
 - evidence readiness matters as much as keyword match;
 - submission, declarations and legal acceptance remain human actions.
 
-Target source adapters: Find a Tender, Contracts Finder, then regional UK procurement services. The first public prototype uses normalized JSON and does not scrape or submit anything.
-
-## What is already built (say this to a funder)
+## What is already built
 
 - Civic Evidence OS: tested lookup, fallbacks, no form submit
 - Assisted plain-text channel
 - Optional profile with consent and erasure
 - Community Compass: manual event seeds + validation
 - Agent Fabric reference: worker budget, approval gate, hash ledger
-- Tender Intelligence: deterministic opportunity scoring, blockers, capability profile and evidence-shaped output
+- Tender Intelligence v1.1 + official read-only procurement adapters
+- MCP LAB foundation + four starter capability servers
+- MCP deny-by-default gateway reference
+- MCP security baseline, learning track and CI
 - Public site + technical libraries
 
-Status line to say out loud: **tested prototypes, not a live council system, not a procurement authority, not auto-submit.**
+Status line: **tested/reference prototypes; not a live council system, not a procurement authority, not an autonomous submission system, and remote MCP services are not production-labelled until auth/operations gates pass.**
 
-## What to build before the first paid pilot (only this)
+## Demo path
 
-1. One demo page: task box → brief → approve button that does not send.
-2. One YAML/JSON job record: task, sources, score, action draft, approved true/false.
-3. Four canned demos: “find official service”, “draft a reply to an employer”, “weekend events list”, “score a public tender and prepare a bid brief”.
-4. One-page pitch PDF from this file. No extra architecture novels.
+A useful demo should show:
 
-## Do not build for the pitch
+1. user enters a real task;
+2. Agent OS chooses one bounded MCP capability;
+3. tool returns result + provenance where relevant;
+4. KUBERA prepares a draft action;
+5. nothing consequential is sent/submitted without approval;
+6. audit/evidence record explains what happened.
 
-New repos, modules 19–30, live posting, payments, uncontrolled scraping, “Merton official partner”, eligibility engine, autonomous tender submission.
+## Do not build for appearance
 
-## Ask to the customer
+Do not create hundreds of copied MCP servers, new Agent OS clones, modules 19–30, uncontrolled scraping, unofficial WhatsApp automation, live posting without approval, arbitrary URL/filesystem tools, or claims of official partnership.
 
-Pilot 4–6 weeks. One workflow they already do by hand. Fixed fee. We plug their sources into this OS. They keep the approve button.
+## Commercial direction
+
+Products should be configurations over the same core:
+
+- KUBERA AI Receptionist
+- KUBERA Tender Desk
+- KUBERA Local Desk
+- KUBERA Collector Intelligence
+- KUBERA Document Desk
+
+A customer buys the useful workflow, not the words "MCP server".
+
+## Rule
+
+**KUBERA prepares and verifies. MCP exposes bounded capabilities. The human remains the authority.**
