@@ -13,6 +13,7 @@ Teams already have ChatGPT, search and ten tabs. They still lose time on:
 - unchecked answers
 - agents that post or send too early
 - no trace of why a result appeared
+- opportunities discovered too late or pursued without checking delivery fit
 
 KUBERA sells the missing layer: **verified groundwork + human authority**.
 
@@ -21,8 +22,8 @@ KUBERA sells the missing layer: **verified groundwork + human authority**.
 1. Customer types a task in plain language.
 2. System splits work (research / match / draft).
 3. It returns: result, sources, confidence as an engineering score not a promise.
-4. It prepares an action (email, reply, listing, form link).
-5. Nothing is sent until the customer approves.
+4. It prepares an action (email, reply, listing, form link, bid brief).
+5. Nothing is sent or submitted until the customer approves.
 6. A log stores the decision hash, not raw private text.
 
 If a slide cannot point to a running step, cut the slide.
@@ -36,13 +37,14 @@ If a slide cannot point to a running step, cut the slide.
 | Independent check / skeptics | Second pass before the brief is trusted | verifier / safety fallbacks |
 | Privacy aliases + no raw logs (Brave / Anthropic Insights style) | Hash the query, allow-list profile tags | evidence.jsonl, ResidentProfile rules |
 | Explicit human sign-off before any send | External write needs approval | Trust Mesh ActionIntent idea |
+| Procurement intelligence systems | Filter, evidence-check and score before bid drafting | Tender Intelligence reference prototype |
 | Voice as an output only (ElevenLabs) | Voice later, not the brain | not built — do not demo |
 
 Do not paste their code. Do not use their names in the customer pitch except “the market already works this way”.
 
 ## Product shape
 
-```
+```text
 Task in
   → plan
   → workers (bounded)
@@ -54,10 +56,25 @@ Task in
 
 Noses (pluggable, one at a time):
 
-- work & documents (visa, CV, employer letter) — templates already exist
+- work & documents (CV, employer letter, structured applications) — templates already exist
 - local verified lookup (council / events) — code already exists
 - research brief for a business question — docs exist, runtime thin
+- **UK Tender Intelligence** — normalize opportunity → evidence → capability match → BID / REVIEW / NO-BID → draft bid brief
 - later: voice out, chat adapters
+
+## Tender Intelligence integration
+
+`kubera-lab/tender-intelligence/` is a reference implementation of a procurement opportunity nose for Agent OS.
+
+It reuses the same core rules:
+
+- provenance is required;
+- scoring is explainable and bounded;
+- hard blockers override enthusiasm;
+- evidence readiness matters as much as keyword match;
+- submission, declarations and legal acceptance remain human actions.
+
+Target source adapters: Find a Tender, Contracts Finder, then regional UK procurement services. The first public prototype uses normalized JSON and does not scrape or submit anything.
 
 ## What is already built (say this to a funder)
 
@@ -66,20 +83,21 @@ Noses (pluggable, one at a time):
 - Optional profile with consent and erasure
 - Community Compass: manual event seeds + validation
 - Agent Fabric reference: worker budget, approval gate, hash ledger
-- Public site + migration/job libraries
+- Tender Intelligence: deterministic opportunity scoring, blockers, capability profile and evidence-shaped output
+- Public site + technical libraries
 
-Status line to say out loud: **tested prototypes, not a live council system, not a bank, not auto-publish.**
+Status line to say out loud: **tested prototypes, not a live council system, not a procurement authority, not auto-submit.**
 
 ## What to build before the first paid pilot (only this)
 
 1. One demo page: task box → brief → approve button that does not send.
 2. One YAML/JSON job record: task, sources, score, action draft, approved true/false.
-3. Three canned demos: “find official service”, “draft a reply to an employer”, “weekend events list”.
+3. Four canned demos: “find official service”, “draft a reply to an employer”, “weekend events list”, “score a public tender and prepare a bid brief”.
 4. One-page pitch PDF from this file. No extra architecture novels.
 
 ## Do not build for the pitch
 
-New repos, modules 19–30, live posting, payments, scraping Compass, “Merton official partner”, eligibility engine.
+New repos, modules 19–30, live posting, payments, uncontrolled scraping, “Merton official partner”, eligibility engine, autonomous tender submission.
 
 ## Ask to the customer
 
