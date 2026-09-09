@@ -128,6 +128,17 @@ npm start
 
 The current gateway **authorizes logical routes only**. It deliberately does not proxy arbitrary upstream requests. Remote proxying is a later security-gated phase.
 
+## CI gates
+
+Pull requests touching MCP LAB must pass:
+
+- Python package installation on Python 3.12;
+- `py_compile` across shared policy and every starter server;
+- pytest regression tests for hashing, URL allow-lists, identifiers, input budgets and approval policy;
+- TypeScript installation and `tsc --noEmit` for the gateway reference.
+
+A feature is not merged as "working" merely because documentation exists; the executable baseline must remain green.
+
 ## Relationship to existing KUBERA components
 
 - **Tender MCP** exposes the existing Tender Intelligence engine rather than duplicating it.
