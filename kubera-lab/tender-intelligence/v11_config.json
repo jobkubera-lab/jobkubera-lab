@@ -1,0 +1,38 @@
+{
+  "cpv_map": {
+    "ai": ["72212", "72222", "7226", "7231"],
+    "automation": ["7222", "7226", "7251"],
+    "data": ["723", "7241", "7933"],
+    "civic_tech": ["720", "722", "723", "724"],
+    "web": ["72413", "72415", "7242", "72212224"],
+    "accessibility": ["72413", "72212224"],
+    "documents": ["72512", "799951", "7231"],
+    "ai_assurance": ["72225000", "72254000", "72800000"],
+    "research": ["7931", "7932", "7933"],
+    "support": ["726", "72253", "7251"]
+  },
+  "evidence_keywords": {
+    "ai": ["artificial intelligence", "ai", "machine learning", "assistant", "agent", "chatbot"],
+    "automation": ["automation", "workflow", "rpa", "process"],
+    "data": ["data", "analytics", "dashboard", "reporting"],
+    "civic_tech": ["council", "local authority", "resident", "public service", "civic"],
+    "web": ["website", "portal", "wordpress", "online form", "web"],
+    "accessibility": ["accessibility", "wcag", "inclusive"],
+    "documents": ["document", "classification", "extraction"],
+    "ai_assurance": ["evaluation", "testing", "assurance", "audit", "evidence", "provenance"],
+    "research": ["research", "discovery", "requirements"],
+    "support": ["support", "helpdesk", "technical support"]
+  },
+  "capability_evidence": {
+    "ai": ["KUBERA Agent OS", "innovation-stack/reference-implementation"],
+    "automation": ["KUBERA Agent OS human-controlled workflow", "Trust Mesh / ActionIntent control layer"],
+    "data": ["Civic Evidence OS", "Evidence Ledger patterns"],
+    "civic_tech": ["KUBERA Local Desk", "Community Compass", "Civic Evidence OS"],
+    "web": ["kubera-improved-website", "KUBERA LAB web projects"],
+    "accessibility": ["digital service architecture and LocalGov-related work"],
+    "documents": ["KUBERA Agent OS work/document workflows", "document template libraries"],
+    "ai_assurance": ["Evidence Ledger", "Self-Check / verifier patterns", "llm-eval-monitor-framework"],
+    "research": ["service discovery and verified-source research workflows"],
+    "support": ["operator workspace and digital support workflows"]
+  }
+}
