@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kubera.example/schemas/kubera-stones-commission.schema.json",
+  "title": "KUBERA Stones Commission",
+  "type": "object",
+  "required": ["commission_id", "size_class", "intended_context", "status"],
+  "properties": {
+    "commission_id": {"type": "string", "minLength": 3},
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "CUSTOMER_INPUT_COMPLETE",
+        "MAKER_REVIEW",
+        "FEASIBLE",
+        "REVISION_REQUIRED",
+        "DECLINED",
+        "BUILD_SPEC_APPROVED",
+        "IN_PRODUCTION",
+        "QUALITY_REVIEW",
+        "COMPLETED",
+        "FULFILLED"
+      ]
+    },
+    "stone_type": {"type": ["string", "null"]},
+    "size_class": {"type": "string", "enum": ["small", "medium", "large", "custom"]},
+    "intended_context": {
+      "type": "string",
+      "enum": ["personal", "interior", "hospitality", "exhibition", "custom"]
+    },
+    "symbolic_motif": {"type": ["string", "null"]},
+    "birth_year_reference": {"type": ["integer", "null"], "minimum": 1800, "maximum": 2200},
+    "country_reference": {"type": ["string", "null"]},
+    "coin_element": {"type": ["string", "null"]},
+    "gemstone_element": {"type": ["string", "null"]},
+    "customer_collection_element": {"type": ["string", "null"]},
+    "engraving_or_relief_notes": {"type": ["string", "null"]},
+    "composition_constraints": {"type": "array", "items": {"type": "string"}},
+    "maker_notes": {"type": ["string", "null"]},
+    "shipping_region": {"type": ["string", "null"]},
+    "configuration_version": {"type": "integer", "minimum": 1, "default": 1}
+  },
+  "additionalProperties": false
+}
