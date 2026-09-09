@@ -1,0 +1,16 @@
+{
+  "notice_id": "EXAMPLE-001",
+  "title": "AI and Automation Discovery for Local Authority Services",
+  "buyer": "Example Council",
+  "description": "A local authority is seeking an SME supplier for a pilot and discovery project covering AI assistants, workflow automation, data analytics and digital service improvement for resident-facing services.",
+  "requirements": [
+    "Provide a discovery report and proof of concept",
+    "Demonstrate human oversight and evidence trails",
+    "Support accessibility and public-service requirements"
+  ],
+  "tags": ["SME", "AI", "automation", "local authority", "pilot"],
+  "estimated_value_gbp": 85000,
+  "published_date": "2026-09-09",
+  "deadline": "2026-10-05",
+  "source_url": "https://example.invalid/tender/EXAMPLE-001"
+}
