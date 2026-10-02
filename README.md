@@ -1,14 +1,5 @@
 # 👋 Hello, I'm Nikola Kubera
 
-<p align="right">
-  <a href="https://www.coingecko.com/en/coins/monero" title="Monero (XMR)">
-    <img src="https://cdn.simpleicons.org/monero/FF6600" width="18" height="18" alt="XMR" />
-  </a>
-  <a href="https://www.coingecko.com/en/coins/monero" title="Live XMR/USD price">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.coingecko.com%2Fapi%2Fv3%2Fsimple%2Fprice%3Fids%3Dmonero%26vs_currencies%3Dusd&query=%24.monero.usd&prefix=%24&label=&color=2f3337&style=flat" height="18" alt="Live XMR/USD price" />
-  </a>
-</p>
-
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=760&lines=AI+Solutions+Builder;Building+KUBERA+AGENT+OS;AI+Agents+%7C+Local+Intelligence+%7C+Civic+Tech;Kubera+Guide+%E2%80%94+1.1M+Google+Maps+views" alt="Typing SVG" />
 </p>
@@ -21,13 +12,11 @@
 
 I build practical AI systems, research tools, interactive maps and digital products that turn complex real-world information into clear, usable results.
 
-### ⚡ Five connected directions
+### ⚡ Three connected directions
 
 - 🤖 **AI Agent Systems & Automation** — modular agents, reusable skills, model routing and controlled workflows.
 - 🗺️ **Mapping & Local Intelligence** — field data, place discovery, geographic knowledge and interactive maps.
 - 🏛️ **Civic Tech & Public-Service Tools** — explainable systems for residents, newcomers and local communities.
-- 🌐 **International Work & Relocation Intelligence** — structured employment research, route comparison and document planning.
-- 🕉️ **Vedic Astrology & Jyotish Technology** — traditional knowledge translated into transparent digital tools and research workflows.
 
 ## 🧰 Technology stack
 
@@ -119,9 +108,7 @@ The design keeps models interchangeable while preserving continuity, accountabil
 - 🗺️ **Interactive maps and local intelligence** — field data, place research, service discovery and geographic knowledge systems.
 - 🏛️ **Civic-tech prototypes** — explainable digital tools for communities, newcomers and public-service information.
 - 🏠 **AI-assisted real-estate intelligence** — property research, due diligence workflows, evidence gathering and structured comparison.
-- 🌐 **International work and relocation intelligence** — official-source research, document planning and decision support.
 - 🎓 **Educational and creative AI products** — learning workflows, interactive content and visual concepts.
-- 🕉️ **Jyotish research tools** — structured exploration of Vedic astrology using transparent digital methods.
 
 ## 🧪 KUBERA LAB
 
@@ -158,13 +145,11 @@ GitHub is part of the method: commits, diffs, tests, architecture notes and lear
 - 🏠 **KUBERA Real Estate OS** — AI-assisted property research, due diligence, evidence gathering and client-facing analysis.
 - 🌍 **Kubera Guide / Local Intelligence** — field mapping, place evidence, local discovery and reusable geographic knowledge.
 - 🏛️ **Civic AI / Merton** — local-service and newcomer-oriented community tools.
-- 🌐 **Career & Relocation Intelligence** — source-checked employment, document and residence-planning workflows.
 
 **Research and creative applications**
 - 🔐 **AI Privacy & Human Control** — privacy gates, permissions and controlled data use.
 - 📊 **Technology Radar** — structured evaluation of emerging technologies and practical adoption.
 - 🎓 **AI Education** — learning systems, language practice and creative digital experiences.
-- 🕉️ **Jyotish Technology** — structured Vedic astrology research and transparent digital tools.
 
 ➡️ **[Explore KUBERA LAB](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab)**
 
@@ -217,32 +202,6 @@ I use GitHub as an engineering workspace and public development record: branches
 - 🔎 **Retrieval & data quality** — validation, provenance, freshness and duplicate detection.
 - ⚙️ **Developer productivity** — Python automation, APIs, GitHub Actions and repeatable workflows.
 - 🎓 **Educational and creative AI** — learning systems, interactive content and visual workflows.
-- 🌐 **Relocation information tools** — structured employment, document and residence research.
-
-## 🕉️ Vedic Astrology & Jyotish
-
-I study traditional Vedic astrology and turn its structured methods into clear digital tools and practical personal guidance.
-
-- Jyotish birth-chart research and structured interpretation;
-- planetary periods, transits and life-cycle analysis;
-- career, relocation and place-compatibility perspectives;
-- concepts for transparent Jyotish calculators, knowledge bases and AI-assisted research;
-- respect for classical principles without presenting uncertain predictions as guaranteed facts.
-
-> **Traditional knowledge, modern tools, transparent reasoning.**
-
-## 🌐 International Work & Relocation Guidance
-
-Practical, source-checked guidance for international employment and lawful residence planning.
-
-| Focus | Support |
-| :--- | :--- |
-| 💼 **Work** | Search strategy · CV · applications |
-| 🧭 **Move** | Route comparison · action plan · timeline |
-| 📄 **Status** | Requirements · documents · official sources |
-| 🌍 **Countries** | 🇷🇸 Serbia · 🇲🇪 Montenegro · 🇮🇸 Iceland · 🇬🇪 Georgia · 🇦🇲 Armenia |
-
-📌 **Clear options, verified requirements and realistic next steps — never invented guarantees.**
 
 ## 🧑‍💼 About NIKOLA KUBERA
 
@@ -257,7 +216,6 @@ My current professional direction is **AI Assurance & Infrastructure**: understa
 - 🛠️ I turn real problems into specifications, prototypes, workflows, APIs, maps and usable digital products.
 - 🏠 I apply AI to real-estate research, structured due diligence and evidence-led comparison.
 - 🗺️ I connect field data and geographic research with local-intelligence systems.
-- 🌐 I convert complex employment, relocation and document requirements into structured decision workflows.
 - 🧪 I use **KUBERA LAB** as a living portfolio where learning, engineering, tests and project decisions are documented in GitHub.
 - 🤝 I am open to practical collaboration in AI systems, AI assurance, structured research, local intelligence and applied automation.
 
@@ -265,7 +223,7 @@ My current professional direction is **AI Assurance & Infrastructure**: understa
 
 > **Build practical intelligence: systems that turn verified knowledge into action while keeping people — not models — in control.**
 
-My mission is to connect AI engineering, field data, geographic knowledge, public-service research, international employment and relocation guidance, Jyotish and education into one coherent technology ecosystem.
+My mission is to connect AI engineering, evidence-led automation, civic technology, local intelligence and practical digital products into one coherent technology ecosystem.
 
 Every KUBERA project should:
 
