@@ -1,7 +1,6 @@
 # 🌍 Kubera Guide — Global Mapping Project
 
-![Google Maps](https://img.shields.io/badge/Google%20Maps-1.1M%20views-4285F4?logo=googlemaps&logoColor=white)
-![Profile impressions](https://img.shields.io/badge/Profile%20impressions-1.8K-34A853)
+![Google Maps](https://img.shields.io/badge/Google%20Maps-Field%20Mapping-4285F4?logo=googlemaps&logoColor=white)
 ![Travel](https://img.shields.io/badge/Project-Travel%20%26%20Places-FBBC05)
 ![Mapping](https://img.shields.io/badge/Direction-Mapping%20%26%20Civic%20Tech-EA4335)
 
@@ -9,13 +8,14 @@
 
 The project combines travel, photography, place discovery and public map contributions into a growing geographic archive that other people can discover and read.
 
-## Project reach
+## Public mapping work
 
-- 👁️ **1.1M Google Maps views**
-- ✨ **1.8K profile impressions**
 - 🌍 travel-based location publishing across different countries and cities
 - 📷 photos and place information published from real visits
-- 🗺️ growing public geographic footprint on Google Maps
+- 🗂️ first-hand place evidence that can be normalised for local-intelligence research
+- 🔗 a public Google Maps contribution profile linked below
+
+Historical reach screenshots are not used here as current metrics unless they can be independently verified.
 
 ## How the project works
 
