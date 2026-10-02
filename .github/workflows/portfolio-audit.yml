@@ -1,0 +1,42 @@
+name: Portfolio Evidence Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "STATUS.md"
+      - "REPO_MAP.md"
+      - "KUBERA_AGENT_OS.md"
+      - "kubera-lab/**"
+      - "research/**"
+      - "tools/portfolio_audit.py"
+      - ".github/workflows/portfolio-audit.yml"
+  pull_request:
+    paths:
+      - "README.md"
+      - "STATUS.md"
+      - "REPO_MAP.md"
+      - "KUBERA_AGENT_OS.md"
+      - "kubera-lab/**"
+      - "research/**"
+      - "tools/portfolio_audit.py"
+      - ".github/workflows/portfolio-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile audit
+        run: python -m py_compile tools/portfolio_audit.py
+      - name: Verify portfolio evidence surface
+        run: python tools/portfolio_audit.py
