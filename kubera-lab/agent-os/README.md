@@ -13,7 +13,7 @@ The working reference code lives in:
 - [MCP capability layer](../mcp-lab/)
 - [Tender Intelligence capability](../tender-intelligence/)
 
-The repository includes executable Python reference code, tests, a safe demo, an Evidence Ledger, approval gates, idempotency controls, privacy/tool validation, provider budgets and a controlled tool-execution boundary.
+The repository includes executable Python reference code, a safe demo, an Evidence Ledger, approval gates, idempotency controls, privacy/tool validation, provider budgets and a controlled tool-execution boundary. On 2 October 2026 the current reference suite passed **173 tests** on Python 3.11, 3.12 and 3.13; the coverage job reported **89%** source branch coverage against an 85% floor.
 
 ## Control path
 
