@@ -75,6 +75,12 @@ python -m unittest discover -s tests -v
 python -m kubera_innovation demo --json
 ```
 
+## CI verification
+
+The public reference implementation is tested by `.github/workflows/test-innovation-stack-reference.yml` on Python **3.11, 3.12 and 3.13**. The workflow installs the package, runs the unit-test suite, executes the safe JSON demo and enforces an **85% source branch-coverage floor**.
+
+This verification is intentionally scoped to the public reference runtime. It does not certify external provider integrations or production security.
+
 ## Security boundary
 
 This remains a reference runtime, not a production security product. The Evidence Ledger is tamper-evident hash-chain logic, not immutable external storage or a digital-signature service. The signed-grant reference uses a local HMAC signer; production deployments should protect key material and use stronger identity/attestation where required.
