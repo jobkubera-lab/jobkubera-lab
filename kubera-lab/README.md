@@ -8,10 +8,10 @@ KUBERA LAB is the public engineering record behind the KUBERA portfolio. The rul
 
 | Priority | Project | Public evidence | Status |
 |---|---|---|---|
-| P0 | **KUBERA AGENT OS** | [engineering dossier](agent-os/) · [reference implementation](innovation-stack/reference-implementation/) | implemented reference runtime |
+| P0 | **KUBERA AGENT OS** | [engineering dossier](agent-os/) · [reference implementation](innovation-stack/reference-implementation/) | verified reference runtime — 173 tests, 89% coverage |
 | P1 | **KUBERA TAO LAB** | [ML evidence dossier](kubera-tao-lab/) | active private implementation + public evidence |
-| P1 | **KUBERA Real Estate OS** | [product dossier](real-estate-os/) | private repository bootstrap / architecture |
-| P2 | **Tender Intelligence** | [source + tests](tender-intelligence/) | tested applied capability |
+| P1 | **KUBERA Real Estate OS** | [product dossier](real-estate-os/) | early verified private core — 3/3 tests; wider product bootstrap |
+| P2 | **Tender Intelligence** | [source + tests](tender-intelligence/) | tested applied capability — 16 tests across Python 3.11–3.13 |
 | P2 | **MCP LAB** | [architecture + servers + gateway](mcp-lab/) | tested capability layer |
 | P2 | **Civic / Local Intelligence** | [Community Compass](dzambala-community-compass/) · [Council AI eval](../research/council-ai-service-finder/eval/v0.1/) | tested prototypes/evaluation |
 
