@@ -32,6 +32,7 @@ The current report selects XGBoost by final-validation performance. Test metrics
 | Illinois | 27.66% |
 | Pennsylvania | 36.76% |
 | Q1 — lowest-price quintile | 61.96% |
+| Q2 | 31.48% |
 | Q3 | 24.61% |
 | Q4 | 20.33% |
 | Q5 — highest-price quintile | 23.04% |
