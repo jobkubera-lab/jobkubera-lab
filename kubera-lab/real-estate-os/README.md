@@ -28,9 +28,9 @@ Acquire -> Answer -> Qualify -> Nurture -> Convert -> Analyse -> Optimise
 
 ## Current verified status
 
-The private repository currently labels itself **Repository bootstrap**. It contains the product definition, governance requirements and Python project structure. Production integrations are **not** claimed unless they are separately authenticated and tested.
+The private repository is an **early verified core / product bootstrap**. It contains product architecture plus an implemented evidence-first Montenegro land due-diligence module. On 2 October 2026 its current main branch passed **3/3 tests** and GitHub Actions verification succeeded on Python 3.11 and 3.12. The broader SaaS/integration platform is still not production-labelled.
 
-That distinction is intentional: architecture, diagrams and README text do not count as a finished feature.
+That distinction is intentional: the land-check core is implemented and tested; the broader platform remains architecture/bootstrap work. Diagrams and README text do not count as finished features.
 
 ## Engineering completion rule
 
