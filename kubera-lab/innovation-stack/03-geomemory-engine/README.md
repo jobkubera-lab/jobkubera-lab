@@ -22,7 +22,7 @@ Each place may store:
 
 ## Kubera Guide bridge
 
-Kubera Guide gives the GeoMemory design a concrete real-world source model: places are visited, photographed and published through Google Maps. The supplied public-profile screenshots confirm **1.1M views** and **1.8K profile impressions**, demonstrating that the map activity is not only stored data but publicly consumed geographic content.
+Kubera Guide gives the GeoMemory design a concrete real-world source model: places are visited, photographed and published through Google Maps. The engineering value here is provenance and structured first-hand place evidence; historical audience metrics are not used as current technical proof unless independently verifiable.
 
 The technical rule is more important than the metric: a Kubera Guide-derived record can be marked `provenance: first_hand`, while current operational facts from the web remain `external_source` and AI-created deductions remain `model_inference`.
 
