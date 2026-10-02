@@ -17,6 +17,8 @@ Start here:
 
 Verified public evidence includes:
 - executable Python reference code;
+- **173 tests passed** on Python 3.11–3.13;
+- **89% source branch coverage** with an 85% enforced floor;
 - automated tests and CI;
 - Evidence Ledger mechanics;
 - permission and approval boundaries;
@@ -32,9 +34,9 @@ This is the primary project for technical review.
 | Project | Role | Status |
 |---|---|---|
 | KUBERA TAO LAB | ML evaluation and validation discipline | Active research / evidence dossier |
-| KUBERA Real Estate OS | Product architecture and applied AI vertical | Private implementation / public dossier |
+| KUBERA Real Estate OS | Product architecture and applied AI vertical | Early verified private core: 3/3 tests on Python 3.11/3.12; wider SaaS bootstrap |
 | KUBERA MCP LAB | Reusable bounded capability servers | Active public engineering track |
-| Tender Intelligence | Procurement qualification and evidence workflows | Applied capability |
+| Tender Intelligence | Procurement qualification and evidence workflows | Tested applied capability: 16 tests on Python 3.11–3.13 |
 | Council AI Service Finder | Deterministic resident-language retrieval evaluation | Applied civic-AI evaluation |
 | Kubera Guide / Local Intelligence | Field evidence and geographic knowledge | Active applied research |
 
@@ -104,3 +106,6 @@ Verified result
 ```
 
 Applied verticals such as real estate, civic AI, local intelligence and relocation tools demonstrate the same control-and-evidence architecture in different domains.
+
+
+For consolidated current verification, see [EVIDENCE_MATRIX.md](EVIDENCE_MATRIX.md).
