@@ -1,14 +1,14 @@
 # 👋 Hello, I'm Nikola Kubera
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=760&lines=AI+Solutions+Builder;Building+KUBERA+AGENT+OS;AI+Agents+%7C+Local+Intelligence+%7C+Civic+Tech;Kubera+Guide+%E2%80%94+1.1M+Google+Maps+views" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=760&lines=AI+Solutions+Builder;Building+KUBERA+AGENT+OS;AI+Agents+%7C+Local+Intelligence+%7C+Civic+Tech;Kubera+Guide+%E2%80%94+Field+Mapping+%26+Local+Intelligence" alt="Typing SVG" />
 </p>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=jobkubera-lab&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
 </p>
 
-## AI Solutions Builder · AI Assurance & Infrastructure · KUBERA LAB · Agent Systems
+## AI Systems Builder · Infrastructure & Assurance · Evidence-Driven Automation
 
 I build practical AI systems, research tools, interactive maps and digital products that turn complex real-world information into clear, usable results.
 
@@ -41,12 +41,12 @@ I build practical AI systems, research tools, interactive maps and digital produ
 
 **Kubera Guide** is a field-built Google Maps project based on real locations, original photographs and structured place documentation.
 
-### 📊 Current public reach
+### 📊 Public mapping work
 
-- 👁️ **1.1M+ Google Maps views**
-- ✨ **1.8K profile impressions**
 - 🌍 international place research and publishing
-- 📷 original visual evidence and location information
+- 📷 original field photography and location documentation
+- 🗂️ structured place evidence for local-intelligence projects
+- 🔗 public Google Maps contribution profile linked below
 
 ### 🔄 From field discovery to useful intelligence
 
@@ -155,7 +155,8 @@ GitHub is part of the method: commits, diffs, tests, architecture notes and lear
 
 ## 🚀 Selected public projects
 
-- **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — 1.1M-view travel and Google Maps publishing project.
+- **[KUBERA TAO LAB — ML Evaluation Evidence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-tao-lab)** — public evidence dossier for a private multi-region ML R&D implementation; 34/34 local tests and successful GitHub Actions CI verified on 2 October 2026.
+- **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — field mapping, original place evidence and local-intelligence research.
 - **[KUBERA Agent OS / DZAMBALA public reference](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack)** — 6 executable foundation prototypes, 47 unit tests and CI across Python 3.11–3.13.
 - **[Council AI Service Finder — Evaluation Harness](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder/eval/v0.1)** — deterministic resident-language retrieval with IDF/BM25 controls, frozen regression cases and explicit safety fallbacks.
 - **[KUBERA Tender Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence)** — read-only UK procurement ingestion, evidence hashing, human BID / REVIEW / NO-BID decisions and regression tests.
