@@ -1,0 +1,43 @@
+name: Test Tender Intelligence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "kubera-lab/tender-intelligence/**"
+      - ".github/workflows/test-tender-intelligence.yml"
+  pull_request:
+    paths:
+      - "kubera-lab/tender-intelligence/**"
+      - ".github/workflows/test-tender-intelligence.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tender-intelligence-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    defaults:
+      run:
+        working-directory: kubera-lab/tender-intelligence
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install test runner
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Compile source
+        run: python -m py_compile intelligence_v11.py procurement_adapter.py procurement_pipeline.py procurement_pipeline_v11.py tender_intelligence.py
+      - name: Run tests
+        run: python -m pytest -q
