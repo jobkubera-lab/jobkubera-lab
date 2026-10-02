@@ -1,9 +1,21 @@
 # SHCHEGLOV NIKOLA
 
-**AI Agent Systems Builder | LLM Application Engineering | AI Automation | Civic AI**
+**AI Systems Builder | AI Assurance & Infrastructure | Agent Systems | Evidence-Driven Automation**
 
 London, United Kingdom  
 GitHub: https://github.com/jobkubera-lab
+
+---
+
+## VERIFIED ENGINEERING SNAPSHOT — 2 OCTOBER 2026
+
+- **KUBERA Agent OS / Innovation Stack reference:** 173 tests passed on Python 3.11–3.13; 89% source branch coverage; current GitHub Actions run successful.
+- **KUBERA TAO LAB:** 34/34 local project tests passed; hardened private CI successful; public evidence dossier documents temporal validation, leakage controls and strict unseen-property evaluation.
+- **KUBERA Real Estate OS:** evidence-first Montenegro land-check core; 3/3 tests passed on Python 3.11/3.12; private CI successful; wider SaaS remains bootstrap.
+- **Tender Intelligence:** 16 tests passed on Python 3.11–3.13; deterministic provenance and DRAFT_ONLY workflow.
+- **Portfolio Evidence Audit:** automated guardrail prevents stale headline metrics and verifies priority evidence paths.
+
+Technical reviewer route: https://github.com/jobkubera-lab/jobkubera-lab/blob/main/PORTFOLIO_REVIEW.md
 
 ---
 
