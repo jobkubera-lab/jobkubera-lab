@@ -156,9 +156,10 @@ GitHub is part of the method: commits, diffs, tests, architecture notes and lear
 ## 🚀 Selected public projects
 
 - **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — 1.1M-view travel and Google Maps publishing project.
-- **[kubera-ai-prompts](https://github.com/jobkubera-lab/kubera-ai-prompts)** — reusable prompt systems and AI workflows.
-- **[kubera-improved-website](https://github.com/jobkubera-lab/kubera-improved-website)** — web experiments and community-map work.
-- **[Cosmic English Adventures](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/cosmic-english-adventures)** — cartoons + English learning + colouring-book educational concept.
+- **[KUBERA Agent OS / DZAMBALA public reference](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack)** — 6 executable foundation prototypes, 47 unit tests and CI across Python 3.11–3.13.
+- **[Council AI Service Finder — Evaluation Harness](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder/eval/v0.1)** — deterministic resident-language retrieval with IDF/BM25 controls, frozen regression cases and explicit safety fallbacks.
+- **[KUBERA Tender Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence)** — read-only UK procurement ingestion, evidence hashing, human BID / REVIEW / NO-BID decisions and regression tests.
+- **[DZAMBALA Community Compass v0.2](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/dzambala-community-compass)** — verified London/Merton event discovery with provenance, validation, deduplication and GitHub Actions checks.
 
 ## 🧭 Project evolution
 
@@ -177,14 +178,6 @@ GitHub is part of the method: commits, diffs, tests, architecture notes and lear
           ↓
 🧠 KUBERA AGENT OS
 ```
-
-## 🐍 Contribution trail
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jobkubera-lab/jobkubera-lab/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jobkubera-lab/jobkubera-lab/output/github-contribution-grid-snake.svg" />
-  <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/jobkubera-lab/jobkubera-lab/output/github-contribution-grid-snake.svg" />
-</picture>
 
 ## 🤝 Open-source participation
 
