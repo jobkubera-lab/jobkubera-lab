@@ -1,7 +1,7 @@
 # 👋 Hello, I'm Nikola Kubera
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=760&lines=AI+Solutions+Builder;Building+KUBERA+AGENT+OS;AI+Agents+%7C+Local+Intelligence+%7C+Civic+Tech;Kubera+Guide+%E2%80%94+1.1M+Google+Maps+views" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=760&lines=AI+Solutions+Builder;Building+KUBERA+AGENT+OS;AI+Agents+%7C[...]" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -9,6 +9,8 @@
 </p>
 
 ## AI Solutions Builder · AI Assurance & Infrastructure · KUBERA LAB · Agent Systems
+
+AI systems builder in London — evidence-first AI agents, civic-tech prototypes and data tools. Human approval by design.
 
 I build practical AI systems, research tools, interactive maps and digital products that turn complex real-world information into clear, usable results.
 
@@ -33,7 +35,7 @@ I build practical AI systems, research tools, interactive maps and digital produ
 ![Evidence Ledger](https://img.shields.io/badge/Evidence_Ledger-Verification-6F42C1?style=for-the-badge)
 ![Human Control](https://img.shields.io/badge/Human--in--the--Loop-Approval-2EA44F?style=for-the-badge)
 
-**Working capabilities:** AI agent orchestration · local/hybrid AI · model routing · tool/API integration · permissions · human approval · evidence tracking · claim verification · GitHub-based engineering workflows · containerised local services.
+**Working capabilities:** AI agent orchestration · local/hybrid AI · model routing · tool/API integration · permissions · human approval · evidence tracking · claim verification · GitHub-b[...]
 
 **Currently strengthening:** Linux · networking · observability · incident analysis · AI infrastructure operations · AI governance and assurance.
 
@@ -50,12 +52,19 @@ I build practical AI systems, research tools, interactive maps and digital produ
 
 ### 🔄 From field discovery to useful intelligence
 
-**🧭 Field observation → 📷 evidence capture → 🗂️ structured place record → 🌍 public mapping → 📊 audience signals → 🧠 local intelligence → 🗺️ interactive services**
+**🧭 Field observation → 📷 evidence capture → 🗂️ structured place record → 🌍 public mapping → 📊 audience signals → 🧠 local intelligence → 🗺️ interactive service[...]**
 
 Each contribution begins with a real place and becomes part of a reusable geographic knowledge layer.
 
 ➡️ **[Explore the Kubera Guide project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)**  
-🌍 **[View Kubera Guide on Google Maps](https://www.google.com/maps/contrib/111907570264362429428?utm_source=mstt_0&g_ep=CAESBzI2LjMzLjIYACCBvQQqqQEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc2MSwxMDA3OTY1MzUsOTQyODA1NzYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksMTAwODE1NjQwLDEwMDgyMDIzNywxMDA4MjI0ODksMTAwODI3OTcxQgJHQg%3D%3D&skid=9d39cad4-d69e-433c-81c5-5e65fff3327e&g_st=atm)**
+🌍 **[View Kubera Guide on Google Maps](https://www.google.com/maps/contrib/111907570264362429428?utm_source=mstt_0&g_ep=CAESBzI2LjMzLjIYACCBvQQqqQEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2N[...]**
+
+## ⭐ Featured projects
+
+- **KUBERA Agent OS (reference implementation)** — [kubera-lab/innovation-stack/reference-implementation](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack/reference-implementation) — governed agent runtime, ~25 test files, 89% coverage, 85% CI floor.
+- **Council AI Service Finder** — [research/council-ai-service-finder](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder) — multilingual service retrieval with baseline, BM25 and frozen validation sets.
+- **Tender Intelligence** — [kubera-lab/tender-intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence) — UK procurement opportunity analysis with tests.
+- **KUBERA RESI** — US residential price model (repository coming soon): 232k sales, 4 regions, XGBoost 32% MAPE on strict time-based test.
 
 ## 🧠 KUBERA AGENT OS
 
@@ -112,9 +121,9 @@ The design keeps models interchangeable while preserving continuity, accountabil
 
 ## 🧪 KUBERA LAB
 
-**KUBERA LAB** is my applied AI research, engineering and learning environment. I use it to turn real-world needs, verified information and original ideas into working systems that can be inspected, tested, audited and improved.
+**KUBERA LAB** is my applied AI research, engineering and learning environment. I use it to turn real-world needs, verified information and original ideas into working systems that can be inspect[...]
 
-It is also my **technical portfolio and evidence trail**: each meaningful capability should leave something concrete in GitHub — architecture notes, code, tests, configurations, diagrams, incident analysis, evidence records or documented decisions.
+It is also my **technical portfolio and evidence trail**: each meaningful capability should leave something concrete in GitHub — architecture notes, code, tests, configurations, diagrams, incid[...]
 
 KUBERA LAB connects four disciplines that I am deliberately developing together:
 
@@ -127,9 +136,9 @@ KUBERA LAB connects four disciplines that I am deliberately developing together:
 
 **🔍 Observe → ✅ Verify → 🎯 Define → 🧩 Architect → 🛠️ Build → 📡 Instrument → 🧪 Test → 🧾 Audit → 👤 Human review → 📝 Document → 🔁 Improve**
 
-My method starts with a real problem, not a technology. I identify what must be decided or achieved, verify the available information, define the system boundary and permissions, then build the smallest useful version.
+My method starts with a real problem, not a technology. I identify what must be decided or achieved, verify the available information, define the system boundary and permissions, then build the s[...]
 
-I do not treat an AI output as proof by itself. Important results should be connected to sources, system records, tests or other evidence. Where an action can affect people, accounts, money, publishing or external systems, human authority remains part of the design.
+I do not treat an AI output as proof by itself. Important results should be connected to sources, system records, tests or other evidence. Where an action can affect people, accounts, money, publ[...]
 
 GitHub is part of the method: commits, diffs, tests, architecture notes and learning records create a visible history of how the system evolved and why decisions were made.
 
@@ -155,11 +164,11 @@ GitHub is part of the method: commits, diffs, tests, architecture notes and lear
 
 ## 🚀 Selected public projects
 
-- **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — 1.1M-view travel and Google Maps publishing project.
-- **[KUBERA Agent OS / DZAMBALA public reference](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack)** — 6 executable foundation prototypes, 47 unit tests and CI across Python 3.11–3.13.
-- **[Council AI Service Finder — Evaluation Harness](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder/eval/v0.1)** — deterministic resident-language retrieval with IDF/BM25 controls, frozen regression cases and explicit safety fallbacks.
-- **[KUBERA Tender Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence)** — read-only UK procurement ingestion, evidence hashing, human BID / REVIEW / NO-BID decisions and regression tests.
-- **[DZAMBALA Community Compass v0.2](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/dzambala-community-compass)** — verified London/Merton event discovery with provenance, validation, deduplication and GitHub Actions checks.
+- **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — 1.1M-view travel and Google Maps publishing pr[...]
+- **[KUBERA Agent OS / DZAMBALA public reference](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack)** — 6 executable foundation prototypes, 47 unit tests and[...]
+- **[Council AI Service Finder — Evaluation Harness](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder/eval/v0.1)** — deterministic resident-language[...]
+- **[KUBERA Tender Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence)** — read-only UK procurement ingestion, evidence hashing, human BID / R[...]
+- **[DZAMBALA Community Compass v0.2](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/dzambala-community-compass)** — verified London/Merton event discovery with provenance,[...]
 
 ## 🧭 Project evolution
 
@@ -198,9 +207,9 @@ I use GitHub as an engineering workspace and public development record: branches
 
 ## 🧑‍💼 About NIKOLA KUBERA
 
-**NIKOLA KUBERA** is an AI solutions builder developing practical systems at the intersection of **AI agents, AI assurance, local/hybrid AI, infrastructure operations, evidence engineering and real-world decision support**.
+**NIKOLA KUBERA** is an AI solutions builder developing practical systems at the intersection of **AI agents, AI assurance, local/hybrid AI, infrastructure operations, evidence engineering and re[...]**
 
-My current professional direction is **AI Assurance & Infrastructure**: understanding how an AI task moves through agents, models, tools and compute — and how to verify what actually happened with evidence.
+My current professional direction is **AI Assurance & Infrastructure**: understanding how an AI task moves through agents, models, tools and compute — and how to verify what actually happened w[...]
 
 - 🧠 I design modular AI architectures with memory, skills, model routing, permissions and verification.
 - 🛡️ I build human-control boundaries for consequential actions rather than giving agents unrestricted authority.
