@@ -2,7 +2,7 @@
 
 **18 modular technologies plus cross-cutting capabilities for turning real-world experience into trustworthy AI systems.**
 
-> Current state: **6 executable foundation prototypes + 12 documented concepts + Visual Systems prototype contract.** A module is only upgraded from `CONCEPT` when executable code and validation exist.
+> Current state: the **reference implementation is the active executable Control layer**; modules 01–18 remain the documented architecture catalogue and are not expanded merely for appearance. A capability is described as implemented only when code and verification exist.
 
 KUBERA INNOVATION STACK is the public architecture layer around KUBERA LAB. It connects real-world observations, structured memory, AI agents, human control, GitHub evidence, geographic intelligence, visual explanation and public project presentation.
 
@@ -18,7 +18,7 @@ The public [Reference Implementation](reference-implementation/) currently imple
 - ✅ Proof-of-Work Portfolio — ordered engineering evidence chain;
 - ✅ Visual Systems `DiagramIntent` — validated contract for routing technical content to a compatible visual renderer.
 
-The package now contains **47 unit tests**. GitHub CI validates it across Python 3.11, 3.12 and 3.13.
+Current verification (2 October 2026): **173 tests passed** on Python 3.11, 3.12 and 3.13. The coverage job reports **89% source branch coverage** against an enforced 85% floor.
 
 ## Core idea
 
@@ -71,7 +71,7 @@ Living GitHub portfolio
 A KUBERA-owned model-agnostic `DiagramIntent` contract plus integration architecture for external visual renderers. The first documented upstream capability is **Diagram Design** by Cathryn Lavery (MIT), whose live repository currently documents 39 editorial diagram types and standalone HTML/SVG/PNG output.
 
 ### 🌍 Kubera Guide → GeoMemory bridge
-The Google Maps project provides a real-world source model for `first_hand` geographic observations: place, category, visit context, media, public source link and platform-level reach. The screenshots supplied for the project confirm **1.1M Google Maps views** and **1.8K profile impressions**.
+The Google Maps project provides a real-world source model for `first_hand` geographic observations: place, category, visit context, media and a public source link. Historical reach figures are not used as technical evidence unless they are currently independently verifiable.
 
 ## Design principles
 
