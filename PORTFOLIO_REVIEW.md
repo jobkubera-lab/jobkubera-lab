@@ -10,6 +10,8 @@ See [PORTFOLIO_MAP.md](PORTFOLIO_MAP.md) for the complete classification of flag
 
 Start with [KUBERA AGENT OS](kubera-lab/agent-os/).
 
+Verified current evidence: **173 tests passed** on Python 3.11–3.13 and **89% source branch coverage**.
+
 Look for:
 - bounded capabilities rather than unrestricted agents;
 - evidence and approval gates;
@@ -34,6 +36,8 @@ Look for:
 
 Open [KUBERA Real Estate OS](kubera-lab/real-estate-os/).
 
+Verified current core evidence: **3/3 tests passed** on Python 3.11/3.12; current private CI succeeded.
+
 Look for:
 - product/system decomposition;
 - multi-tenant and governance requirements;
@@ -42,7 +46,7 @@ Look for:
 
 ## 4. Applied evidence
 
-- [Tender Intelligence](kubera-lab/tender-intelligence/) — deterministic UK procurement qualification, provenance and DRAFT_ONLY output.
+- [Tender Intelligence](kubera-lab/tender-intelligence/) — deterministic UK procurement qualification, provenance and DRAFT_ONLY output; current CI: **16 tests passed** on Python 3.11–3.13.
 - [MCP Lab](kubera-lab/mcp-lab/) — bounded reusable capability servers plus deny-by-default gateway policy.
 - [Council AI Service Finder](research/council-ai-service-finder/eval/v0.1/) — deterministic resident-language retrieval evaluation.
 - [Community Compass](kubera-lab/dzambala-community-compass/) — provenance-oriented local event/service discovery.
@@ -59,3 +63,6 @@ The portfolio intentionally distinguishes **implemented**, **tested**, **private
 - **Supporting libraries/content:** prompts, migration templates, playbooks and learning materials.
 - **Legacy:** historical repositories kept for context, not current product claims.
 - **External/reference:** upstream or third-party code used for study/domain exposure; not presented as original KUBERA products.
+
+
+For the consolidated verification table, see [EVIDENCE_MATRIX.md](EVIDENCE_MATRIX.md).
