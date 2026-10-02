@@ -11,6 +11,8 @@ Public evidence:
 - `kubera-lab/innovation-stack/reference-implementation/`
 - `kubera-lab/mcp-lab/`
 
+Verified on 2026-10-02: **173 tests passed** on Python 3.11–3.13; coverage job reported **89% source branch coverage** against an 85% floor.
+
 Status: **implemented public reference runtime**, not a production security product.
 
 Core evidence includes source/evidence/action gates, Evidence Ledger mechanics, human approval boundaries, idempotency/replay handling, privacy/tool validation, a safe demo and automated CI.
@@ -35,10 +37,12 @@ Public evidence:
 
 Implementation: private `jobkubera-lab/kubera-real-estate-os`.
 
-Status: **repository bootstrap / product architecture**. Production integrations are not claimed until authenticated and tested.
+Verified on 2026-10-02: evidence-first Montenegro land-check core, **3/3 tests passed** on Python 3.11/3.12, private CI successful.
+
+Status: **early verified core / wider product bootstrap**. Production integrations are not claimed until authenticated and tested.
 
 ### P2 — Applied proof
-- `kubera-lab/tender-intelligence/` — deterministic procurement qualification and DRAFT_ONLY bid support.
+- `kubera-lab/tender-intelligence/` — deterministic procurement qualification and DRAFT_ONLY bid support; **16 tests passed** on Python 3.11–3.13.
 - `kubera-lab/mcp-lab/` — bounded capability servers and deny-by-default gateway policy.
 - `research/council-ai-service-finder/eval/v0.1/` — deterministic retrieval evaluation.
 - `kubera-lab/dzambala-community-compass/` — provenance-oriented local intelligence.
