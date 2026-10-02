@@ -88,6 +88,18 @@ Core rules:
 - evidence readiness matters as much as keyword match;
 - submission, declarations and legal acceptance remain human actions.
 
+## Verification snapshot — 2 October 2026
+
+Current public reference implementation verification:
+
+- **173 tests passed** on Python 3.11, 3.12 and 3.13;
+- **89% source branch coverage** in the coverage job;
+- enforced coverage floor: **85%**;
+- safe JSON demo executed by CI;
+- current workflow run completed successfully.
+
+These numbers apply to the public reference implementation, not to unimplemented future provider integrations or production security.
+
 ## What is already built
 
 - Civic Evidence OS: tested lookup, fallbacks, no form submit
