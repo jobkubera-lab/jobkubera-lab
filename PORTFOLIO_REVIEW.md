@@ -2,6 +2,10 @@
 
 This page is the shortest technical route through the portfolio.
 
+**Flagship:** KUBERA AGENT OS is the primary public engineering system. Other KUBERA projects demonstrate supporting capabilities or applied verticals.
+
+See [PORTFOLIO_MAP.md](PORTFOLIO_MAP.md) for the complete classification of flagship, supporting, legacy and external/reference repositories.
+
 ## 1. KUBERA AGENT OS — control and assurance
 
 Start with [KUBERA AGENT OS](kubera-lab/agent-os/).
@@ -46,3 +50,12 @@ Look for:
 ## Portfolio principle
 
 The portfolio intentionally distinguishes **implemented**, **tested**, **private**, **prototype**, and **planned** work. Evidence is preferred over inflated claims.
+
+
+## Portfolio structure
+
+- **Flagship:** KUBERA AGENT OS.
+- **Supporting engineering:** TAO LAB, Real Estate OS, MCP LAB and applied evidence systems.
+- **Supporting libraries/content:** prompts, migration templates, playbooks and learning materials.
+- **Legacy:** historical repositories kept for context, not current product claims.
+- **External/reference:** upstream or third-party code used for study/domain exposure; not presented as original KUBERA products.
