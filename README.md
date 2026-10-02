@@ -12,6 +12,20 @@
 
 I build practical AI systems, research tools, interactive maps and digital products that turn complex real-world information into clear, usable results.
 
+## 🔎 Reviewer quick path
+
+For the shortest technical review, open **[PORTFOLIO_REVIEW.md](PORTFOLIO_REVIEW.md)**.
+
+| Priority | Project | Evidence |
+|---|---|---|
+| **P0** | **KUBERA AGENT OS** | [control/assurance dossier](kubera-lab/agent-os/) · [reference implementation](kubera-lab/innovation-stack/reference-implementation/) |
+| **P1** | **KUBERA TAO LAB** | [ML evaluation evidence](kubera-lab/kubera-tao-lab/) |
+| **P1** | **KUBERA Real Estate OS** | [public architecture/status dossier](kubera-lab/real-estate-os/) |
+| **P2** | **Applied capabilities** | [Tender Intelligence](kubera-lab/tender-intelligence/) · [MCP LAB](kubera-lab/mcp-lab/) · [Council AI eval](research/council-ai-service-finder/eval/v0.1/) |
+
+The portfolio distinguishes **implemented**, **tested**, **private**, **prototype** and **planned** work. I prefer verifiable engineering evidence over inflated status claims.
+
+
 ### ⚡ Three connected directions
 
 - 🤖 **AI Agent Systems & Automation** — modular agents, reusable skills, model routing and controlled workflows.
@@ -155,12 +169,13 @@ GitHub is part of the method: commits, diffs, tests, architecture notes and lear
 
 ## 🚀 Selected public projects
 
-- **[KUBERA TAO LAB — ML Evaluation Evidence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-tao-lab)** — public evidence dossier for a private multi-region ML R&D implementation; 34/34 local tests and successful GitHub Actions CI verified on 2 October 2026.
+- **[KUBERA AGENT OS — Control & Assurance](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/agent-os)** — bounded agent execution, evidence/approval gates, idempotency, failure handling and a tested public reference runtime.
+- **[KUBERA TAO LAB — ML Evaluation Evidence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-tao-lab)** — public evidence dossier for a private multi-region ML R&D implementation; local project suite verified at 34 passed / 0 failed on 2 October 2026 and private CI succeeded on the hardened pipeline commit.
+- **[KUBERA Real Estate OS](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/real-estate-os)** — public product-architecture dossier for the private London-first real-estate OS; current status is explicitly repository bootstrap, not production.
+- **[KUBERA Tender Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence)** — deterministic UK procurement qualification with provenance, hard blockers and DRAFT_ONLY bid support.
+- **[KUBERA MCP LAB](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/mcp-lab)** — bounded capability servers and deny-by-default gateway policy.
+- **[Council AI Service Finder — Evaluation Harness](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder/eval/v0.1)** — deterministic resident-language retrieval evaluation with regression tests and explicit safety fallbacks.
 - **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — field mapping, original place evidence and local-intelligence research.
-- **[KUBERA Agent OS / DZAMBALA public reference](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack)** — 6 executable foundation prototypes, 47 unit tests and CI across Python 3.11–3.13.
-- **[Council AI Service Finder — Evaluation Harness](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder/eval/v0.1)** — deterministic resident-language retrieval with IDF/BM25 controls, frozen regression cases and explicit safety fallbacks.
-- **[KUBERA Tender Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence)** — read-only UK procurement ingestion, evidence hashing, human BID / REVIEW / NO-BID decisions and regression tests.
-- **[DZAMBALA Community Compass v0.2](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/dzambala-community-compass)** — verified London/Merton event discovery with provenance, validation, deduplication and GitHub Actions checks.
 
 ## 🧭 Project evolution
 
