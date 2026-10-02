@@ -17,7 +17,7 @@
   <img src="https://komarev.com/ghpvc/?username=jobkubera-lab&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
 </p>
 
-## AI Solutions Builder · AI Assurance & Infrastructure · KUBERA LAB · Agent Systems
+## AI Solutions Builder · KUBERA LAB · AI agents, local intelligence, civic-tech and interactive maps
 
 I build practical AI systems, research tools, interactive maps and digital products that turn complex real-world information into clear, usable results.
 
@@ -32,21 +32,11 @@ I build practical AI systems, research tools, interactive maps and digital produ
 ## 🧰 Technology stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![AI Agents](https://img.shields.io/badge/AI%20Agents-000000?style=for-the-badge&logo=openai&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-Local_AI-black?style=for-the-badge)
-![AI Agents](https://img.shields.io/badge/AI_Agents-Agentic_Systems-111111?style=for-the-badge)
-![MCP](https://img.shields.io/badge/MCP-Tool_Integration-7C3AED?style=for-the-badge)
-![AI Assurance](https://img.shields.io/badge/AI_Assurance-Audit_%26_Control-0A66C2?style=for-the-badge)
-![Evidence Ledger](https://img.shields.io/badge/Evidence_Ledger-Verification-6F42C1?style=for-the-badge)
-![Human Control](https://img.shields.io/badge/Human--in--the--Loop-Approval-2EA44F?style=for-the-badge)
 
-**Working capabilities:** AI agent orchestration · local/hybrid AI · model routing · tool/API integration · permissions · human approval · evidence tracking · claim verification · GitHub-based engineering workflows · containerised local services.
-
-**Currently strengthening:** Linux · networking · observability · incident analysis · AI infrastructure operations · AI governance and assurance.
+![AI Solutions Builder](https://img.shields.io/badge/-AI%20Solutions%20Builder-brightgreen?logo=appveyor) ![AI Agents](https://img.shields.io/badge/-AI%20Agents-blue) ![Civic Tech](https://img.shields.io/badge/-Civic%20Tech-teal) ![Interactive Maps](https://img.shields.io/badge/-Interactive%20Maps-orange) ![Local Intelligence](https://img.shields.io/badge/-Local%20Intelligence-purple)
 
 ## 🌍 Kubera Guide — Global Mapping Project
 
@@ -108,63 +98,41 @@ The design keeps models interchangeable while preserving continuity, accountabil
 
 ## ✨ What I build
 
-- 🤖 **AI agent systems and workflow automation** — task-specific agents, reusable skills, tool use and controlled execution.
-- 🛡️ **AI Control & Assurance systems** — permissions, human approval, independent checks, audit trails and verified release gates.
-- 🧾 **Evidence-led AI** — Evidence Ledger, claim verification, source provenance and traceable decision history.
-- 🧠 **Local, hybrid and privacy-conscious AI** — systems that can combine local models with external services without surrendering control of memory or policy.
-- 🔀 **Model and tool orchestration** — routing between models, APIs, MCP tools and specialist agents according to task, privacy and reliability.
-- ⚙️ **API-backed AI services** — lightweight Python/FastAPI services, SQLite state, Docker runtimes and repeatable deployment patterns.
-- 🔎 **Observability and incident-analysis foundations** — learning to connect logs, traces, system behaviour, code history and evidence when something goes wrong.
-- 🧬 **Reusable AI capability modules** — prompt systems, Skill DNA, policies, contracts and repeatable LLM workflows.
-- 🗺️ **Interactive maps and local intelligence** — field data, place research, service discovery and geographic knowledge systems.
-- 🏛️ **Civic-tech prototypes** — explainable digital tools for communities, newcomers and public-service information.
-- 🏠 **AI-assisted real-estate intelligence** — property research, due diligence workflows, evidence gathering and structured comparison.
-- 🌐 **International work and relocation intelligence** — official-source research, document planning and decision support.
-- 🎓 **Educational and creative AI products** — learning workflows, interactive content and visual concepts.
-- 🕉️ **Jyotish research tools** — structured exploration of Vedic astrology using transparent digital methods.
+- 🤖 AI agents and intelligent workflow tools.
+- 🧠 Local, hybrid and privacy-conscious AI systems.
+- 🧬 Prompt systems, Skill DNA modules and reusable LLM workflows.
+- 🗺️ Interactive maps and local-service discovery tools.
+- 🏛️ Civic-tech prototypes for communities and newcomers.
+- 🔎 Research, evidence tracking and structured knowledge systems.
+- 🎓 Educational AI products and creative digital experiences.
+- 🕉️ Jyotish and Vedic astrology research tools.
+- 🌐 International employment, relocation and residence-planning tools.
 
 ## 🧪 KUBERA LAB
 
-**KUBERA LAB** is my applied AI research, engineering and learning environment. I use it to turn real-world needs, verified information and original ideas into working systems that can be inspected, tested, audited and improved.
-
-It is also my **technical portfolio and evidence trail**: each meaningful capability should leave something concrete in GitHub — architecture notes, code, tests, configurations, diagrams, incident analysis, evidence records or documented decisions.
-
-KUBERA LAB connects four disciplines that I am deliberately developing together:
-
-- 🤖 **AI systems** — agents, models, tools, APIs and automation.
-- ⚙️ **AI infrastructure** — Linux, networking, services, containers, compute and operational reliability.
-- 🛡️ **AI assurance** — permissions, human control, verification, audit and risk.
-- 🧾 **Evidence engineering** — provenance, logs, traceability, failure analysis and reproducible decisions.
+**KUBERA LAB** is my applied research-and-development environment for turning real needs, verified information and original ideas into working digital systems.
 
 ### ⚙️ My method
 
-**🔍 Observe → ✅ Verify → 🎯 Define → 🧩 Architect → 🛠️ Build → 📡 Instrument → 🧪 Test → 🧾 Audit → 👤 Human review → 📝 Document → 🔁 Improve**
+**🔍 Observe → ✅ verify → 🧭 define the problem → 🧩 design the architecture → 🛠️ build → 🧪 test → 🧾 record evidence → 🔁 improve**
 
-My method starts with a real problem, not a technology. I identify what must be decided or achieved, verify the available information, define the system boundary and permissions, then build the smallest useful version.
+I use AI as an engineering partner to convert real-world needs, research, field observations and cultural knowledge into specifications, data structures, decision rules, agent workflows, interfaces and testable software.
 
-I do not treat an AI output as proof by itself. Important results should be connected to sources, system records, tests or other evidence. Where an action can affect people, accounts, money, publishing or external systems, human authority remains part of the design.
-
-GitHub is part of the method: commits, diffs, tests, architecture notes and learning records create a visible history of how the system evolved and why decisions were made.
+Ideas are decomposed into components, checked against reliable sources, modelled as repeatable processes, tested for failure modes and refined through documented iterations. The goal is not an impressive description — it is a system that can be inspected, used and improved.
 
 ### 🚀 Active directions
 
-**Core professional track**
-- 🛡️ **KUBERA AI Infrastructure & Assurance Lab** — Linux, networking, APIs, Docker, observability, incident analysis, AI controls and audit.
-- 🤖 **KUBERA AGENT OS** — orchestration, model routing, Skill DNA, permissions, evidence and verified execution.
-- 🧾 **KUBERA AUDIT / Evidence Layer** — independent checks, provenance, claim verification, human approval and failure records.
-- ⚙️ **AgentOps & Local AI** — controlled local/hybrid model use, tool integration and operational workflows.
-
-**Applied systems**
-- 🏠 **KUBERA Real Estate OS** — AI-assisted property research, due diligence, evidence gathering and client-facing analysis.
-- 🌍 **Kubera Guide / Local Intelligence** — field mapping, place evidence, local discovery and reusable geographic knowledge.
-- 🏛️ **Civic AI / Merton** — local-service and newcomer-oriented community tools.
-- 🌐 **Career & Relocation Intelligence** — source-checked employment, document and residence-planning workflows.
-
-**Research and creative applications**
-- 🔐 **AI Privacy & Human Control** — privacy gates, permissions and controlled data use.
-- 📊 **Technology Radar** — structured evaluation of emerging technologies and practical adoption.
-- 🎓 **AI Education** — learning systems, language practice and creative digital experiences.
+- 🌍 **Kubera Guide** — field mapping, visual evidence and public place discovery.
+- 🤖 **KUBERA AGENT OS** — modular orchestration, memory, permissions and verification.
+- 🗺️ **Mitcham / Merton community mapping** — local services and newcomer-oriented tools.
+- 🧠 **AI Agents** — task-specific assistants, skills and controlled automation.
+- 📊 **Technology Radar** — structured evaluation of emerging technologies.
+- 🔐 **AI Privacy** — privacy gates, local models and human-controlled data.
+- ⚙️ **Automation** — workflows using APIs, Python and no-code / low-code tools.
+- 🏛️ **Civic AI** — evidence-led digital tools for communities and public services.
+- 🌌 **Cosmic English Adventures** — AI-assisted education combining stories, animation, English learning and printable activities.
 - 🕉️ **Jyotish Technology** — structured Vedic astrology research and transparent digital tools.
+- 🌐 **Relocation Intelligence** — official-source research for international work, documents and residence planning.
 
 ➡️ **[Explore KUBERA LAB](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab)**
 
@@ -246,20 +214,16 @@ Practical, source-checked guidance for international employment and lawful resid
 
 ## 🧑‍💼 About NIKOLA KUBERA
 
-**NIKOLA KUBERA** is an AI solutions builder developing practical systems at the intersection of **AI agents, AI assurance, local/hybrid AI, infrastructure operations, evidence engineering and real-world decision support**.
+**NIKOLA KUBERA** is a multidisciplinary systems builder working at the intersection of AI engineering, local intelligence, civic technology, international employment research, Jyotish and digital education.
 
-My current professional direction is **AI Assurance & Infrastructure**: understanding how an AI task moves through agents, models, tools and compute — and how to verify what actually happened with evidence.
-
-- 🧠 I design modular AI architectures with memory, skills, model routing, permissions and verification.
-- 🛡️ I build human-control boundaries for consequential actions rather than giving agents unrestricted authority.
-- 🧾 I use evidence trails, source provenance, tests and audit records to make AI behaviour more inspectable.
-- ⚙️ I am developing practical infrastructure skills in Linux, networking, APIs, Docker, observability and incident analysis.
-- 🛠️ I turn real problems into specifications, prototypes, workflows, APIs, maps and usable digital products.
-- 🏠 I apply AI to real-estate research, structured due diligence and evidence-led comparison.
-- 🗺️ I connect field data and geographic research with local-intelligence systems.
-- 🌐 I convert complex employment, relocation and document requirements into structured decision workflows.
-- 🧪 I use **KUBERA LAB** as a living portfolio where learning, engineering, tests and project decisions are documented in GitHub.
-- 🤝 I am open to practical collaboration in AI systems, AI assurance, structured research, local intelligence and applied automation.
+- 🧠 I design modular AI architectures with memory, skills, permissions, verification and evidence trails.
+- 🛠️ I turn real problems into specifications, prototypes, workflows, maps and usable digital products.
+- 🗺️ I connect field data and geographic research with interactive local-intelligence systems.
+- 🔎 I analyse official sources and convert complex employment, document and residence requirements into structured action plans.
+- 🕉️ I explore how classical Jyotish methods can be represented through transparent calculations, knowledge systems and responsible AI assistance.
+- 🎓 I create educational and cultural concepts that combine technology, visual storytelling and practical learning.
+- 🧪 I develop **KUBERA LAB** as one connected ecosystem where ideas are researched, built, tested, documented and improved.
+- 🤝 I am open to collaboration with individuals, businesses, researchers and organisations that need practical AI, structured research or original digital solutions.
 
 ## 💡 Mission
 
