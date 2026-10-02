@@ -14,7 +14,7 @@ I build practical AI systems, research tools, interactive maps and digital produ
 
 ## 🔎 Reviewer quick path
 
-For the shortest technical review, open **[PORTFOLIO_REVIEW.md](PORTFOLIO_REVIEW.md)**.
+For the shortest technical review, open **[PORTFOLIO_REVIEW.md](PORTFOLIO_REVIEW.md)**. For the full portfolio classification, see **[PORTFOLIO_MAP.md](PORTFOLIO_MAP.md)**.
 
 | Priority | Project | Evidence |
 |---|---|---|
@@ -24,6 +24,14 @@ For the shortest technical review, open **[PORTFOLIO_REVIEW.md](PORTFOLIO_REVIEW
 | **P2** | **Applied capabilities** | [Tender Intelligence](kubera-lab/tender-intelligence/) · [MCP LAB](kubera-lab/mcp-lab/) · [Council AI eval](research/council-ai-service-finder/eval/v0.1/) |
 
 The portfolio distinguishes **implemented**, **tested**, **private**, **prototype** and **planned** work. I prefer verifiable engineering evidence over inflated status claims.
+
+### Portfolio structure
+
+- **Flagship:** KUBERA AGENT OS — control, assurance, evidence and bounded execution.
+- **Applied verticals:** Real Estate OS, civic AI, local intelligence and procurement workflows.
+- **Supporting assets:** prompt libraries, playbooks, templates and learning material.
+- **Legacy:** historical experiments are explicitly marked and are not current product claims.
+- **External/reference code:** upstream GOV.UK, NHS, LocalGov and other reference repositories are not presented as original KUBERA products.
 
 
 ### ⚡ Three connected directions
