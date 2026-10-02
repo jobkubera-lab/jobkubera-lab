@@ -1,109 +1,99 @@
 # KUBERA repository map
 
-Обновлено: 2026-09-09.
+Updated: **2026-10-02**
 
-## Продукт
+## Public entry points
 
-**KUBERA Local Desk / Agent OS** — человек описывает задачу, система выбирает ограниченную capability, находит и проверяет источник, готовит понятный результат, сохраняет доказательства и предлагает следующее действие; человек остаётся authority.
+1. **Profile / portfolio hub** — `jobkubera-lab/jobkubera-lab`
+2. **Reviewer route** — `PORTFOLIO_REVIEW.md`
+3. **KUBERA LAB index** — `kubera-lab/README.md`
 
-Это не live council service, не eligibility decision, не procurement authority, не банк и не автопостинг.
+## Priority architecture
 
-## Флагманы
+### 1. Control — KUBERA AGENT OS
+Paths:
+- `KUBERA_AGENT_OS.md`
+- `kubera-lab/agent-os/`
+- `kubera-lab/innovation-stack/reference-implementation/`
 
-1. **Lookup — Civic Evidence OS**  
-   Репозиторий: `jobkubera-lab/kubera-improved-website`  
-   Папка: `civic-evidence-os/`  
-   Роль: детерминированный поиск по проверенному каталогу, официальный URL, fallback и safety.
+Role:
+- orchestration;
+- policy and permissions;
+- source/evidence/action gates;
+- approval boundaries;
+- idempotency/replay control;
+- Evidence Ledger;
+- safe tool execution.
 
-2. **Place — Community Compass v0.2**  
-   Репозиторий: `jobkubera-lab/jobkubera-lab`  
-   Папка: `kubera-lab/dzambala-community-compass/`  
-   Роль: карта, вручную проверенные события и provenance для London + Merton.
+### 2. Capability layer — KUBERA MCP LAB
+Path: `kubera-lab/mcp-lab/`
 
-3. **Control — Agent Fabric / Trust Mesh + DZAMBALA**  
-   Репозиторий: `jobkubera-lab/jobkubera-lab`  
-   Папка: `kubera-lab/innovation-stack/reference-implementation/`  
-   Стратегия: `kubera-lab/innovation-stack/DZAMBALA.md`  
-   Роль: handoff, source/evidence/action gates, approval, idempotency, Evidence Ledger и контролируемое выполнение.
-
-## Capability layer — KUBERA MCP LAB
-
-Папка: `kubera-lab/mcp-lab/`
-
-Роль: набор небольших MCP-серверов, которые делают существующие KUBERA-capabilities переиспользуемыми для разных каналов и AI-hosts.
-
+Role:
 ```text
-surface -> Agent OS -> MCP Gateway -> bounded MCP server -> official/data source
-                                      -> evidence/result -> human-controlled action
+surface -> Agent OS -> MCP gateway -> bounded capability -> source/tool
+                                     -> evidence/result -> human-controlled action
 ```
 
-Текущая foundation-версия включает:
+MCP is a capability boundary, not a replacement Agent OS.
 
-- Hello MCP — учебный/smoke-test сервер;
-- Evidence MCP — SHA-256 provenance envelopes;
-- ONS MCP — read-only official statistics interface;
-- Tender MCP — interface к существующему Tender Intelligence;
-- TypeScript gateway reference с deny-by-default server/tool registry;
-- security baseline;
-- project-based learning track;
-- Python/TypeScript CI.
+### 3. ML research — KUBERA TAO LAB
+Public path: `kubera-lab/kubera-tao-lab/`
 
-MCP LAB **не является новым Agent OS**. Agent OS решает, когда использовать capability; MCP определяет ограниченный tool/resource contract; Control/Evidence слой обеспечивает границы и human authority.
+Private implementation: `saturnom999-lab/kubera-tao-lab`.
 
-## Операционные noses Agent OS
+Role:
+- model evaluation discipline;
+- temporal validation;
+- strict unseen-property testing;
+- leakage control;
+- bias/error analysis;
+- ONNX/deployment checks.
 
-### KUBERA Tender Intelligence
+### 4. Product architecture — KUBERA Real Estate OS
+Public path: `kubera-lab/real-estate-os/`
 
-Папка: `kubera-lab/tender-intelligence/`
+Private implementation: `jobkubera-lab/kubera-real-estate-os`.
 
-Роль:
+Role:
+- property intelligence;
+- workflow/CRM architecture;
+- governance and multi-tenant design;
+- future authenticated integrations.
 
-```text
-official source -> normalize/provenance -> checkpoint -> deadline/CPV/requirements/buyer -> gaps -> BID/REVIEW/NO-BID -> DRAFT bid pack -> human
-```
+Current status remains bootstrap; architecture is not labelled as production.
 
-Включает read-only Find a Tender / Contracts Finder intake и v1.1 intelligence.
+## Applied systems
 
-Ограничения:
+### Tender Intelligence
+Path: `kubera-lab/tender-intelligence/`
 
-- нет автономной подачи тендеров;
-- нет подписания деклараций;
-- нет принятия legal terms;
-- нет заявлений о partnership с UK government.
+Official read-only procurement intake -> normalize/provenance -> deadline/CPV/requirements/buyer checks -> BID/REVIEW/NO-BID -> DRAFT_ONLY bid pack -> human.
 
-### Future MCP-backed noses
+### Council AI Service Finder
+Path: `research/council-ai-service-finder/eval/v0.1/`
 
-Следующие направления развиваются как конфигурации общей системы, а не новые платформы:
+Deterministic resident-language retrieval evaluation with regression tests and explicit fallbacks.
 
-- Local MCP / KUBERA Local Desk;
-- Collector MCP / KUBERA Collector Intelligence;
-- Document MCP / KUBERA Document Desk;
-- Business/booking MCP для AI Receptionist — только после approval/idempotency/auth gates.
+### Community Compass
+Path: `kubera-lab/dzambala-community-compass/`
 
-## Craft — отдельно от runtime
+Local/event intelligence with source validation and provenance-oriented data handling.
 
-**KUBERA STONES**  
-Папка: `kubera-lab/kubera-stones/`  
-Роль: one-of-a-kind handmade stones, персональные символы и custom-order craft. Это отдельное творческое направление и не часть AI runtime.
+## Supporting / library repositories
 
-## Витрина
+These remain useful but are not flagship portfolio items:
+- migration/visa templates;
+- learning repositories;
+- prompt libraries;
+- small infrastructure experiments;
+- legacy web prototypes.
 
-Корневой профильный `README.md` — отдельная лицевая презентационная страница. Операционные статусы, runtime-изменения и служебные записи размещаются в `STATUS.md`, `REPO_MAP.md` и внутренних README проектов, а не добавляются автоматически на лицевую страницу.
+Forks used for upstream/open-source participation remain separate from KUBERA product claims.
 
-## Склад / библиотека
+## Public/private rule
 
-Остальные репозитории и материалы не считаются отдельными флагманскими продуктами. Это библиотеки, заметки, старые эксперименты или черновики, пока они не нужны Lookup / Place / Control / Capability слоям.
+Private implementation history is not made public merely for appearance. Public dossiers expose architecture, status and verified evidence without publishing credentials, client data, raw private datasets or unsafe history.
 
-Шаблоны виз и миграционные материалы остаются библиотекой, а не главным нарративом аккаунта.
+## Rule
 
-## Заморожено
-
-Innovation-stack модули 01–18 как отдельные продукты **не развивать и не расширять новыми модулями 19+**.
-
-`reference-implementation/` и `DZAMBALA.md` — действующий Control-слой и продолжают развиваться через небольшие проверяемые компоненты и тесты.
-
-Также не развивать как витринные направления: `ssh-check`, `kubera-local-ai2`, крипто-оплату, автокомменты и другие черновые эксперименты.
-
-## Правило
-
-**KUBERA prepares. MCP exposes bounded capabilities. The human remains the authority.**
+**KUBERA prepares. Capabilities stay bounded. Evidence is explicit. The human remains the authority.**
