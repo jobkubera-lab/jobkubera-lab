@@ -43,12 +43,9 @@ The portfolio distinguishes **implemented**, **tested**, **private**, **prototyp
 ## 🧰 Technology stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-Local_AI-black?style=for-the-badge)
 ![AI Agents](https://img.shields.io/badge/AI_Agents-Agentic_Systems-111111?style=for-the-badge)
 ![MCP](https://img.shields.io/badge/MCP-Tool_Integration-7C3AED?style=for-the-badge)
 ![AI Assurance](https://img.shields.io/badge/AI_Assurance-Audit_%26_Control-0A66C2?style=for-the-badge)
@@ -63,8 +60,10 @@ The portfolio distinguishes **implemented**, **tested**, **private**, **prototyp
 
 **Kubera Guide** is a field-built Google Maps project based on real locations, original photographs and structured place documentation.
 
-### 📊 Public mapping work
+### 📊 Current public reach
 
+- 👁️ **1.1M+ Google Maps views**
+- ✨ **1.8K profile impressions**
 - 🌍 international place research and publishing
 - 📷 original field photography and location documentation
 - 🗂️ structured place evidence for local-intelligence projects
@@ -124,7 +123,7 @@ The design keeps models interchangeable while preserving continuity, accountabil
 - 🧾 **Evidence-led AI** — Evidence Ledger, claim verification, source provenance and traceable decision history.
 - 🧠 **Local, hybrid and privacy-conscious AI** — systems that can combine local models with external services without surrendering control of memory or policy.
 - 🔀 **Model and tool orchestration** — routing between models, APIs, MCP tools and specialist agents according to task, privacy and reliability.
-- ⚙️ **API-backed AI services** — lightweight Python/FastAPI services, SQLite state, Docker runtimes and repeatable deployment patterns.
+- ⚙️ **API-backed AI services** — lightweight Python services, SQLite state and repeatable deployment patterns.
 - 🔎 **Observability and incident-analysis foundations** — learning to connect logs, traces, system behaviour, code history and evidence when something goes wrong.
 - 🧬 **Reusable AI capability modules** — prompt systems, Skill DNA, policies, contracts and repeatable LLM workflows.
 - 🗺️ **Interactive maps and local intelligence** — field data, place research, service discovery and geographic knowledge systems.
