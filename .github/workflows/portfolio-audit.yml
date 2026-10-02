@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - "README.md"
+      - "ABOUT_KUBERA.md"
+      - "PORTFOLIO_REVIEW.md"
+      - "EVIDENCE_MATRIX.md"
+      - "career/**"
       - "STATUS.md"
       - "REPO_MAP.md"
       - "KUBERA_AGENT_OS.md"
@@ -15,6 +19,10 @@ on:
   pull_request:
     paths:
       - "README.md"
+      - "ABOUT_KUBERA.md"
+      - "PORTFOLIO_REVIEW.md"
+      - "EVIDENCE_MATRIX.md"
+      - "career/**"
       - "STATUS.md"
       - "REPO_MAP.md"
       - "KUBERA_AGENT_OS.md"
