@@ -14,7 +14,7 @@ I build practical AI systems, research tools, interactive maps and digital produ
 
 ## 🔎 Reviewer quick path
 
-For the shortest technical review, open **[PORTFOLIO_REVIEW.md](PORTFOLIO_REVIEW.md)**. For the full portfolio classification, see **[PORTFOLIO_MAP.md](PORTFOLIO_MAP.md)**.
+For the shortest technical review, open **[PORTFOLIO_REVIEW.md](PORTFOLIO_REVIEW.md)** and the consolidated **[EVIDENCE_MATRIX.md](EVIDENCE_MATRIX.md)**. For the full portfolio classification, see **[PORTFOLIO_MAP.md](PORTFOLIO_MAP.md)**.
 
 | Priority | Project | Evidence |
 |---|---|---|
@@ -177,10 +177,10 @@ GitHub is part of the method: commits, diffs, tests, architecture notes and lear
 
 ## 🚀 Selected public projects
 
-- **[KUBERA AGENT OS — Control & Assurance](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/agent-os)** — bounded agent execution, evidence/approval gates, idempotency, failure handling and a tested public reference runtime.
+- **[KUBERA AGENT OS — Control & Assurance](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/agent-os)** — bounded agent execution, evidence/approval gates, idempotency and failure handling; current reference CI: **173 tests passed** on Python 3.11–3.13 with **89% source branch coverage**.
 - **[KUBERA TAO LAB — ML Evaluation Evidence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-tao-lab)** — public evidence dossier for a private multi-region ML R&D implementation; local project suite verified at 34 passed / 0 failed on 2 October 2026 and private CI succeeded on the hardened pipeline commit.
-- **[KUBERA Real Estate OS](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/real-estate-os)** — public product-architecture dossier for the private London-first real-estate OS; current status is explicitly repository bootstrap, not production.
-- **[KUBERA Tender Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence)** — deterministic UK procurement qualification with provenance, hard blockers and DRAFT_ONLY bid support.
+- **[KUBERA Real Estate OS](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/real-estate-os)** — private London-first product repository with an early verified land due-diligence core; **3/3 tests passed** on Python 3.11/3.12, while the wider SaaS remains bootstrap rather than production.
+- **[KUBERA Tender Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence)** — deterministic UK procurement qualification with provenance, hard blockers and DRAFT_ONLY bid support; current CI: **16 tests passed** on Python 3.11–3.13.
 - **[KUBERA MCP LAB](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/mcp-lab)** — bounded capability servers and deny-by-default gateway policy.
 - **[Council AI Service Finder — Evaluation Harness](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder/eval/v0.1)** — deterministic resident-language retrieval evaluation with regression tests and explicit safety fallbacks.
 - **[Kubera Guide — Global Mapping Project](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-guide-global-mapping)** — field mapping, original place evidence and local-intelligence research.
