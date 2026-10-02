@@ -1,39 +1,64 @@
 # KUBERA workspace status
 
-Updated 2026-09-03.
+Updated: **2026-10-02**
 
-## Flagship (work here)
+## Priority order
 
-1. Civic Evidence OS — `kubera-improved-website/civic-evidence-os`
-2. Agent Fabric / Trust Mesh + DZAMBALA operational trust v0.9.1 — `jobkubera-lab/kubera-lab/innovation-stack/reference-implementation`
-3. Community Compass v0.2 — `jobkubera-lab/kubera-lab/dzambala-community-compass`
+### P0 — KUBERA AGENT OS / AI Assurance
+Public evidence:
+- `KUBERA_AGENT_OS.md`
+- `kubera-lab/agent-os/`
+- `kubera-lab/innovation-stack/reference-implementation/`
+- `kubera-lab/mcp-lab/`
 
-PR #38 merged: `HandoffArtifact`, Source/Evidence/Action gates, `IdempotencyStore`, and `ActionLogger` into the existing Evidence Ledger; focused tests 12/12; GitHub Actions green.
+Status: **implemented public reference runtime**, not a production security product.
 
-PR #39 merged: `SovereignToolExecutor` composes Handoff → Privacy/Validation → Source/Evidence/Action gates → signed approval → idempotency → injected tool adapter → ActionLogger/Evidence Ledger.
+Core evidence includes source/evidence/action gates, Evidence Ledger mechanics, human approval boundaries, idempotency/replay handling, privacy/tool validation, a safe demo and automated CI.
 
-PR #40 merged: Tool Executor hardened to v0.9.1 — approval bound to finalized sanitized payload + actor + idempotency key; PENDING/COMPLETE idempotency state; UNKNOWN_EXTERNAL_STATE on uncertain retries; serialized Evidence Ledger writes; malformed grants fail closed.
+### P1 — KUBERA TAO LAB
+Public evidence:
+- `kubera-lab/kubera-tao-lab/`
 
-PR #41 merged: KUBERA operator pack landed — `KUBERA_OPERATOR.md`, five-field `WorkContract`, ledger-backed Source/Evidence resolution, explicit PENDING/IN_FLIGHT idempotency handling, and `SovereignToolExecutor` as the single reference tool choke point. CI: **143/143 tests green on Python 3.11, 3.12 and 3.13**.
+Implementation: private `saturnom999-lab/kubera-tao-lab`.
 
-PR #42 merged: `LocalDraftAdapter` adds one reversible real tool path behind `SovereignToolExecutor`: `task → brief → approval → local draft`. Replay does not write the draft twice. Full Innovation Stack CI: **145/145 tests green on Python 3.11, 3.12 and 3.13**.
+Verified on 2026-10-02:
+- local project suite: **34 passed, 0 failed**;
+- Python source compile check: passed;
+- secret-pattern scan of staged source: passed;
+- private GitHub Actions CI for commit `df3b739`: **success**.
 
-PR #43 and #44 merged: the owner-approved root profile `README.md` was restored and protected by a hash-check/self-healing workflow. The profile README is owner-controlled and must not be changed by routine project work.
+Status: **active ML research/evaluation track**. It does not claim current Bittensor subnet compatibility or a live miner.
 
-Current reference CI also measures source-only branch coverage. Unit tests + safe demo report **89%**, with an enforced **85% fail-under floor**.
+### P1 — KUBERA Real Estate OS
+Public evidence:
+- `kubera-lab/real-estate-os/`
 
-## Frozen
+Implementation: private `jobkubera-lab/kubera-real-estate-os`.
 
-Innovation-stack modules 01–18 are not separate products and should not be expanded as parallel product lines. Do not create modules 19+.
+Status: **repository bootstrap / product architecture**. Production integrations are not claimed until authenticated and tested.
 
-`DZAMBALA.md` plus `reference-implementation/` are the active Control layer. The rest of innovation-stack remains frozen unless directly required by the active reference runtime.
+### P2 — Applied proof
+- `kubera-lab/tender-intelligence/` — deterministic procurement qualification and DRAFT_ONLY bid support.
+- `kubera-lab/mcp-lab/` — bounded capability servers and deny-by-default gateway policy.
+- `research/council-ai-service-finder/eval/v0.1/` — deterministic retrieval evaluation.
+- `kubera-lab/dzambala-community-compass/` — provenance-oriented local intelligence.
 
-Migration/visa templates remain library material rather than the primary account product narrative.
+## Portfolio controls
 
-## Next step
+The root profile is checked by `tools/portfolio_audit.py` and `.github/workflows/portfolio-audit.yml`.
 
-If a real external integration is added, add at most one narrowly scoped read/lookup adapter behind `SovereignToolExecutor`; raw provider credentials remain outside agent/plugin reach and no send/publish/payment action is added without a separate review.
+The audit prevents stale/unverified headline claims from returning and verifies that the priority evidence paths remain present.
+
+## Not priority
+
+Migration/visa templates, learning repositories, small experiments and old utilities remain useful library material but are not the primary professional narrative.
+
+`kubera-learning.`, `ssh-check` and `kubera-local-ai2` should not be presented as flagship work.
+
+## Administrative cleanup still separate from code work
+
+Repository rename, repository descriptions/topics and profile pinning are GitHub account-setting operations. They are not considered complete merely because README files were edited.
 
 ## Rule
 
-**KUBERA prepares. The human remains the authority.**
+**Evidence before claims. KUBERA prepares and verifies. The human remains the authority.**
