@@ -1,64 +1,16 @@
-name: Profile README Lock
+name: Profile README Guard (manual only)
+
+# Automatic README rollback disabled on 2 Oct 2026.
+# The profile README is now intentionally editable.
 
 on:
-  pull_request:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
-  contents: write
-
-env:
-  PROFILE_README_BLOB: "1e23d60ca20b461dad51d7ca05ec5dfb4bdbd26e"
-  PROFILE_README_CANONICAL_COMMIT: "c7c0e507e94229447b47262fec200d1b07602018"
+  contents: read
 
 jobs:
-  verify-profile-readme:
-    name: verify-profile-readme
-    if: github.event_name == 'pull_request'
+  profile-readme-status:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - name: Reject profile README changes
-        shell: bash
-        run: |
-          set -euo pipefail
-          actual="$(git hash-object README.md)"
-          echo "expected=$PROFILE_README_BLOB"
-          echo "actual=$actual"
-          if [ "$actual" != "$PROFILE_README_BLOB" ]; then
-            echo "::error file=README.md::Profile README is locked. Restore the canonical version before merging."
-            exit 1
-          fi
-
-  restore-profile-readme:
-    name: restore-profile-readme
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - name: Restore canonical README after direct modification
-        shell: bash
-        run: |
-          set -euo pipefail
-          actual="$(git hash-object README.md)"
-          if [ "$actual" = "$PROFILE_README_BLOB" ]; then
-            echo "Profile README is canonical; no restore required."
-            exit 0
-          fi
-
-          echo "Profile README changed on main. Restoring canonical version."
-          git show "$PROFILE_README_CANONICAL_COMMIT:README.md" > README.md
-          restored="$(git hash-object README.md)"
-          if [ "$restored" != "$PROFILE_README_BLOB" ]; then
-            echo "::error::Canonical restore hash mismatch. Refusing to push."
-            exit 1
-          fi
-
-          git config user.name "KUBERA Profile Guard"
-          git config user.email "jobkubera@gmail.com"
-          git add README.md
-          git commit -m "Auto-restore locked profile README"
-          git push origin HEAD:main
+      - run: echo "Profile README automatic restore is disabled."
