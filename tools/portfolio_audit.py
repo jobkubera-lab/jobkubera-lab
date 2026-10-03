@@ -17,7 +17,9 @@ REQUIRED_PATHS = [
 ]
 
 REQUIRED_PROFILE_TEXT = [
-    "AI Systems Builder · AI Assurance & Infrastructure · Evidence-Driven Automation",
+    "AI Systems Builder",
+    "AI Assurance & Infrastructure",
+    "Evidence-Driven Automation",
     "KUBERA AGENT OS",
     "KUBERA TAO LAB",
     "KUBERA Real Estate OS",
