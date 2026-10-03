@@ -47,7 +47,7 @@ These are useful assets, but they are **not flagship products**:
 - `kubera-ai-prompts` — reusable prompt/rule library;
 - `kubera-visa-playbooks` — supporting reference material;
 - `kubera-migration-templates` — document templates;
-- `kubera-learning.` — learning laboratory;
+- `kubera-learning` — learning laboratory;
 - visual/creative repositories — experimentation and storytelling.
 
 ## 4. Legacy / archive
