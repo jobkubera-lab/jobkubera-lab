@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "README.md"
+      - "EXTENDED_README.md"
       - "ABOUT_KUBERA.md"
       - "PORTFOLIO_REVIEW.md"
       - "EVIDENCE_MATRIX.md"
@@ -19,6 +20,7 @@ on:
   pull_request:
     paths:
       - "README.md"
+      - "EXTENDED_README.md"
       - "ABOUT_KUBERA.md"
       - "PORTFOLIO_REVIEW.md"
       - "EVIDENCE_MATRIX.md"
