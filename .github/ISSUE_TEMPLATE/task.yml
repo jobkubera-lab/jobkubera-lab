@@ -1,5 +1,5 @@
 name: Task
-about: Управляемая задача KUBERA для человека или ИИ-агента
+description: Управляемая задача KUBERA для человека или ИИ-агента
 title: "[TASK] "
 labels:
   - type:task
@@ -49,6 +49,6 @@ body:
     attributes:
       label: Что НЕЛЬЗЯ трогать
       description: Перечислите файлы, папки, настройки или действия, которые запрещены.
-      placeholder: Например: root README.md, kubera-lab/kubera-guide-global-mapping/, секреты, merge.
+      placeholder: "Например: root README.md, kubera-lab/kubera-guide-global-mapping/, секреты, merge."
     validations:
       required: true
