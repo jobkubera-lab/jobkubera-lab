@@ -1,51 +1,52 @@
 # Nikola Kubera
-**Data & GIS · Practical AI tools · London, UK**  
-**Open to remote and flexible opportunities** in data operations, geospatial analysis, property technology and project coordination.
 
-I build practical tools that turn public datasets into clear, checkable information. My background combines operational management with hands-on work in geographic data, automation and product development.
+**Data · GIS · Practical AI**  
+London, United Kingdom · Open to remote and flexible opportunities
 
-## Featured project — KUBERA GEO SI
-
-### [▶ Explore the live UK property-data demo](https://kubera-geoai.pages.dev) · [View the project and evidence](https://github.com/jobkubera-lab/kubera-geoai)
-
-**A working map-based property information tool for UK estate agents**, piloted in Mitcham, London. It brings together official data and makes gaps and limitations visible rather than guessing.
-
-- **Property evidence:** completed sale prices, EPC records, flood and planning context, local services and transport — with source references.
-- **Agency workflows:** upload a listings CSV, check data quality, prepare a Material Information checklist and compare relevant sale evidence.
-- **Transparent methodology:** distinguishes exact UPRN locations from postcode-centre approximations; flags missing, conflicting and outdated records.
-- **Engineering:** React, TypeScript, Leaflet/OpenStreetMap and Python data preparation; documented tests and a scheduled GitHub Actions data-refresh workflow.
-
-**[Try the demo →](https://kubera-geoai.pages.dev)** · [Screenshots and technical overview →](https://github.com/jobkubera-lab/kubera-geoai#screenshots)
-
-> **Scope:** UK pilot in Mitcham (CR4). This is a public-data preparation tool, not a valuation, legal opinion or substitute for an agent's checks. The showcase repository contains documentation and screenshots; application code is private.
-
-## Other work
-
-- **[KUBERA Agent OS](kubera-lab/agent-os/)** — experiments in controlled agent workflows, approval boundaries, verification and tests.
-- **[KUBERA TAO LAB](kubera-lab/kubera-tao-lab/)** — machine-learning evaluation, data leakage checks and repeatable validation.
-- **[KUBERA Real Estate OS](kubera-lab/real-estate-os/)** — early-stage property data and workflow architecture.
-
-## Skills and interests
-
-**Geospatial data:** GIS, OpenStreetMap, property/location matching, open UK datasets  
-**Data and development:** Python, SQL/SQLite, TypeScript, data-quality checks and automation  
-**Delivery:** operational coordination, documentation, source verification and human-in-the-loop AI
-
-## Let's connect
-
-I'm interested in **remote or flexible work** involving **data quality, GIS, PropTech, AI-assisted workflows, operations or project coordination**. I also welcome conversations with UK estate agencies interested in testing KUBERA GEO SI.
-
-**[Email](mailto:jobkubera@gmail.com)** · **[Telegram](https://t.me/kuberababa)** · **[GitHub](https://github.com/jobkubera-lab)**
-
-<details>
-<summary><strong>More documentation and experiments</strong></summary>
-
-- [Portfolio review](PORTFOLIO_REVIEW.md) · [Project status](STATUS.md) · [Repository map](REPO_MAP.md)
-- [Extended introduction](EXTENDED_README.md) · [Agent OS technical dossier](KUBERA_AGENT_OS.md)
-- [KUBERA product vision](KUBERA_PRODUCT.md) · [Applied research](kubera-lab/)
-
-</details>
+I turn complex information into useful, verifiable tools. My work brings together open data, geographic analysis, automation and operational experience — with a focus on practical results.
 
 ---
 
-*Built to be useful, understandable and verifiable.*
+## Selected work
+
+### KUBERA GEO SI
+**Property intelligence for UK estate agencies**
+
+[**Explore the live demo ↗**](https://kubera-geoai.pages.dev) &nbsp;·&nbsp; [Project overview & screenshots ↗](https://github.com/jobkubera-lab/kubera-geoai)
+
+A working, map-based application that helps estate agents research properties and prepare clearer information for buyers. The pilot covers **Mitcham, London (CR4)**.
+
+| Property evidence | Agency workflow | Clear limitations |
+| :--- | :--- | :--- |
+| Land Registry sales, EPC, flood and local context | CSV import, data-quality checks, Material Information preparation | Source references, missing-data flags, UPRN vs postcode-level locations |
+
+**Built with:** React · TypeScript · Leaflet / OpenStreetMap · Python · public UK datasets
+
+The public repository contains a product walkthrough and screenshots; application source code is private. The tool supports research and preparation — it does not replace legal, surveying or valuation advice.
+
+### Additional projects
+
+| Project | Focus |
+| :--- | :--- |
+| [KUBERA Agent OS](kubera-lab/agent-os/) | Controlled AI workflows, verification and approval gates |
+| [KUBERA TAO LAB](kubera-lab/kubera-tao-lab/) | Machine-learning evaluation and data-quality discipline |
+| [KUBERA Real Estate OS](kubera-lab/real-estate-os/) | Early-stage property operations and information workflows |
+
+---
+
+## What I bring
+
+- **Geospatial & open data:** location research, mapping, property data and source verification.
+- **Data & automation:** Python, structured datasets, quality checks and AI-assisted workflows.
+- **Operations:** coordinating day-to-day processes, documenting decisions and following work through to delivery.
+
+I'm interested in **remote or flexible roles** in data operations, GIS, PropTech, research support and project coordination, as well as conversations with estate agencies about piloting KUBERA GEO SI.
+
+**Contact:** [Email](mailto:jobkubera@gmail.com) · [Telegram](https://t.me/kuberababa)
+
+<details>
+<summary>More projects and documentation</summary>
+
+[Portfolio review](PORTFOLIO_REVIEW.md) · [Project status](STATUS.md) · [Repository map](REPO_MAP.md) · [Extended README](EXTENDED_README.md) · [Technical dossier](KUBERA_AGENT_OS.md) · [Product vision](KUBERA_PRODUCT.md)
+
+</details>
