@@ -1,8 +1,12 @@
 <div align="center">
 
-<h3>Nikola Kubera</h3>
+<sub>KUBERA &nbsp;·&nbsp; TECHNOLOGY & INNOVATION</sub>
 
-<sub>INDEPENDENT TECHNOLOGY BUILDER &nbsp;·&nbsp; AI · DATA · AUTOMATION · DIGITAL PRODUCTS &nbsp;·&nbsp; LONDON</sub>
+# Nikola Kubera
+
+**Independent Technology Builder** &nbsp;·&nbsp; London, United Kingdom
+
+`AI` &nbsp; `Data` &nbsp; `Automation` &nbsp; `Digital Products`
 
 **Exploring ideas. Building systems. Turning complexity into useful technology.**
 
@@ -14,13 +18,11 @@
 
 ## 👋 About me
 
-I am an independent technology builder developing **KUBERA**, a collection of projects at the intersection of artificial intelligence, data, automation and digital services. My interests are deliberately broad: I am drawn to problems where fragmented information, repetitive processes or difficult decisions can be made easier through thoughtfully designed technology.
+I am an independent technology builder developing **KUBERA** — a family of projects in artificial intelligence, data, automation and digital services. I focus on problems where scattered information, repetitive work or difficult decisions can be made easier with well-designed technology.
 
-My background is not limited to software. I have experience coordinating day-to-day operations in a real-world industrial environment, where practical constraints, clear responsibilities and reliable processes matter. That operational perspective shapes the way I approach technology: a useful system must do more than look impressive in a demonstration. It needs a clear purpose, understandable behaviour and a way to check whether it works.
+> **Operations background.** I also have experience coordinating day-to-day operations in an industrial environment. That work taught me to value clear responsibilities, reliable processes and results that can be checked — and it shapes every system I build.
 
-I work across the lifecycle of an idea — researching the problem, finding relevant information, shaping a concept, experimenting with tools, evaluating results and refining the product. I use AI as a practical collaborator for research, development and analysis while keeping important decisions under human control.
-
-The **KUBERA** name brings these efforts together. Some projects are live demonstrations; others are research environments, prototypes or early-stage product concepts. They share an emphasis on clarity, verification, practical value and continuous improvement.
+I take ideas through the whole cycle — problem, research, concept, build, testing and improvement — using AI as a practical collaborator while keeping important decisions under human control.
 
 ### 💡 What drives my work
 
@@ -52,10 +54,10 @@ A portfolio of distinct but connected initiatives. Each project has its own purp
 | Project | Purpose |
 | :--- | :--- |
 | 🏙️ **[KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai)** | Live digital product exploring property information and agency workflows · [Open demo ↗](https://kubera-geoai.pages.dev) |
-| 🧠 **[KUBERA AGENT OS](kubera-lab/agent-os/)** | Architecture and experiments for controlled AI-agent coordination |
-| 📈 **[KUBERA TAO LAB](kubera-lab/kubera-tao-lab/)** | Machine-learning research, evaluation and model validation |
-| 🏠 **[KUBERA Real Estate OS](kubera-lab/real-estate-os/)** | Early-stage concepts for information management and operational workflows |
-| 📑 **[Tender Intelligence](kubera-lab/tender-intelligence/)** | Research and qualification tools for public procurement opportunities |
+| 🧠 **[KUBERA AGENT OS](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/agent-os)** | Architecture and experiments for controlled AI-agent coordination |
+| 📈 **[KUBERA TAO LAB](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/kubera-tao-lab)** | Machine-learning research, evaluation and model validation |
+| 🏠 **[KUBERA Real Estate OS](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/real-estate-os)** | Early-stage concepts for information management and operational workflows |
+| 📑 **[Tender Intelligence](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/tender-intelligence)** | Research and qualification tools for public procurement opportunities |
 
 *Live products, research projects and prototypes are distinguished in their individual documentation.*
 
@@ -96,8 +98,9 @@ Check results, document limitations and refine the solution through iteration.
 
 </div>
 
-| Area | Tools and methods used across projects |
-| :--- | :--- |
+**Also:** agent workflows & tool integration · data validation · GIS · automated testing · CI · documentation · human approval
+
+--- | :--- |
 | **Software & interfaces** | Python · TypeScript · React · Vite · Git |
 | **Delivery & infrastructure** | GitHub · GitHub Actions · Cloudflare Pages · Web workflows |
 | **AI systems** | Claude · Gemini · ChatGPT · Agent workflows · Tool integration |
@@ -105,6 +108,19 @@ Check results, document limitations and refine the solution through iteration.
 | **Quality & process** | Automated tests · Documentation · Review · Human approval |
 
 I combine hands-on technical experimentation with research and operational coordination. Individual projects provide the clearest evidence of their implementation and current maturity.
+
+---
+
+## ✅ Results & evidence
+
+| | What is verified |
+| :---: | :--- |
+| 🟢 | **KUBERA GEO SI** is a live web product, deployed on Cloudflare and used through a browser |
+| 🧪 | **KUBERA AGENT OS** reference implementation: 173 automated tests passing on Python 3.11–3.13, 89% branch coverage (October 2026) |
+| 📈 | **KUBERA TAO LAB**: 34/34 project tests passing, with documented model-evaluation rules |
+| 🔁 | Changes to this portfolio are checked automatically by GitHub Actions (portfolio audit) |
+
+<sub>Figures come from each project's public documentation and CI runs; maturity of each project is stated in its own README.</sub>
 
 ---
 
@@ -117,6 +133,6 @@ The direction is consistent even when the application changes: identify a concre
 <details>
 <summary><strong>📚 Explore the wider portfolio and technical documentation</strong></summary>
 
-[Portfolio review](PORTFOLIO_REVIEW.md) · [Project status](STATUS.md) · [Repository map](REPO_MAP.md) · [Extended README](EXTENDED_README.md) · [Technical dossier](KUBERA_AGENT_OS.md) · [Product vision](KUBERA_PRODUCT.md)
+[Portfolio review](https://github.com/jobkubera-lab/jobkubera-lab/blob/main/PORTFOLIO_REVIEW.md) · [Project status](https://github.com/jobkubera-lab/jobkubera-lab/blob/main/STATUS.md) · [Repository map](https://github.com/jobkubera-lab/jobkubera-lab/blob/main/REPO_MAP.md) · [Extended README](https://github.com/jobkubera-lab/jobkubera-lab/blob/main/EXTENDED_README.md) · [Technical dossier](https://github.com/jobkubera-lab/jobkubera-lab/blob/main/KUBERA_AGENT_OS.md) · [Product vision](https://github.com/jobkubera-lab/jobkubera-lab/blob/main/KUBERA_PRODUCT.md)
 
 </details>
