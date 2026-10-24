@@ -2,7 +2,9 @@
 
 **NIKOLA KUBERA**
 
-<sub>Independent Technology Builder · London, United Kingdom</sub>
+<img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=600&size=24&duration=3000&pause=100000&color=F2C94C&center=true&vCenter=true&repeat=false&width=360&height=42&lines=Technology+Builder" alt="Technology Builder" />
+
+<sub>London, United Kingdom</sub>
 
 <sub>AI · Data · Automation · Digital Products · Research</sub>
 
