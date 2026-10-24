@@ -22,7 +22,7 @@
 
 I am **Nikola Kubera**, an independent technology builder developing **KUBERA** — a growing portfolio spanning artificial intelligence, data systems, automation, digital products and applied research.
 
-My path into technology is grounded in **real-world operations**. In Iceland, I worked in the waste-processing industry, coordinating day-to-day activities and the practical demands of an operating facility. Working with processes, people and constraints shaped my approach to technology: a system should be understandable, dependable and useful outside a presentation.
+My path into technology is grounded in **real-world operations**. Coordinating day-to-day work, people and practical constraints shaped my approach to technology: a system should be understandable, dependable and useful outside a presentation.
 
 Today, I apply that perspective to digital work. I research problems, organise information, shape product concepts, coordinate AI-assisted development, evaluate implementations and refine what is built. I am interested not only in individual applications but also in how different tools and intelligent systems can work together under clear human direction.
 
