@@ -1,12 +1,10 @@
 <div align="center">
 
-### NIKOLA KUBERA
+**NIKOLA KUBERA**
 
-**Independent Technology Builder**
+<sub>Independent Technology Builder · London, United Kingdom</sub>
 
-**AI · DATA · AUTOMATION · DIGITAL PRODUCTS · RESEARCH**
-
-*London, United Kingdom*
+<sub>AI · Data · Automation · Digital Products · Research</sub>
 
 <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=18&duration=3500&pause=1300&color=70B7F4&center=true&vCenter=true&width=760&height=44&lines=Exploring+ideas.+Building+systems.;From+real-world+operations+to+digital+innovation.;Human-led+AI.+Practical+products.+Verified+results." alt="Animated introduction to KUBERA's work" />
 
@@ -98,10 +96,10 @@ A few concrete examples from the portfolio's documented engineering work — **n
 
 <br/>
 
-![Claude](https://img.shields.io/badge/Claude-AI%20collaboration-253858?style=flat-square)
-![Gemini](https://img.shields.io/badge/Gemini-Product%20exploration-253858?style=flat-square)
-![ChatGPT](https://img.shields.io/badge/ChatGPT-Research%20%26%20analysis-253858?style=flat-square)
-![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Geospatial%20data-253858?style=flat-square)
+[![Claude](https://img.shields.io/badge/Claude-AI%20collaboration-253858?style=flat-square)](https://claude.ai)
+[![Gemini](https://img.shields.io/badge/Gemini-Product%20exploration-253858?style=flat-square)](https://gemini.google.com)
+[![ChatGPT](https://img.shields.io/badge/ChatGPT-Research%20%26%20analysis-253858?style=flat-square)](https://chatgpt.com)
+[![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Geospatial%20data-253858?style=flat-square)](https://www.openstreetmap.org)
 
 </div>
 
