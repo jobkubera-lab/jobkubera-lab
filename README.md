@@ -18,40 +18,24 @@
 
 ## 👋 About me
 
-I am **Nikola Kubera**, a technical solutions developer building **KUBERA** — a practical portfolio spanning artificial intelligence, data systems, automation, digital products and applied research.
+I am **Nikola Kubera**, a **Technical Solutions Developer** building practical systems across AI, data, automation and digital products.
 
-My path into technology is grounded in **real-world operations**. Coordinating day-to-day work, people and practical constraints shaped my approach to technology: a system should be understandable, dependable and useful outside a presentation.
+My work focuses on turning real operational problems into clear, testable tools. I use AI as part of the engineering workflow, but keep evidence, limitations and human control visible.
 
-Today, I apply that perspective to digital work. I research problems, organise information, shape product concepts, coordinate AI-assisted development, evaluate implementations and refine what is built. I am interested not only in individual applications but also in how different tools and intelligent systems can work together under clear human direction.
+**Current flagship:** [KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai) — evidence-first property intelligence for UK estate agencies. [Live demo ↗](https://kubera-geoai.pages.dev)
 
-**KUBERA is not one application or one industry.** It is a portfolio of connected initiatives: AI-agent architecture, machine-learning research, business information systems, property technology and public-procurement intelligence. Some are working demonstrations, some are reference implementations and others are deliberately early-stage ideas.
+### 💡 How I work
 
-I value **clear thinking, evidence, useful design and steady iteration**. I would rather show a project's current limitations than make claims it cannot support.
-
-> **My approach:** Understand the real problem. Connect the right people, data and tools. Build a practical solution. Test it. Improve it.
-
-### 💡 Principles behind KUBERA
-
-| Principle | What it means in practice |
-| :--- | :--- |
-| **Human direction** | AI can assist with research and execution; consequential decisions stay with people |
-| **Practical value** | Build around actual tasks, not fashionable terminology |
-| **Evidence first** | Document assumptions, tests, sources and limitations |
-| **Connected systems** | Bring data, software, operations and AI together where it adds value |
-| **Continuous improvement** | Treat prototypes and research as stages of development, not finished products |
+- **Evidence first** — sources, tests and limitations stay visible.
+- **Human control** — AI assists; consequential decisions stay with people.
+- **Practical engineering** — build around real tasks, not AI theatre.
+- **Iterate carefully** — prototype, verify, improve.
 
 ---
 
-## 🧭 Areas of work
+## 🧭 Focus
 
-| Direction | Focus |
-| :--- | :--- |
-| 🤖 **AI & Intelligent Systems** | Multi-agent workflows, tool integration, evidence trails and controlled automation |
-| 📊 **Data & Analytics** | Structured information, data quality, research and decision-support systems |
-| ⚙️ **Automation & Operations** | Repeatable processes, coordination, quality controls and operational workflows |
-| 💻 **Digital Products** | Web applications, interactive interfaces and practical business tools |
-| 🌐 **Geospatial Technology** | Location intelligence, geographic data and mapping as part of a wider toolkit |
-| 🔬 **Research & Development** | Machine-learning evaluation, prototypes, technical experiments and new concepts |
+**AI systems** · **Data quality** · **Automation** · **Geospatial products** · **Evaluation & assurance**
 
 ---
 
@@ -148,14 +132,8 @@ A prototype is not treated as production evidence. Ideas move into a KUBERA prod
 
 ---
 
-## 🌌 Beyond a single project
-
-KUBERA connects **operational experience with emerging technology**. A property-information application, an AI-agent reference runtime and a machine-learning research lab may appear unrelated at first glance. They share the same underlying questions: How can information become more useful? How can routine work be made more reliable? Where can AI assist — and where must a person remain responsible?
-
-I am developing this portfolio step by step, combining research, implementation, critical review and practical experimentation. The goal is not to present a collection of impressive labels, but to create systems whose purpose, progress and limitations can be understood.
-
 <details>
-<summary><strong>📚 Explore technical dossiers and wider portfolio documentation</strong></summary>
+<summary><strong>📚 Technical documentation</strong></summary>
 
 [Portfolio review](PORTFOLIO_REVIEW.md) · [Project status](STATUS.md) · [Repository map](REPO_MAP.md) · [Extended README](EXTENDED_README.md) · [Technical dossier](KUBERA_AGENT_OS.md) · [Product vision](KUBERA_PRODUCT.md)
 
