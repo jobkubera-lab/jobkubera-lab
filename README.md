@@ -10,7 +10,7 @@
 
 **A connected portfolio of technology projects, experiments and practical solutions.**
 
-[**Explore projects ↓**](#-the-kubera-portfolio) · [**See engineering results ↓**](#-selected-results--evidence)
+[**Explore projects ↓**](#-the-kubera-portfolio) · [**See engineering results ↓**](#-selected-results--evidence) · [**Hugging Face ↗**](https://huggingface.co/spaces/Dzambala/kubera-geoai)
 
 </div>
 
@@ -62,7 +62,7 @@ These projects represent different directions and stages of development. Their i
 | Project | What it does | Stage |
 | :--- | :--- | :--- |
 | **[KUBERA AGENT OS](kubera-lab/agent-os/)** | A reference architecture for coordinating bounded AI workflows with human oversight and verifiable actions | Reference implementation |
-| **[KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai)** | A digital property-information tool designed around the needs of UK estate agencies · [Live demo ↗](https://kubera-geoai.pages.dev) | Live demo |
+| **[KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai)** | Evidence-first property intelligence for UK estate agencies · [Live demo ↗](https://kubera-geoai.pages.dev) · [Hugging Face showcase ↗](https://huggingface.co/spaces/Dzambala/kubera-geoai) | Live demo |
 | **[KUBERA TAO LAB](kubera-lab/kubera-tao-lab/)** | Machine-learning research focused on disciplined evaluation, reproducibility and model robustness | Research |
 | **[KUBERA Real Estate OS](kubera-lab/real-estate-os/)** | A wider concept for connected real-estate operations and information workflows | Product concept |
 | **[KUBERA Tender Intelligence](kubera-lab/tender-intelligence/)** | Research and qualification tools for public-procurement opportunities | Reference prototype |
@@ -99,6 +99,7 @@ A few concrete examples from the portfolio's documented engineering work — **n
 [![Claude](https://img.shields.io/badge/Claude-AI%20collaboration-253858?style=flat-square)](https://claude.ai)
 [![Gemini](https://img.shields.io/badge/Gemini-Product%20exploration-253858?style=flat-square)](https://gemini.google.com)
 [![ChatGPT](https://img.shields.io/badge/ChatGPT-Research%20%26%20analysis-253858?style=flat-square)](https://chatgpt.com)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-AI%20showcase-253858?style=flat-square)](https://huggingface.co/spaces/Dzambala/kubera-geoai)
 [![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Geospatial%20data-253858?style=flat-square)](https://www.openstreetmap.org)
 
 </div>
@@ -108,6 +109,17 @@ A few concrete examples from the portfolio's documented engineering work — **n
 The tools above appear across the portfolio; their presence is not a claim of identical proficiency in every technology.
 
 ---
+
+## ⚡ Product + rapid AI prototyping
+
+KUBERA keeps two layers deliberately separate:
+
+- **Evidence-based products** — working systems such as **KUBERA GEO SI**, where facts, provenance, limitations and human review matter more than flashy generation.
+- **Rapid AI prototypes** — Gemini / AI Studio / Claude / ChatGPT experiments used to test workflows, interface ideas and agent behaviour quickly before anything is promoted into the main product.
+
+A prototype is not treated as production evidence. Ideas move into a KUBERA product only after data, behaviour and limitations are checked.
+
+**Short demo clips (around 10 seconds)** are useful for discovery posts and portfolio previews: they should show one clear action or result, not replace the live demo, README or technical evidence.
 
 ## 🔄 From an idea to a working system
 
