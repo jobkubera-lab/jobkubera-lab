@@ -1,18 +1,16 @@
 <div align="center">
 
-### NIKOLA KUBERA
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0b1220,40:2475a8,75:7b2ff7,100:f5a623&text=NIKOLA%20KUBERA&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Independent%20Technology%20Builder&descSize=20&descAlignY=60&animation=fadeIn" width="100%" alt="NIKOLA KUBERA - Independent Technology Builder" />
 
-**Independent Technology Builder**
+<img src="https://img.shields.io/badge/AI-7b2ff7?style=for-the-badge" alt="AI" /> <img src="https://img.shields.io/badge/DATA-2475a8?style=for-the-badge" alt="Data" /> <img src="https://img.shields.io/badge/AUTOMATION-00a884?style=for-the-badge" alt="Automation" /> <img src="https://img.shields.io/badge/DIGITAL%20PRODUCTS-f5a623?style=for-the-badge" alt="Digital products" /> <img src="https://img.shields.io/badge/RESEARCH-e0475b?style=for-the-badge" alt="Research" />
 
-**AI · DATA · AUTOMATION · DIGITAL PRODUCTS · RESEARCH**
+<img src="https://img.shields.io/badge/London,%20United%20Kingdom-0b1220?style=flat-square" alt="London, United Kingdom" />
 
-*London, United Kingdom*
-
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=18&duration=3500&pause=1300&color=70B7F4&center=true&vCenter=true&width=760&height=44&lines=Exploring+ideas.+Building+systems.;From+real-world+operations+to+digital+innovation.;Human-led+AI.+Practical+products.+Verified+results." alt="Animated introduction to KUBERA's work" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=3500&pause=1200&color=F5A623&center=true&vCenter=true&width=760&height=44&lines=Exploring+ideas.+Building+systems.;From+real-world+operations+to+digital+innovation.;Human-led+AI.+Practical+products.+Verified+results." alt="Animated introduction to KUBERA's work" />
 
 **A connected portfolio of technology projects, experiments and practical solutions.**
 
-[**Explore projects ↓**](#-the-kubera-portfolio) · [**See engineering results ↓**](#-selected-results--evidence)
+<a href="#-the-kubera-portfolio"><img src="https://img.shields.io/badge/Explore%20projects-2475a8?style=for-the-badge" alt="Explore projects" /></a> <a href="#-selected-results--evidence"><img src="https://img.shields.io/badge/See%20engineering%20results-7b2ff7?style=for-the-badge" alt="See engineering results" /></a>
 
 </div>
 
