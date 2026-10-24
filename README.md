@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:0b1220,50:17365d,100:2563a6&text=NIKOLA%20KUBERA&fontColor=ffffff&fontSize=45&fontAlignY=37&desc=Independent%20Technology%20Builder&descSize=19&descAlignY=60" width="100%" alt="NIKOLA KUBERA — Independent Technology Builder" />
-
-### AI · DATA · AUTOMATION · DIGITAL PRODUCTS
+<img src="assets/header.svg" width="100%" alt="NIKOLA KUBERA — Independent Technology Builder · AI · Data · Automation · Digital Products · London" />
 
 **Exploring ideas. Building systems. Turning complexity into useful technology.**
 
