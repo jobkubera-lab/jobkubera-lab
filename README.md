@@ -2,76 +2,68 @@
 
 # NIKOLA KUBERA
 
-**Independent Technology Builder**<br/>
-AI &nbsp;·&nbsp; Data &nbsp;·&nbsp; Automation &nbsp;·&nbsp; Digital Products
+**Independent Technology Builder**  
+AI · Data · Automation · Digital Products
 
 London, United Kingdom
 
-[![Email](https://img.shields.io/badge/Email-jobkubera%40gmail.com-1f2937?style=flat-square)](mailto:jobkubera@gmail.com)&nbsp;
-[![Telegram](https://img.shields.io/badge/Telegram-%40kuberababa-0b1d3a?style=flat-square)](https://t.me/kuberababa)&nbsp;
-[![Open to](https://img.shields.io/badge/Open_to-remote_work_%26_collaboration-1f2937?style=flat-square)](mailto:jobkubera@gmail.com)
+**Building practical technology. Connecting ideas, data and people.**
+
+[Portfolio projects](#selected-projects) · [Live project](https://kubera-geoai.pages.dev) · [Contact](#contact)
 
 </div>
 
-<br/>
+---
 
-### About
+## Profile
 
-I build practical technology: AI assistants and agents, data tools, automated workflows and small digital products that solve real business problems.
+I develop practical digital tools and explore how artificial intelligence, data and automation can improve everyday work. Through **KUBERA**, I bring different ideas together — from applied AI and information systems to business-focused applications.
 
-My work starts with a clear question — what does the person using this actually need? — and ends with something that runs, is tested and can be checked. I prefer simple, honest tools over impressive-sounding ones, and I keep a human in control wherever decisions matter.
+My approach combines an operational perspective with hands-on experimentation: understand the problem, build something useful, test its limitations and improve it. I value transparency, thoughtful design and keeping people in control of important decisions.
 
-Every project I develop sits under one name: **KUBERA** — a growing family of products and experiments in AI, data and automation.
+## Areas of focus
 
-<br/>
-
-### Areas of work
-
-- **Artificial Intelligence & Intelligent Agents** — Assistants and multi-step agents built on modern language models, with clear limits and human approval.
-- **Data Analytics & Information Systems** — Collecting, cleaning and checking data, and turning it into information people can rely on.
-- **Automation & Digital Workflows** — Replacing repetitive manual work with reliable, tested processes.
-- **Digital Products & Business Solutions** — Web applications and tools for companies, agencies and independent professionals.
-- **Research, Development & Innovation** — Prototyping new ideas, evaluating technologies and turning experiments into working products.
-
-<br/>
-
-### Selected projects
-
-| Project | Focus |
+| Direction | What I work on |
 | :--- | :--- |
-| [**KUBERA GEO SI**](https://kubera-geoai.pages.dev) | Property intelligence and digital tools for professionals — live at `kubera-geoai.pages.dev` |
-| [**KUBERA AGENT OS**](kubera-lab/agent-os/) | AI agent systems with human oversight |
-| [**KUBERA TAO LAB**](kubera-lab/kubera-tao-lab/) | Machine learning and model evaluation |
-| [**KUBERA Real Estate OS**](kubera-lab/real-estate-os/) | Real estate operations and automation |
-| [**Tender Intelligence**](kubera-lab/tender-intelligence/) | Research tools for public-sector opportunities |
+| **AI & Intelligent Systems** | Assistants, coordinated agent workflows and human-led decision support |
+| **Data & Analytics** | Data organisation, research, quality checks and actionable insights |
+| **Automation** | Repeatable workflows that reduce manual work and improve consistency |
+| **Digital Products** | Practical web-based tools for organisations and independent professionals |
+| **Research & Development** | Exploring ideas, testing approaches and developing early-stage solutions |
 
-<br/>
+## Selected projects
 
-### Technology & capabilities
+| Project | Overview |
+| :--- | :--- |
+| **[KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai)** | A live property-information application for UK estate agencies · [Live demo ↗](https://kubera-geoai.pages.dev) |
+| **[KUBERA AGENT OS](kubera-lab/agent-os/)** | Experimental AI-agent architecture focused on coordination and human oversight |
+| **[KUBERA TAO LAB](kubera-lab/kubera-tao-lab/)** | Machine-learning experiments, evaluation and reproducible testing |
+| **[KUBERA Real Estate OS](kubera-lab/real-estate-os/)** | Early-stage concepts for property workflows and information management |
+| **[Tender Intelligence](kubera-lab/tender-intelligence/)** | Tools for researching and assessing public-sector opportunities |
 
-**Languages & frameworks** &nbsp; Python · TypeScript · React · Vite · Tailwind CSS<br/>
-**Platforms** &nbsp; Cloudflare Pages & Workers · GitHub Actions · Git · Linux<br/>
-**AI** &nbsp; Claude · Gemini · ChatGPT · open-source models · agent design and tool use<br/>
-**Practice** &nbsp; Automated testing · data quality checks · document processing · privacy by design
+*Projects are at different stages of development. Public documentation and available demonstrations are linked above.*
 
-<br/>
+## Technology & approach
 
-### Collaboration & opportunities
+**Development:** Python · TypeScript · React · Git · GitHub Actions  
+**Data and applications:** Structured data · GIS · Web interfaces · Data-quality checks  
+**AI tooling:** Claude · Gemini · ChatGPT · Agent workflows and tool integration  
+**Working principles:** Research · Prototyping · Testing · Documentation · Human review
 
-I am open to remote roles, international collaboration, partnerships and joint product development — particularly in AI, data and automation. If you have a problem worth solving, I would be glad to hear about it.
+These are technologies and methods used across my projects; this list is not a claim of equal expertise in every tool.
 
-**Languages:** Russian (native) · English (professional working)
+## Collaboration
 
-<br/>
+I am based in London and open to **remote or flexible work**, project collaboration and conversations with teams building useful digital services. Areas of interest include data operations, AI-assisted workflows, digital products, geospatial information and project coordination.
 
-### Contact
+**Languages:** Russian (native) · English (developing professional proficiency)
 
-[jobkubera@gmail.com](mailto:jobkubera@gmail.com) &nbsp;·&nbsp; [Telegram @kuberababa](https://t.me/kuberababa) &nbsp;·&nbsp; [github.com/jobkubera-lab](https://github.com/jobkubera-lab)
+## Contact
 
-<br/>
+[**Email — jobkubera@gmail.com**](mailto:jobkubera@gmail.com) · [**Telegram — @kuberababa**](https://t.me/kuberababa) · [**GitHub — jobkubera-lab**](https://github.com/jobkubera-lab)
 
 <details>
-<summary>Documentation</summary>
+<summary>Further documentation</summary>
 
 [Portfolio review](PORTFOLIO_REVIEW.md) · [Project status](STATUS.md) · [Repository map](REPO_MAP.md) · [Extended README](EXTENDED_README.md) · [Technical dossier](KUBERA_AGENT_OS.md) · [Product vision](KUBERA_PRODUCT.md)
 
