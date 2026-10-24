@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0b1220,50:15345b,100:2475a8&text=NIKOLA%20KUBERA&fontColor=ffffff&fontSize=49&fontAlignY=36&desc=INDEPENDENT%20TECHNOLOGY%20BUILDER&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="NIKOLA KUBERA — Independent Technology Builder" />
+### NIKOLA KUBERA
+
+**Independent Technology Builder**
 
 **AI · DATA · AUTOMATION · DIGITAL PRODUCTS · RESEARCH**
 
@@ -140,6 +142,6 @@ I am developing this portfolio step by step, combining research, implementation,
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=105&section=footer&color=0:0b1220,50:15345b,100:2475a8" width="100%" alt="" />
+
 
 </div>
