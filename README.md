@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="assets/header.svg" width="100%" alt="NIKOLA KUBERA — Independent Technology Builder · AI · Data · Automation · Digital Products · London" />
+<h3>Nikola Kubera</h3>
+
+<sub>INDEPENDENT TECHNOLOGY BUILDER &nbsp;·&nbsp; AI · DATA · AUTOMATION · DIGITAL PRODUCTS &nbsp;·&nbsp; LONDON</sub>
 
 **Exploring ideas. Building systems. Turning complexity into useful technology.**
 
@@ -118,9 +120,3 @@ The direction is consistent even when the application changes: identify a concre
 [Portfolio review](PORTFOLIO_REVIEW.md) · [Project status](STATUS.md) · [Repository map](REPO_MAP.md) · [Extended README](EXTENDED_README.md) · [Technical dossier](KUBERA_AGENT_OS.md) · [Product vision](KUBERA_PRODUCT.md)
 
 </details>
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=95&section=footer&color=0:0b1220,50:17365d,100:2563a6" width="100%" alt="" />
-
-</div>
