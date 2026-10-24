@@ -142,6 +142,4 @@ I am developing this portfolio step by step, combining research, implementation,
 
 <div align="center">
 
-
-
 </div>
