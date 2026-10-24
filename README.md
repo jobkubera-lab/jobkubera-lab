@@ -2,7 +2,7 @@
 
 **NIKOLA KUBERA**
 
-<sub>Independent Technology Builder · London, United Kingdom</sub>
+<sub>Technical Solutions Developer · London, United Kingdom</sub>
 
 <sub>AI · Data · Automation · Digital Products · Research</sub>
 
@@ -18,7 +18,7 @@
 
 ## 👋 About me
 
-I am **Nikola Kubera**, an independent technology builder developing **KUBERA** — a growing portfolio spanning artificial intelligence, data systems, automation, digital products and applied research.
+I am **Nikola Kubera**, a technical solutions developer building **KUBERA** — a practical portfolio spanning artificial intelligence, data systems, automation, digital products and applied research.
 
 My path into technology is grounded in **real-world operations**. Coordinating day-to-day work, people and practical constraints shaped my approach to technology: a system should be understandable, dependable and useful outside a presentation.
 
@@ -26,7 +26,7 @@ Today, I apply that perspective to digital work. I research problems, organise i
 
 **KUBERA is not one application or one industry.** It is a portfolio of connected initiatives: AI-agent architecture, machine-learning research, business information systems, property technology and public-procurement intelligence. Some are working demonstrations, some are reference implementations and others are deliberately early-stage ideas.
 
-I value **independent thinking, evidence, useful design and steady iteration**. I would rather show a project's current limitations than make claims it cannot support.
+I value **clear thinking, evidence, useful design and steady iteration**. I would rather show a project's current limitations than make claims it cannot support.
 
 > **My approach:** Understand the real problem. Connect the right people, data and tools. Build a practical solution. Test it. Improve it.
 
@@ -90,24 +90,35 @@ A few concrete examples from the portfolio's documented engineering work — **n
 
 ## 🛠️ Technology & working toolkit
 
-<div align="center">
+A focused toolkit used across KUBERA projects — grouped by purpose rather than shown as a wall of icons.
 
-<img src="https://skillicons.dev/icons?i=python,ts,react,vite,tailwind,nodejs,cloudflare,githubactions,git,linux&theme=dark&perline=10" alt="Technology icons for tools used across KUBERA projects" />
+**Build**
 
-<br/>
+![Python](https://img.shields.io/badge/Python-Development-1f2937?style=for-the-badge&logo=python)
+![TypeScript](https://img.shields.io/badge/TypeScript-Application%20logic-1f2937?style=for-the-badge&logo=typescript)
+![React](https://img.shields.io/badge/React-Interfaces-1f2937?style=for-the-badge&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-Tooling-1f2937?style=for-the-badge&logo=nodedotjs)
 
-[![Claude](https://img.shields.io/badge/Claude-AI%20collaboration-253858?style=flat-square)](https://claude.ai)
-[![Gemini](https://img.shields.io/badge/Gemini-Product%20exploration-253858?style=flat-square)](https://gemini.google.com)
-[![ChatGPT](https://img.shields.io/badge/ChatGPT-Research%20%26%20analysis-253858?style=flat-square)](https://chatgpt.com)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-AI%20showcase-253858?style=flat-square)](https://huggingface.co/spaces/Dzambala/kubera-geoai)
-[![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Geospatial%20data-253858?style=flat-square)](https://www.openstreetmap.org)
+**Delivery**
 
-</div>
+![Vite](https://img.shields.io/badge/Vite-Web%20build-374151?style=flat-square&logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-UI-374151?style=flat-square&logo=tailwindcss)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-Hosting-374151?style=flat-square&logo=cloudflare)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-374151?style=flat-square&logo=githubactions)
+![Git](https://img.shields.io/badge/Git-Version%20control-374151?style=flat-square&logo=git)
+![Linux](https://img.shields.io/badge/Linux-Environment-374151?style=flat-square&logo=linux)
 
-**Core practices:** research and problem definition · data validation · software prototyping · automated testing · AI-assisted workflows · technical documentation · review and human approval.
+**AI, research & data**
 
-The tools above appear across the portfolio; their presence is not a claim of identical proficiency in every technology.
+[![ChatGPT](https://img.shields.io/badge/ChatGPT-Research%20%26%20analysis-111827?style=flat-square)](https://chatgpt.com)
+[![Claude](https://img.shields.io/badge/Claude-Code%20review%20%26%20implementation-111827?style=flat-square)](https://claude.ai)
+[![Gemini](https://img.shields.io/badge/Gemini-Product%20exploration-111827?style=flat-square)](https://gemini.google.com)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-AI%20showcase-111827?style=flat-square)](https://huggingface.co/spaces/Dzambala/kubera-geoai)
+[![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Geospatial%20data-111827?style=flat-square)](https://www.openstreetmap.org)
 
+**Core practices:** problem definition · source verification · data validation · software prototyping · automated testing · AI-assisted development · technical documentation · human review.
+
+*The toolkit reflects technologies used across the portfolio; it is not a claim of equal depth in every tool.*
 ---
 
 ## ⚡ Product + rapid AI prototyping
