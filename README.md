@@ -8,8 +8,6 @@ I build practical tools that turn public datasets into clear, checkable informat
 
 ### [▶ Explore the live UK property-data demo](https://kubera-geoai.pages.dev) · [View the project and evidence](https://github.com/jobkubera-lab/kubera-geoai)
 
-[![KUBERA GEO SI — interactive property map in Mitcham](https://raw.githubusercontent.com/jobkubera-lab/kubera-geoai/main/docs/screenshots/01-map.jpg)](https://kubera-geoai.pages.dev)
-
 **A working map-based property information tool for UK estate agents**, piloted in Mitcham, London. It brings together official data and makes gaps and limitations visible rather than guessing.
 
 - **Property evidence:** completed sale prices, EPC records, flood and planning context, local services and transport — with source references.
