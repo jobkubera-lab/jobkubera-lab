@@ -1,12 +1,16 @@
 <div align="center">
 
-<h3>Nikola Kubera</h3>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0b1220,50:15345b,100:2475a8&text=NIKOLA%20KUBERA&fontColor=ffffff&fontSize=49&fontAlignY=36&desc=INDEPENDENT%20TECHNOLOGY%20BUILDER&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="NIKOLA KUBERA — Independent Technology Builder" />
 
-<sub>INDEPENDENT TECHNOLOGY BUILDER &nbsp;·&nbsp; AI · DATA · AUTOMATION · DIGITAL PRODUCTS &nbsp;·&nbsp; LONDON</sub>
+**AI · DATA · AUTOMATION · DIGITAL PRODUCTS · RESEARCH**
 
-**Exploring ideas. Building systems. Turning complexity into useful technology.**
+*London, United Kingdom*
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=18&duration=3400&pause=1200&color=70B7F4&center=true&vCenter=true&width=720&height=42&lines=Practical+AI+and+intelligent+systems;Data%2C+automation+and+digital+products;Independent+projects+under+the+KUBERA+name" alt="Animated introduction to KUBERA's areas of work" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=18&duration=3500&pause=1300&color=70B7F4&center=true&vCenter=true&width=760&height=44&lines=Exploring+ideas.+Building+systems.;From+real-world+operations+to+digital+innovation.;Human-led+AI.+Practical+products.+Verified+results." alt="Animated introduction to KUBERA's work" />
+
+**A connected portfolio of technology projects, experiments and practical solutions.**
+
+[**Explore projects ↓**](#-the-kubera-portfolio) · [**See engineering results ↓**](#-selected-results--evidence)
 
 </div>
 
@@ -14,109 +18,128 @@
 
 ## 👋 About me
 
-I am an independent technology builder developing **KUBERA**, a collection of projects at the intersection of artificial intelligence, data, automation and digital services. My interests are deliberately broad: I am drawn to problems where fragmented information, repetitive processes or difficult decisions can be made easier through thoughtfully designed technology.
+I am **Nikola Kubera**, an independent technology builder developing **KUBERA** — a growing portfolio spanning artificial intelligence, data systems, automation, digital products and applied research.
 
-My background is not limited to software. I have experience coordinating day-to-day operations in a real-world industrial environment, where practical constraints, clear responsibilities and reliable processes matter. That operational perspective shapes the way I approach technology: a useful system must do more than look impressive in a demonstration. It needs a clear purpose, understandable behaviour and a way to check whether it works.
+My path into technology is grounded in **real-world operations**. In Iceland, I worked in the waste-processing industry, coordinating day-to-day activities and the practical demands of an operating facility. Working with processes, people and constraints shaped my approach to technology: a system should be understandable, dependable and useful outside a presentation.
 
-I work across the lifecycle of an idea — researching the problem, finding relevant information, shaping a concept, experimenting with tools, evaluating results and refining the product. I use AI as a practical collaborator for research, development and analysis while keeping important decisions under human control.
+Today, I apply that perspective to digital work. I research problems, organise information, shape product concepts, coordinate AI-assisted development, evaluate implementations and refine what is built. I am interested not only in individual applications but also in how different tools and intelligent systems can work together under clear human direction.
 
-The **KUBERA** name brings these efforts together. Some projects are live demonstrations; others are research environments, prototypes or early-stage product concepts. They share an emphasis on clarity, verification, practical value and continuous improvement.
+**KUBERA is not one application or one industry.** It is a portfolio of connected initiatives: AI-agent architecture, machine-learning research, business information systems, property technology and public-procurement intelligence. Some are working demonstrations, some are reference implementations and others are deliberately early-stage ideas.
 
-### 💡 What drives my work
+I value **independent thinking, evidence, useful design and steady iteration**. I would rather show a project's current limitations than make claims it cannot support.
 
-- 🎯 **Useful technology over fashionable terminology.** Start with the problem and the people who need a solution.
-- 🔗 **Connected thinking.** Combine data, AI, automation and operational knowledge instead of treating each as a separate discipline.
-- 🔍 **Evidence and transparency.** Make assumptions, sources, limitations and results visible wherever possible.
-- 🧪 **Experimentation with discipline.** Test ideas, document what works and improve what does not.
-- 🧑‍💼 **Human direction.** Intelligent tools should support judgment, not quietly replace accountability.
+> **My approach:** Understand the real problem. Connect the right people, data and tools. Build a practical solution. Test it. Improve it.
+
+### 💡 Principles behind KUBERA
+
+| Principle | What it means in practice |
+| :--- | :--- |
+| **Human direction** | AI can assist with research and execution; consequential decisions stay with people |
+| **Practical value** | Build around actual tasks, not fashionable terminology |
+| **Evidence first** | Document assumptions, tests, sources and limitations |
+| **Connected systems** | Bring data, software, operations and AI together where it adds value |
+| **Continuous improvement** | Treat prototypes and research as stages of development, not finished products |
 
 ---
 
 ## 🧭 Areas of work
 
-| Focus | What I explore and build |
+| Direction | Focus |
 | :--- | :--- |
-| 🤖 **Artificial Intelligence & Agents** | Assistants, multi-step agent workflows, tool integration and human-controlled execution |
-| 📊 **Data & Information Systems** | Research, structured information, data quality, analysis and evidence-based workflows |
-| ⚙️ **Automation & Operations** | Practical processes that reduce repetitive work and help people coordinate tasks |
-| 💻 **Digital Products** | Web applications, interactive tools and business-focused product concepts |
-| 🌍 **Geospatial Technology** | Geographic information, location data and mapping as one part of a broader toolkit |
-| 🔬 **Research & Development** | Prototypes, model evaluation, technical experiments and new product directions |
+| 🤖 **AI & Intelligent Systems** | Multi-agent workflows, tool integration, evidence trails and controlled automation |
+| 📊 **Data & Analytics** | Structured information, data quality, research and decision-support systems |
+| ⚙️ **Automation & Operations** | Repeatable processes, coordination, quality controls and operational workflows |
+| 💻 **Digital Products** | Web applications, interactive interfaces and practical business tools |
+| 🌐 **Geospatial Technology** | Location intelligence, geographic data and mapping as part of a wider toolkit |
+| 🔬 **Research & Development** | Machine-learning evaluation, prototypes, technical experiments and new concepts |
 
 ---
 
-## 🚀 KUBERA — selected projects
+## 🚀 The KUBERA portfolio
 
-A portfolio of distinct but connected initiatives. Each project has its own purpose, maturity and technical documentation.
+These projects represent different directions and stages of development. Their individual pages contain the technical details.
 
-| Project | Purpose |
-| :--- | :--- |
-| 🏙️ **[KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai)** | Live digital product exploring property information and agency workflows · [Open demo ↗](https://kubera-geoai.pages.dev) |
-| 🧠 **[KUBERA AGENT OS](kubera-lab/agent-os/)** | Architecture and experiments for controlled AI-agent coordination |
-| 📈 **[KUBERA TAO LAB](kubera-lab/kubera-tao-lab/)** | Machine-learning research, evaluation and model validation |
-| 🏠 **[KUBERA Real Estate OS](kubera-lab/real-estate-os/)** | Early-stage concepts for information management and operational workflows |
-| 📑 **[Tender Intelligence](kubera-lab/tender-intelligence/)** | Research and qualification tools for public procurement opportunities |
-
-*Live products, research projects and prototypes are distinguished in their individual documentation.*
-
----
-
-## 🔄 How I work
-
-**🧩 01 — Understand**  
-Define the real problem, the people involved and the information needed.
-
-**🔎 02 — Research**  
-Explore available evidence, technologies, constraints and alternative approaches.
-
-**✏️ 03 — Design**  
-Turn an idea into a clear workflow, product structure or technical experiment.
-
-**🛠️ 04 — Build & connect**  
-Use suitable tools, code and AI assistance to develop a practical implementation.
-
-**✅ 05 — Verify & improve**  
-Check results, document limitations and refine the solution through iteration.
-
----
-
-## 🛠️ Technology & capabilities
+| Project | What it does | Stage |
+| :--- | :--- | :--- |
+| **[KUBERA AGENT OS](kubera-lab/agent-os/)** | A reference architecture for coordinating bounded AI workflows with human oversight and verifiable actions | Reference implementation |
+| **[KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai)** | A digital property-information tool designed around the needs of UK estate agencies · [Live demo ↗](https://kubera-geoai.pages.dev) | Live demo |
+| **[KUBERA TAO LAB](kubera-lab/kubera-tao-lab/)** | Machine-learning research focused on disciplined evaluation, reproducibility and model robustness | Research |
+| **[KUBERA Real Estate OS](kubera-lab/real-estate-os/)** | A wider concept for connected real-estate operations and information workflows | Product concept |
+| **[KUBERA Tender Intelligence](kubera-lab/tender-intelligence/)** | Research and qualification tools for public-procurement opportunities | Reference prototype |
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,ts,js,react,vite,tailwind,nodejs,cloudflare,github,githubactions,git,linux,vscode&theme=dark&perline=13" alt="Python, TypeScript, JavaScript, React, Vite, Tailwind, Node.js, Cloudflare, GitHub, GitHub Actions, Git, Linux, VS Code" />
-
-<br/><br/>
-
-![Claude](https://img.shields.io/badge/Claude-191919?style=for-the-badge&logo=anthropic&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini-17365d?style=for-the-badge&logo=googlegemini&logoColor=white)
-![ChatGPT](https://img.shields.io/badge/ChatGPT-191919?style=for-the-badge&logo=openai&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging_Face-17365d?style=for-the-badge&logo=huggingface&logoColor=white)
-![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-191919?style=for-the-badge&logo=openstreetmap&logoColor=white)
+<img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=0:0b1220,50:2475a8,100:0b1220" width="90%" alt="" />
 
 </div>
 
-| Area | Tools and methods used across projects |
-| :--- | :--- |
-| **Software & interfaces** | Python · TypeScript · React · Vite · Git |
-| **Delivery & infrastructure** | GitHub · GitHub Actions · Cloudflare Pages · Web workflows |
-| **AI systems** | Claude · Gemini · ChatGPT · Agent workflows · Tool integration |
-| **Data & location** | Structured datasets · Data validation · GIS · OpenStreetMap |
-| **Quality & process** | Automated tests · Documentation · Review · Human approval |
+## 🧪 Selected results & evidence
 
-I combine hands-on technical experimentation with research and operational coordination. Individual projects provide the clearest evidence of their implementation and current maturity.
+A few concrete examples from the portfolio's documented engineering work — **not claims that every project is production-ready**.
+
+| Project | Documented result |
+| :--- | :--- |
+| **KUBERA AGENT OS** | Public reference implementation with **173 tests passing** across Python 3.11–3.13 and **89% branch coverage**, reported 2 October 2026 · [Engineering dossier](kubera-lab/agent-os/) |
+| **KUBERA TAO LAB** | **34/34 local project tests passed**, reported 2 October 2026; research and benchmark limitations documented · [Research dossier](kubera-lab/kubera-tao-lab/) |
+| **KUBERA GEO SI** | Publicly accessible web demonstration · [Open live product](https://kubera-geoai.pages.dev) |
+| **Tender Intelligence** | Documented read-only procurement research prototype with a human decision step · [Project details](kubera-lab/tender-intelligence/) |
+
+*Figures are dated project-reported results; they are not a claim of independently re-run tests today.*
 
 ---
 
-## 🌐 Beyond a single project
+## 🛠️ Technology & working toolkit
 
-My work spans multiple domains because I am interested in **how technology can help different kinds of organisations and people**, not in building the same product repeatedly. The portfolio includes property technology, AI-agent infrastructure, machine-learning evaluation, information research and workflow design.
+<div align="center">
 
-The direction is consistent even when the application changes: identify a concrete need, connect the right information and tools, create something usable, and keep improving it.
+<img src="https://skillicons.dev/icons?i=python,ts,react,vite,tailwind,nodejs,cloudflare,githubactions,git,linux&theme=dark&perline=10" alt="Technology icons for tools used across KUBERA projects" />
+
+<br/>
+
+![Claude](https://img.shields.io/badge/Claude-AI%20collaboration-253858?style=flat-square)
+![Gemini](https://img.shields.io/badge/Gemini-Product%20exploration-253858?style=flat-square)
+![ChatGPT](https://img.shields.io/badge/ChatGPT-Research%20%26%20analysis-253858?style=flat-square)
+![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Geospatial%20data-253858?style=flat-square)
+
+</div>
+
+**Core practices:** research and problem definition · data validation · software prototyping · automated testing · AI-assisted workflows · technical documentation · review and human approval.
+
+The tools above appear across the portfolio; their presence is not a claim of identical proficiency in every technology.
+
+---
+
+## 🔄 From an idea to a working system
+
+**01 · Discover** — Understand the problem, users, constraints and desired outcome.
+
+**02 · Investigate** — Examine evidence, available data, existing tools and alternatives.
+
+**03 · Design** — Define the workflow, responsibilities, product structure and limits.
+
+**04 · Build** — Develop and integrate appropriate software, data and AI components.
+
+**05 · Verify** — Test behaviour, review evidence, expose weaknesses and document results.
+
+**06 · Evolve** — Improve the system, expand carefully and keep people accountable.
+
+---
+
+## 🌌 Beyond a single project
+
+KUBERA connects **operational experience with emerging technology**. A property-information application, an AI-agent reference runtime and a machine-learning research lab may appear unrelated at first glance. They share the same underlying questions: How can information become more useful? How can routine work be made more reliable? Where can AI assist — and where must a person remain responsible?
+
+I am developing this portfolio step by step, combining research, implementation, critical review and practical experimentation. The goal is not to present a collection of impressive labels, but to create systems whose purpose, progress and limitations can be understood.
 
 <details>
-<summary><strong>📚 Explore the wider portfolio and technical documentation</strong></summary>
+<summary><strong>📚 Explore technical dossiers and wider portfolio documentation</strong></summary>
 
 [Portfolio review](PORTFOLIO_REVIEW.md) · [Project status](STATUS.md) · [Repository map](REPO_MAP.md) · [Extended README](EXTENDED_README.md) · [Technical dossier](KUBERA_AGENT_OS.md) · [Product vision](KUBERA_PRODUCT.md)
 
 </details>
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=105&section=footer&color=0:0b1220,50:15345b,100:2475a8" width="100%" alt="" />
+
+</div>
