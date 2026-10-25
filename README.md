@@ -24,6 +24,20 @@ My work focuses on turning real operational problems into clear, testable tools.
 
 **Current flagship:** [KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai) — evidence-first property intelligence for UK estate agencies. [Live demo ↗](https://kubera-geoai.pages.dev)
 
+**What I do hands-on:** Python and TypeScript applications · LLM tool-calling with server-side validation · open-data pipelines and geospatial products · automated tests and CI/CD · technical documentation.
+
+**My role and AI-assisted development:** I define the problem, the architecture and the acceptance checks. AI tools help draft code; every change is reviewed, tested in CI and checked on the live system before it counts as done.
+
+### ✅ Verify in one click
+
+| | KUBERA AGENT OS (reference implementation) |
+| :--- | :--- |
+| **Code** | [Python package, tests and examples](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack/reference-implementation) |
+| **CI** | [![Tests](https://github.com/jobkubera-lab/jobkubera-lab/actions/workflows/test-innovation-stack-reference.yml/badge.svg)](https://github.com/jobkubera-lab/jobkubera-lab/actions/workflows/test-innovation-stack-reference.yml) — Python 3.11 · 3.12 · 3.13 |
+| **Architecture** | [Technical dossier](KUBERA_AGENT_OS.md) · [Engineering notes](kubera-lab/agent-os/) |
+| **Run it** | `cd kubera-lab/innovation-stack/reference-implementation && pip install -e . && python -m unittest discover -s tests && python -m kubera_innovation demo --json` |
+
+
 ### 💡 How I work
 
 | Principle | What it means in practice |
@@ -67,12 +81,27 @@ A few concrete examples from the portfolio's documented engineering work — **n
 
 | Project | Documented result |
 | :--- | :--- |
-| **KUBERA AGENT OS** | Public reference implementation with **173 tests passing** across Python 3.11–3.13 and **89% branch coverage**, reported 2 October 2026 · [Engineering dossier](kubera-lab/agent-os/) |
+| **KUBERA AGENT OS** | **173 tests passing** and **89% branch coverage** — re-run on 25 October 2026 (Python 3.13); CI matrix Python 3.11–3.13 · [Code](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack/reference-implementation) · [CI runs](https://github.com/jobkubera-lab/jobkubera-lab/actions/workflows/test-innovation-stack-reference.yml) |
 | **KUBERA TAO LAB** | **34/34 local project tests passed**, reported 2 October 2026; research and benchmark limitations documented · [Research dossier](kubera-lab/kubera-tao-lab/) |
-| **KUBERA GEO SI** | Publicly accessible web demonstration · [Open live product](https://kubera-geoai.pages.dev) |
+| **KUBERA GEO SI** | Live product on official open data (HM Land Registry, EPC, Environment Agency, Defra noise, OpenStreetMap); typed React + TypeScript app, unit and assistant tests, licence guard and automatic deployment after review · [Open live product](https://kubera-geoai.pages.dev) |
 | **Tender Intelligence** | Documented read-only procurement research prototype with a human decision step · [Project details](kubera-lab/tender-intelligence/) |
 
-*Figures are dated project-reported results; they are not a claim of independently re-run tests today.*
+*Figures are dated. AGENT OS figures were re-run on the date shown; other figures are project-reported.*
+
+---
+
+## 🏠 Case study: KUBERA GEO SI
+
+| | |
+| :--- | :--- |
+| **Problem** | Estate agents in the UK spend time collecting the same facts for every home — past sales, energy rating, flood risk, local context — from many separate official sites. |
+| **Users** | Estate agency staff preparing valuations, listings and buyer answers. |
+| **Solution** | One map and home card that brings the official facts together, each with its source and date, plus an assistant that answers only from those checked sources. |
+| **Technology** | React · TypeScript · Leaflet · Cloudflare Pages & Workers · GitHub Actions · UK open data (OGL) |
+| **Quality** | Type checking, unit tests, assistant tests, a build-time guard against restricted data, deployment only after review and a live check |
+| **Limits** | Pilot area Mitcham (CR4). Not a valuation tool. Homes for sale appear only from the agency's own listings. |
+
+[Open the live product ↗](https://kubera-geoai.pages.dev)
 
 ---
 
