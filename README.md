@@ -26,10 +26,14 @@ My work focuses on turning real operational problems into clear, testable tools.
 
 ### 💡 How I work
 
-- **Evidence first** — sources, tests and limitations stay visible.
-- **Human control** — AI assists; consequential decisions stay with people.
-- **Practical engineering** — build around real tasks, not AI theatre.
-- **Iterate carefully** — prototype, verify, improve.
+| Principle | What it means in practice |
+| :--- | :--- |
+| **Evidence first** | Every figure, claim and recommendation carries its source, retrieval date and known limitations. If something has not been verified, it is labelled as such — never presented as fact. |
+| **Human authority** | AI prepares, drafts and checks; people approve. Consequential actions — publishing, merging, sending, paying — pass through an explicit human decision. |
+| **Practical engineering** | Systems are designed around a real user and a real workflow. Success is measured by whether the work gets done correctly, not by how impressive the AI looks. |
+| **Verified delivery** | Every change goes through a branch, automated checks, review and a live verification after release. Problems found later are fixed openly, with the reason recorded. |
+| **Lawful, open data** | Data is used only where the licence allows it. Official open datasets are preferred, and restricted sources are kept out of public products. |
+| **Plain communication** | Results are explained in clear language for the people who use them — what was done, what is proven and what still needs a decision. |
 
 ---
 
@@ -74,61 +78,63 @@ A few concrete examples from the portfolio's documented engineering work — **n
 
 ## 🛠️ Technology & working toolkit
 
-A focused toolkit used across KUBERA projects — grouped by purpose rather than shown as a wall of icons.
+Tools are chosen per problem and grouped by the job they do.
 
-**Build**
+| Area | Technologies | Used for |
+| :--- | :--- | :--- |
+| **Application development** | Python · TypeScript · React · Node.js · Vite · Tailwind CSS | Web products, data pipelines, internal tools and reference implementations |
+| **Geospatial & open data** | Leaflet · OpenStreetMap · UK official open data (property, energy, flood, planning, transport, crime) | Map-based products where every layer keeps its source and licence |
+| **AI engineering** | LLM tool-calling · server-side validation · retrieval over verified sources · evaluation tests | Assistants that answer from checked data and say "not in our data" instead of guessing |
+| **Quality & assurance** | Automated unit and integration tests · type checking · data validation · licence guards | Catching wrong figures, broken data and restricted content before release |
+| **Delivery & operations** | Git · GitHub Actions (CI/CD) · Cloudflare Pages & Workers · Linux | Repeatable builds, automatic deployment after review, scheduled data refreshes |
+| **Research & showcase** | Hugging Face · technical documentation · source logs | Public demonstrations and traceable research notes |
 
-![Python](https://img.shields.io/badge/Python-Development-1f2937?style=for-the-badge&logo=python)
-![TypeScript](https://img.shields.io/badge/TypeScript-Application%20logic-1f2937?style=for-the-badge&logo=typescript)
-![React](https://img.shields.io/badge/React-Interfaces-1f2937?style=for-the-badge&logo=react)
-![Node.js](https://img.shields.io/badge/Node.js-Tooling-1f2937?style=for-the-badge&logo=nodedotjs)
+![Python](https://img.shields.io/badge/Python-1f2937?style=flat-square&logo=python)
+![TypeScript](https://img.shields.io/badge/TypeScript-1f2937?style=flat-square&logo=typescript)
+![React](https://img.shields.io/badge/React-1f2937?style=flat-square&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-1f2937?style=flat-square&logo=nodedotjs)
+![Vite](https://img.shields.io/badge/Vite-374151?style=flat-square&logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-374151?style=flat-square&logo=tailwindcss)
+![Leaflet](https://img.shields.io/badge/Leaflet-374151?style=flat-square&logo=leaflet)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-374151?style=flat-square&logo=cloudflare)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-374151?style=flat-square&logo=githubactions)
+![Linux](https://img.shields.io/badge/Linux-374151?style=flat-square&logo=linux)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-111827?style=flat-square&logo=huggingface)](https://huggingface.co/spaces/Dzambala/kubera-geoai)
 
-**Delivery**
-
-![Vite](https://img.shields.io/badge/Vite-Web%20build-374151?style=flat-square&logo=vite)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-UI-374151?style=flat-square&logo=tailwindcss)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-Hosting-374151?style=flat-square&logo=cloudflare)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-374151?style=flat-square&logo=githubactions)
-![Git](https://img.shields.io/badge/Git-Version%20control-374151?style=flat-square&logo=git)
-![Linux](https://img.shields.io/badge/Linux-Environment-374151?style=flat-square&logo=linux)
-
-**AI, research & data**
-
-[![ChatGPT](https://img.shields.io/badge/ChatGPT-Research%20%26%20analysis-111827?style=flat-square)](https://chatgpt.com)
-[![Claude](https://img.shields.io/badge/Claude-Code%20review%20%26%20implementation-111827?style=flat-square)](https://claude.ai)
-[![Gemini](https://img.shields.io/badge/Gemini-Product%20exploration-111827?style=flat-square)](https://gemini.google.com)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-AI%20showcase-111827?style=flat-square)](https://huggingface.co/spaces/Dzambala/kubera-geoai)
-[![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Geospatial%20data-111827?style=flat-square)](https://www.openstreetmap.org)
-
-**Core practices:** problem definition · source verification · data validation · software prototyping · automated testing · AI-assisted development · technical documentation · human review.
+**Core practices:** problem framing · source verification · data validation · prototyping · automated testing · AI-assisted development · technical documentation · human review.
 
 *The toolkit reflects technologies used across the portfolio; it is not a claim of equal depth in every tool.*
+
 ---
 
-## ⚡ Product + rapid AI prototyping
+## ⚡ From prototype to product
 
-KUBERA keeps two layers deliberately separate:
+KUBERA separates **exploration** from **production**.
 
-- **Evidence-based products** — working systems such as **KUBERA GEO SI**, where facts, provenance, limitations and human review matter more than flashy generation.
-- **Rapid AI prototypes** — Gemini / AI Studio / Claude / ChatGPT experiments used to test workflows, interface ideas and agent behaviour quickly before anything is promoted into the main product.
+- **Exploration** — new ideas, interfaces and assistant behaviours are tested quickly in isolated prototypes. Speed matters here; nothing from this stage reaches users directly.
+- **Production** — a capability is promoted into a product such as **KUBERA GEO SI** only after its data, behaviour and limits have been checked against real cases.
 
-A prototype is not treated as production evidence. Ideas move into a KUBERA product only after data, behaviour and limitations are checked.
+**Promotion criteria**
 
-**Short demo clips (around 10 seconds)** are useful for discovery posts and portfolio previews: they should show one clear action or result, not replace the live demo, README or technical evidence.
+- the data source is identified, licensed for the intended use and dated;
+- the behaviour is covered by automated tests, including failure and edge cases;
+- limitations are written down and shown to the user where they matter;
+- a person has reviewed the change before release, and the live result is checked after it.
+
+A working prototype is treated as a hypothesis, not as proof.
+
+---
 
 ## 🔄 From an idea to a working system
 
-**01 · Discover** — Understand the problem, users, constraints and desired outcome.
-
-**02 · Investigate** — Examine evidence, available data, existing tools and alternatives.
-
-**03 · Design** — Define the workflow, responsibilities, product structure and limits.
-
-**04 · Build** — Develop and integrate appropriate software, data and AI components.
-
-**05 · Verify** — Test behaviour, review evidence, expose weaknesses and document results.
-
-**06 · Evolve** — Improve the system, expand carefully and keep people accountable.
+| Stage | Focus | Output |
+| :--- | :--- | :--- |
+| **01 · Discover** | Who is the user, what decision do they need to make, what does success look like | Problem statement and success criteria |
+| **02 · Investigate** | Available evidence, open data, licences, existing tools and alternatives | Source register and feasibility notes |
+| **03 · Design** | Workflow, responsibilities, data model and clear limits of what the system will not do | Product structure and acceptance checks |
+| **04 · Build** | Small, reviewable increments of software, data and AI components | Working feature behind automated checks |
+| **05 · Verify** | Tests, live checks, review of evidence and honest reporting of weaknesses | Verified release and documented results |
+| **06 · Operate & evolve** | Monitoring, scheduled data refreshes, user feedback and careful expansion | Maintained system with a clear change history |
 
 ---
 
