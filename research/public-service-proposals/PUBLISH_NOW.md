@@ -16,7 +16,7 @@ https://github.com/nhsuk/nhsuk-frontend/issues/new?title=Proposal%3A%20multiling
 
 **Copy the body from**
 
-https://github.com/jobkubera-lab/jobkubera-lab/blob/main/research/public-service-proposals/NHS_UK_MULTILINGUAL_PLAIN_LANGUAGE_PROPOSAL.md
+https://github.com/kubera-lab/kubera-lab/blob/main/research/public-service-proposals/NHS_UK_MULTILINGUAL_PLAIN_LANGUAGE_PROPOSAL.md
 
 ## 2) GOV.UK Frontend
 
@@ -30,7 +30,7 @@ https://github.com/alphagov/govuk-frontend/issues/new?title=Proposal%3A%20explic
 
 **Copy the body from**
 
-https://github.com/jobkubera-lab/jobkubera-lab/blob/main/research/public-service-proposals/GOVUK_PROCESSING_STATE_ACCESSIBILITY_PROPOSAL.md
+https://github.com/kubera-lab/kubera-lab/blob/main/research/public-service-proposals/GOVUK_PROCESSING_STATE_ACCESSIBILITY_PROPOSAL.md
 
 ## 3) LocalGov Drupal — Natural-Language Service Finder
 
@@ -44,7 +44,7 @@ https://github.com/localgovdrupal/localgov/issues/new?title=Proposal%3A%20provid
 
 **Copy the body from**
 
-https://github.com/jobkubera-lab/jobkubera-lab/blob/main/research/public-service-proposals/LOCALGOV_NATURAL_LANGUAGE_SERVICE_FINDER_PROPOSAL.md
+https://github.com/kubera-lab/kubera-lab/blob/main/research/public-service-proposals/LOCALGOV_NATURAL_LANGUAGE_SERVICE_FINDER_PROPOSAL.md
 
 ## Already published
 
@@ -54,4 +54,4 @@ https://github.com/localgovdrupal/localgov/issues/927
 
 ## Publication status
 
-https://github.com/jobkubera-lab/jobkubera-lab/blob/main/research/public-service-proposals/PUBLICATION_STATUS.md
+https://github.com/kubera-lab/kubera-lab/blob/main/research/public-service-proposals/PUBLICATION_STATUS.md

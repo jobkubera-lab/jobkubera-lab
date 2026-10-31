@@ -505,7 +505,7 @@ class MCPToolAdapter:
 
 4. **Install KUBERA:**
    ```bash
-   git clone https://github.com/jobkubera-lab/kubera-local-ai
+   git clone https://github.com/kubera-lab/kubera-local-ai
    cd kubera-local-ai
    
    # Use script from repo

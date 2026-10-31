@@ -4,7 +4,7 @@ Updated: **2026-10-02**
 
 ## Public entry points
 
-1. **Profile / portfolio hub** — `jobkubera-lab/jobkubera-lab`
+1. **Profile / portfolio hub** — `kubera-lab/kubera-lab`
 2. **Reviewer route** — `PORTFOLIO_REVIEW.md`
 3. **KUBERA LAB index** — `kubera-lab/README.md`
 
@@ -52,7 +52,7 @@ Role:
 ### 4. Product architecture — KUBERA Real Estate OS
 Public path: `kubera-lab/real-estate-os/`
 
-Private implementation: `jobkubera-lab/kubera-real-estate-os`.
+Private implementation: `kubera-lab/kubera-real-estate-os`.
 
 Role:
 - property intelligence;

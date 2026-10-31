@@ -10,7 +10,7 @@ from mcp.server import MCPServer
 from shared.policy import evidence_envelope, validate_identifier
 
 BASE = "https://api.beta.ons.gov.uk"
-USER_AGENT = "KUBERA-ONS-MCP/0.1 (+https://github.com/jobkubera-lab/jobkubera-lab)"
+USER_AGENT = "KUBERA-ONS-MCP/0.1 (+https://github.com/kubera-lab/kubera-lab)"
 
 mcp = MCPServer("kubera-ons-mcp")
 

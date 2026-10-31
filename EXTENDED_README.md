@@ -116,6 +116,6 @@ That is the core of the KUBERA approach.
 
 - Email: jobkubera@gmail.com
 - Telegram: @kuberababa
-- GitHub: https://github.com/jobkubera-lab
+- GitHub: https://github.com/kubera-lab
 
 For the short technical route, use [PORTFOLIO_REVIEW.md](PORTFOLIO_REVIEW.md). For the full engineering record, use [KUBERA_AGENT_OS.md](KUBERA_AGENT_OS.md) and [kubera-lab/](kubera-lab/).

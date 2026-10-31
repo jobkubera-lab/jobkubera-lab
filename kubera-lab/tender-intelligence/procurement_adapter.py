@@ -11,7 +11,7 @@ from typing import Any, Iterable
 
 FIND_A_TENDER_OCDS = "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages"
 CONTRACTS_FINDER_OCDS = "https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search"
-USER_AGENT = "KUBERA-Tender-Intelligence/1.0 (+https://github.com/jobkubera-lab/jobkubera-lab)"
+USER_AGENT = "KUBERA-Tender-Intelligence/1.0 (+https://github.com/kubera-lab/kubera-lab)"
 
 
 @dataclass(frozen=True)
