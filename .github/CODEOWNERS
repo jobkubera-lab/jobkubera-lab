@@ -1,4 +1,4 @@
 # Profile page is owner-controlled.
-/README.md @jobkubera-lab
-/.github/workflows/profile-readme-lock.yml @jobkubera-lab
-/.github/CODEOWNERS @jobkubera-lab
+/README.md @kubera-lab
+/.github/workflows/profile-readme-lock.yml @kubera-lab
+/.github/CODEOWNERS @kubera-lab

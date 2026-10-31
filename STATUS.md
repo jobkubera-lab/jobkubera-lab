@@ -35,7 +35,7 @@ Status: **active ML research/evaluation track**. It does not claim current Bitte
 Public evidence:
 - `kubera-lab/real-estate-os/`
 
-Implementation: private `jobkubera-lab/kubera-real-estate-os`.
+Implementation: private `kubera-lab/kubera-real-estate-os`.
 
 Verified on 2026-10-02: evidence-first Montenegro land-check core, **3/3 tests passed** on Python 3.11/3.12, private CI successful.
 

@@ -347,7 +347,7 @@ ollama serve
 ### Start KUBERA Locally
 ```powershell
 # Clone repo
-git clone https://github.com/jobkubera-lab/kubera-local-ai
+git clone https://github.com/kubera-lab/kubera-local-ai
 cd kubera-local-ai
 
 # Install

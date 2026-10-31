@@ -3,7 +3,7 @@
 **AI Systems Builder | AI Assurance & Infrastructure | Agent Systems | Evidence-Driven Automation**
 
 London, United Kingdom  
-GitHub: https://github.com/jobkubera-lab
+GitHub: https://github.com/kubera-lab
 
 ---
 
@@ -15,7 +15,7 @@ GitHub: https://github.com/jobkubera-lab
 - **Tender Intelligence:** 16 tests passed on Python 3.11–3.13; deterministic provenance and DRAFT_ONLY workflow.
 - **Portfolio Evidence Audit:** automated guardrail prevents stale headline metrics and verifies priority evidence paths.
 
-Technical reviewer route: https://github.com/jobkubera-lab/jobkubera-lab/blob/main/PORTFOLIO_REVIEW.md
+Technical reviewer route: https://github.com/kubera-lab/kubera-lab/blob/main/PORTFOLIO_REVIEW.md
 
 ---
 
@@ -82,7 +82,7 @@ Current public work demonstrates multi-agent orchestration, privacy and permissi
 ## KUBERA / DZAMBALA — Sovereign AI Agent Architecture
 
 **Role:** Creator / AI Systems Builder  
-**Repository:** https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack
+**Repository:** https://github.com/kubera-lab/kubera-lab/tree/main/kubera-lab/innovation-stack
 
 A provider-neutral architecture designed so AI models and runtimes can be replaced while the human owner retains control over memory, permissions, privacy policy and evidence.
 
@@ -109,7 +109,7 @@ Implemented public reference components include:
 
 ## DZAMBALA Community Compass — London + Merton v0.2
 
-**Repository:** https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/dzambala-community-compass
+**Repository:** https://github.com/kubera-lab/kubera-lab/tree/main/kubera-lab/dzambala-community-compass
 
 Verified-source civic discovery prototype for community organisations and upcoming events.
 
@@ -132,10 +132,10 @@ The project explicitly does **not** claim automatic scraping, AI ranking or prod
 ## KUBERA Civic Evidence OS / Council AI Service Finder
 
 **Civic Evidence OS:**  
-https://github.com/jobkubera-lab/kubera-improved-website/tree/main/civic-evidence-os
+https://github.com/kubera-lab/kubera-improved-website/tree/main/civic-evidence-os
 
 **Council AI Service Finder:**  
-https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/council-ai-service-finder
+https://github.com/kubera-lab/kubera-lab/tree/main/research/council-ai-service-finder
 
 Work focused on explainable local-service discovery using controlled retrieval, authoritative sources, review dates, explicit safety fallbacks and human-readable evidence.
 
@@ -144,7 +144,7 @@ Work focused on explainable local-service discovery using controlled retrieval, 
 ## KUBERA Agent Fabric
 
 **Repository:**  
-https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/kubera-agent-fabric
+https://github.com/kubera-lab/kubera-lab/tree/main/research/kubera-agent-fabric
 
 Provider-neutral orchestration reference work with verification and approval-gate concepts.
 
@@ -165,7 +165,7 @@ This is direct public evidence of participation in a UK civic open-source projec
 
 Technical proposals prepared for NHS.UK Frontend, GOV.UK Frontend and LocalGov Drupal:
 
-https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/public-service-proposals
+https://github.com/kubera-lab/kubera-lab/tree/main/research/public-service-proposals
 
 The proposals deliberately remove unsupported impact figures and distinguish prototypes from accepted/production work.
 
@@ -231,7 +231,7 @@ I build practical AI-agent systems and LLM-powered products. My main engineering
 
 My work combines product thinking with Python prototyping, GitHub workflows, structured AI contracts, SQLite-backed state/evidence components, validation, testing, civic-data prototypes and open-source public-service work.
 
-GitHub: https://github.com/jobkubera-lab
+GitHub: https://github.com/kubera-lab
 
 ---
 
@@ -262,16 +262,16 @@ AI systems builder with hands-on experience designing and implementing agent wor
 ## PORTFOLIO
 
 **GitHub profile**  
-https://github.com/jobkubera-lab
+https://github.com/kubera-lab
 
 **KUBERA / DZAMBALA Innovation Stack**  
-https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack
+https://github.com/kubera-lab/kubera-lab/tree/main/kubera-lab/innovation-stack
 
 **DZAMBALA Community Compass v0.2**  
-https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/dzambala-community-compass
+https://github.com/kubera-lab/kubera-lab/tree/main/kubera-lab/dzambala-community-compass
 
 **UK Public-Service Proposals**  
-https://github.com/jobkubera-lab/jobkubera-lab/tree/main/research/public-service-proposals
+https://github.com/kubera-lab/kubera-lab/tree/main/research/public-service-proposals
 
 **LocalGov Drupal Issue #927**  
 https://github.com/localgovdrupal/localgov/issues/927
