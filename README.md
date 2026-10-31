@@ -22,7 +22,7 @@ I am **Nikola Kubera**, a **Technical Solutions Developer** building practical s
 
 My work focuses on turning real operational problems into clear, testable tools. I use AI as part of the engineering workflow, but keep evidence, limitations and human control visible.
 
-**Current flagship:** [KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai) — evidence-first property intelligence for UK estate agencies. [Live demo ↗](https://kubera-geoai.pages.dev)
+**Current flagship:** [KUBERA GEO SI](https://github.com/kubera-lab/kubera-geoai) — evidence-first property intelligence for UK estate agencies. [Live demo ↗](https://kubera-geoai.pages.dev)
 
 **What I do hands-on:** Python and TypeScript applications · LLM tool-calling with server-side validation · open-data pipelines and geospatial products · automated tests and CI/CD · technical documentation.
 
@@ -32,8 +32,8 @@ My work focuses on turning real operational problems into clear, testable tools.
 
 | | KUBERA AGENT OS (reference implementation) |
 | :--- | :--- |
-| **Code** | [Python package, tests and examples](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack/reference-implementation) |
-| **CI** | [![Tests](https://github.com/jobkubera-lab/jobkubera-lab/actions/workflows/test-innovation-stack-reference.yml/badge.svg)](https://github.com/jobkubera-lab/jobkubera-lab/actions/workflows/test-innovation-stack-reference.yml) — Python 3.11 · 3.12 · 3.13 |
+| **Code** | [Python package, tests and examples](https://github.com/kubera-lab/kubera-lab/tree/main/kubera-lab/innovation-stack/reference-implementation) |
+| **CI** | [![Tests](https://github.com/kubera-lab/kubera-lab/actions/workflows/test-innovation-stack-reference.yml/badge.svg)](https://github.com/kubera-lab/kubera-lab/actions/workflows/test-innovation-stack-reference.yml) — Python 3.11 · 3.12 · 3.13 |
 | **Architecture** | [Technical dossier](KUBERA_AGENT_OS.md) · [Engineering notes](kubera-lab/agent-os/) |
 | **Run it** | `cd kubera-lab/innovation-stack/reference-implementation && pip install -e . && python -m unittest discover -s tests && python -m kubera_innovation demo --json` |
 
@@ -64,7 +64,7 @@ These projects represent different directions and stages of development. Their i
 | Project | What it does | Stage |
 | :--- | :--- | :--- |
 | **[KUBERA AGENT OS](kubera-lab/agent-os/)** | A reference architecture for coordinating bounded AI workflows with human oversight and verifiable actions | Reference implementation |
-| **[KUBERA GEO SI](https://github.com/jobkubera-lab/kubera-geoai)** | Evidence-first property intelligence for UK estate agencies · [Live demo ↗](https://kubera-geoai.pages.dev) · [Hugging Face showcase ↗](https://huggingface.co/spaces/Dzambala/kubera-geoai) | Live demo |
+| **[KUBERA GEO SI](https://github.com/kubera-lab/kubera-geoai)** | Evidence-first property intelligence for UK estate agencies · [Live demo ↗](https://kubera-geoai.pages.dev) · [Hugging Face showcase ↗](https://huggingface.co/spaces/Dzambala/kubera-geoai) | Live demo |
 | **[KUBERA TAO LAB](kubera-lab/kubera-tao-lab/)** | Machine-learning research focused on disciplined evaluation, reproducibility and model robustness | Research |
 | **[KUBERA Real Estate OS](kubera-lab/real-estate-os/)** | A wider concept for connected real-estate operations and information workflows | Product concept |
 | **[KUBERA Tender Intelligence](kubera-lab/tender-intelligence/)** | Research and qualification tools for public-procurement opportunities | Reference prototype |
@@ -81,7 +81,7 @@ A few concrete examples from the portfolio's documented engineering work — **n
 
 | Project | Documented result |
 | :--- | :--- |
-| **KUBERA AGENT OS** | **173 tests passing** and **89% branch coverage** — re-run on 25 October 2026 (Python 3.13); CI matrix Python 3.11–3.13 · [Code](https://github.com/jobkubera-lab/jobkubera-lab/tree/main/kubera-lab/innovation-stack/reference-implementation) · [CI runs](https://github.com/jobkubera-lab/jobkubera-lab/actions/workflows/test-innovation-stack-reference.yml) |
+| **KUBERA AGENT OS** | **173 tests passing** and **89% branch coverage** — re-run on 25 October 2026 (Python 3.13); CI matrix Python 3.11–3.13 · [Code](https://github.com/kubera-lab/kubera-lab/tree/main/kubera-lab/innovation-stack/reference-implementation) · [CI runs](https://github.com/kubera-lab/kubera-lab/actions/workflows/test-innovation-stack-reference.yml) |
 | **KUBERA TAO LAB** | **34/34 local project tests passed**, reported 2 October 2026; research and benchmark limitations documented · [Research dossier](kubera-lab/kubera-tao-lab/) |
 | **KUBERA GEO SI** | Live product on official open data (HM Land Registry, EPC, Environment Agency, Defra noise, OpenStreetMap); typed React + TypeScript app, unit and assistant tests, licence guard and automatic deployment after review · [Open live product](https://kubera-geoai.pages.dev) |
 | **Tender Intelligence** | Documented read-only procurement research prototype with a human decision step · [Project details](kubera-lab/tender-intelligence/) |
